@@ -1,0 +1,61 @@
+\documentclass{article}
+\title{Sistema de controle de mesa de som - Sistemas digitais e microcontrolados}
+\date{}
+
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[margin=3.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[parfill]{parskip}
+\usepackage[nottoc]{tocbibind}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{/home/luispengler/drive/LinuxFabrik/Research/read/bib.bib}
+\usepackage{authblk}
+\author[1]{Giovanna Bughi}
+\author[2]{Gustavo Ratier Cardoso}
+\author[3]{João Vitor Medeiros}
+\author[4]{Luís Spengler}
+\affil[1,2,3,4]{Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso do Sul}
+
+\graphicspath{{./docs/}}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\medskip
+
+\section{}
+\subsection{Problema proposto}
+
+\begin{displaymath}
+\begin{array}{|c c c|c c c|}
+INPUT & & & OUTPUT &\\
+\hline
+ChP & ChD & ChC & SP & SD & SC\\
+\hline % Put a horizontal line between the table header and the rest.
+0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 1 & 0 & 0 & 1\\
+0 & 1 & 0 & 0 & 1 & 0\\
+0 & 1 & 1 & 0 & 1 & 0\\
+1 & 0 & 0 & 1 & 0 & 0\\
+1 & 0 & 1 & 1 & 0 & 0\\
+1 & 1 & 0 & 1 & 0 & 0\\
+1 & 1 & 1 & 1 & 0 & 0\\
+\end{array}
+\end{displaymath}
+
+\section{Conclusão}
+
+Por fim, pode-se concluir que todos os gates (portas) testados experimentalmente neste relatório estavam funcionando corretamente. Até mesmo sua implementação na criação de uma porta NAND funcionou conforme esperado.
+
+\medskip
+
+\end{document}
