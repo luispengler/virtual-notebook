@@ -11,6 +11,31 @@
 + P2.1 - 5.0 pt - 4/5 - REC2 - 10.0 pt - 29/6
 + P2.2 - 5.0 pt - 8/6
 
+* Revisão
+** Potências
+#+ATTR_HTML: alt: waterwave :title Triângulo de Potências :style margin-left: auto;margin-right: auto;background-color: mintcream;display: block;width: 100%;
+https://luispengler.github.io/virtual-notebook/12th-grade/doc/industriais/triangulopot.jpg
++ P: Potência Ativa (W -> Luz, calor, som, movimento)
++ QL: Potência Reativa Indutiva (VarL) (Campo Magnético). Não dá pra ver nessa imagem, mas essa pot. acontece no eixo reativo no sentido para cima
++ QC: Potência Reativa Capacitiva (VarC) (Carga/Descarga de capacitores). Não dá pra ver nessa imagem, mas essa pot. acontece no eixo reativo no sentido para baixo
++ S: Potência Aparente (VA). Essa é a potência mais importante, pois usaremos para dimensionamento
+\[S=\sqrt{P^2+Q^2}\]
+\[I=\frac{S}{V}\]
+
+** Fator de Potência
+*** Para QL > QC
++ \[QL'=QL-QC\]
++ Fator de Potência indutivo
+\[cos\phi=\frac{P}{S}\]
+*** Para QC > QL
++ \[QC'=QC-QL'\]
++ Fator de Potência capacitivo
+\[cos\phi=\frac{P}{S}\]
+*** Para QL > QC
++ \[QC=QL=0\]
++ Fator de Potência unitário
+\[cos\phi=\frac{P}{S}=\frac{P}{P}=1\]
+
 * Conteúdo até agora (08/03)
 ** Partes Básicas
 + Estator (fixa): Ligada à rede de energia elétrica
@@ -41,3 +66,60 @@
 + Potência Aparente \[VA\] -> Soma vetorial das potências ativa e reativa
 + Fator de potência -> Relação entre as potências ativa e aparente
   \[F.P. = \frac{P}{S}=cos\theta\]
+
+** Dados nominais de \[MI3\phi\]
+*** Fator de Potência
++ \[F.P.=cos\phi=\frac{P}{S}\]
+*** Corrente nominal
+\[Inm=\frac{Pnm}{\sqrt{3}\cdot cos\phi\cdot \eta\cdot VFF\]
+
++ Pnm é a mesma que PO, ou potência de output, que é a potência mecânica
+
+1. Exemplo: Dado um motor de indução trifásico 220V; 4cv; F.P.=0,85; \[\eta=82\%\]. Calcule suas potências de entrada e sua corrente nominal.
+   \[PO=4\cdot 736=2944W\]
+   \[Inm=\frac{2944}{\sqrt{3}\cdot 0,85\cdot 0,82\cdot 220} = \frac{2944}{265,59} = 11,08A\]
+   \[Si=\frac{Pi}{F.P.}=4378,34 VA\]
+   \[Vi=\sqrt{S^2-P^2}=2506VarL\]
+
+*** Corrente para um circuito trifásico
+\[I3\phi=\frac{SI}{\sqrt{3}\cdot VFF}=\frac{PO}{VFF\cdot \eta\cdot cos\phi\cdot \sqrt{3}}\]
++ VFF = Tensão entre qualquer par de fases
+\[F.P.=cos\phi=\frac{Pi}{Si}\]
+\[Si=\frac{Pi}{cos\phi}\]
+\[Si=\frac{Po}{\eta\cdot cos\phi}\]
+
+*** Questões
+1. Um motor de 10cv possui rendimento igual a 85% e fator de potência de 0,82. Ele é de indução trifásico e possui tensão nominal de 220V. Calcule/apresente:
+   a) Potência de saída (W);
+      \[10\cdot 736=7360W\]
+   b) Potência de entrada (W);
+      \[7360\cdot \frac{100}{85} = 8658,82W\]
+   c) Perdas (W);
+      \[8658,82-7360=1298,82W\]
+   d) Potência aparente (VA);
+      \[\frac{P}{S}=0,82=\frac{P}{0,82}=S=10559,53VA\]
+   e) Potência reativa (VarL);
+      \[10559,53=\sqrt{8658,82^2+Q^2}\]
+      \[10559,53^2=74975163,79+Q^2\]
+      \[111503673,8-74975163,79=Q^2\]
+      \[36528510,03=Q^2\]
+      \[Q=6043,882 VAR\]
+   f) Corrente nominal (A)
+      \[Inm=\frac{7360}{\sqrt{3}\cdot 0,82\cdot 0,85\cdot 220}=\frac{7360}{265,5926}=27,71A\]
+
+2. Um motor de indução trifásico possui corrente nominal de 15A. Sua tensão nominal é 220; F.P.=0,85;\[\eta=88%\]. Calcule suas perdas
+   \[Po=15\cdot \sqrt{3}\cdot 220\cdot 0,85\cdot 0,88\]
+   \[Po=4275,39W\]
+   \[Pi=4275\cdot \frac{100}{88}=4857,9545W\]
+   \[Perdas=4857,95-4275,39=582,56W\]
+
+** Velocidade Síncrona
++ f: Frequência da tensão da rede (Hz)
++ p: Número de polos do motor
+\[ns=\frac{120.f}{p}\]
++ É a velocidade do campo eletromagnético girante produzido pelo estator
+** Escorregamento
++ É a diferença entre a velocidade síncrona e a velocidade no eixo do motor (unidade em rpm)
+  \[s=n_s-n\]
+\[s(\%)=\frac{(n_s-n)}{n_s}\cdot 100\%\
+\[s=\frac{n_s-n}{n}\]
