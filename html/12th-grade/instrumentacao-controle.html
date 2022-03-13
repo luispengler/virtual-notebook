@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-03-13 Sun 16:40 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Instrumentação e Controle</title>
+<meta name="author" content="Luís Spengler" />
+<meta name="description" content="Instrumentação e Controle - Meu caderno virtual" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="https://luispengler.github.io/site/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://luispengler.github.io/site/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="httpss://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="httpss://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://luispengler.github.io/site/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://luispengler.github.io/site/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Instrumentação e Controle</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org3e3b4fb">Primeira Aula</a>
+<ul>
+<li><a href="#org9c99ad5">Tipos de processos (ponto de vista do tempo e do tipo de operação envolvida)</a></li>
+</ul>
+</li>
+<li><a href="#orgaaba153">Aula 17/02</a></li>
+<li><a href="#org2257abf">Aula 18/02</a>
+<ul>
+<li><a href="#orgc6c4080">Classes de instrumentos</a></li>
+</ul>
+</li>
+<li><a href="#org3d85b1a">Aula 24/02</a></li>
+<li><a href="#org8c38ed6">Aula 25/02</a>
+<ul>
+<li><a href="#orge199fe7">Características dos sistemas de medição</a></li>
+</ul>
+</li>
+<li><a href="#orge363968">Aula 03/03</a></li>
+<li><a href="#org1619406">Aula 04/03</a>
+<ul>
+<li><a href="#org28aa0d5">Tipos de sensores</a></li>
+</ul>
+</li>
+<li><a href="#orga88534f">Aula 10/03</a></li>
+<li><a href="#orged46100">Aula 11/03</a>
+<ul>
+<li><a href="#org35c67ee">Sensores de proximidade ultrassônicos</a></li>
+<li><a href="#orgad1a636">Sensor óptico de posição (encoder)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3e3b4fb" class="outline-2">
+<h2 id="org3e3b4fb">Primeira Aula</h2>
+<div class="outline-text-2" id="text-org3e3b4fb">
+<ul class="org-ul">
+<li>O professor Hilton James passou como vai ser as notas da disciplina, de acordo com a seguinte equação
+\[MF=\frac{[(P1\cdot 0,7)+(Ativ. Trab.\cdot 0,3)]+[(P2\cdot 0,7)+(Ativ. Trab.\cdot 0,3)]}{2}\]</li>
+</ul>
+
+<p>
+Sendo P1 dia 31/03 e sua recuperação dia 07/04 e a P2 sendo dia 09/06 e sua recuperação dia 23/06.
+</p>
+
+<ul class="org-ul">
+<li>Ele também passou seus horários de permanência: 14h30-17h05 (WED), 08h30-10h20 (THU), 18h50-20h20 (FRI) - Salas B206, B102, B204</li>
+
+<li>A disciplina vai ser ministrada pelo professor Hilton James na parte prática e a teoria com a professora Gabriele Kavano</li>
+
+<li>Horário de PE da professora: 15h35-16h30 (THU)</li>
+</ul>
+</div>
+
+<div id="outline-container-org9c99ad5" class="outline-3">
+<h3 id="org9c99ad5">Tipos de processos (ponto de vista do tempo e do tipo de operação envolvida)</h3>
+<div class="outline-text-3" id="text-org9c99ad5">
+</div>
+<div id="outline-container-org4080cea" class="outline-4">
+<h4 id="org4080cea">Processo Contínuo</h4>
+<div class="outline-text-4" id="text-org4080cea">
+<ul class="org-ul">
+<li>A adição da matéria-prima e a saída do produto são contrínuas (no sentido de não ser interrompido). Ex: Refinaria de petróleo
+<ul class="org-ul">
+<li>Não realizam paradas periódicas (Works 24/7), exceto por paradas progamadas com um periodo maior que 1 ano</li>
+<li>Esse tipo de industria faz somente um produto</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7dfc756" class="outline-4">
+<h4 id="org7dfc756">Processo em Batelada</h4>
+<div class="outline-text-4" id="text-org7dfc756">
+<ul class="org-ul">
+<li>O processo é alimentado e re-alimentado. O produto é descarregado e inicia-se outro ciclo, sendo o intervalo entre estes curto.</li>
+<li>Permite vários produtor em uma mesma linha de produção. Ex: Fanta laranja, fanta uva, etc&#x2026;</li>
+<li>É um processo descontínuo</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5a4f7eb" class="outline-4">
+<h4 id="org5a4f7eb">Processo Discreto</h4>
+<div class="outline-text-4" id="text-org5a4f7eb">
+<ul class="org-ul">
+<li>Itens separados = produto</li>
+<li>Não tem dependência de outras etapas como no processo contínuo, ou tanto quanto em batelada</li>
+<li>Geralmente usa-se robos</li>
+<li>Industria de automóveis é um exemplo</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgaaba153" class="outline-2">
+<h2 id="orgaaba153">Aula 17/02</h2>
+<div class="outline-text-2" id="text-orgaaba153">
+<ul class="org-ul">
+<li>Tivemos que fazer o pré-rascunho de um artigo em trio. Fui com Daniel e Lukas. Obtivemos a seguinte belezinha</li>
+</ul>
+
+<div id="orgcd3a97c" class="figure">
+<p><img src="https://luispengler.github.io/site/org-pages/notes/12th-grade/doc/instrumenta1.jpg" alt="instrumenta1.jpg" title="Primeira atividade prática" style="margin-left: auto;margin-right: auto;background-color: mintcream;display: block;width: 100%;" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2257abf" class="outline-2">
+<h2 id="org2257abf">Aula 18/02</h2>
+<div class="outline-text-2" id="text-org2257abf">
+</div>
+<div id="outline-container-orgc6c4080" class="outline-3">
+<h3 id="orgc6c4080">Classes de instrumentos</h3>
+<div class="outline-text-3" id="text-orgc6c4080">
+<ul class="org-ul">
+<li>Podem ser divididos em várias categorias</li>
+</ul>
+</div>
+<div id="outline-container-org94ef4ba" class="outline-4">
+<h4 id="org94ef4ba">Elemento primário/Sensor</h4>
+<div class="outline-text-4" id="text-org94ef4ba">
+<ul class="org-ul">
+<li>Capaz de detectar a variação de uma grandeza física e converter um tipo de grandeza que pode ser mensurada por dispositivos eletrônicos. Ex: termometro</li>
+<li>Esta classe é dividida entre instrumento cego (não apresenta um visor) e instrumento indicador (possui um visor)</li>
+<li>Normalmente se associa com outros componentes para se tornar um transdutor</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf455ade" class="outline-4">
+<h4 id="orgf455ade">Registrador</h4>
+<div class="outline-text-4" id="text-orgf455ade">
+<ul class="org-ul">
+<li>Registra as variações de uma ou mais variáveis, guardando as em discos ou fitas de papel e através de displays eletrônicos</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb4fd024" class="outline-4">
+<h4 id="orgb4fd024">Conversor</h4>
+<div class="outline-text-4" id="text-orgb4fd024">
+<ul class="org-ul">
+<li>Recebe um tipo de sinal e o converte em outro</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org18bc670" class="outline-4">
+<h4 id="org18bc670">Transmissor/Transdutor</h4>
+<div class="outline-text-4" id="text-org18bc670">
+<ul class="org-ul">
+<li>Mede uma grandeza física e transmite um sinal padronizado proporcional a faixa de variação da grandeza</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf8f4ee6" class="outline-4">
+<h4 id="orgf8f4ee6">Controlador</h4>
+<div class="outline-text-4" id="text-orgf8f4ee6">
+<ul class="org-ul">
+<li>Recebe sinais dos transmissores/sensores e com base nisso, faz a correção do sistema acionando os atuadores</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org58caec3" class="outline-4">
+<h4 id="org58caec3">Atuador/Elemento final de controle</h4>
+<div class="outline-text-4" id="text-org58caec3">
+<ul class="org-ul">
+<li>Provoca uma mudança em uma variável do processo de acordo com um sinal enviado pelo controlador do processo.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3d85b1a" class="outline-2">
+<h2 id="org3d85b1a">Aula 24/02</h2>
+<div class="outline-text-2" id="text-org3d85b1a">
+<ul class="org-ul">
+<li>Fazer pré-rascunho de um artigo (sozinho), contendo Introdução, Problemática, Objetivo&#x2026;</li>
+<li>Aqui está o <a href="https://luispengler.github.io/site/org-pages/notes/12th-grade/doc/instrumentacao1/instrumentacao1.pdf">artigo pronto</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8c38ed6" class="outline-2">
+<h2 id="org8c38ed6">Aula 25/02</h2>
+<div class="outline-text-2" id="text-org8c38ed6">
+</div>
+<div id="outline-container-org33e2bb5" class="outline-4">
+<h4 id="org33e2bb5">Zero Vivo</h4>
+<div class="outline-text-4" id="text-org33e2bb5">
+<ul class="org-ul">
+<li>Transmissão de um sinal de 4 a 20mA, com 4 sendo o 0% do nível de água de um recipiente. 20mA representa 10%</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge199fe7" class="outline-3">
+<h3 id="orge199fe7">Características dos sistemas de medição</h3>
+<div class="outline-text-3" id="text-orge199fe7">
+</div>
+<div id="outline-container-org283752b" class="outline-4">
+<h4 id="org283752b">Faixa nominal (nominal range)</h4>
+<div class="outline-text-4" id="text-org283752b">
+<ul class="org-ul">
+<li>Limite superior e inferior da faixa de trabalho do instrumento</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org52c4d33" class="outline-4">
+<h4 id="org52c4d33">Fundo de escala</h4>
+<div class="outline-text-4" id="text-org52c4d33">
+<ul class="org-ul">
+<li>Valor máximo que um instrumento de medida pode medir sem ser danificado</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge363968" class="outline-2">
+<h2 id="orge363968">Aula 03/03</h2>
+<div class="outline-text-2" id="text-orge363968">
+<ul class="org-ul">
+<li>O professor fez a correção da atividade entregue anteriormente (aula 24/02)</li>
+<li>Fomos apresentados o sensor infrared difuse e o infrared retroreflective. Depois fomos pedidos para escolher o melhor desses dois para identificar a passagem de ouro numa linha de trituração e o melhor entre os dois para identificar se há um objeto passando OU NÃO em uma linha de produção.</li>
+<li>Retro-reflective: Sinal lógico 0 quando nada está passando. Mas existem dois tipos, aqueles que emitem ondas polarizadas e que não. Não polarizados não saberiam diferenciar o seu espelho retro-refletor de um objeto metálico, se este redirecionasse o feixe do emissor diretamente no receptor. Neste caso, objetos metálicos, às vezes, fariam o nível lógico voltar pra 0. Com objetos normais, o nível lógico continuaria sendo 1. É sensível até 7m. No entanto, para o tipo de ondas polarizadas, qualquer objeto que interrompa o feixe, mesmo que este seja metálico (ou até outro espelho!), o sinal lógico vai ser 1. É sensível de 3 a 5,5m.</li>
+<li>Difuse: A diferença entre este e o anterior, é que usam o alvo para mandar a luz de volta (em vez de um espelho). No entanto, nem todos os alvos são bons em emitir luz de volta e precisam estar mais perto do que alguns para serem detectados. Sensores de proximidade difusos tem um alcance de até 500mm. Qualquer alvo dentro deste alcance vai ser visto, contanto que reflita luz suficiente. Para aplicações menores (com alvos menores), existe o tipo de foco fixo. O foco do emissor e receptor estão no mesmo ponto do espaço, aumentando a sua precisão, mas diminuindo o alcance quando comparados com sensores de proximidade difusos. Alcance de geralmente até 70mm.</li>
+<li>Resposta (remover depois) difuso para o do ouro e retoreflector não polarizado para linha de produção</li>
+<li>Aqui está o artigo pronto</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1619406" class="outline-2">
+<h2 id="org1619406">Aula 04/03</h2>
+<div class="outline-text-2" id="text-org1619406">
+<ul class="org-ul">
+<li>Prova semana que vem (atividade avaliativa) até a Aula 3 no moodle</li>
+</ul>
+</div>
+<div id="outline-container-org28aa0d5" class="outline-3">
+<h3 id="org28aa0d5">Tipos de sensores</h3>
+<div class="outline-text-3" id="text-org28aa0d5">
+<ul class="org-ul">
+<li>Sensores industriais: Pega uma variável e transforma em outra variável mais conveniente</li>
+<li>Sesnsores podem ser do tipo discreto e contínuo</li>
+</ul>
+</div>
+
+<div id="outline-container-org74eecf3" class="outline-4">
+<h4 id="org74eecf3">Sensores discretos</h4>
+<div class="outline-text-4" id="text-org74eecf3">
+<ul class="org-ul">
+<li>Apenas ligado ou desligado</li>
+<li>Ex: Chave fim de curso</li>
+</ul>
+</div>
+
+<div id="outline-container-org4cd4580" class="outline-5">
+<h5 id="org4cd4580">Sensores de proximidade discretos</h5>
+<div class="outline-text-5" id="text-org4cd4580">
+<ul class="org-ul">
+<li>Detectar a presença de um determinado objeto e chaves eletromecânicas são atuadas em função disso</li>
+<li>Usado para detecção de posição, contagem de peças, medição da velocidade, detecção do nível de água e detecção de altura, detecção de forma, detecção de ferramenta</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb210046" class="outline-5">
+<h5 id="orgb210046">Definições Básicas</h5>
+<div class="outline-text-5" id="text-orgb210046">
+<ul class="org-ul">
+<li>Face sensora: superficie de onde sai campo elétrico ou campo eletromagnético</li>
+<li>Distância sensora nominal (Sn): Distância teórica que os sensores são específicados. Não significa que ele sempre vai operar nessa faixa.</li>
+<li>Distância sensora operacional (Sa): Distância segura, em que se considera todas as variáveis de industrialização, temperatura e tensão de alimentação.</li>
+</ul>
+<p>
+\[S_{a}=0,81\cdot S_{n}\]
+</p>
+<ul class="org-ul">
+<li>Alvo padrão: É um acionador normalizado para calibrar a distância sensore nominal durante o processo de fabriação do sensor. Este consiste de uma chapa de aço de 1mm de espessura, formato quadrado, mas essas medidas mudam por sensor.</li>
+<li>Histerese: Diferença entre o ponto de acionamento e o ponto de desligamento. Basicamente a medida (em m, mm, cm, etc) da diferença de desligar ou ligar um sensor</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge2a0ebd" class="outline-5">
+<h5 id="orge2a0ebd">Configurações elétricas em corrente contínua</h5>
+<div class="outline-text-5" id="text-orge2a0ebd">
+<ul class="org-ul">
+<li>Apresentam várias formas de estágios de saída.</li>
+<li>A configuração elétrica em corrente contínua é bastante usada na automação de processos.</li>
+<li>Existem dois tipos de transistores de saída
+<ul class="org-ul">
+<li>Um que comuta o terminal positivo da fonte (PNP)</li>
+<li>Otro que comuta o terminal negativo da fonte (NPN)</li>
+</ul></li>
+<li>Esses tipos de sensores apresentam características que dependem do conhecimento das definições abaixo
+<ul class="org-ul">
+<li>Normalmente aberto (NO) (NA): O transistor de saída está normalmente cortado, com o sensor desativado, assim a carga está desativada também.</li>
+<li>Normalmente fechado (NC) (NF): O transistor de saída está normalmente saturado, com o sensor ativado, assim a carga está ativada também.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7864955" class="outline-5">
+<h5 id="org7864955">Tipos de sensores de proximidade</h5>
+<div class="outline-text-5" id="text-org7864955">
+</div>
+<ul class="org-ul">
+<li><a id="org357aa62"></a>Indutivos: detectam a proximidade de elementos metálicos sem a necessidade de contato<br />
+<div class="outline-text-6" id="text-org357aa62">
+<ul class="org-ul">
+<li>Este gera um campo eletromagnético que é gerado por uma bobina ressonante instalada na face sensora</li>
+<li>Sua distância sensora operacional depende do tipo de material e é multiplicada por um fator de redução</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org5b329a6"></a>Magnéticos: detectam a proximidade de um imã, atuando de acordo com a sua presença e ausência<br /></li>
+<li><a id="org7968b17"></a>Capacitivos: detectam a presença de materiais orgânicos, pós, líquidos, entre outros. Assim como objetos dentro de objetos (líquidos dentro de garrafas)<br />
+<div class="outline-text-6" id="text-org7968b17">
+<ul class="org-ul">
+<li>Consiste de duas placas paralelas (armaduras) e isoladas por um dielétrico</li>
+<li>O valor da capacitância pode ser alterado pela aproximação de um objeto</li>
+<li>Por serem utilizados em uma grande variedade de objetos, geralmente há algum tipo de ajuste de sensibilidade presente na parte traseira do sensor.</li>
+<li>Permissividade relativa: uma medida do aumento de capacidade de armazenar energia em um meio dielétrico sob efeito de um campo elétrico. Quanto maior esse valor, maior a quantidade de cargas elétricas que o capacitor será capaz de armazenar em suas armaduras.</li>
+<li>São influenciados pela densidade do meio onde o sensor está instalado, então tomar cuidado com este ambiente</li>
+</ul>
+</div>
+</li>
+
+<li><a id="orgd284116"></a>Sensores de proximidade fotoelétricos<br />
+<div class="outline-text-6" id="text-orgd284116">
+<ul class="org-ul">
+<li>Denomidados de sensores ótpicos, os quais manipulam a luz para detectar a presença de um objeto dentro de uma área delimitada</li>
+<li>Transmissor: Apenas sensores fotoelétricos ativos o apresentam. Este componente envia um feixe de luz através de um LED. Esses flashes são de alta potência e de curta duração</li>
+<li>Receptor: Composto por um fototransistor que é sensível à luz emitida pelo transmissor</li>
+<li>Conversor de sinal: Converte os pulsos de luz do transmissor em sinais elétricos.</li>
+<li>Estes ainda podem ser
+<ul class="org-ul">
+<li>Ativos: Necessitam de transmissor e receptor de infravermelho separados</li>
+<li>Passivos: Apresentam somente receptores pois não emitem ondas infravermelhas</li>
+</ul></li>
+</ul>
+</div>
+
+<ul class="org-ul">
+<li><a id="orgb2f551d"></a>Sistema por barreira direta<br />
+<div class="outline-text-7" id="text-orgb2f551d">
+<ul class="org-ul">
+<li>Transmissor e receptor estão em unidades distintas e devem ser dispostos frente a frente</li>
+<li>Quando houver alguma interrupção, a saída será acionada</li>
+</ul>
+</div>
+</li>
+<li><a id="org9779d1c"></a>Sistema por difusão<br />
+<div class="outline-text-7" id="text-org9779d1c">
+<ul class="org-ul">
+<li>O transmissor e receptor são montados na mesma unidade</li>
+<li>O acionamento da saída ocorre quando o objeto a ser detectado entre na região de sensibilidade e reflete para o receptor o feixe de luz emitido pelo transmissor</li>
+<li>É muito eficiente com objetos metálicos, pois depende do índice de reflexão do objeto</li>
+<li>É calibrado com uma folha de papel branco, apresentando índice de refletividade de 90%</li>
+</ul>
+<p>
+\[S_{a}=0,81\cdot S_{n}\cdot F\]
+</p>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga88534f" class="outline-2">
+<h2 id="orga88534f">Aula 10/03</h2>
+<div class="outline-text-2" id="text-orga88534f">
+<ul class="org-ul">
+<li>Instrumentamos sensores capacitivos e indutivos com diversos materiais (silicone, joelho de cano pvc, cabo de cobre isolado com borracha)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orged46100" class="outline-2">
+<h2 id="orged46100">Aula 11/03</h2>
+<div class="outline-text-2" id="text-orged46100">
+</div>
+<div id="outline-container-org35c67ee" class="outline-3">
+<h3 id="org35c67ee">Sensores de proximidade ultrassônicos</h3>
+<div class="outline-text-3" id="text-org35c67ee">
+<ul class="org-ul">
+<li>Emprega frequências fora do espectro de audição humana, determinando a distância de objetos (proximidade)</li>
+<li>A detecção acontece quando a onda bate sobre um objeto e produz um eco</li>
+<li>O tempo de repetição do eco é medido, sendo convertido em um sinal elétrico.</li>
+<li>Existe uma repetição desses pulsos de onda mecânica de 1 a 100Hz.</li>
+</ul>
+</div>
+<div id="outline-container-org79c0f9b" class="outline-4">
+<h4 id="org79c0f9b">Vantagens</h4>
+<div class="outline-text-4" id="text-org79c0f9b">
+<ul class="org-ul">
+<li>Detcção sem contato direto</li>
+<li>Detecção idependente da cor</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga884337" class="outline-4">
+<h4 id="orga884337">Desvantages</h4>
+<div class="outline-text-4" id="text-orga884337">
+<ul class="org-ul">
+<li>Dificuldade de detecção se há muitas irregularidades no objeto</li>
+<li>Esse sensor é relativamente lento (porque usa som)</li>
+<li>Custo maior comparado aos fotoelétricos</li>
+<li>Podem ser influenciados pela temperatura (porque a velocidade do som muda de acordo com a temperatura)</li>
+<li>Dificuldade no uso de vários sensores ultrassônicos próximos (por causa da interferência)</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgad1a636" class="outline-3">
+<h3 id="orgad1a636">Sensor óptico de posição (encoder)</h3>
+<div class="outline-text-3" id="text-orgad1a636">
+<ul class="org-ul">
+<li>Detectam a posição de um objeto com respeito a um ponto de referência</li>
+<li>Podem medir distâncias lineares quanto angulares</li>
+<li>Funciona convertendo o movimento ou posição angular em uma série de pulsos.</li>
+</ul>
+</div>
+<div id="outline-container-org3e3f4c1" class="outline-4">
+<h4 id="org3e3f4c1">Encoder absoluto</h4>
+<div class="outline-text-4" id="text-org3e3f4c1">
+<ul class="org-ul">
+<li>Definimos a posição absoluta do encoder através de um código</li>
+<li>O código mais utilizado é o binário, mas pode ser o código de Gray</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5c65973" class="outline-4">
+<h4 id="org5c65973">Encoder Incremental</h4>
+<div class="outline-text-4" id="text-org5c65973">
+<ul class="org-ul">
+<li>Possui apenas uma trilha com dentes igualmente espaçados</li>
+<li>A resolução é dada pela relação pulso/revolução (chamado de PPR) - Quantos pulsos de luz por cada volta?</li>
+<li>Podem ser dividos em simples e quadratura</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Luís Spengler</p>
+<p class="date">Created: 2022-03-13 Sun 16:40</p>
+</div>
+</body>
+</html>
