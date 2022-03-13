@@ -42,7 +42,7 @@
 + 3 tecnologias para inversores identificar o ponto de máxima potência (MPPT = Rastreamento de ponto de máxima potência)
 + Abaixo há um gráfico IxW
 #+ATTR_HTML: alt: waterwave :title Curva T-W :style margin-left: auto;margin-right: auto;background-color: mintcream;display: block;width: 100%;
-https://luispengler.github.io/site/org-pages/notes/12th-grade/doc/meioambiente1.png
+https://luispengler.github.io/virtual-notebook/12th-grade/doc/meioambiente1.png
 
 ** Formas de conexão dos painéis
 + Sistemas em baixa tensão com micro inversor
