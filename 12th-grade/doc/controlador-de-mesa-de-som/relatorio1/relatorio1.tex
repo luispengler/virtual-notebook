@@ -12,6 +12,7 @@
 \usepackage{wrapfig}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{karnaugh-map}
 \usepackage[parfill]{parskip}
 \usepackage[nottoc]{tocbibind}
 \usepackage[backend=biber]{biblatex}
@@ -49,6 +50,7 @@ O problema pode ser esboçado de acordo com o texto acima.
 \includegraphics[width=\textwidth]{esbocoroubado}
 
 \subsection{Definição das variáveis de entrada e saída e seus estados em uma tabela verdade}
+Foi considerado cada usuário do microfone como uma variável, estes sendo as variáveis de entrada (ChP, ChD, ChC). As suas respectivas saídas (SP, SD, SC) foram definidas como variáveis de saída. Obedecendo a prioridade de cada falante, as saídas na tabela verdade abaixo, podem ter seus estados definidos.
 \begin{displaymath}
 \begin{array}{|c c c|c c c|}
 INPUT & & & OUTPUT &\\
@@ -69,6 +71,31 @@ ChP & ChD & ChC & SP & SD & SC\\
 \subsection{Obtenção da expressão de saída}
 
 \subsection{Mapa de Karnaugh}
+Mapa de Karnaugh para a saída do presidente (SP)
+
+\begin{karnaugh-map}*[4][2][1][$ChPChD$][$ChC$]
+	\minterms{2,3,6,7}
+	\maxterms{0,1,4,5}
+	\indeterminants{2,5}
+	\implicant{3}{2}
+	\implicant{7}{6}
+\end{karnaugh-map}
+
+Mapa de Karnaugh para a saída do diretor (SD)
+
+\begin{karnaugh-map}*[4][2][1][$ChPChD$][$ChC$]
+	\maxterms{0,2,3,4,6,7}
+	\minterms{1,5}
+	\implicant{1}{5}
+\end{karnaugh-map}
+
+Mapa de Karnaugh para a saída do coordenador (SC)
+
+\begin{karnaugh-map}*[4][2][1][$ChPChD$][$ChC$]
+	\maxterms{0,1,2,3,5,6,7}
+	\minterms{4}
+	\implicant{4}{4}
+\end{karnaugh-map}
 
 \subsection{Simplificação da expressão pelo mapa de Karnaugh}
 
@@ -77,7 +104,6 @@ ChP & ChD & ChC & SP & SD & SC\\
 \subsection{Implementação do hardware a partir do circuito lógico}
 
 \section{Conclusão}
-
 
 \medskip
 
