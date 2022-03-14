@@ -32,9 +32,23 @@
 
 \medskip
 
-\section{}
-\subsection{Problema proposto}
+\section{Problema proposto}
+Uma mesa de som conecta três microfones numa única caixa de som amplificada, que são: Microfone Presidente, Microfone Diretor e Microfone Coordenador. Sabendo que somente um microfone pode falar por vez. Elabore um circuito lógico combinacional que permita ligar os microfones segundo a prioridade abaixo:
 
+Prioridade 1 : Presidente         
+
+Prioridade 2 : Diretor
+
+Prioridade 3 : Coordenador
+
+Cada Microfone é acionado pelo usuário por um interruptor  ( liga-desliga) (ChP, ChD, ChC). Cada microfone  ao ser acionado tem sua saída  comutada (0 ou 1) informando ao circuito lógico,  que por sua vez, aciona uma das  saídas (SP, SD, SC), para a caixa amplificada. Então, quando o Presidente ligar seu microfone, terá prioridade sobre os demais. Quando o Diretor ligar seu microfone só terá prioridade sobre o  Coordenador. O Coordenador só fala quando os demais não estiverem com seus microfones ligados.
+
+\subsection{Esboço do esquema proposto}
+O problema pode ser esboçado de acordo com o texto acima.
+
+\includegraphics[width=\textwidth]{esbocoroubado}
+
+\subsection{Definição das variáveis de entrada e saída e seus estados em uma tabela verdade}
 \begin{displaymath}
 \begin{array}{|c c c|c c c|}
 INPUT & & & OUTPUT &\\
@@ -52,9 +66,18 @@ ChP & ChD & ChC & SP & SD & SC\\
 \end{array}
 \end{displaymath}
 
+\subsection{Obtenção da expressão de saída}
+
+\subsection{Mapa de Karnaugh}
+
+\subsection{Simplificação da expressão pelo mapa de Karnaugh}
+
+\subsection{Obtenção do circuito lógico}
+
+\subsection{Implementação do hardware a partir do circuito lógico}
+
 \section{Conclusão}
 
-Por fim, pode-se concluir que todos os gates (portas) testados experimentalmente neste relatório estavam funcionando corretamente. Até mesmo sua implementação na criação de uma porta NAND funcionou conforme esperado.
 
 \medskip
 

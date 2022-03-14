@@ -4,6 +4,7 @@
 #+LaTeX_+HEADER: \usepackage{physics}
 #+LaTeX_+HEADER: \usepackage{amsmath}
 #+OPTIONS: num:nil ^:{} toc:2
+=Nota= Esse caderno tem poucas adições devido a política de senhorito do professor Fernando.
 
 * Primeira Aula
 O professor só introduziu a disciplina, mas começando uma revisão de eletricidade 2 e máquinas elétricas e acionamentos 1, tanto nas aulas teóricas, quanto nas práticas
@@ -29,5 +30,3 @@ O professor disse que a tensão era o conceito mais fundamental da eletricidade 
 + Entendemos os tipos de ligações dentro dos motores de indução trifásicos apresentados
 + Um dos modelos era o que eu chamo de "bivolt manual". Era possível ligar ele em 220V, se fosse uma ligação delta. Em 380V esta era uma ligação estrela.
 
-* Aula 08/03 (Aula prática)
-+
