@@ -45,12 +45,20 @@ Prioridade 3 : Coordenador
 Cada Microfone é acionado pelo usuário por um interruptor  ( liga-desliga) (ChP, ChD, ChC). Cada microfone  ao ser acionado tem sua saída  comutada (0 ou 1) informando ao circuito lógico,  que por sua vez, aciona uma das  saídas (SP, SD, SC), para a caixa amplificada. Então, quando o Presidente ligar seu microfone, terá prioridade sobre os demais. Quando o Diretor ligar seu microfone só terá prioridade sobre o  Coordenador. O Coordenador só fala quando os demais não estiverem com seus microfones ligados.
 
 \subsection{Esboço do esquema proposto}
-O problema pode ser esboçado de acordo com o texto acima.
+O problema pode ser esboçado de acordo com o texto apresentado acima.
 
 \includegraphics[width=\textwidth]{esbocoroubado}
 
-\subsection{Definição das variáveis de entrada e saída e seus estados em uma tabela verdade}
-Foi considerado cada usuário do microfone como uma variável, estes sendo as variáveis de entrada (ChP, ChD, ChC). As suas respectivas saídas (SP, SD, SC) foram definidas como variáveis de saída. Obedecendo a prioridade de cada falante, as saídas na tabela verdade abaixo, podem ter seus estados definidos.
+\section{Solução do problema proposto}
+
+\subsection{Identificação das variáveis de entrada e saída}
+Foi definido a cada usuário do microfone uma variável distinta, estas sendo as variáveis de entrada (ChP, ChD, ChC). Foram definidas como variáveis de saída SP, SD e SC, suas respectivas saídas.
+
+\subsection{Identificação dos estados das variáveis de entrada e saída}
+As entradas (ChP, ChD, ChC) apenas serão 1 (nível lógico alto) quando os usuários tiverem seus microfones ligados. Se todos tiverem seus microfones ligados, então ChP=1, ChD=1, ChC=1. No entanto, em um estado inicial, todas as variáveis serão igual a 0, portanto: ChP=0, ChD=0, ChC=0. Conforme a conversa prossegue, cada um dos usuários (que aqui são as variáveis de entrada), alterarão o seu estado lógico para o nível 1.
+
+\subsection{Montagem da tabela verdade}
+ Obedecendo a prioridade de cada falante, as saídas na tabela verdade podem ter seus estados definidos pelos valores abaixo.
 \begin{displaymath}
 \begin{array}{|c c c|c c c|}
 INPUT & & & OUTPUT &\\
@@ -69,6 +77,17 @@ ChP & ChD & ChC & SP & SD & SC\\
 \end{displaymath}
 
 \subsection{Obtenção da expressão de saída}
+A partir da tabela verdade, pôde-se obter as seguintes expressões:
+\begin{enumerate}
+	\item Para SP, em função de ChP:
+		\[SP=ChP\cdot ChC' + ChP\cdot ChC\]
+		\[SP=ChP\cdot (ChC' + ChC)\]
+		\[SP=ChP\]
+	\item Para SD, em função de ChD:
+		\[SD=ChP'\cdot ChD\]
+	\item Para SC, em função de ChC:
+		\[SC=(ChP'\cdot ChD')\cdot ChC\]
+\end{enumerate}
 
 \subsection{Mapa de Karnaugh}
 Mapa de Karnaugh para a saída do presidente (SP)
@@ -98,6 +117,15 @@ Mapa de Karnaugh para a saída do coordenador (SC)
 \end{karnaugh-map}
 
 \subsection{Simplificação da expressão pelo mapa de Karnaugh}
+A única expressão que pôde ser simplificada através do mapa de Karnaugh é a expressão referente à SP em função de ChP, pois apenas esta apresenta uma propriedade de simplificação.
+
+\begin{karnaugh-map}*[4][2][1][$ChPChD$][$ChC$]
+	\minterms{2,3,6,7}
+	\maxterms{0,1,4,5}
+	\indeterminants{2,5}
+	\implicant{3}{2}
+	\implicant{7}{6}
+\end{karnaugh-map}
 
 \subsection{Obtenção do circuito lógico}
 

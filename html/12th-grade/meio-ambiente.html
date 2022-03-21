@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-03-13 Sun 18:04 -->
+<!-- 2022-03-17 Thu 21:44 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Meio Ambiente e Energias Renováveis</title>
@@ -204,10 +204,171 @@
 <body>
 <div id="content" class="content">
 <h1 class="title">Meio Ambiente e Energias Renováveis</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgb4a8239">Aula (03/03)</a>
+<ul>
+<li><a href="#org822445c">Sistema Off-grid</a></li>
+<li><a href="#org25286e1">Sistema On-grid</a></li>
+<li><a href="#orgc978e26">Formas de geração distribuida</a></li>
+<li><a href="#org70866e2">Módulo Solar Fotovoltaico</a></li>
+<li><a href="#org18d49af">Circuito Equivalente de um paniel solar fotovoltáico</a></li>
+<li><a href="#org082de42">Curva I-V</a></li>
+<li><a href="#orgc3fc3a3">Formas de conexão dos painéis</a></li>
+<li><a href="#orgf0eb2fd">O problema das sombras</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb4a8239" class="outline-2">
+<h2 id="orgb4a8239">Aula (03/03)</h2>
+<div class="outline-text-2" id="text-orgb4a8239">
+</div>
+<div id="outline-container-org822445c" class="outline-3">
+<h3 id="org822445c">Sistema Off-grid</h3>
+<div class="outline-text-3" id="text-org822445c">
+<ul class="org-ul">
+<li>Ideal para lugares onde a energia elétrica não chega</li>
+<li>Economicamente inviável, por conta dos elevados custos e vida útil das baterias reduzidas</li>
+<li>Todo projeto deve ser sobredimensionado, considerando demanda diária e capacidade de pico (todos aparelhos ligados), assim projetando as placas para funcionar no pior cenário, desperdiçando energia gerada.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org25286e1" class="outline-3">
+<h3 id="org25286e1">Sistema On-grid</h3>
+<div class="outline-text-3" id="text-org25286e1">
+<ul class="org-ul">
+<li>Painel solar + Inversor + Medição</li>
+<li>O medidor precisa ser trocado (para modelo bidirecional), mas a troca do medidor é coberta pela concessionária</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc978e26" class="outline-3">
+<h3 id="orgc978e26">Formas de geração distribuida</h3>
+<div class="outline-text-3" id="text-orgc978e26">
+</div>
+<div id="outline-container-orgdbe43a5" class="outline-4">
+<h4 id="orgdbe43a5">até 70Kw (microgeração)</h4>
+<div class="outline-text-4" id="text-orgdbe43a5">
+<ul class="org-ul">
+<li>Altamente desburocratizada</li>
+<li></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4e9e78f" class="outline-4">
+<h4 id="org4e9e78f">de 70Kw à 5Mw (minigeração)</h4>
+<div class="outline-text-4" id="text-org4e9e78f">
+<ul class="org-ul">
+<li>É necessário um estudo de rede</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org70866e2" class="outline-3">
+<h3 id="org70866e2">Módulo Solar Fotovoltaico</h3>
+<div class="outline-text-3" id="text-org70866e2">
+<ul class="org-ul">
+<li>São células de aprox. 0,65V ligadas em série</li>
+<li>Quanto mais luz, menos calor = mais energia</li>
+<li>Pensar no inversor de acordo com a tensão máxima e mínima das suas placas, pois com variações de temperatura para uma mesma luminosidade, a tensão varia. Isso pode tirar o inversor da rede.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org18d49af" class="outline-3">
+<h3 id="org18d49af">Circuito Equivalente de um paniel solar fotovoltáico</h3>
+<div class="outline-text-3" id="text-org18d49af">
+<ul class="org-ul">
+<li>Esquematizado no meu caderno (lol)</li>
+<li>Não existe um diodo de verdade lmao</li>
+<li>Rp = Resistência Paralela -&gt; Fulgas internas</li>
+<li>Rs = Resistência Série -&gt; Resistências internas e dos condutores</li>
+<li>Dp = Diodo Paralelo</li>
+</ul>
+</div>
+<div id="outline-container-org16266eb" class="outline-4">
+<h4 id="org16266eb">Dados no datasheet</h4>
+<div class="outline-text-4" id="text-org16266eb">
+<ul class="org-ul">
+<li>Short-circuit current: Corrente de curto circuito (dica se estiver com defeito)</li>
+<li>Open-circuit voltage: Tensão de circuito aberto (desconectado) (operação nos dias frios)</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org082de42" class="outline-3">
+<h3 id="org082de42">Curva I-V</h3>
+<div class="outline-text-3" id="text-org082de42">
+<ul class="org-ul">
+<li>Tensão e corrente variam</li>
+<li>3 tecnologias para inversores identificar o ponto de máxima potência (MPPT = Rastreamento de ponto de máxima potência)</li>
+<li>Abaixo há um gráfico IxW</li>
+</ul>
+
+<div id="orgf4b1fcd" class="figure">
+<p><img src="https://luispengler.github.io/virtual-notebook/12th-grade/doc/meioambiente1.png" alt="meioambiente1.png" title="Curva T-W" style="margin-left: auto;margin-right: auto;background-color: mintcream;display: block;width: 100%;" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc3fc3a3" class="outline-3">
+<h3 id="orgc3fc3a3">Formas de conexão dos painéis</h3>
+<div class="outline-text-3" id="text-orgc3fc3a3">
+<ul class="org-ul">
+<li>Sistemas em baixa tensão com micro inversor</li>
+<li>Ligar os painéis em série -&gt; aumentar a tensão</li>
+<li>Ligar os painéis em paralelo -&gt; aumentar a corrente</li>
+</ul>
+</div>
+
+<div id="outline-container-orgf085e8d" class="outline-4">
+<h4 id="orgf085e8d">String: Painéis em Série</h4>
+<div class="outline-text-4" id="text-orgf085e8d">
+<ul class="org-ul">
+<li>Maior eficiência, menor o custo</li>
+<li>Alta tensão DC</li>
+<li>Maior possibilidade de falhas em projetos</li>
+<li>Problemas em um painel afetará toda a string</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd1db13a" class="outline-4">
+<h4 id="orgd1db13a">Array: Série paralelo</h4>
+<div class="outline-text-4" id="text-orgd1db13a">
+<ul class="org-ul">
+<li>Menor custo para instalação</li>
+<li>Único MMPT para todos os painéis, acentuando as perdas em caso de falha de algum paniel</li>
+<li>Protação contra curto circuito</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf0eb2fd" class="outline-3">
+<h3 id="orgf0eb2fd">O problema das sombras</h3>
+<div class="outline-text-3" id="text-orgf0eb2fd">
+<ul class="org-ul">
+<li>A sombra desvia a energia gerada para a resistência, que é o unico condutor fechado, assim sobreaquecendo o painel</li>
+<li>As sombras paricias são piores, porque se fossem totais, a célula no escuro sairia da geração, minimizando os efeitos da sombra.</li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luís Spengler</p>
-<p class="date">Created: 2022-03-13 Sun 18:04</p>
+<p class="date">Created: 2022-03-17 Thu 21:44</p>
 </div>
 </body>
 </html>

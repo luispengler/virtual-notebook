@@ -6,9 +6,9 @@
 <!-- 2022-03-17 Thu 21:44 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Máquinas Elétricas e Acionamentos 2 - Meu caderno virtual</title>
+<title>Pneumática e Hidráulica</title>
 <meta name="author" content="Luís Spengler" />
-<meta name="description" content="Máquinas Elétricas e Acionamentos 2 - Meu caderno virtual" />
+<meta name="description" content="Pneumática e Hidráulica - Meu caderno virtual" />
 <meta name="generator" content="Org Mode" />
 <style>
   #content { max-width: 60em; margin: auto; }
@@ -224,72 +224,190 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Máquinas Elétricas e Acionamentos 2 - Meu caderno virtual</h1>
+<h1 class="title">Pneumática e Hidráulica</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org1e0b088">Primeira Aula</a></li>
-<li><a href="#org5b8dea0">Segunda Aula</a></li>
-<li><a href="#orgaa139ad">Aula 07/03 (Aula prática)</a></li>
+<li><a href="#org6aa5c98">Mecânica dos Fluidos</a></li>
+<li><a href="#org554eb25">Massa específica</a></li>
+<li><a href="#orgd196374">Peso específico</a></li>
+<li><a href="#orge0d225a">Peso específico relativo para líquidos</a></li>
+<li><a href="#orgb93e2ba">Tensão de cisalhamento</a></li>
+<li><a href="#org4c20123">Lei de Newton da Viscosidade</a></li>
+<li><a href="#orgfd03d64">Viscosidade cinemática (v)</a></li>
+<li><a href="#orgd70d4a9">Estática dos fluidos</a>
+<ul>
+<li><a href="#org081b326">Teorema de Stevin</a></li>
+<li><a href="#org3735eec">Lei de Pascal</a></li>
+<li><a href="#orge9fc0ef">Carga de Pressão</a></li>
+<li><a href="#org778b092">Escalas de pressão</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
-<p>
-<code>Nota</code> Esse caderno tem poucas adições devido a política de senhorito do professor Fernando.
-</p>
 
-<div id="outline-container-org1e0b088" class="outline-2">
-<h2 id="org1e0b088">Primeira Aula</h2>
-<div class="outline-text-2" id="text-org1e0b088">
-<p>
-O professor só introduziu a disciplina, mas começando uma revisão de eletricidade 2 e máquinas elétricas e acionamentos 1, tanto nas aulas teóricas, quanto nas práticas
-</p>
+<div id="outline-container-org6aa5c98" class="outline-2">
+<h2 id="org6aa5c98">Mecânica dos Fluidos</h2>
+<div class="outline-text-2" id="text-org6aa5c98">
+<ul class="org-ul">
+<li>Parte da mecânica que se dedica à análise do comportamento dos líquidos e gases</li>
+<li>Fluídos não têm forma própria, assumen o formato do recipiente</li>
+</ul>
+</div>
+</div>
 
+<div id="outline-container-org554eb25" class="outline-2">
+<h2 id="org554eb25">Massa específica</h2>
+<div class="outline-text-2" id="text-org554eb25">
+<ul class="org-ul">
+<li>Fluídos incompressíveis têm \[\rho\]</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd196374" class="outline-2">
+<h2 id="orgd196374">Peso específico</h2>
+<div class="outline-text-2" id="text-orgd196374">
 <p>
-O professor disse que a tensão era o conceito mais fundamental da eletricidade que a gente trabalha. Sem tensão, não há palavras chiques: corrente, resistência, capacitância, campo eletromagnético&#x2026;
+\[\gamma=\frac{G}{V}=\frac{m\cdot g}{V}=\rho \cdot g\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge0d225a" class="outline-2">
+<h2 id="orge0d225a">Peso específico relativo para líquidos</h2>
+</div>
+
+
+<div id="outline-container-orgb93e2ba" class="outline-2">
+<h2 id="orgb93e2ba">Tensão de cisalhamento</h2>
+<div class="outline-text-2" id="text-orgb93e2ba">
+<p>
+\[\tau=\frac{Ft}{A}=\frac{N}{m^2}\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4c20123" class="outline-2">
+<h2 id="org4c20123">Lei de Newton da Viscosidade</h2>
+<div class="outline-text-2" id="text-org4c20123">
+<ul class="org-ul">
+<li>Proporcionalidade entre a tensão de cisalhamento e o gradiente da velocidade</li>
+</ul>
+<p>
+\[\tau=\mu\cdot \frac{dv}{dy}=Pa\cdot s; \frac{N\cdot s}{m^2}; Poise\]
 </p>
 
 <ul class="org-ul">
-<li>Campo Grande tem uma tensão fase-neutro de 127V, fase-fase é de 220V</li>
-<li>Bahia tem uma tensão fase-neutro de 220V, fase-fase é de 380V</li>
+<li>Quanto maior o \[\mu\] mais a facilidade de escoar</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org5b8dea0" class="outline-2">
-<h2 id="org5b8dea0">Segunda Aula</h2>
-<div class="outline-text-2" id="text-org5b8dea0">
+<div id="outline-container-orgfd03d64" class="outline-2">
+<h2 id="orgfd03d64">Viscosidade cinemática (v)</h2>
+<div class="outline-text-2" id="text-orgfd03d64">
 <ul class="org-ul">
-<li>Por causa da frequência, que é 1, onde T é o tempo decorrido de um ciclo completo em uma onda senoidal, que só acontece em C.A, temos:</li>
+<li>Propriedade definida a partir da viscosidade absoluta pela massa específica</li>
 </ul>
 <p>
-\[X_L=2\cdot \pi\cdot f\cdot L\]
-\[X_C=\frac{1}{2\cdot \pi\cdot f\cdot C}\]
+\[V=\frac{\mu}{\rho}\]
 </p>
-
 <ul class="org-ul">
-<li>Toda corrente trifásica pode ser calculada de acordo com as fórmulas abaixo, em função do tempo</li>
+<li>Molécula mais simples = menos viscoso</li>
+<li>Gás mais quente = mais viscoso</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd70d4a9" class="outline-2">
+<h2 id="orgd70d4a9">Estática dos fluidos</h2>
+<div class="outline-text-2" id="text-orgd70d4a9">
+<ul class="org-ul">
+<li>Estudo do fluido em repouso</li>
+<li>Hidrostática é outro termo utilizado para os estudos dos fluidos em repouso</li>
+<li>Em vasos comunicantes, o nível é o mesmo, independente da forma</li>
+<li>A pressão é descrita como a força normal aplicada sobre uma superfície</li>
 </ul>
 <p>
-\[ia(t)=im\cdot cos(\omega\cdot t+0º)\]
-\[ib(t)=im\cdot cos(\omega\cdot t-120º)\]
-\[ic(t)=im\cdot cos(\omega\cdot t+120º)\]
+\[P=\frac{F_n}{A}\]
 </p>
-
 <ul class="org-ul">
-<li>Em uma instalação trifásica os custos dos materiais são reduzidos em 25% para a mesma quantidade de energia transformada e gerada.</li>
+<li>Onde \[P\] é a pressão em Pascal, \[F_n\] força normal em N, e \[A\] área em \[m^2\]</li>
+<li>Não se deve confundir pressão com força, pois pressão é simplesmente força pela área (vai se ferrar se tu não sabe disso)</li>
 </ul>
+</div>
+
+<div id="outline-container-org081b326" class="outline-3">
+<h3 id="org081b326">Teorema de Stevin</h3>
+<div class="outline-text-3" id="text-org081b326">
+<p>
+\[P_n-P_m=\gamma\cdot h = \gamma\cdot (Z_m-Z_n)\]
+</p>
+<ul class="org-ul">
+<li>Na diferença de pressão entre dois pontos não interessa a distância entre eles, mas a diferença de cotas;</li>
+<li>A pressão dos pontos num mesmo plano ou nível horizontal é a mesma;</li>
+<li>O formato do recipiente não é importante para o cálculo da pressão em algum ponto</li>
+<li>Se a pressão na superfície de um líquido num recipiente for nula, a pressão num ponto à profundidade h dentro do líquido será dada por:</li>
+</ul>
+<p>
+\[P=\gamma\cdot h\]
+</p>
+<ul class="org-ul">
+<li>Nos gases, como o peso específico é pequeno, se a diferença de cota entre dois pontos não é muito grande, pode-se desprezar a diferença de pressão entre eles</li>
+</ul>
+<p>
+\[P_A\aprox P_B\aprox P_C\aprox\]
+</p>
 </div>
 </div>
 
-<div id="outline-container-orgaa139ad" class="outline-2">
-<h2 id="orgaa139ad">Aula 07/03 (Aula prática)</h2>
-<div class="outline-text-2" id="text-orgaa139ad">
+<div id="outline-container-org3735eec" class="outline-3">
+<h3 id="org3735eec">Lei de Pascal</h3>
+<div class="outline-text-3" id="text-org3735eec">
 <ul class="org-ul">
-<li>Entendemos os tipos de ligações dentro dos motores de indução trifásicos apresentados</li>
-<li>Um dos modelos era o que eu chamo de &ldquo;bivolt manual&rdquo;. Era possível ligar ele em 220V, se fosse uma ligação delta. Em 380V esta era uma ligação estrela.</li>
+<li>A pressão aplicada num ponto de fluido em repouso transmite-se integralmente a todos os pontos do fluido</li>
 </ul>
+</div>
+</div>
+<div id="outline-container-orge9fc0ef" class="outline-3">
+<h3 id="orge9fc0ef">Carga de Pressão</h3>
+<div class="outline-text-3" id="text-orge9fc0ef">
+<ul class="org-ul">
+<li>Pressão em um certo fluido em unidade de comprimento</li>
+</ul>
+<p>
+\[\frac{P}{\gamma}=h\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org778b092" class="outline-3">
+<h3 id="org778b092">Escalas de pressão</h3>
+<div class="outline-text-3" id="text-org778b092">
+<ul class="org-ul">
+<li>Pressão absoluta: A pressão é medida em relação ao vácuo ou zero absoluto</li>
+<li>Pressão efetiva: A pressão é medida adotando-se a pressão atmosfera como referência</li>
+<li>Pressão atmosférica: Também chamada de pressão barométrica e varia com a altitude</li>
+</ul>
+<p>
+\[P_{abs}=P_{ef}+P_{atm}\]
+</p>
+</div>
+<div id="outline-container-org0959762" class="outline-4">
+<h4 id="org0959762">Unidades de pressão</h4>
+<div class="outline-text-4" id="text-org0959762">
+<ul class="org-ul">
+<li>As unidades de pressão podem ser dividas em três grupos</li>
+<li>Unidades de pressão: \[\frac{kgf}{m^2};\frac={kgf}{cm^2};\frac{N}{m^2} ou Pa; \frac{daN}{cm^2} ou bar;\]</li>
+<li>Unidades de carga de pressão: mmHg (milímetros de coluna de mercúrio); mca (metros de coluna de água); cmca (centímetros de coluna de água)</li>
+<li>Unidades definidas: atm (atmosfera)</li>
+<li>Conversão: 1 atm = 760 mmHg = 101.203 Pa = 101,23 kPa = 10.330 kgf/m^2 = 1,033 kgf/cm^2 = 1,01 bar = 14,7 psi = 10,33 mca</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 </div>

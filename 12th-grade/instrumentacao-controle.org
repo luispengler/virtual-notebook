@@ -152,6 +152,9 @@ https://luispengler.github.io/virtual-notebook/12th-grade/doc/instrumenta1.jpg
 
 * Aula 10/03
 + Instrumentamos sensores capacitivos e indutivos com diversos materiais (silicone, joelho de cano pvc, cabo de cobre isolado com borracha)
++ Devemos retomar o trabalho da aula (03/03) com a adição desses dois novos sensores
++ Capacitive Proximity Sensors: They emit an electrical field from the sensing end of the sensor. Any target that can disrupt this electrical field can be dedected by a capacitive sensor. It can detect all types of metal, all types of plastic, wood, paper, glass, and cloth; liquids like water, oil, and paint. It can also detect a material in a nonmetallic container -- but these types have and ajustable sensing range. Same use as the retroreflective sensor (?)
++ Inductive Sensors: Can detect ferrous metal without physical contact, but it can also detect alluminun, brass, and copper, however its sensibility gets decreased by those materials
 
 * Aula 11/03
 ** Sensores de proximidade ultrassônicos
@@ -179,3 +182,32 @@ https://luispengler.github.io/virtual-notebook/12th-grade/doc/instrumenta1.jpg
 + Possui apenas uma trilha com dentes igualmente espaçados
 + A resolução é dada pela relação pulso/revolução (chamado de PPR) - Quantos pulsos de luz por cada volta?
 + Podem ser dividos em simples e quadratura
+* Aula 17/03
++ Fizemos a instrumentação de encoder incremental (rotary encoder)
+
+* Aula 18/03
++ Definição da data da recuperação da primeira prova (24/03-27/03)
++ Definição da data da P2 (07/04-10/04)
++ Definição da data da recuperação da P2 (22/04-24/04)
+** Medidores de pressão
+*** Coluna de líquido
++ O deslocamente de um líquido em função da pressão que é aplicada nas extremidades do tubo
++ Pode ser feito do tipo U, tipo reservatório (ou coluna reta vertical), tipo inclinado (ou coluna reta inclinada)
++ Eram muito utilizados em laboratório, mas foram subtituidos por instrumentos mais precisos
+*** Manômetro de pressão elástico
++ Manômetro tubo de Bourdon tipo C
++ Manômetro tubo de Bourdon tipo espiral - utilizado para pressões maiores e por causa do seu formato minimiza os efeitos da turbulência
++ Manômetro tubo de Bourdon tipo helicoidal - utilizado para pressões maiores que o espiral
++ Manômetro tipo Fole
++ Manômetro tipo Diafragma
+*** Medidor de pressão eletrônicos
++ Sensor de pressão piezoelétrico
++ Sensor de pressão piezorresistivo (Strain Gauge) - feito de materiais que alteram sua resistência quando a força é aplicada
++ Sensor de pressão capacitivo - a armadura móvel, ao sofrer uma variação de pressão, altera o valor da capacitância
++ Sensor de pressão indutivo
+** Medidor de nível
++ As medidas de nível permitem avaliar quantidades em tanques que contêm líquidos ou sólidos
++ É chamada de monitoramento contínuo, quando a saída é proporcional ao nível que se pretende medir
++ É chamada de monitoramento discreto, quando indica uma faixa ou presença de material armazenado
++ Medida de nível direta: realizada como referência o nível superior
++ Medida de nível indireta: Usado outras grandezas físicas (pressão, empuxo, radiação, etc) para indicar o nível indiretamente

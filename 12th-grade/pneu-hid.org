@@ -1,0 +1,71 @@
+#+TITLE: Pneumática e Hidráulica
+#+DESCRIPTION: Pneumática e Hidráulica - Meu caderno virtual
+#+SETUPFILE: https://luispengler.github.io/site/org-html-themes/org/theme-readtheorg.setup
+#+LaTeX_+HEADER: \usepackage{physics}
+#+LaTeX_+HEADER: \usepackage{amsmath}
+#+OPTIONS: num:nil ^:{} toc:2
+
+* Mecânica dos Fluidos
++ Parte da mecânica que se dedica à análise do comportamento dos líquidos e gases
++ Fluídos não têm forma própria, assumen o formato do recipiente
+
+* Massa específica
++ Fluídos incompressíveis têm \[\rho\]
+
+* Peso específico
+\[\gamma=\frac{G}{V}=\frac{m\cdot g}{V}=\rho \cdot g\]
+
+* Peso específico relativo para líquidos
+
+
+* Tensão de cisalhamento
+\[\tau=\frac{Ft}{A}=\frac{N}{m^2}\]
+
+* Lei de Newton da Viscosidade
++ Proporcionalidade entre a tensão de cisalhamento e o gradiente da velocidade
+\[\tau=\mu\cdot \frac{dv}{dy}=Pa\cdot s; \frac{N\cdot s}{m^2}; Poise\]
+
++ Quanto maior o \[\mu\] mais a facilidade de escoar
+
+* Viscosidade cinemática (v)
++ Propriedade definida a partir da viscosidade absoluta pela massa específica
+\[V=\frac{\mu}{\rho}\]
++ Molécula mais simples = menos viscoso
++ Gás mais quente = mais viscoso
+
+* Estática dos fluidos
++ Estudo do fluido em repouso
++ Hidrostática é outro termo utilizado para os estudos dos fluidos em repouso
++ Em vasos comunicantes, o nível é o mesmo, independente da forma
++ A pressão é descrita como a força normal aplicada sobre uma superfície
+\[P=\frac{F_n}{A}\]
++ Onde \[P\] é a pressão em Pascal, \[F_n\] força normal em N, e \[A\] área em \[m^2\]
++ Não se deve confundir pressão com força, pois pressão é simplesmente força pela área (vai se ferrar se tu não sabe disso)
+
+** Teorema de Stevin
+\[P_n-P_m=\gamma\cdot h = \gamma\cdot (Z_m-Z_n)\]
++ Na diferença de pressão entre dois pontos não interessa a distância entre eles, mas a diferença de cotas;
++ A pressão dos pontos num mesmo plano ou nível horizontal é a mesma;
++ O formato do recipiente não é importante para o cálculo da pressão em algum ponto
++ Se a pressão na superfície de um líquido num recipiente for nula, a pressão num ponto à profundidade h dentro do líquido será dada por:
+\[P=\gamma\cdot h\]
++ Nos gases, como o peso específico é pequeno, se a diferença de cota entre dois pontos não é muito grande, pode-se desprezar a diferença de pressão entre eles
+\[P_A\aprox P_B\aprox P_C\aprox\]
+
+** Lei de Pascal
++ A pressão aplicada num ponto de fluido em repouso transmite-se integralmente a todos os pontos do fluido
+** Carga de Pressão
++ Pressão em um certo fluido em unidade de comprimento
+\[\frac{P}{\gamma}=h\]
+
+** Escalas de pressão
++ Pressão absoluta: A pressão é medida em relação ao vácuo ou zero absoluto
++ Pressão efetiva: A pressão é medida adotando-se a pressão atmosfera como referência
++ Pressão atmosférica: Também chamada de pressão barométrica e varia com a altitude
+\[P_{abs}=P_{ef}+P_{atm}\]
+*** Unidades de pressão
++ As unidades de pressão podem ser dividas em três grupos
++ Unidades de pressão: \[\frac{kgf}{m^2};\frac={kgf}{cm^2};\frac{N}{m^2} ou Pa; \frac{daN}{cm^2} ou bar;\]
++ Unidades de carga de pressão: mmHg (milímetros de coluna de mercúrio); mca (metros de coluna de água); cmca (centímetros de coluna de água)
++ Unidades definidas: atm (atmosfera)
++ Conversão: 1 atm = 760 mmHg = 101.203 Pa = 101,23 kPa = 10.330 kgf/m^2 = 1,033 kgf/cm^2 = 1,01 bar = 14,7 psi = 10,33 mca
