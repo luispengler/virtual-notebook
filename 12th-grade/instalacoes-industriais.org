@@ -123,3 +123,33 @@ https://luispengler.github.io/virtual-notebook/12th-grade/doc/industriais/triang
   \[s=n_s-n\]
 \[s(\%)=\frac{(n_s-n)}{n_s}\cdot 100\%\
 \[s=\frac{n_s-n}{n}\]
+
+* Dados Nominais de motores de indução - continuação (23/03)
+** Corrente de Partida \[Ip\]
++ Necessária para iniciar o movimento do eixo do motor
++ Em alguns casos é apresentada a relação \[\frac{Ip}{In}\], onde \[In\] é a corrente nominal do motor.
++ Ex: A corrente de partida é 5 vezes maior que a nominal
+  \[\frac{Ip}{In}=5\]
++ A corrente de partida é utilizada para os dimensionamentos de dispositivos de acionamentos e proteções de motores
++ A corrente de partida pode durar
+
+** Grau de proteção (IP)
++ Proteção de equipamentos elétricos (seus invólucros) contra a entrada de materiais sólidos e umidade.
++ São utilizados 2 algarismos: o primeiro representa a proteção contra objetos sólidos e o segundo contra água.
+
+** Fator de Serviço (FS)
++ É um número que pode ser multiplicado pela potência nominal do motor, a fim de se obter a carga permissível que o mesmo pode acionar, em regime contínuo, dentro de condições estabelecidos pela norma.
+
+** Exercícios
+1. Um motor de indução trifásico, 220V, F.P. = 0.85; 10 cv; \[\eta=84\%\]; 4 polos; 60Hz, possui F.S. = 1,15 e \[\frac{Ip}{In}=10\]. Calcule:
+   a) Velocidade síncrona;
+      \[ns=\frac{120\cdot 60}{4} = 1800 RPM\]
+   b) Velocidade nominal para escorregamento de 3%;
+      \[100\% - 3\% = 97\%\cdot ns = 1746\]
+   c) Corrente de partida;
+      \[Po=10\cdot 736 = 7360W\]
+      \[Inm=\frac{7360}{0,85\cdot 0,84\cdot 220\cdot \sqrt{3}} = 27,05A\]
+   d) Potência de saída máxima permitida.
+      \[Po_{max}=10\cdot 736\cdot 1,15 = 8464W\]
+   e) Potência de entrada máxima quando a potência de saída máxima é utilizada
+      \[\frac{Po_{max}}{0,84}= 10076,19W\]
