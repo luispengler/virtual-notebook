@@ -63,3 +63,25 @@ https://luispengler.github.io/virtual-notebook/12th-grade/doc/meioambiente1.png
 ** O problema das sombras
 + A sombra desvia a energia gerada para a resistência, que é o unico condutor fechado, assim sobreaquecendo o painel
 + As sombras paricias são piores, porque se fossem totais, a célula no escuro sairia da geração, minimizando os efeitos da sombra.
+
+* Arco elétrico - Limpeza dos módulos
++ Um dos maiores riscos em UFV;
++ Pode ser difícil de extinguir;
++ Um incêndio pode ser apagado, o arco elétrico não
+
+** Possíveis causas
++ Degradação da isolação, devido à exposição aos raios UV;
++ Rachaduras no isolamento, devido à variações de temperatura;
++ Degradação do isolamento devido ao envelhecimento;
++ Danos ao isolamento causado por roedores, insetos, pássaros, etc;
++ Danos ao isolamento durante a instalação;
++ Danos ao isolamento por trabalhos de construção;
++ Conexões soltas;
++ Corrosão de junções
++ Falha nos isoladores CC;
++ Entrada de água em cabos, eletrodutos, caixas de proteção CC,
+
+** Limpeza dos painéis
++ Realizada a cada 3 meses, ou quando a capacidade de geração cair além de 15%;
++ Desligar completamente a UFV: AC e CC;
++ Não utilizar lavadoras de alta pressão;

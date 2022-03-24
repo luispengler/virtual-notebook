@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-03-23 Wed 11:45 -->
+<!-- 2022-03-24 Thu 09:51 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Pneumática e Hidráulica</title>
@@ -244,6 +244,14 @@
 <li><a href="#org778b092">Escalas de pressão</a></li>
 </ul>
 </li>
+<li><a href="#orgc0ca4c9">Cinemática dos fluidos</a>
+<ul>
+<li><a href="#org601584a">O número de Reynolds (Re)</a></li>
+<li><a href="#org60e87ea">Vazão em volume</a></li>
+<li><a href="#orgf46bff1">Vazão em massa</a></li>
+<li><a href="#org5e4e2fc">O efeito Venturi</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -410,10 +418,112 @@
 </div>
 </div>
 </div>
+
+<div id="outline-container-orgc0ca4c9" class="outline-2">
+<h2 id="orgc0ca4c9">Cinemática dos fluidos</h2>
+<div class="outline-text-2" id="text-orgc0ca4c9">
+<ul class="org-ul">
+<li>A cinemática dos fluídos trata do estudo do movimento dos fluidos sem considerar as forças que estão atuando.</li>
+<li>O regime de movimento dos fluidos são divididos em:
+<ul class="org-ul">
+<li>Regime Permanente - não varia conforme o tempo</li>
+<li>Regime Transiente (variado) - varia conforme o tempo</li>
+</ul></li>
+<li>O regime permanente não tem as propriedades afetadas pela variação pelo tempo</li>
+<li>O regime variado é aquele em que as propriedades do fluido vvariam em cada ponto com o tempo</li>
+<li>Osborne Reynolds descobriu 3 padroes de escoamento:
+<ul class="org-ul">
+<li>Escoamento Laminar</li>
+<li>Escoamento de transição</li>
+<li>Escoamento Turbulento</li>
+</ul></li>
+<li>Escoamento laminar: as partículas do fluido se deslocam na forma de um fileto reto e contínuo em uma direção longitudinal</li>
+<li>Escoamento turbulento: as partículas do fluido se deslocam também em uma dimensão transversal, além da longitudinal</li>
+</ul>
+</div>
+<div id="outline-container-org601584a" class="outline-3">
+<h3 id="org601584a">O número de Reynolds (Re)</h3>
+<div class="outline-text-3" id="text-org601584a">
+<ul class="org-ul">
+<li>\[Re=\frac{\rho\cdot v\cdot D}{\mu}=\frac{v\cdot D}{\ni}\]</li>
+<li>Onde:</li>
+</ul>
+<p>
+\[\rho = massa específica\]
+\[v = velocidade do escoamento\]
+\[D = diametro do tubo\]
+\[\mu = viscosidade dinamica\]
+\[\ni = velocidade cinemática\]
+</p>
+
+<ul class="org-ul">
+<li>Escoamento laminar</li>
+</ul>
+<p>
+\[Re\le 2000\]
+\[2000\lt Re \lt 2400\]
+\[Re\ge 2400\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org60e87ea" class="outline-3">
+<h3 id="org60e87ea">Vazão em volume</h3>
+<div class="outline-text-3" id="text-org60e87ea">
+<ul class="org-ul">
+<li>\[Q=\frac{V}{t}=\frac{20L}{10s}=2L/s\]</li>
+<li>Relação entre a vazão em volume a velocidade do fluido</li>
+<li>No intervalo de tempo t, o fluido se desloca através da seção da área A, a uma distância S.</li>
+<li>Logo temos que:</li>
+</ul>
+<p>
+\[Q=\frac{V}{t}=\frac{s\cdot A}{t}\]
+\[v=\frac{s}{t}\]
+\[Q=v&sdot; A]
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf46bff1" class="outline-3">
+<h3 id="orgf46bff1">Vazão em massa</h3>
+<div class="outline-text-3" id="text-orgf46bff1">
+<p>
+\[Q_m=\frac{m}{t}\
+pesquisa sobre m ponto, coloca um ponto em cima do m e isso significa que é pelo tempo
+\[Q_m=\frac{\rho\cdot A\cdot S}{t}=\rho\cdot A\cdot v = \rho\cdot Q\]
+</p>
+<ul class="org-ul">
+<li>Quando ocorre o escoamento de um fluido ao longo de um tubo, a vazão mássica vai ser a mesma em qualquer ponto do tubo</li>
+<li>No entanto, a equação da vazão volumétrica não seria igual, pois em fluidos compressíveis, a alta compressão ferra tudo</li>
+<li>Volumétrica só é igual a entrada e saída quando for fluido incompressível</li>
+<li>Exemplo: Um gás escoa em regime em regime permanente no trecho de tubulação da figura. Na seção, tem-se \[A_1=20cm^2\], \[rho_1 = 4kg/m^3\], \[v_1=30m/s\]. Na seção \[A_2 = 10cm^2\] e \[\rho_2 = 12kg/m^3\]. Qual é a velocidade na seção</li>
+</ul>
+<p>
+\[Q_{m1}=Q_{m2}\]
+\[\rho_1\cdot v_1\cdot A_1 = \rho_2\cdot v\cdot A_2\]
+\[v_2 = v_1\cdot \frac\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5e4e2fc" class="outline-3">
+<h3 id="org5e4e2fc">O efeito Venturi</h3>
+<div class="outline-text-3" id="text-org5e4e2fc">
+<ul class="org-ul">
+<li>A velocidade aumenta de acordo com a redução da área da seção transversal</li>
+<li>A pressão diminui de acordo com a redução da área da seção transversal</li>
+<li>Exemplo: O venturi é um tubo convergente/divergente, como é mostrado na figura. Determinar a velocidade na seção mínima (garganta) da área 5cm^2, se na seção de entrada da área 20cm^2 a velocidade é 2m/s. O fluido é incompressivel.</li>
+</ul>
+<p>
+\[V_e\cdot A_e = V_G\cdot A_G\]
+</p>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luís Spengler</p>
-<p class="date">Created: 2022-03-23 Wed 11:45</p>
+<p class="date">Created: 2022-03-24 Thu 09:51</p>
 </div>
 </body>
 </html>

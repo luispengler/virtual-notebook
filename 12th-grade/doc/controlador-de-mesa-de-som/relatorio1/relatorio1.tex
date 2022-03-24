@@ -1,4 +1,5 @@
 \documentclass{article}
+
 \title{Sistema de controle de mesa de som - Sistemas digitais e microcontrolados}
 \date{}
 
@@ -32,13 +33,83 @@
 \doublespacing
 
 \begin{document}
-\maketitle
 
-\tableofcontents
+\begin{titlepage} % Suppresses displaying the page number on the title page and the subsequent page counts as page 1
+	\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for horizontal lines, change thickness here
 
-\medskip
+	\center % Centre everything on the page
 
-\vspace{500mm}
+	%------------------------------------------------
+	%	Headings
+	%------------------------------------------------
+
+	\textsc{\LARGE Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso do Sul}\\[1.5cm] % Main heading such as the name of your university/college
+
+	\textsc{\Large Técnico em Eletrotécnica}\\[0.5cm] % Major heading such as course name
+
+	\textsc{\large Disciplina de Sistemas Digitais e Microcontrolados}\\[0.5cm] % Minor heading such as course title
+
+	%------------------------------------------------
+	%	Title
+	%------------------------------------------------
+
+	\HRule\\[0.4cm]
+
+	{\huge\bfseries Roteiro Para Elaboração De Projeto Final}\\[0.4cm] % Title of your document
+
+	\HRule\\[1.5cm]
+
+	%------------------------------------------------
+	%	Author(s)
+	%------------------------------------------------
+
+	\vspace{30mm}
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushleft}
+			\large
+			\textit{Autores}\\
+			\textsc{Giovanna Bughi, Gustavo Ratier Cardoso, João Vitor Medeiros, Luís Spengler} % Your name
+		\end{flushleft}
+	\end{minipage}
+	~
+	
+	% If you don't want a supervisor, uncomment the two lines below and comment the code above
+	%{\large\textit{Author}}\\
+	%John \textsc{Smith} % Your name
+
+	%------------------------------------------------
+	%	Date
+	%------------------------------------------------
+
+	\vfill\vfill\vfill\vfill\vfill\vfill\vfill % Position the date 3/4 down the remaining page
+	
+	{\large{Campo Grande, MS}\\
+	\today} % Date, change the \today to a set date if you want to be precise
+
+	%------------------------------------------------
+	%	Logo
+	%------------------------------------------------
+
+	%\vfill\vfill
+	%\includegraphics[width=0.2\textwidth]{placeholder.jpg}\\[1cm] % Include a department/university logo - this will require the graphicx package
+
+	%----------------------------------------------------------------------------------------
+
+	\vfill % Push the date up 1/4 of the remaining page
+
+\end{titlepage}
+
+\section{Introdução}
+
+Dada uma situação de operação em uma mesa de som em que, quando acionados os microfones em uma determinada reunião sejam transmitidos de acordo com seu nível de prioridade. Para isso deverá ser implementado e adaptado o circuito lógico por meio de CIs e demais componentes eletrônicos, possuindo cada um deles sinais de entrada e saídas de acordo com o proposto.
+
+\subsection{Objetivos}
+\begin{itemize}
+	\item  Identificação das portas lógicas utilizadas para o circuito e seus demais componentes;
+	\item  Testar as várias possibilidades de entradas e saídas para a devida transmissão dos microfones;
+	\item  Caracterizar o nível de prioridade de acordo com a transmissão do microfone desejado.
+\end{itemize}
+
 \section{Problema proposto}
 Para a mesa de som são conectados três microfones em uma única caixa de som amplificada, que são: ChP, ChD e ChC. A sigla “Ch” vem da palavra derivada do inglês, Channel (Canal), já as letras que à acompanham são do Presidente, Diretor e Coordenador, respectivamente. Foi identificado o nível de prioridade entre os microfones conforme sua transmissão e elaborado o circuito lógico combinacional que permitirá ligar os microfones segundo sua ordem de prioridade conforme a relação abaixo:
 
@@ -86,7 +157,7 @@ ChP & ChD & ChC & SP & SD & SC\\
 \subsection{Obtenção da expressão de saída}
 A partir da tabela verdade, foram equacionadas as expressões de saída referente ao seu proprietário.
 
-\begin{enumerate}
+\begin{itemize}
 	\item SP (Saída do Presidente) em Função de ChP (Canal do Presidente);
 		\[SP=ChP\cdot ChC' + ChP\cdot ChC\]
 		\[SP=ChP\cdot (ChC' + ChC)\]
@@ -95,7 +166,7 @@ A partir da tabela verdade, foram equacionadas as expressões de saída referent
 		\[SD=ChP'\cdot ChD\]
 	\item SC (Saída do Coordenador) em Função de ChC (Canal do Coordenador).
 		\[SC=(ChP'\cdot ChD')\cdot ChC\]
-\end{enumerate}
+\end{itemize}
 
 \vspace{-15mm}
 \subsection{Mapa de Karnaugh}
@@ -151,19 +222,17 @@ Analisando o mapa de Karnaugh é possível identificar que, apenas a expressão 
 \end{center}
 
 \subsection{Componentes utilizados no circuito}
-\begin{enumerate}
+\begin{itemize}
 	\item Board de instrumentação e controle possuindo suporte para as protoboards;
 	\item CI (AND) SN7408N e CI (NOT) SN7404N;
 	\item Jumper de ligação (macho-macho) e Jumper de ligação (macho-fêmea);
 	\item Fios de conexão para alimentação do circuito ligados no GND de cada CI; 
 	\item Fios de conexão para alimentação do circuito ligados no VCC de cada CI.
 	\item Chaves de acionamento para cada lógica no circuito.
-\end{enumerate}
+\end{itemize}
 
 \section{Conclusão}
 
 Com o circuito montado, programado e funcionando conforme os parâmetros apresentados, ao acionar as chaves, cada uma delas são executadas conforme o grau de prioridade no alto falante determinado pelos Cis. O Presidente ao solicitar a transmissão no alto falante o somente seu canal será reproduzido e impossibilitando os demais serem de serem reproduzidos; ao Diretor solicitar reprodução do seu microfone no alto falante, somente ele fará. A menos que o Presidente reproduza seu microfone uma outra vez; e o Coordenador só falará quando os microfones do Presidente e do Diretor não forem reproduzidos, respectivamente. Através dessas relações, se vê na prática a aplicação da ordem de prioridade conforme demonstrada no tópico ``Problema Proposto''. O circuito e seu funcionamento são um sucesso e atuam conforme o solicitado.
-
-\medskip
 
 \end{document}
