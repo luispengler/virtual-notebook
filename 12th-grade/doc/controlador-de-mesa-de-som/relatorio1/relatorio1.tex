@@ -4,7 +4,7 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[portuguese]{babel}
-\usepackage[margin=3.5cm]{geometry}
+\usepackage[margin=2.5cm,headheight=0pt,headsep=0pt]{geometry}
 \usepackage{amsmath}
 \usepackage{physics}
 \usepackage{titlesec}
@@ -13,6 +13,7 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{karnaugh-map}
+\usepackage{setspace}
 \usepackage[parfill]{parskip}
 \usepackage[nottoc]{tocbibind}
 \usepackage[backend=biber]{biblatex}
@@ -26,6 +27,10 @@
 
 \graphicspath{{./docs/}}
 
+\renewcommand{\baselinestretch}{1.5}
+
+\doublespacing
+
 \begin{document}
 \maketitle
 
@@ -33,6 +38,7 @@
 
 \medskip
 
+\vspace{500mm}
 \section{Problema proposto}
 Para a mesa de som são conectados três microfones em uma única caixa de som amplificada, que são: ChP, ChD e ChC. A sigla “Ch” vem da palavra derivada do inglês, Channel (Canal), já as letras que à acompanham são do Presidente, Diretor e Coordenador, respectivamente. Foi identificado o nível de prioridade entre os microfones conforme sua transmissão e elaborado o circuito lógico combinacional que permitirá ligar os microfones segundo sua ordem de prioridade conforme a relação abaixo:
 
@@ -44,7 +50,10 @@ Prioridade 3: Coordenador.
 
 Seu acionamento é simples, cada microfone é acionado pelo usuário através de um interruptor (liga-desliga) que nesse caso, serão também as entradas. Os microfones quando acionados comutam em sua saída 0 ou 1, informando ao circuito lógico que, por sua vez, aciona uma das saídas (SP, SD, SC) na caixa amplificada. Então, quando o Presidente ligar seu microfone, terá prioridade sobre os demais. Quando o Diretor ligar seu microfone, só terá prioridade sobre o Coordenador. E por fim, o Coordenador só falará quando os demais microfones não estiverem ligados.
 
-\includegraphics[width=\textwidth]{esbocoroubado}
+\vspace{15mm}
+\begin{center}
+\includegraphics[width=0.5\textwidth]{esbocoroubado}
+\end{center}
 
 \section{Solução do problema proposto}
 

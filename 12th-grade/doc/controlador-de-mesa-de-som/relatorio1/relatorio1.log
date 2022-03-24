@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.3.21)  23 MAR 2022 21:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.3.21)  24 MAR 2022 07:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -493,7 +493,10 @@ File: tikzlibrarymatrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
 \@karnaughmap@var@colorindex@=\count305
 \@karnaughmap@var@colorindexnext@=\count306
-) (/usr/share/texmf-dist/tex/latex/parskip/parskip.sty
+) (/usr/share/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(/usr/share/texmf-dist/tex/latex/parskip/parskip.sty
 Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
 
 (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
@@ -769,20 +772,20 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (./relatorio1.aux)
 \openout1 = `relatorio1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -792,17 +795,17 @@ LaTeX Font Info:    ... okay on input line 29.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(99.58464pt, 415.12572pt, 99.58464pt)
-* v-part:(T,H,B)=(99.58464pt, 595.8007pt, 99.58464pt)
+* h-part:(L,W,R)=(71.13188pt, 472.03123pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 652.70622pt, 71.13188pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=415.12572pt
-* \textheight=595.8007pt
-* \oddsidemargin=27.31465pt
-* \evensidemargin=27.31465pt
-* \topmargin=-9.68535pt
-* \headheight=12.0pt
-* \headsep=25.0pt
+* \textwidth=472.03123pt
+* \textheight=652.70622pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-1.1381pt
+* \headheight=0.0pt
+* \headsep=0.0pt
 * \topskip=10.0pt
 * \footskip=30.0pt
 * \marginparwidth=65.0pt
@@ -856,8 +859,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'relatorio1.bbl' found.
  (./relatorio1.bbl)
-Package biblatex Info: Reference section=0 on input line 29.
-Package biblatex Info: Reference segment=0 on input line 29.
+Package biblatex Info: Reference section=0 on input line 34.
+Package biblatex Info: Reference segment=0 on input line 34.
  (./relatorio1.toc)
 \tf@toc=\write5
 \openout5 = `relatorio1.toc'.
@@ -868,38 +871,34 @@ Package biblatex Info: Reference segment=0 on input line 29.
 <esbocoroubado.jpg, id=15, 813.0375pt x 828.84656pt>
 File: esbocoroubado.jpg Graphic file (type jpg)
 <use esbocoroubado.jpg>
-Package pdftex.def Info: esbocoroubado.jpg  used on input line 47.
-(pdftex.def)             Requested size: 415.12572pt x 423.19939pt.
+Package pdftex.def Info: esbocoroubado.jpg  used on input line 55.
+(pdftex.def)             Requested size: 236.01561pt x 240.59964pt.
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 47--48
-[][] 
- []
-
-[2 <./esbocoroubado.jpg>]
+[2 <./esbocoroubado.jpg>] [3]
 
 Package karnaugh-map Warning: The API for specifying variable labels have been 
 updated. You are currently using the old API(v1). In the new API each variable 
 label is specified separately. See the documentation for more details. Backward
- compatibility may disappear in a future release. on input line 95.
+ compatibility may disappear in a future release. on input line 104.
 
 \@karnaughmap@local@northwest@=\count444
 \@karnaughmap@local@southeast@=\count445
 \@karnaughmap@local@northwest@=\count446
 \@karnaughmap@local@southeast@=\count447
-[3]
 
 Package karnaugh-map Warning: The API for specifying variable labels have been 
 updated. You are currently using the old API(v1). In the new API each variable 
 label is specified separately. See the documentation for more details. Backward
- compatibility may disappear in a future release. on input line 105.
+ compatibility may disappear in a future release. on input line 114.
 
 \@karnaughmap@local@northwest@=\count448
 \@karnaughmap@local@southeast@=\count449
+[4]
 
 Package karnaugh-map Warning: The API for specifying variable labels have been 
 updated. You are currently using the old API(v1). In the new API each variable 
 label is specified separately. See the documentation for more details. Backward
- compatibility may disappear in a future release. on input line 113.
+ compatibility may disappear in a future release. on input line 122.
 
 \@karnaughmap@local@northwest@=\count450
 \@karnaughmap@local@southeast@=\count451
@@ -907,24 +906,23 @@ label is specified separately. See the documentation for more details. Backward
 Package karnaugh-map Warning: The API for specifying variable labels have been 
 updated. You are currently using the old API(v1). In the new API each variable 
 label is specified separately. See the documentation for more details. Backward
- compatibility may disappear in a future release. on input line 122.
+ compatibility may disappear in a future release. on input line 131.
 
 \@karnaughmap@local@northwest@=\count452
 \@karnaughmap@local@southeast@=\count453
 \@karnaughmap@local@northwest@=\count454
 \@karnaughmap@local@southeast@=\count455
-[4]
 <circuito.png, id=29, 697.8572pt x 399.74344pt>
 File: circuito.png Graphic file (type png)
 <use circuito.png>
-Package pdftex.def Info: circuito.png  used on input line 131.
-(pdftex.def)             Requested size: 415.12572pt x 237.79234pt.
+Package pdftex.def Info: circuito.png  used on input line 140.
+(pdftex.def)             Requested size: 472.03123pt x 270.38852pt.
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 131--132
+Overfull \hbox (30.0pt too wide) in paragraph at lines 140--141
 [] 
  []
 
-[5 <./circuito.png>] [6] (./relatorio1.aux)
+[5] [6 <./circuito.png>] [7] (./relatorio1.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -938,10 +936,10 @@ Package logreq Info: Writing requests to 'relatorio1.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25387 strings out of 478276
- 497960 string characters out of 5853013
- 1232042 words of memory out of 5000000
- 43235 multiletter control sequences out of 15000+600000
+ 25430 strings out of 478276
+ 498875 string characters out of 5853013
+ 1225342 words of memory out of 5000000
+ 43274 multiletter control sequences out of 15000+600000
  475779 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,14n,103p,1199b,1631s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -954,10 +952,10 @@ share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmsy7.pfb>
-Output written on relatorio1.pdf (6 pages, 320406 bytes).
+Output written on relatorio1.pdf (7 pages, 320732 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
- 47 compressed objects within 1 object stream
+ 83 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
