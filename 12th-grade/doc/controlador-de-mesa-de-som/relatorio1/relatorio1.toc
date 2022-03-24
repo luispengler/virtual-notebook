@@ -7,6 +7,6 @@
 \contentsline {subsection}{\numberline {2.4}Obtenção da expressão de saída}{4}{}%
 \contentsline {subsection}{\numberline {2.5}Mapa de Karnaugh}{4}{}%
 \contentsline {subsection}{\numberline {2.6}Simplificação da expressão através do mapa de Karnaugh}{5}{}%
-\contentsline {subsection}{\numberline {2.7}Circuito lógico}{6}{}%
+\contentsline {subsection}{\numberline {2.7}Circuito lógico}{5}{}%
 \contentsline {subsection}{\numberline {2.8}Componentes utilizados no circuito}{6}{}%
 \contentsline {section}{\numberline {3}Conclusão}{6}{}%

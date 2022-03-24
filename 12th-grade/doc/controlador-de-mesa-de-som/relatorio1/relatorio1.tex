@@ -97,47 +97,58 @@ A partir da tabela verdade, foram equacionadas as expressões de saída referent
 		\[SC=(ChP'\cdot ChD')\cdot ChC\]
 \end{enumerate}
 
+\vspace{-15mm}
 \subsection{Mapa de Karnaugh}
 Mapa de Karnaugh para a saída do presidente (SP)
 
-\begin{karnaugh-map}*[4][2][1][$ChPChD$][$ChC$]
+\begin{center}
+\begin{karnaugh-map}*[4][2][1][$ChP/ChD$][$ChC$]
 	\minterms{2,3,6,7}
 	\maxterms{0,1,4,5}
 	\indeterminants{2,5}
 	\implicant{3}{2}
 	\implicant{7}{6}
 \end{karnaugh-map}
+\end{center}
 
 Mapa de Karnaugh para a saída do diretor (SD)
 
-\begin{karnaugh-map}*[4][2][1][$ChPChD$][$ChC$]
+\begin{center}
+\begin{karnaugh-map}*[4][2][1][$ChP/ChD$][$ChC$]
 	\maxterms{0,2,3,4,6,7}
 	\minterms{1,5}
 	\implicant{1}{5}
 \end{karnaugh-map}
+\end{center}
 
 Mapa de Karnaugh para a saída do coordenador (SC)
 
-\begin{karnaugh-map}*[4][2][1][$ChPChD$][$ChC$]
+\begin{center}
+\begin{karnaugh-map}*[4][2][1][$ChP/ChD$][$ChC$]
 	\maxterms{0,1,2,3,5,6,7}
 	\minterms{4}
 	\implicant{4}{4}
 \end{karnaugh-map}
+\end{center}
 
 \subsection{Simplificação da expressão através do mapa de Karnaugh}
 Analisando o mapa de Karnaugh é possível identificar que, apenas a expressão referente ao Presidente (SP em função de ChP) será simplificada por ser a única com alguma propriedade de simplificação.
 
-\begin{karnaugh-map}*[4][2][1][$ChPChD$][$ChC$]
+\begin{center}
+\begin{karnaugh-map}*[4][2][1][$ChP/ChD$][$ChC$]
 	\minterms{2,3,6,7}
 	\maxterms{0,1,4,5}
 	\indeterminants{2,5}
 	\implicant{3}{2}
 	\implicant{7}{6}
 \end{karnaugh-map}
+\end{center}
 
 \subsection{Circuito lógico}
 
-\includegraphics[width=\textwidth]{circuito}
+\begin{center}
+\includegraphics[width=0.9\textwidth]{circuito}
+\end{center}
 
 \subsection{Componentes utilizados no circuito}
 \begin{enumerate}
@@ -150,7 +161,8 @@ Analisando o mapa de Karnaugh é possível identificar que, apenas a expressão 
 \end{enumerate}
 
 \section{Conclusão}
-Com o circuito montado, programado e funcionando conforme os parâmetros apresentados, ao acionar as chaves, cada uma delas são executadas conforme o grau de prioridade no alto falante determinado pelos Cis. O Presidente ao solicitar a transmissão no alto falante o somente seu canal será reproduzido e impossibilitando os demais serem de serem reproduzidos; ao Diretor solicitar reprodução do seu microfone no alto falante, somente ele fará. A menos que o Presidente reproduza seu microfone uma outra vez; e o Coordenador só falará quando os microfones do Presidente e do Diretor não forem reproduzidos, respectivamente. Através dessas relações, se vê na prática a aplicação da ordem de prioridade conforme demonstrada no tópico “Problema Proposto”. O circuito e seu funcionamento são um sucesso e atuam conforme o solicitado.
+
+Com o circuito montado, programado e funcionando conforme os parâmetros apresentados, ao acionar as chaves, cada uma delas são executadas conforme o grau de prioridade no alto falante determinado pelos Cis. O Presidente ao solicitar a transmissão no alto falante o somente seu canal será reproduzido e impossibilitando os demais serem de serem reproduzidos; ao Diretor solicitar reprodução do seu microfone no alto falante, somente ele fará. A menos que o Presidente reproduza seu microfone uma outra vez; e o Coordenador só falará quando os microfones do Presidente e do Diretor não forem reproduzidos, respectivamente. Através dessas relações, se vê na prática a aplicação da ordem de prioridade conforme demonstrada no tópico ``Problema Proposto''. O circuito e seu funcionamento são um sucesso e atuam conforme o solicitado.
 
 \medskip
 
