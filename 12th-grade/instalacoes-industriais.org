@@ -149,6 +149,7 @@ https://luispengler.github.io/virtual-notebook/12th-grade/doc/industriais/triang
    c) Corrente de partida;
       \[Po=10\cdot 736 = 7360W\]
       \[Inm=\frac{7360}{0,85\cdot 0,84\cdot 220\cdot \sqrt{3}} = 27,05A\]
+      \[frac{Ip}{In}=10 = 270,5A\]
    d) Potência de saída máxima permitida.
       \[Po_{max}=10\cdot 736\cdot 1,15 = 8464W\]
    e) Potência de entrada máxima quando a potência de saída máxima é utilizada

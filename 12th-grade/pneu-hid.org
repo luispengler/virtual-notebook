@@ -69,3 +69,57 @@
 + Unidades de carga de pressão: mmHg (milímetros de coluna de mercúrio); mca (metros de coluna de água); cmca (centímetros de coluna de água)
 + Unidades definidas: atm (atmosfera)
 + Conversão: 1 atm = 760 mmHg = 101.203 Pa = 101,23 kPa = 10.330 kgf/m^2 = 1,033 kgf/cm^2 = 1,01 bar = 14,7 psi = 10,33 mca
+
+* Cinemática dos fluidos
++ A cinemática dos fluídos trata do estudo do movimento dos fluidos sem considerar as forças que estão atuando.
++ O regime de movimento dos fluidos são divididos em:
+  - Regime Permanente - não varia conforme o tempo
+  - Regime Transiente (variado) - varia conforme o tempo
++ O regime permanente não tem as propriedades afetadas pela variação pelo tempo
++ O regime variado é aquele em que as propriedades do fluido vvariam em cada ponto com o tempo
++ Osborne Reynolds descobriu 3 padroes de escoamento:
+  - Escoamento Laminar
+  - Escoamento de transição
+  - Escoamento Turbulento
++ Escoamento laminar: as partículas do fluido se deslocam na forma de um fileto reto e contínuo em uma direção longitudinal
++ Escoamento turbulento: as partículas do fluido se deslocam também em uma dimensão transversal, além da longitudinal
+** O número de Reynolds (Re)
++ \[Re=\frac{\rho\cdot v\cdot D}{\mu}=\frac{v\cdot D}{\ni}\]
++ Onde:
+\[\rho = massa específica\]
+\[v = velocidade do escoamento\]
+\[D = diametro do tubo\]
+\[\mu = viscosidade dinamica\]
+\[\ni = velocidade cinemática\]
+
++ Escoamento laminar
+\[Re\le 2000\]
+\[2000\lt Re \lt 2400\]
+\[Re\ge 2400\]
+
+** Vazão em volume
++ \[Q=\frac{V}{t}=\frac{20L}{10s}=2L/s\]
++ Relação entre a vazão em volume a velocidade do fluido
++ No intervalo de tempo t, o fluido se desloca através da seção da área A, a uma distância S.
++ Logo temos que:
+\[Q=\frac{V}{t}=\frac{s\cdot A}{t}\]
+\[v=\frac{s}{t}\]
+\[Q=v\cdot A]
+
+** Vazão em massa
+\[Q_m=\frac{m}{t}\
+pesquisa sobre m ponto, coloca um ponto em cima do m e isso significa que é pelo tempo
+\[Q_m=\frac{\rho\cdot A\cdot S}{t}=\rho\cdot A\cdot v = \rho\cdot Q\]
++ Quando ocorre o escoamento de um fluido ao longo de um tubo, a vazão mássica vai ser a mesma em qualquer ponto do tubo
++ No entanto, a equação da vazão volumétrica não seria igual, pois em fluidos compressíveis, a alta compressão ferra tudo
++ Volumétrica só é igual a entrada e saída quando for fluido incompressível
++ Exemplo: Um gás escoa em regime em regime permanente no trecho de tubulação da figura. Na seção, tem-se \[A_1=20cm^2\], \[rho_1 = 4kg/m^3\], \[v_1=30m/s\]. Na seção \[A_2 = 10cm^2\] e \[\rho_2 = 12kg/m^3\]. Qual é a velocidade na seção
+\[Q_{m1}=Q_{m2}\]
+\[\rho_1\cdot v_1\cdot A_1 = \rho_2\cdot v\cdot A_2\]
+\[v_2 = v_1\cdot \frac\]
+
+** O efeito Venturi
++ A velocidade aumenta de acordo com a redução da área da seção transversal
++ A pressão diminui de acordo com a redução da área da seção transversal
++ Exemplo: O venturi é um tubo convergente/divergente, como é mostrado na figura. Determinar a velocidade na seção mínima (garganta) da área 5cm^2, se na seção de entrada da área 20cm^2 a velocidade é 2m/s. O fluido é incompressivel.
+\[V_e\cdot A_e = V_G\cdot A_G\]

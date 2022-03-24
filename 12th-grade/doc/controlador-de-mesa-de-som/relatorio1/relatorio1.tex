@@ -16,7 +16,7 @@
 \usepackage[parfill]{parskip}
 \usepackage[nottoc]{tocbibind}
 \usepackage[backend=biber]{biblatex}
-\addbibresource{/home/luispengler/drive/LinuxFabrik/Research/read/bib.bib}
+\addbibresource{/home/luispengler/drive/NextCloud/Research/read/bib.bib}
 \usepackage{authblk}
 \author[1]{Giovanna Bughi}
 \author[2]{Gustavo Ratier Cardoso}
@@ -34,31 +34,29 @@
 \medskip
 
 \section{Problema proposto}
-Uma mesa de som conecta três microfones numa única caixa de som amplificada, que são: Microfone Presidente, Microfone Diretor e Microfone Coordenador. Sabendo que somente um microfone pode falar por vez. Elabore um circuito lógico combinacional que permita ligar os microfones segundo a prioridade abaixo:
+Para a mesa de som são conectados três microfones em uma única caixa de som amplificada, que são: ChP, ChD e ChC. A sigla “Ch” vem da palavra derivada do inglês, Channel (Canal), já as letras que à acompanham são do Presidente, Diretor e Coordenador, respectivamente. Foi identificado o nível de prioridade entre os microfones conforme sua transmissão e elaborado o circuito lógico combinacional que permitirá ligar os microfones segundo sua ordem de prioridade conforme a relação abaixo:
 
-Prioridade 1 : Presidente         
+Prioridade 1: Presidente;
 
-Prioridade 2 : Diretor
+Prioridade 2: Diretor;
 
-Prioridade 3 : Coordenador
+Prioridade 3: Coordenador.
 
-Cada Microfone é acionado pelo usuário por um interruptor  ( liga-desliga) (ChP, ChD, ChC). Cada microfone  ao ser acionado tem sua saída  comutada (0 ou 1) informando ao circuito lógico,  que por sua vez, aciona uma das  saídas (SP, SD, SC), para a caixa amplificada. Então, quando o Presidente ligar seu microfone, terá prioridade sobre os demais. Quando o Diretor ligar seu microfone só terá prioridade sobre o  Coordenador. O Coordenador só fala quando os demais não estiverem com seus microfones ligados.
-
-\subsection{Esboço do esquema proposto}
-O problema pode ser esboçado de acordo com o texto apresentado acima.
+Seu acionamento é simples, cada microfone é acionado pelo usuário através de um interruptor (liga-desliga) que nesse caso, serão também as entradas. Os microfones quando acionados comutam em sua saída 0 ou 1, informando ao circuito lógico que, por sua vez, aciona uma das saídas (SP, SD, SC) na caixa amplificada. Então, quando o Presidente ligar seu microfone, terá prioridade sobre os demais. Quando o Diretor ligar seu microfone, só terá prioridade sobre o Coordenador. E por fim, o Coordenador só falará quando os demais microfones não estiverem ligados.
 
 \includegraphics[width=\textwidth]{esbocoroubado}
 
 \section{Solução do problema proposto}
 
 \subsection{Identificação das variáveis de entrada e saída}
-Foi definido a cada usuário do microfone uma variável distinta, estas sendo as variáveis de entrada (ChP, ChD, ChC). Foram definidas como variáveis de saída SP, SD e SC, suas respectivas saídas.
+Identificado o problema proposto, foram denominadas as entradas e saídas que serão utilizadas para a ativação dos microfones no circuito lógico. A sigla “Ch” é originada do inglês Channel, em que canal é a sua tradução; a entrada será referente ao canal de seus utilizadores conforme sua prioridade; a letra S nas expressões lógicas é representada por saída e será utilizada para denominar a saída do utilizador. Então ChP; ChD; ChC; SP; SD e SC serão os canais de entrada e expressão de saída do Presidente, Diretor e Coordenador respectivamente, de acordo com suas siglas e letras.
 
 \subsection{Identificação dos estados das variáveis de entrada e saída}
-As entradas (ChP, ChD, ChC) apenas serão 1 (nível lógico alto) quando os usuários tiverem seus microfones ligados. Se todos tiverem seus microfones ligados, então ChP=1, ChD=1, ChC=1. No entanto, em um estado inicial, todas as variáveis serão igual a 0, portanto: ChP=0, ChD=0, ChC=0. Conforme a conversa prossegue, cada um dos usuários (que aqui são as variáveis de entrada), alterarão o seu estado lógico para o nível 1.
+Nas entradas ChP, ChD e ChC terão nível lógico alto (1), somente quando os usuários tiverem seus microfones ligados; se todos tiverem seus microfones ligados: ChP = 1, ChD = 1 e ChC = 1; em estado inicial todas as inicias serão iguais a zero (0), então: ChP = 0, ChD = 0, ChC = 0. Conforme a conversa prossegue e os usuários ativam o microfone, são alteradas as variáveis de saída para estado lógico alto (1).
 
 \subsection{Montagem da tabela verdade}
- Obedecendo a prioridade de cada falante, as saídas na tabela verdade podem ter seus estados definidos pelos valores abaixo.
+Reunidas as variáveis de entrada e saída, uma tabela verdade foi feita a fim de determinar os estados de atuação em cada uma das entradas e saídas, obedecendo a ordem de prioridade em cada falante de acordo com os valores da tabela abaixo:
+
 \begin{displaymath}
 \begin{array}{|c c c|c c c|}
 INPUT & & & OUTPUT &\\
@@ -77,15 +75,16 @@ ChP & ChD & ChC & SP & SD & SC\\
 \end{displaymath}
 
 \subsection{Obtenção da expressão de saída}
-A partir da tabela verdade, pôde-se obter as seguintes expressões:
+A partir da tabela verdade, foram equacionadas as expressões de saída referente ao seu proprietário.
+
 \begin{enumerate}
-	\item Para SP, em função de ChP:
+	\item SP (Saída do Presidente) em Função de ChP (Canal do Presidente);
 		\[SP=ChP\cdot ChC' + ChP\cdot ChC\]
 		\[SP=ChP\cdot (ChC' + ChC)\]
 		\[SP=ChP\]
-	\item Para SD, em função de ChD:
+	\item SD (Saída do Diretor) em Função de ChD (Canal do Diretor);
 		\[SD=ChP'\cdot ChD\]
-	\item Para SC, em função de ChC:
+	\item SC (Saída do Coordenador) em Função de ChC (Canal do Coordenador).
 		\[SC=(ChP'\cdot ChD')\cdot ChC\]
 \end{enumerate}
 
@@ -116,8 +115,8 @@ Mapa de Karnaugh para a saída do coordenador (SC)
 	\implicant{4}{4}
 \end{karnaugh-map}
 
-\subsection{Simplificação da expressão pelo mapa de Karnaugh}
-A única expressão que pôde ser simplificada através do mapa de Karnaugh é a expressão referente à SP em função de ChP, pois apenas esta apresenta uma propriedade de simplificação.
+\subsection{Simplificação da expressão através do mapa de Karnaugh}
+Analisando o mapa de Karnaugh é possível identificar que, apenas a expressão referente ao Presidente (SP em função de ChP) será simplificada por ser a única com alguma propriedade de simplificação.
 
 \begin{karnaugh-map}*[4][2][1][$ChPChD$][$ChC$]
 	\minterms{2,3,6,7}
@@ -127,11 +126,22 @@ A única expressão que pôde ser simplificada através do mapa de Karnaugh é a
 	\implicant{7}{6}
 \end{karnaugh-map}
 
-\subsection{Obtenção do circuito lógico}
+\subsection{Circuito lógico}
 
-\subsection{Implementação do hardware a partir do circuito lógico}
+\includegraphics[width=\textwidth]{circuito}
+
+\subsection{Componentes utilizados no circuito}
+\begin{enumerate}
+	\item Board de instrumentação e controle possuindo suporte para as protoboards;
+	\item CI (AND) SN7408N e CI (NOT) SN7404N;
+	\item Jumper de ligação (macho-macho) e Jumper de ligação (macho-fêmea);
+	\item Fios de conexão para alimentação do circuito ligados no GND de cada CI; 
+	\item Fios de conexão para alimentação do circuito ligados no VCC de cada CI.
+	\item Chaves de acionamento para cada lógica no circuito.
+\end{enumerate}
 
 \section{Conclusão}
+Com o circuito montado, programado e funcionando conforme os parâmetros apresentados, ao acionar as chaves, cada uma delas são executadas conforme o grau de prioridade no alto falante determinado pelos Cis. O Presidente ao solicitar a transmissão no alto falante o somente seu canal será reproduzido e impossibilitando os demais serem de serem reproduzidos; ao Diretor solicitar reprodução do seu microfone no alto falante, somente ele fará. A menos que o Presidente reproduza seu microfone uma outra vez; e o Coordenador só falará quando os microfones do Presidente e do Diretor não forem reproduzidos, respectivamente. Através dessas relações, se vê na prática a aplicação da ordem de prioridade conforme demonstrada no tópico “Problema Proposto”. O circuito e seu funcionamento são um sucesso e atuam conforme o solicitado.
 
 \medskip
 

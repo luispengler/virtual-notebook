@@ -1,0 +1,15 @@
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'relatorio1.blg'
+[99] biber:340> INFO - === Wed Mar 23, 2022, 21:51:12
+[116] Biber.pm:418> INFO - Reading 'relatorio1.bcf'
+[201] Biber.pm:972> INFO - Found 2 citekeys in bib section 0
+[224] Biber.pm:4383> INFO - Processing section 0
+[238] Biber.pm:4574> INFO - Looking for bibtex file '/home/luispengler/drive/NextCloud/Research/read/bib.bib' for section 0
+[239] bibtex.pm:1713> INFO - LaTeX decoding ...
+[251] bibtex.pm:1518> INFO - Found BibTeX data source '/home/luispengler/drive/NextCloud/Research/read/bib.bib'
+[273] UCollate.pm:68> INFO - Overriding locale 'pt-PT' defaults 'variable = shifted' with 'variable = non-ignorable'
+[273] UCollate.pm:68> INFO - Overriding locale 'pt-PT' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[273] Biber.pm:4203> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'pt-PT'
+[274] Biber.pm:4209> INFO - No sort tailoring available for locale 'pt-PT'
+[326] bbl.pm:654> INFO - Writing 'relatorio1.bbl' with encoding 'UTF-8'
+[328] bbl.pm:757> INFO - Output to relatorio1.bbl
