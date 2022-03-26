@@ -211,3 +211,22 @@ https://luispengler.github.io/virtual-notebook/12th-grade/doc/instrumenta1.jpg
 + É chamada de monitoramento discreto, quando indica uma faixa ou presença de material armazenado
 + Medida de nível direta: realizada como referência o nível superior
 + Medida de nível indireta: Usado outras grandezas físicas (pressão, empuxo, radiação, etc) para indicar o nível indiretamente
+
+* Medição de Vazão
++ Vazão é a quantidade volumétrica ou mássica de um fluido que passa através de uma seção transversal
++ Essa medição é utiliazda para garantir que determinados ingredientes são fornecidos a uma taxa adequada durante o processo de mistura
++ Para evitar uma vazão elevada, que pode ocasionar em explosões
+** Vazão volumétrica
++ Quantidade de volume por tempo
+\[Q=\frac{V}{t}\]
+** Vazão mássica
++ Quantidade de massa por tempo
+\[Q_M=\frac{M}{t}\]
+** Perda de carga localizada
++ Ocorre em trechos da tubulação onde há presença de acessórios, i.e. válvulas, curvas, derivações, registros ou conexões, bombas, turbinas, etc.
++ A presença desses acessórios contribui para a alteração de módulo ou direção da velocidade média do escoamento, consequentemente alterando a pressão no local (contribui para aumento do número de reynolds)
++ Menor a perda de carga localizada, menor a queda de pressão
+
+** Medição da vazão por pressão diferencial
++ É inserido em uma tubulação um dispositivo capaz de gerar uma diferença de pressão que será detectada através de tomadas de pressão
++ Tem-se uma variaão da diferença de pressão em função da vazão do sistema
