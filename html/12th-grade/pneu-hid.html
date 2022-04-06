@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-03-25 Fri 21:31 -->
+<!-- 2022-04-06 Wed 10:56 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Pneumática e Hidráulica</title>
@@ -250,6 +250,9 @@
 <li><a href="#org60e87ea">Vazão em volume</a></li>
 <li><a href="#orgf46bff1">Vazão em massa</a></li>
 <li><a href="#org5e4e2fc">O efeito Venturi</a></li>
+<li><a href="#orge35576b">Equação de Bernoulli</a></li>
+<li><a href="#org81c8e3f">O postulado</a></li>
+<li><a href="#orgf3bbbbf">Caso bomba-turbina</a></li>
 </ul>
 </li>
 </ul>
@@ -519,11 +522,79 @@ pesquisa sobre m ponto, coloca um ponto em cima do m e isso significa que é pel
 </p>
 </div>
 </div>
+
+<div id="outline-container-orge35576b" class="outline-3">
+<h3 id="orge35576b">Equação de Bernoulli</h3>
+<div class="outline-text-3" id="text-orge35576b">
+</div>
+<div id="outline-container-orgcdc38b6" class="outline-4">
+<h4 id="orgcdc38b6">Energia Potencial</h4>
+<div class="outline-text-4" id="text-orgcdc38b6">
+<p>
+\[E_p=\m\cdot g\cdot h\]
+</p>
+</div>
+</div>
+<div id="outline-container-org2a9aa52" class="outline-4">
+<h4 id="org2a9aa52">Energia Cinética</h4>
+<div class="outline-text-4" id="text-org2a9aa52">
+<p>
+\[E_c=\frac{m\cdot v^2}{2}\]
+</p>
+</div>
+</div>
+<div id="outline-container-orgfc0254e" class="outline-4">
+<h4 id="orgfc0254e">Energia de pressão</h4>
+<div class="outline-text-4" id="text-orgfc0254e">
+<ul class="org-ul">
+<li>É uma energia potencial de pressão:</li>
+</ul>
+<p>
+\[\E_pr=\int(v)pdV\]
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org81c8e3f" class="outline-3">
+<h3 id="org81c8e3f">O postulado</h3>
+<div class="outline-text-3" id="text-org81c8e3f">
+<ul class="org-ul">
+<li>Tipos de energia mecânicas associadas a um fluido</li>
+</ul>
+<p>
+\[E=E_p+E_c+E_pr\]
+\[E=m\cdot g\cdot h + \frac{m\cdot v^2}{2} + \int(v) pdV\]
+</p>
+<ul class="org-ul">
+<li>A equação de energia é uma simplificação de fenômenos envolvidos na dinâmica dos fluidos para se chegar próximo da realidade</li>
+<li>Para isso utilizamos de hipóteses simplifacadoras:</li>
+<li>Regime permanente</li>
+<li>Sem máquina no trecho de escoamento em estudo</li>
+<li>Sem perdas por atrito no escoamento do fluido</li>
+<li>Propriedades uniformes nas seções</li>
+</ul>
+<p>
+\[Z_1 + \frac{v^2_{1}}{2g} + \frac{p_1}{\gamma} Z_2 + \frac{v^2_{2}}{2g} + \frac{p_2}{\gamma}\]
+</p>
+</div>
+</div>
+<div id="outline-container-orgf3bbbbf" class="outline-3">
+<h3 id="orgf3bbbbf">Caso bomba-turbina</h3>
+<div class="outline-text-3" id="text-orgf3bbbbf">
+<ul class="org-ul">
+<li>Potência, por definição, é o trabalho por unidade de tempo</li>
+</ul>
+<p>
+\[N=\frac{energia mecanica}{tempo}\]
+\[N=\frac{energia mecanica}{peso}\cdot \frac{peso}{tempo}\]
+</p>
+</div>
+</div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luís Spengler</p>
-<p class="date">Created: 2022-03-25 Fri 21:31</p>
+<p class="date">Created: 2022-04-06 Wed 10:56</p>
 </div>
 </body>
 </html>

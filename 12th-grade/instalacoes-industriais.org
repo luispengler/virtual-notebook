@@ -154,3 +154,43 @@ https://luispengler.github.io/virtual-notebook/12th-grade/doc/industriais/triang
       \[Po_{max}=10\cdot 736\cdot 1,15 = 8464W\]
    e) Potência de entrada máxima quando a potência de saída máxima é utilizada
       \[\frac{Po_{max}}{0,84}= 10076,19W\]
+
+* Cálculo Luminotécnico
+** Fluxo luminoso
++ Radiação luminosa emitida por uma fonte
++ Unidade: Lúmen (lm)
+
+** Nível de Iluminamento ou Iluminância
++ Relação entre o fluxo luminoso pela área de incidência
++ Unidade: Lux
++ Norma da ABNT que indica os níveis de iluminamento de acordo com a atividade a ser realizada no ambiente
++ ISO/CIE-8995-1 (Iluminação de ambiente de trabalho. Parte 1: Interior)
+
+** Índice de reprodução de cores (IRC)
++ Escala de 1 a 10 (ou 100%) que indica as características mais precisas possível das cores de um corpo.
+
+** Eficiência Luminosa
++ Relação entre o fluxo luminoso emitido por uma fonte e sua potência (W)
++ Unidade: lúmens/watt (lm/m)
+
+** Cálculo Luminotécnico (método dos lúmens)
++ Determinar a quantidade de luminárias para se obter o nível de iluminamento adequado para determinada atividade
+*** Fatores a serem analisados
++ Área;
++ Altura;
++ Cores de teto, parade e piso;
++ Tipo de luminária;
++ Tipo de lâmpada;
++ Tipo de atividade;
++ Período de manutenção das luminárias/lampadas
+
+* Cálculo Luminotécnico (parte 2)
+\[\Phi = \frac{E\cdot S}{Fu\cdot Ftl\]
+\[\Phi_{LUM} = n\cdot \Phi_{LÂMP}\]
++ Número de luminárias \[=\frac{\Phi_{T}}{\Phi_{LUM}}\]
++ Fu: Fator de utilização da luminária no recinto. Uso de tabela
++ Fdl: Fator de Depreciação da luminária (dado)
++ Refletâncias para uso da tabela de Fu:
++ Teto: Branco = 70%; Claro = 50%; Escuro = 30%
++ Parede: Claro = 50%; Escuro = 30%
++ Piso: Escuro = 10%

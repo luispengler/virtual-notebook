@@ -85,3 +85,32 @@ https://luispengler.github.io/virtual-notebook/12th-grade/doc/meioambiente1.png
 + Realizada a cada 3 meses, ou quando a capacidade de geração cair além de 15%;
 + Desligar completamente a UFV: AC e CC;
 + Não utilizar lavadoras de alta pressão;
+
+* String box
++ Proteção contra curto somente em array maior que 3 strings
++ Um circuito para cada MPPT do inversor
++ Seccionamento AC/DC
++ Proteção contra Surto
++ O inversor que tem DPS interno, chama-se string inverter
+
+* Cabeamento
++ Resistência à intempéries, altas temperaturas e irradiação UV;
++ Isolação para 1,5KV;
++ Cabo estanhado;
++ Dupla isolação;
+** Norma
++ Calculas o cabeamento trecho a trecho
++ Queda máxima em toda a extensão: 3%
++ Não usar o critério de 5% da NBR5410
+
+** Proteção e Manobra
++ Arranjo fotovoltáico, proteções CC, inversor, Proteções CA, REDE
+** Proteção CC
++ Fusíveis CC - por string
++ Chave Secionadora CC geral ou,
++ Disjuntores CC
++ DPS CC (dispositivos de proteção surtos)
+** Proteção CA
++ Disjuntores CA
++ DPS CA (Dispositivos de Proteção Surtos)
++ Chave Secionadora CA (DSV) - opcional

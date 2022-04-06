@@ -123,3 +123,27 @@ pesquisa sobre m ponto, coloca um ponto em cima do m e isso significa que é pel
 + A pressão diminui de acordo com a redução da área da seção transversal
 + Exemplo: O venturi é um tubo convergente/divergente, como é mostrado na figura. Determinar a velocidade na seção mínima (garganta) da área 5cm^2, se na seção de entrada da área 20cm^2 a velocidade é 2m/s. O fluido é incompressivel.
 \[V_e\cdot A_e = V_G\cdot A_G\]
+
+** Equação de Bernoulli
+*** Energia Potencial
+\[E_p=\m\cdot g\cdot h\]
+*** Energia Cinética
+\[E_c=\frac{m\cdot v^2}{2}\]
+*** Energia de pressão
++ É uma energia potencial de pressão:
+\[\E_pr=\int(v)pdV\]
+** O postulado
++ Tipos de energia mecânicas associadas a um fluido
+\[E=E_p+E_c+E_pr\]
+\[E=m\cdot g\cdot h + \frac{m\cdot v^2}{2} + \int(v) pdV\]
++ A equação de energia é uma simplificação de fenômenos envolvidos na dinâmica dos fluidos para se chegar próximo da realidade
++ Para isso utilizamos de hipóteses simplifacadoras:
++ Regime permanente
++ Sem máquina no trecho de escoamento em estudo
++ Sem perdas por atrito no escoamento do fluido
++ Propriedades uniformes nas seções
+\[Z_1 + \frac{v^2_{1}}{2g} + \frac{p_1}{\gamma} Z_2 + \frac{v^2_{2}}{2g} + \frac{p_2}{\gamma}\]
+** Caso bomba-turbina
++ Potência, por definição, é o trabalho por unidade de tempo
+\[N=\frac{energia mecanica}{tempo}\]
+\[N=\frac{energia mecanica}{peso}\cdot \frac{peso}{tempo}\]

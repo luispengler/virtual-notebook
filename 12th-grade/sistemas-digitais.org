@@ -34,3 +34,12 @@
 + Integrantes: Giovanna Bughi, Gustavo Ratier Cardoso, João Vitor Medeiros, Luís Spengler
 + Segunda-Feira: 13h30-17h15
 + Prazo máximo: 25/03
++ Link do PDF do trabalho pronto: [[https://luispengler.github.io/virtual-notebook/12th-grade/doc/controlador-de-mesa-de-som/relatorio1/relatorio1.pdf][aqui]]
+
+* Aula (28/03)
+** Sistemas digitais microcontrolados
++ Display de 7 segmentos - Ac e Cc
++ Decodificador BDC para 7 segmentos
++ Relê DC  5V 10 A
++ Introdução aos microcontroladores
++ Leitura de valores analógicos no \[\mu c\] (A/D)

@@ -17,11 +17,17 @@ Sendo P1 dia 31/03 e sua recuperação dia 07/04 e a P2 sendo dia 09/06 e sua re
 
 + Horário de PE da professora: 15h35-16h30 (THU)
 
+** O que é instrumentação
++ É a ciência que desenvolve e aplica técnicas de medição, indicação, registro e controle de processos de fabricação, visando à otimização e eficiencia desses processos
++ A instrumentação está ligada e é a base para a automação, pois permite a leitura das variaveis de um processo
++ Também permite o sensoriamento, condicionamento, transformação da informação lida e a atuação em um processo
+
 ** Tipos de processos (ponto de vista do tempo e do tipo de operação envolvida)
 *** Processo Contínuo
 + A adição da matéria-prima e a saída do produto são contrínuas (no sentido de não ser interrompido). Ex: Refinaria de petróleo
   - Não realizam paradas periódicas (Works 24/7), exceto por paradas progamadas com um periodo maior que 1 ano
   - Esse tipo de industria faz somente um produto
+  - Industrias de grande porte
 
 *** Processo em Batelada
 + O processo é alimentado e re-alimentado. O produto é descarregado e inicia-se outro ciclo, sendo o intervalo entre estes curto.
@@ -69,7 +75,7 @@ https://luispengler.github.io/virtual-notebook/12th-grade/doc/instrumenta1.jpg
 
 * Aula 25/02
 *** Zero Vivo
-+ Transmissão de um sinal de 4 a 20mA, com 4 sendo o 0% do nível de água de um recipiente. 20mA representa 10%
++ Transmissão de um sinal de 4 a 20mA, com 4 sendo o 0% do nível de água de um recipiente. 20mA representa 100%
 
 ** Características dos sistemas de medição
 *** Faixa nominal (nominal range)
@@ -83,7 +89,6 @@ https://luispengler.github.io/virtual-notebook/12th-grade/doc/instrumenta1.jpg
 + Fomos apresentados o sensor infrared difuse e o infrared retroreflective. Depois fomos pedidos para escolher o melhor desses dois para identificar a passagem de ouro numa linha de trituração e o melhor entre os dois para identificar se há um objeto passando OU NÃO em uma linha de produção.
 + Retro-reflective: Sinal lógico 0 quando nada está passando. Mas existem dois tipos, aqueles que emitem ondas polarizadas e que não. Não polarizados não saberiam diferenciar o seu espelho retro-refletor de um objeto metálico, se este redirecionasse o feixe do emissor diretamente no receptor. Neste caso, objetos metálicos, às vezes, fariam o nível lógico voltar pra 0. Com objetos normais, o nível lógico continuaria sendo 1. É sensível até 7m. No entanto, para o tipo de ondas polarizadas, qualquer objeto que interrompa o feixe, mesmo que este seja metálico (ou até outro espelho!), o sinal lógico vai ser 1. É sensível de 3 a 5,5m.
 + Difuse: A diferença entre este e o anterior, é que usam o alvo para mandar a luz de volta (em vez de um espelho). No entanto, nem todos os alvos são bons em emitir luz de volta e precisam estar mais perto do que alguns para serem detectados. Sensores de proximidade difusos tem um alcance de até 500mm. Qualquer alvo dentro deste alcance vai ser visto, contanto que reflita luz suficiente. Para aplicações menores (com alvos menores), existe o tipo de foco fixo. O foco do emissor e receptor estão no mesmo ponto do espaço, aumentando a sua precisão, mas diminuindo o alcance quando comparados com sensores de proximidade difusos. Alcance de geralmente até 70mm.
-+ Resposta (remover depois) difuso para o do ouro e retoreflector não polarizado para linha de produção
 + Aqui está o [[https://luispengler.github.io/virtual-notebook/12th-grade/doc/instrumentacao2/instrumentacao2.pdf][artigo pronto]]
 
 * Aula 04/03
@@ -216,12 +221,15 @@ https://luispengler.github.io/virtual-notebook/12th-grade/doc/instrumenta1.jpg
 + Vazão é a quantidade volumétrica ou mássica de um fluido que passa através de uma seção transversal
 + Essa medição é utiliazda para garantir que determinados ingredientes são fornecidos a uma taxa adequada durante o processo de mistura
 + Para evitar uma vazão elevada, que pode ocasionar em explosões
+
 ** Vazão volumétrica
 + Quantidade de volume por tempo
 \[Q=\frac{V}{t}\]
+
 ** Vazão mássica
 + Quantidade de massa por tempo
 \[Q_M=\frac{M}{t}\]
+
 ** Perda de carga localizada
 + Ocorre em trechos da tubulação onde há presença de acessórios, i.e. válvulas, curvas, derivações, registros ou conexões, bombas, turbinas, etc.
 + A presença desses acessórios contribui para a alteração de módulo ou direção da velocidade média do escoamento, consequentemente alterando a pressão no local (contribui para aumento do número de reynolds)
@@ -229,4 +237,73 @@ https://luispengler.github.io/virtual-notebook/12th-grade/doc/instrumenta1.jpg
 
 ** Medição da vazão por pressão diferencial
 + É inserido em uma tubulação um dispositivo capaz de gerar uma diferença de pressão que será detectada através de tomadas de pressão
-+ Tem-se uma variaão da diferença de pressão em função da vazão do sistema
++ Tem-se uma variação da diferença de pressão em função da vazão do sistema
++ Se aumentarmos o valor da vazão aumentamos o valor da pressão diferencial, essa relação é direta porém não é linear
+
+*** Dipostivos
+
+**** Placa de Orfício
++ Esse elementos consistem de uma placa que será inserida dentro da tubulação e essa placa irá gerar uma redução na passagem do fluido
++ É um dos elementos empregados para medir pressão diferencial de construção, possui manutenção e troca mais simples, mas com alta perda de carga
++ Geralmente são fabricadas com aço inox, monel, latão, etc., dependendo do fluido
++ Existem outros tipos de placa (concêntrico, excêntrico, segmentado), a serem utilizados em outros fluidos (líquidos, gases e vapor sem sólidos em suspensão; com sólidos em suspensão; fluidos viscosos e com alta percentagem de sólidos em suspensão; respectivamente)
++ Existem outros tipo de bordo (o formato interno do orificio) para essas placas de orifício. Estes são bordo quadrado (utilizado em tubulações com diametro maior que 6 polegas), bordo arredondado (utilizado em fluidos altamente viscosos), bordo com entrada cônica (para uso geral)
+
+**** Tubo de Venturi
++ Apresenta uma redução de seção que resulta em aumento de velocidade e pressão menor
++ Assim pode-se medir a pressão entre os pontos P2 e P1
++ A recuperação de pressão em um tubo Venturi é eficiente pois melhora o restabelecimento de pressão, favorecendo fluidos que carregam sólidos em suspensão
++ Produz um diferencial menor que uma placa de orifício, mas o alto custo restringe a sua utlização e apresenta uma perda de carga considerável
+
+**** Bocal de vazão
++ Objeto no formato cônico que é inserido no interior da tubulação
++ É utilizado em aplicações com fluidos muito abrasivos e corrosivos
++ Possui uma perda de carga entre o tubo de orificio e tubo de venturi
+
+**** Tubo de Pitot
++ Consiste em um tubo de pequeno diametro com uma abertura em sua extremidade, voltada a direção de fluxo de um fluido
++ Se medirmos a pressão estática com outro tubo, podemos calcular a velocidade como função da diferença de pressões
++ A diferença de pressão total e a pressão estática da linha nos dará a pressão dinâmica, a qual é proporcional ao quadrado da velocidade
++ Possibilita o funcionamento de um dos mais importantes instrumentos de uma aeronave, o velocímetro
+
+** Medição da vazão do tipo Turbina
++ Constituido por um rotor montado na tubulação, que possui aletas que giram durante a passagem de fluido na turbulação
++ Um sensor de efeito Hall capta a passagem das hélices da turbina
++ a frequência dos pulsos gerados é proporcional à velocidade do fluido
++ É um dos mais flexíveis e universais métodos de medidas de vazão
++ A perda de carga é equivalente a de um trecho reto de tubulação, pois não apresenta obstrução
++ Utiliza a Lei de Faraday de Indução Magnética, onde uma tensão é induzida em um condutor que se move em um campo magnético
++ Essa tensão induzida é detectada e medida por um par e eletrodos e ela é diretamente proporcional à velocidade do fluxo
++ A desvantagem desse medidor restringe-se à necessidade do fluido ser condutivo
+
+** Medição de vazão do tipo Vortex
++ Contém um obstáculo após o qual ocorre um rastro de vórtices
++ A frequência f do rastro de vórtices é proporcional à velocidade
++ À medida que a velocidade do fluxo aumenta, a frequência oscilação também aumenta.
++ A medição de vazão é feita pela medição indireta de velocidade do fluido
+
+** Medidor de vazão ultra-sonico
++ Emite um sinal ultra-sonico e conta o tempo de resposta, relacionado-o com a vazão.
+
+* Medição de temperatura
+** Termomêtros à dilatação de líquidos/gases
++ Normalmente não serão utilizados em sistemas produtivos automatizados
++ Podem ter o corpo metálico ou de vidro, onde está o bulbo há a concentração do líquido/gás
++ Também pode haver o tubo capilar, que é onde o fluido se deslocará
+
+** Termomêtro bimetálico
++ Consiste de lâminas de coeficiente de dilatação linear diferente, as quais são unidas a fim de proporcionar um movimento resultante
++ Ao variar a temperatura, as lâminas apresentarão uma curvatura proporcional que pode ser empregada para indicar temperatura
++ O mais empregado é o da lâmina helicoidal, sendo sua faixa de trabalho de -50C a 800C, sendo sua escala bastante linear e precisão de mais ou menos 1%
+
+** Termopar
++ São largamente utilizados em processos produtivos
++ Um termopar consiste de dois metais, ou ligas, diferentes, unidos por uma junção soldade, chamada de junta quente ou de medição
++ As extremidades dos fios, chamas de junta fria ou referência (JR) são levadas a um medidor de fem, formando um circuito elétrico.
++ Ao ser submetido a uma temperatura diferente da outra extremidade, o termopar produz uma tensão proporcional à variação de temperatura em seus terminais
++ Quatro efeitos conhecidos ocorrem quando junções de materiais distintos são mantidas a temperaturas diferentes
++ Efeito termoelétrico de Seeback: Dois condutores quando estão submetidos a temperatuas diferentes na JR e na JM surge uma fem nas suas extremidades, representado pelo voltímetro V. O coeficiente de Seeback é a relação entre a tensão e temperatura (medida em mV/C)
++ Efeito termoelétrico de Peltier: Quando uma corrente elétrica i flui na junção entre dois metais diferentes, calor é gerado ou absorvido nesse local em quantidade proporcional à corrente. O circuito poderá gerar ou absorver calor, dependendo do sentido da corrente. Portanto, poderá ser gerado a fem, tanto no aquecimento, como no resfriamento da junção, porém com sentidos opostos de condução
+
+
+Como pode ser quantificado a perda de carga nos dispositivos por pressão diferencial

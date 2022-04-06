@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-03-25 Fri 21:31 -->
+<!-- 2022-04-06 Wed 10:56 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Instrumentação e Controle</title>
@@ -231,6 +231,7 @@
 <ul>
 <li><a href="#org3e3b4fb">Primeira Aula</a>
 <ul>
+<li><a href="#org9ad2617">O que é instrumentação</a></li>
 <li><a href="#org9c99ad5">Tipos de processos (ponto de vista do tempo e do tipo de operação envolvida)</a></li>
 </ul>
 </li>
@@ -272,6 +273,16 @@
 <li><a href="#orge6f9f22">Vazão mássica</a></li>
 <li><a href="#org128c856">Perda de carga localizada</a></li>
 <li><a href="#org64988db">Medição da vazão por pressão diferencial</a></li>
+<li><a href="#org0e3985d">Medição da vazão do tipo Turbina</a></li>
+<li><a href="#orgfd1e72c">Medição de vazão do tipo Vortex</a></li>
+<li><a href="#org730da8c">Medidor de vazão ultra-sonico</a></li>
+</ul>
+</li>
+<li><a href="#orgbbba792">Medição de temperatura</a>
+<ul>
+<li><a href="#org3d9901c">Termomêtros à dilatação de líquidos/gases</a></li>
+<li><a href="#org6b44f6c">Termomêtro bimetálico</a></li>
+<li><a href="#orge532b8e">Termopar</a></li>
 </ul>
 </li>
 </ul>
@@ -299,6 +310,17 @@ Sendo P1 dia 31/03 e sua recuperação dia 07/04 e a P2 sendo dia 09/06 e sua re
 </ul>
 </div>
 
+<div id="outline-container-org9ad2617" class="outline-3">
+<h3 id="org9ad2617">O que é instrumentação</h3>
+<div class="outline-text-3" id="text-org9ad2617">
+<ul class="org-ul">
+<li>É a ciência que desenvolve e aplica técnicas de medição, indicação, registro e controle de processos de fabricação, visando à otimização e eficiencia desses processos</li>
+<li>A instrumentação está ligada e é a base para a automação, pois permite a leitura das variaveis de um processo</li>
+<li>Também permite o sensoriamento, condicionamento, transformação da informação lida e a atuação em um processo</li>
+</ul>
+</div>
+</div>
+
 <div id="outline-container-org9c99ad5" class="outline-3">
 <h3 id="org9c99ad5">Tipos de processos (ponto de vista do tempo e do tipo de operação envolvida)</h3>
 <div class="outline-text-3" id="text-org9c99ad5">
@@ -311,6 +333,7 @@ Sendo P1 dia 31/03 e sua recuperação dia 07/04 e a P2 sendo dia 09/06 e sua re
 <ul class="org-ul">
 <li>Não realizam paradas periódicas (Works 24/7), exceto por paradas progamadas com um periodo maior que 1 ano</li>
 <li>Esse tipo de industria faz somente um produto</li>
+<li>Industrias de grande porte</li>
 </ul></li>
 </ul>
 </div>
@@ -349,7 +372,7 @@ Sendo P1 dia 31/03 e sua recuperação dia 07/04 e a P2 sendo dia 09/06 e sua re
 <li>Tivemos que fazer o pré-rascunho de um artigo em trio. Fui com Daniel e Lukas. Obtivemos a seguinte belezinha</li>
 </ul>
 
-<div id="orgb273d95" class="figure">
+<div id="org938bcdc" class="figure">
 <p><img src="https://luispengler.github.io/virtual-notebook/12th-grade/doc/instrumenta1.jpg" alt="instrumenta1.jpg" title="Primeira atividade prática" style="margin-left: auto;margin-right: auto;background-color: mintcream;display: block;width: 100%;" />
 </p>
 </div>
@@ -443,7 +466,7 @@ Sendo P1 dia 31/03 e sua recuperação dia 07/04 e a P2 sendo dia 09/06 e sua re
 <h4 id="org33e2bb5">Zero Vivo</h4>
 <div class="outline-text-4" id="text-org33e2bb5">
 <ul class="org-ul">
-<li>Transmissão de um sinal de 4 a 20mA, com 4 sendo o 0% do nível de água de um recipiente. 20mA representa 10%</li>
+<li>Transmissão de um sinal de 4 a 20mA, com 4 sendo o 0% do nível de água de um recipiente. 20mA representa 100%</li>
 </ul>
 </div>
 </div>
@@ -480,7 +503,6 @@ Sendo P1 dia 31/03 e sua recuperação dia 07/04 e a P2 sendo dia 09/06 e sua re
 <li>Fomos apresentados o sensor infrared difuse e o infrared retroreflective. Depois fomos pedidos para escolher o melhor desses dois para identificar a passagem de ouro numa linha de trituração e o melhor entre os dois para identificar se há um objeto passando OU NÃO em uma linha de produção.</li>
 <li>Retro-reflective: Sinal lógico 0 quando nada está passando. Mas existem dois tipos, aqueles que emitem ondas polarizadas e que não. Não polarizados não saberiam diferenciar o seu espelho retro-refletor de um objeto metálico, se este redirecionasse o feixe do emissor diretamente no receptor. Neste caso, objetos metálicos, às vezes, fariam o nível lógico voltar pra 0. Com objetos normais, o nível lógico continuaria sendo 1. É sensível até 7m. No entanto, para o tipo de ondas polarizadas, qualquer objeto que interrompa o feixe, mesmo que este seja metálico (ou até outro espelho!), o sinal lógico vai ser 1. É sensível de 3 a 5,5m.</li>
 <li>Difuse: A diferença entre este e o anterior, é que usam o alvo para mandar a luz de volta (em vez de um espelho). No entanto, nem todos os alvos são bons em emitir luz de volta e precisam estar mais perto do que alguns para serem detectados. Sensores de proximidade difusos tem um alcance de até 500mm. Qualquer alvo dentro deste alcance vai ser visto, contanto que reflita luz suficiente. Para aplicações menores (com alvos menores), existe o tipo de foco fixo. O foco do emissor e receptor estão no mesmo ponto do espaço, aumentando a sua precisão, mas diminuindo o alcance quando comparados com sensores de proximidade difusos. Alcance de geralmente até 70mm.</li>
-<li>Resposta (remover depois) difuso para o do ouro e retoreflector não polarizado para linha de produção</li>
 <li>Aqui está o <a href="https://luispengler.github.io/virtual-notebook/12th-grade/doc/instrumentacao2/instrumentacao2.pdf">artigo pronto</a></li>
 </ul>
 </div>
@@ -788,6 +810,7 @@ Sendo P1 dia 31/03 e sua recuperação dia 07/04 e a P2 sendo dia 09/06 e sua re
 <li>Para evitar uma vazão elevada, que pode ocasionar em explosões</li>
 </ul>
 </div>
+
 <div id="outline-container-org85a8229" class="outline-3">
 <h3 id="org85a8229">Vazão volumétrica</h3>
 <div class="outline-text-3" id="text-org85a8229">
@@ -799,6 +822,7 @@ Sendo P1 dia 31/03 e sua recuperação dia 07/04 e a P2 sendo dia 09/06 e sua re
 </p>
 </div>
 </div>
+
 <div id="outline-container-orge6f9f22" class="outline-3">
 <h3 id="orge6f9f22">Vazão mássica</h3>
 <div class="outline-text-3" id="text-orge6f9f22">
@@ -810,6 +834,7 @@ Sendo P1 dia 31/03 e sua recuperação dia 07/04 e a P2 sendo dia 09/06 e sua re
 </p>
 </div>
 </div>
+
 <div id="outline-container-org128c856" class="outline-3">
 <h3 id="org128c856">Perda de carga localizada</h3>
 <div class="outline-text-3" id="text-org128c856">
@@ -826,15 +851,153 @@ Sendo P1 dia 31/03 e sua recuperação dia 07/04 e a P2 sendo dia 09/06 e sua re
 <div class="outline-text-3" id="text-org64988db">
 <ul class="org-ul">
 <li>É inserido em uma tubulação um dispositivo capaz de gerar uma diferença de pressão que será detectada através de tomadas de pressão</li>
-<li>Tem-se uma variaão da diferença de pressão em função da vazão do sistema</li>
+<li>Tem-se uma variação da diferença de pressão em função da vazão do sistema</li>
+<li>Se aumentarmos o valor da vazão aumentamos o valor da pressão diferencial, essa relação é direta porém não é linear</li>
 </ul>
+</div>
+
+<div id="outline-container-orgfef1348" class="outline-4">
+<h4 id="orgfef1348">Dipostivos</h4>
+<div class="outline-text-4" id="text-orgfef1348">
+</div>
+<div id="outline-container-org533b707" class="outline-5">
+<h5 id="org533b707">Placa de Orfício</h5>
+<div class="outline-text-5" id="text-org533b707">
+<ul class="org-ul">
+<li>Esse elementos consistem de uma placa que será inserida dentro da tubulação e essa placa irá gerar uma redução na passagem do fluido</li>
+<li>É um dos elementos empregados para medir pressão diferencial de construção, possui manutenção e troca mais simples, mas com alta perda de carga</li>
+<li>Geralmente são fabricadas com aço inox, monel, latão, etc., dependendo do fluido</li>
+<li>Existem outros tipos de placa (concêntrico, excêntrico, segmentado), a serem utilizados em outros fluidos (líquidos, gases e vapor sem sólidos em suspensão; com sólidos em suspensão; fluidos viscosos e com alta percentagem de sólidos em suspensão; respectivamente)</li>
+<li>Existem outros tipo de bordo (o formato interno do orificio) para essas placas de orifício. Estes são bordo quadrado (utilizado em tubulações com diametro maior que 6 polegas), bordo arredondado (utilizado em fluidos altamente viscosos), bordo com entrada cônica (para uso geral)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge93f1cd" class="outline-5">
+<h5 id="orge93f1cd">Tubo de Venturi</h5>
+<div class="outline-text-5" id="text-orge93f1cd">
+<ul class="org-ul">
+<li>Apresenta uma redução de seção que resulta em aumento de velocidade e pressão menor</li>
+<li>Assim pode-se medir a pressão entre os pontos P2 e P1</li>
+<li>A recuperação de pressão em um tubo Venturi é eficiente pois melhora o restabelecimento de pressão, favorecendo fluidos que carregam sólidos em suspensão</li>
+<li>Produz um diferencial menor que uma placa de orifício, mas o alto custo restringe a sua utlização e apresenta uma perda de carga considerável</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgdb8f4c3" class="outline-5">
+<h5 id="orgdb8f4c3">Bocal de vazão</h5>
+<div class="outline-text-5" id="text-orgdb8f4c3">
+<ul class="org-ul">
+<li>Objeto no formato cônico que é inserido no interior da tubulação</li>
+<li>É utilizado em aplicações com fluidos muito abrasivos e corrosivos</li>
+<li>Possui uma perda de carga entre o tubo de orificio e tubo de venturi</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1294212" class="outline-5">
+<h5 id="org1294212">Tubo de Pitot</h5>
+<div class="outline-text-5" id="text-org1294212">
+<ul class="org-ul">
+<li>Consiste em um tubo de pequeno diametro com uma abertura em sua extremidade, voltada a direção de fluxo de um fluido</li>
+<li>Se medirmos a pressão estática com outro tubo, podemos calcular a velocidade como função da diferença de pressões</li>
+<li>A diferença de pressão total e a pressão estática da linha nos dará a pressão dinâmica, a qual é proporcional ao quadrado da velocidade</li>
+<li>Possibilita o funcionamento de um dos mais importantes instrumentos de uma aeronave, o velocímetro</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0e3985d" class="outline-3">
+<h3 id="org0e3985d">Medição da vazão do tipo Turbina</h3>
+<div class="outline-text-3" id="text-org0e3985d">
+<ul class="org-ul">
+<li>Constituido por um rotor montado na tubulação, que possui aletas que giram durante a passagem de fluido na turbulação</li>
+<li>Um sensor de efeito Hall capta a passagem das hélices da turbina</li>
+<li>a frequência dos pulsos gerados é proporcional à velocidade do fluido</li>
+<li>É um dos mais flexíveis e universais métodos de medidas de vazão</li>
+<li>A perda de carga é equivalente a de um trecho reto de tubulação, pois não apresenta obstrução</li>
+<li>Utiliza a Lei de Faraday de Indução Magnética, onde uma tensão é induzida em um condutor que se move em um campo magnético</li>
+<li>Essa tensão induzida é detectada e medida por um par e eletrodos e ela é diretamente proporcional à velocidade do fluxo</li>
+<li>A desvantagem desse medidor restringe-se à necessidade do fluido ser condutivo</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgfd1e72c" class="outline-3">
+<h3 id="orgfd1e72c">Medição de vazão do tipo Vortex</h3>
+<div class="outline-text-3" id="text-orgfd1e72c">
+<ul class="org-ul">
+<li>Contém um obstáculo após o qual ocorre um rastro de vórtices</li>
+<li>A frequência f do rastro de vórtices é proporcional à velocidade</li>
+<li>À medida que a velocidade do fluxo aumenta, a frequência oscilação também aumenta.</li>
+<li>A medição de vazão é feita pela medição indireta de velocidade do fluido</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org730da8c" class="outline-3">
+<h3 id="org730da8c">Medidor de vazão ultra-sonico</h3>
+<div class="outline-text-3" id="text-org730da8c">
+<ul class="org-ul">
+<li>Emite um sinal ultra-sonico e conta o tempo de resposta, relacionado-o com a vazão.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbbba792" class="outline-2">
+<h2 id="orgbbba792">Medição de temperatura</h2>
+<div class="outline-text-2" id="text-orgbbba792">
+</div>
+<div id="outline-container-org3d9901c" class="outline-3">
+<h3 id="org3d9901c">Termomêtros à dilatação de líquidos/gases</h3>
+<div class="outline-text-3" id="text-org3d9901c">
+<ul class="org-ul">
+<li>Normalmente não serão utilizados em sistemas produtivos automatizados</li>
+<li>Podem ter o corpo metálico ou de vidro, onde está o bulbo há a concentração do líquido/gás</li>
+<li>Também pode haver o tubo capilar, que é onde o fluido se deslocará</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6b44f6c" class="outline-3">
+<h3 id="org6b44f6c">Termomêtro bimetálico</h3>
+<div class="outline-text-3" id="text-org6b44f6c">
+<ul class="org-ul">
+<li>Consiste de lâminas de coeficiente de dilatação linear diferente, as quais são unidas a fim de proporcionar um movimento resultante</li>
+<li>Ao variar a temperatura, as lâminas apresentarão uma curvatura proporcional que pode ser empregada para indicar temperatura</li>
+<li>O mais empregado é o da lâmina helicoidal, sendo sua faixa de trabalho de -50C a 800C, sendo sua escala bastante linear e precisão de mais ou menos 1%</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge532b8e" class="outline-3">
+<h3 id="orge532b8e">Termopar</h3>
+<div class="outline-text-3" id="text-orge532b8e">
+<ul class="org-ul">
+<li>São largamente utilizados em processos produtivos</li>
+<li>Um termopar consiste de dois metais, ou ligas, diferentes, unidos por uma junção soldade, chamada de junta quente ou de medição</li>
+<li>As extremidades dos fios, chamas de junta fria ou referência (JR) são levadas a um medidor de fem, formando um circuito elétrico.</li>
+<li>Ao ser submetido a uma temperatura diferente da outra extremidade, o termopar produz uma tensão proporcional à variação de temperatura em seus terminais</li>
+<li>Quatro efeitos conhecidos ocorrem quando junções de materiais distintos são mantidas a temperaturas diferentes</li>
+<li>Efeito termoelétrico de Seeback: Dois condutores quando estão submetidos a temperatuas diferentes na JR e na JM surge uma fem nas suas extremidades, representado pelo voltímetro V. O coeficiente de Seeback é a relação entre a tensão e temperatura (medida em mV/C)</li>
+<li>Efeito termoelétrico de Peltier: Quando uma corrente elétrica i flui na junção entre dois metais diferentes, calor é gerado ou absorvido nesse local em quantidade proporcional à corrente. O circuito poderá gerar ou absorver calor, dependendo do sentido da corrente. Portanto, poderá ser gerado a fem, tanto no aquecimento, como no resfriamento da junção, porém com sentidos opostos de condução</li>
+</ul>
+
+
+<p>
+Como pode ser quantificado a perda de carga nos dispositivos por pressão diferencial
+</p>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luís Spengler</p>
-<p class="date">Created: 2022-03-25 Fri 21:31</p>
+<p class="date">Created: 2022-04-06 Wed 10:56</p>
 </div>
 </body>
 </html>
