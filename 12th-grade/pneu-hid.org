@@ -7,7 +7,11 @@
 
 * Mecânica dos Fluidos
 + Parte da mecânica que se dedica à análise do comportamento dos líquidos e gases
-+ Fluídos não têm forma própria, assumen o formato do recipiente
++ Fluídos não têm forma própria, assumen o formato do recipiente (São exemplos: gases e liquidos)
++ Os fluidos são caracterizados como uma substância que se deforma continuamente se submetida a uma tensão de cisalhamento
++ Diz que um fluido é incompressível se o seu volume não variar quando se aplica uma pressão
++ Se o fluido for incompressível sua massa específica é a mesma, não variando quando a pressão varia
++ Não existe um fluido idealmente incompressível, mas os liquidos são os que chegam mais próximo disto
 
 * Massa específica
 + Fluídos incompressíveis têm \[\rho\]
@@ -16,20 +20,25 @@
 \[\gamma=\frac{G}{V}=\frac{m\cdot g}{V}=\rho \cdot g\]
 
 * Peso específico relativo para líquidos
-
++ É simplesmente a relação entre o peso específico do liquido e o peso específico da água
 
 * Tensão de cisalhamento
++ Definida através da divisão do módulo da componente tangencial da força e a área sobre a qual esta está sendo aplicada
 \[\tau=\frac{Ft}{A}=\frac{N}{m^2}\]
 
 * Lei de Newton da Viscosidade
 + Proporcionalidade entre a tensão de cisalhamento e o gradiente da velocidade
++ Isso introduz um coeficiente, conhecido como viscosidade absoluta ou dinâmica (\[\mu\])
+
 \[\tau=\mu\cdot \frac{dv}{dy}=Pa\cdot s; \frac{N\cdot s}{m^2}; Poise\]
 
-+ Quanto maior o \[\mu\] mais a facilidade de escoar
++ Quanto maior o \[\mu\] menor a facilidade de escoar, pois são inversalmente proporcionais
 
 * Viscosidade cinemática (v)
 + Propriedade definida a partir da viscosidade absoluta pela massa específica
-\[V=\frac{\mu}{\rho}\]
+
+\[\nu=\frac{\mu}{\rho}\]
+
 + Molécula mais simples = menos viscoso
 + Gás mais quente = mais viscoso
 
@@ -38,6 +47,7 @@
 + Hidrostática é outro termo utilizado para os estudos dos fluidos em repouso
 + Em vasos comunicantes, o nível é o mesmo, independente da forma
 + A pressão é descrita como a força normal aplicada sobre uma superfície
+
 \[P=\frac{F_n}{A}\]
 + Onde \[P\] é a pressão em Pascal, \[F_n\] força normal em N, e \[A\] área em \[m^2\]
 + Não se deve confundir pressão com força, pois pressão é simplesmente força pela área (vai se ferrar se tu não sabe disso)
@@ -84,13 +94,13 @@
 + Escoamento laminar: as partículas do fluido se deslocam na forma de um fileto reto e contínuo em uma direção longitudinal
 + Escoamento turbulento: as partículas do fluido se deslocam também em uma dimensão transversal, além da longitudinal
 ** O número de Reynolds (Re)
-+ \[Re=\frac{\rho\cdot v\cdot D}{\mu}=\frac{v\cdot D}{\ni}\]
++ \[Re=\frac{\rho\cdot v\cdot D}{\mu}=\frac{v\cdot D}{\nu}\]
 + Onde:
 \[\rho = massa específica\]
 \[v = velocidade do escoamento\]
 \[D = diametro do tubo\]
 \[\mu = viscosidade dinamica\]
-\[\ni = velocidade cinemática\]
+\[\nu = velocidade cinemática\]
 
 + Escoamento laminar
 \[Re\le 2000\]
@@ -104,10 +114,10 @@
 + Logo temos que:
 \[Q=\frac{V}{t}=\frac{s\cdot A}{t}\]
 \[v=\frac{s}{t}\]
-\[Q=v\cdot A]
+\[Q=v\cdot A\]
 
 ** Vazão em massa
-\[Q_m=\frac{m}{t}\
+\[Q_m=\frac{m}{t}\]
 pesquisa sobre m ponto, coloca um ponto em cima do m e isso significa que é pelo tempo
 \[Q_m=\frac{\rho\cdot A\cdot S}{t}=\rho\cdot A\cdot v = \rho\cdot Q\]
 + Quando ocorre o escoamento de um fluido ao longo de um tubo, a vazão mássica vai ser a mesma em qualquer ponto do tubo
@@ -142,8 +152,10 @@ pesquisa sobre m ponto, coloca um ponto em cima do m e isso significa que é pel
 + Sem máquina no trecho de escoamento em estudo
 + Sem perdas por atrito no escoamento do fluido
 + Propriedades uniformes nas seções
-\[Z_1 + \frac{v^2_{1}}{2g} + \frac{p_1}{\gamma} Z_2 + \frac{v^2_{2}}{2g} + \frac{p_2}{\gamma}\]
+\[Z_1 + \frac{v^2_{1}}{2g} + \frac{p_1}{\gamma} = Z_2 + \frac{v^2_{2}}{2g} + \frac{p_2}{\gamma}\]
 ** Caso bomba-turbina
 + Potência, por definição, é o trabalho por unidade de tempo
 \[N=\frac{energia mecanica}{tempo}\]
 \[N=\frac{energia mecanica}{peso}\cdot \frac{peso}{tempo}\]
+
+* Resolução de Exercícios - Primeiro Bimestre

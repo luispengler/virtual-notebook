@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-06 Wed 10:56 -->
+<!-- 2022-04-17 Sun 08:54 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Instrumentação e Controle</title>
@@ -283,8 +283,10 @@
 <li><a href="#org3d9901c">Termomêtros à dilatação de líquidos/gases</a></li>
 <li><a href="#org6b44f6c">Termomêtro bimetálico</a></li>
 <li><a href="#orge532b8e">Termopar</a></li>
+<li><a href="#org7fc29c5">Termorresistências (RTD - Resistance Temperature Detector)</a></li>
 </ul>
 </li>
+<li><a href="#org29639c9">Democratização do talvez</a></li>
 </ul>
 </div>
 </div>
@@ -372,7 +374,7 @@ Sendo P1 dia 31/03 e sua recuperação dia 07/04 e a P2 sendo dia 09/06 e sua re
 <li>Tivemos que fazer o pré-rascunho de um artigo em trio. Fui com Daniel e Lukas. Obtivemos a seguinte belezinha</li>
 </ul>
 
-<div id="org938bcdc" class="figure">
+<div id="org9f39940" class="figure">
 <p><img src="https://luispengler.github.io/virtual-notebook/12th-grade/doc/instrumenta1.jpg" alt="instrumenta1.jpg" title="Primeira atividade prática" style="margin-left: auto;margin-right: auto;background-color: mintcream;display: block;width: 100%;" />
 </p>
 </div>
@@ -982,22 +984,100 @@ Sendo P1 dia 31/03 e sua recuperação dia 07/04 e a P2 sendo dia 09/06 e sua re
 <li>Um termopar consiste de dois metais, ou ligas, diferentes, unidos por uma junção soldade, chamada de junta quente ou de medição</li>
 <li>As extremidades dos fios, chamas de junta fria ou referência (JR) são levadas a um medidor de fem, formando um circuito elétrico.</li>
 <li>Ao ser submetido a uma temperatura diferente da outra extremidade, o termopar produz uma tensão proporcional à variação de temperatura em seus terminais</li>
-<li>Quatro efeitos conhecidos ocorrem quando junções de materiais distintos são mantidas a temperaturas diferentes</li>
+<li>Quatro efeitos conhecidos ocorrem quando junções de materiais distintos são mantidas a temperaturas diferentes: Seebeck, Peltier, Thomson</li>
 <li>Efeito termoelétrico de Seeback: Dois condutores quando estão submetidos a temperatuas diferentes na JR e na JM surge uma fem nas suas extremidades, representado pelo voltímetro V. O coeficiente de Seeback é a relação entre a tensão e temperatura (medida em mV/C)</li>
 <li>Efeito termoelétrico de Peltier: Quando uma corrente elétrica i flui na junção entre dois metais diferentes, calor é gerado ou absorvido nesse local em quantidade proporcional à corrente. O circuito poderá gerar ou absorver calor, dependendo do sentido da corrente. Portanto, poderá ser gerado a fem, tanto no aquecimento, como no resfriamento da junção, porém com sentidos opostos de condução</li>
 </ul>
-
-
-<p>
-Como pode ser quantificado a perda de carga nos dispositivos por pressão diferencial
-</p>
 </div>
+<div id="outline-container-org2cb3d75" class="outline-4">
+<h4 id="org2cb3d75">Classificação dos termopares</h4>
+<div class="outline-text-4" id="text-org2cb3d75">
+</div>
+<div id="outline-container-org838fabc" class="outline-5">
+<h5 id="org838fabc">Tipo básico</h5>
+<div class="outline-text-5" id="text-org838fabc">
+<ul class="org-ul">
+<li>São os de maior uso industrial</li>
+<li>Podem ser empregados em atmosferas inertes, oxidants ou redutoras</li>
+<li>Os fios são de custo relativamente baixo e sua aplicação permite um limite maior de erro (incerteza maior)</li>
+<li>Exemplos: Termopar tipo T (cobre-constantan), tipo J (ferro-constantan), tipo E (cromel-constantan), tipo K (cromel-alumel), tipo N (nicrosil-nisil)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5eda254" class="outline-5">
+<h5 id="org5eda254">Tipo nobre</h5>
+<div class="outline-text-5" id="text-org5eda254">
+<ul class="org-ul">
+<li>São chamados nobres por usar a platina como elemento básico</li>
+<li>Apresentam uma alta precisão devido à homegeniedade e pureza dos fios e podem ser usados em altas temperaturas</li>
+<li>Exigem instumentos receptores de alta sensibilidade devido à baixa potêNcia termoelétrica</li>
+<li>Exemplos: Termopar tipo S (platina/rhódio 90/10), tipo R (platina/rhódio 87/13), tipo B (platina-rhódio 70/30 platina-ródio 94/6)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3028248" class="outline-5">
+<h5 id="org3028248">Tipo especial</h5>
+<div class="outline-text-5" id="text-org3028248">
+<ul class="org-ul">
+<li>São termopares específicos desenvolvidos para atender a aplicaçẽos restritas que não podem ser atendidas pelo tipo básico e nobre</li>
+<li>Exemplos: Termopar (Tungstênio/Rhênio), termopar (ouro/ferro-chromel)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1ff1fe7" class="outline-5">
+<h5 id="org1ff1fe7">Termopar convencional</h5>
+<div class="outline-text-5" id="text-org1ff1fe7">
+<ul class="org-ul">
+<li>A junta metálica do termopar pode ser exposta ao meio ou protegida</li>
+<li>Os termoelementos são acomodados em isoladores cerâmicos, usualmente denominados missangas, as quais apresentam alta condutividade térmica e também alta resistência de isolação</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5979be6" class="outline-5">
+<h5 id="org5979be6">Termopar com isolação mineral</h5>
+<div class="outline-text-5" id="text-org5979be6">
+<ul class="org-ul">
+<li>O termopar é protegido por uma bainha externa metálica tendo em seu interior um pó isolante de óxido de magnésio</li>
+<li>A durabilidade do  termopar depende da resistência à corrosão da sua bainha e não da resistência à corrosão dos condutores</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7fc29c5" class="outline-3">
+<h3 id="org7fc29c5">Termorresistências (RTD - Resistance Temperature Detector)</h3>
+<div class="outline-text-3" id="text-org7fc29c5">
+<ul class="org-ul">
+<li>É um dispositivo de medidade de temperatura resistivo, RTD, sendo um resistor que varia sua resistência em função da temperatura</li>
+<li>Normalmente o sensor é construído em um filme metálico ou em um pequeno enrolamento à partir de um fio muito fino</li>
+<li>Os principais metais empregados são ligas compostas por niquel, cobre, ou platina com várias faixas de medidade e de custo</li>
+<li>Exemplo: Pt100, Pt1000</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org29639c9" class="outline-2">
+<h2 id="org29639c9">Democratização do talvez</h2>
+<div class="outline-text-2" id="text-org29639c9">
+<ul class="org-ul">
+<li>Todos podem falar &ldquo;talvez&rdquo;, sem distinção de gênero e cor</li>
+<li>Na duvida, sempre diga &ldquo;talvez&rdquo; e nunca diga nunca</li>
+<li>Ninguém pode te forçar a te dizer sim ou não, se isso acontecer diga &ldquo;talvez&rdquo;</li>
+<li>&ldquo;Talvez&rdquo; também pode ser referido como &ldquo;Maybe&rdquo;, &ldquo;Perhaps&rdquo;, &ldquo;Villeicht&rdquo;, mas são versões menos usadas da palavra</li>
+</ul>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luís Spengler</p>
-<p class="date">Created: 2022-04-06 Wed 10:56</p>
+<p class="date">Created: 2022-04-17 Sun 08:54</p>
 </div>
 </body>
 </html>

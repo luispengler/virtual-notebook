@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-06 Wed 10:56 -->
+<!-- 2022-04-17 Sun 08:54 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Instalações Elétricas Industriais</title>
@@ -233,7 +233,7 @@
 <li><a href="#orgaaf6667">Revisão</a>
 <ul>
 <li><a href="#org55ca754">Potências</a></li>
-<li><a href="#orgf892917">Fator de Potência</a></li>
+<li><a href="#orgaf9b597">Fator de Potência</a></li>
 </ul>
 </li>
 <li><a href="#orga465e58">Conteúdo até agora (08/03)</a>
@@ -264,6 +264,12 @@
 </ul>
 </li>
 <li><a href="#orga779bfc">Cálculo Luminotécnico (parte 2)</a></li>
+<li><a href="#org268178b">Cálculo do Fu:</a></li>
+<li><a href="#org970df34">Cálculo Luminotécnico (parte 3)</a>
+<ul>
+<li><a href="#orgd9d13be">Lista cálculo luminotécnico</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -288,7 +294,7 @@
 <h3 id="org55ca754">Potências</h3>
 <div class="outline-text-3" id="text-org55ca754">
 
-<div id="org2049c28" class="figure">
+<div id="org247683f" class="figure">
 <p><img src="https://luispengler.github.io/virtual-notebook/12th-grade/doc/industriais/triangulopot.jpg" alt="triangulopot.jpg" title="Triângulo de Potências" style="margin-left: auto;margin-right: auto;background-color: mintcream;display: block;width: 100%;" />
 </p>
 </div>
@@ -305,13 +311,13 @@
 </div>
 </div>
 
-<div id="outline-container-orgf892917" class="outline-3">
-<h3 id="orgf892917">Fator de Potência</h3>
-<div class="outline-text-3" id="text-orgf892917">
+<div id="outline-container-orgaf9b597" class="outline-3">
+<h3 id="orgaf9b597">Fator de Potência</h3>
+<div class="outline-text-3" id="text-orgaf9b597">
 </div>
-<div id="outline-container-orgdce016c" class="outline-4">
-<h4 id="orgdce016c">Para QL &gt; QC</h4>
-<div class="outline-text-4" id="text-orgdce016c">
+<div id="outline-container-orgb8a313e" class="outline-4">
+<h4 id="orgb8a313e">Para QL &gt; QC</h4>
+<div class="outline-text-4" id="text-orgb8a313e">
 <ul class="org-ul">
 <li>\[QL'=QL-QC\]</li>
 <li>Fator de Potência indutivo</li>
@@ -333,9 +339,9 @@
 </p>
 </div>
 </div>
-<div id="outline-container-orgb8a313e" class="outline-4">
-<h4 id="orgb8a313e">Para QL &gt; QC</h4>
-<div class="outline-text-4" id="text-orgb8a313e">
+<div id="outline-container-org4254a5d" class="outline-4">
+<h4 id="org4254a5d">Para QL &gt; QC</h4>
+<div class="outline-text-4" id="text-org4254a5d">
 <ul class="org-ul">
 <li>\[QC=QL=0\]</li>
 <li>Fator de Potência unitário</li>
@@ -412,9 +418,9 @@
 <h3 id="org98b7577">Dados nominais de \[MI3\phi\]</h3>
 <div class="outline-text-3" id="text-org98b7577">
 </div>
-<div id="outline-container-orgaf9b597" class="outline-4">
-<h4 id="orgaf9b597">Fator de Potência</h4>
-<div class="outline-text-4" id="text-orgaf9b597">
+<div id="outline-container-org7e9656d" class="outline-4">
+<h4 id="org7e9656d">Fator de Potência</h4>
+<div class="outline-text-4" id="text-org7e9656d">
 <ul class="org-ul">
 <li>\[F.P.=cos\phi=\frac{P}{S}\]</li>
 </ul>
@@ -655,6 +661,11 @@
 <div class="outline-text-2" id="text-orga779bfc">
 <p>
 \[\Phi = \frac{E\cdot S}{Fu\cdot Ftl\]
+</p>
+<ul class="org-ul">
+<li>Onde E é lux e S é área</li>
+</ul>
+<p>
 \[\Phi_{LUM} = n\cdot \Phi_{LÂMP}\]
 </p>
 <ul class="org-ul">
@@ -668,10 +679,200 @@
 </ul>
 </div>
 </div>
+
+<div id="outline-container-org268178b" class="outline-2">
+<h2 id="org268178b">Cálculo do Fu:</h2>
+<div class="outline-text-2" id="text-org268178b">
+<p>
+\[k = \frac{(A\times B)}{Hlp\cdot (A+B)\]
+</p>
+<ul class="org-ul">
+<li>Onde A é comprimento (m), B é largura (m), Hlp é a distância da luminária ao plano de trabalho (m) e k é o índice do recinto</li>
+</ul>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Teto-</td>
+<td class="org-left">70%</td>
+<td class="org-left">50%</td>
+</tr>
+
+<tr>
+<td class="org-left">Parede-</td>
+<td class="org-left">50%/30%</td>
+<td class="org-left">50%/30%</td>
+</tr>
+
+<tr>
+<td class="org-left">k:</td>
+<td class="org-left">Piso (10%)</td>
+<td class="org-left">Piso (10%)</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<ul class="org-ul">
+<li>Exemplo do roteiro: E = 500lux; Fdl = 0,75; h=0,7; Pé direito = 3,5m; Área = 35x20 = 700m²; Teto: Claro (50%); Parede: Claro (50%); Piso: Escuro (10%)</li>
+</ul>
+<p>
+\[Hlp = 3,5-0,7=2,8m\]
+\[k = \frac{(35\times 20)}{2,8\cdot (35+20)\]
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Teto-</td>
+<td class="org-left">70%</td>
+<td class="org-left">50%</td>
+</tr>
+
+<tr>
+<td class="org-left">Parede-</td>
+<td class="org-left">50%/30%</td>
+<td class="org-left">50%/30%</td>
+</tr>
+
+<tr>
+<td class="org-left">k:</td>
+<td class="org-left">Piso (10%)</td>
+<td class="org-left">Piso (10%)</td>
+</tr>
+
+<tr>
+<td class="org-left">4,0</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">0,72</td>
+</tr>
+
+<tr>
+<td class="org-left">5,0</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">0,76</td>
+</tr>
+</tbody>
+</table>
+
+<ul class="org-ul">
+<li>Nosso k deu entre dois valores de número (4 e 5), logo para descobrir o valor do fu precisaremos fazer uma continha (interpolação)</li>
+</ul>
+
+<p>
+\[\frac{5-4}{5-4,55} = \frac{0,76-0,72}{0,76-Fu}\]
+\[Fu \approx 0,74\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org970df34" class="outline-2">
+<h2 id="org970df34">Cálculo Luminotécnico (parte 3)</h2>
+<div class="outline-text-2" id="text-org970df34">
+<ul class="org-ul">
+<li>Exemplo da última aula:</li>
+<li>E = 500 lux; Área: 35x20 m^2; Pé direito: 3,5m; Altura do plano de trabalho: 0,7m; Fator de depreciação: 0,75; Fluxo de cada lâmpada: 2700 lm; Fator de utilização da luminária: 0,74</li>
+</ul>
+<p>
+\[\Phi = \frac{E\times S}{Fu\times Fdl} = \frac{500\times 700}{0,74\times 0,75} = 630630,60 lm\]
+</p>
+<ul class="org-ul">
+<li>Cada luminária possui 2 lâmpadas</li>
+</ul>
+<p>
+\[\Phi = 2\times 2700 = 5400 lm\]
+</p>
+<ul class="org-ul">
+<li>Número de luminárias:</li>
+</ul>
+<p>
+\[\frac{\Phi_{T}}{\Phi_{LUM}} \approx 117\]
+</p>
+<ul class="org-ul">
+<li>Regra para distribuição:</li>
+</ul>
+<p>
+\[x\leq Hlp\]
+\[y \leq Hlp\]
+</p>
+<ul class="org-ul">
+<li>x e y é a distância entre as luminárias</li>
+<li>Analisar arranjos &ldquo;linhas x colunas&rdquo; para a distribuição do fluxo de forma mais homogênea: 9x13</li>
+</ul>
+</div>
+
+
+<div id="outline-container-orgd9d13be" class="outline-3">
+<h3 id="orgd9d13be">Lista cálculo luminotécnico</h3>
+<div class="outline-text-3" id="text-orgd9d13be">
+<ol class="org-ol">
+<li>Dados: E = 600 lux; A = 9x6m^2; Pé direito: 4,5m; Plano de trabalho está a 0,75m do chão; Paredes e teto claros, piso é escuro; Fluxo de cada lâmpada: 2300 lm; Fdl = 0,78</li>
+</ol>
+<p>
+\[Hlp = 4,5 - 0,75 = 3,75 m\]
+</p>
+
+<p>
+\[k = \frac{9\times 6}{3,75(9+6)} = 0,96\]
+</p>
+
+
+<p>
+\[Fu = \frac{1-0,8}{1-0,96} = \frac{0,36-0,3}{0,36-Fu}\]
+</p>
+
+<p>
+\[Fu = \frac{0,2}{0,04} = \frac{0,06}{0,36-Fu}\]
+</p>
+
+<p>
+\[Fu = 0,348\]
+</p>
+
+<p>
+\[Phi = \frac{E\times S}{Fu\times Fdl} = \frac{600\times 54}{0,78\times 0,348} = 119 363,39 lux\]
+</p>
+
+<p>
+\[\Phi_{LUM} = 4600 lm\]
+</p>
+
+<ul class="org-ul">
+<li>Numero de luminárias:</li>
+</ul>
+<p>
+\[\frac{\Phi_{T}}{\Phi_{LUM} \approx 26\]
+</p>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luís Spengler</p>
-<p class="date">Created: 2022-04-06 Wed 10:56</p>
+<p class="date">Created: 2022-04-17 Sun 08:54</p>
 </div>
 </body>
 </html>

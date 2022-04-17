@@ -301,9 +301,43 @@ https://luispengler.github.io/virtual-notebook/12th-grade/doc/instrumenta1.jpg
 + Um termopar consiste de dois metais, ou ligas, diferentes, unidos por uma junção soldade, chamada de junta quente ou de medição
 + As extremidades dos fios, chamas de junta fria ou referência (JR) são levadas a um medidor de fem, formando um circuito elétrico.
 + Ao ser submetido a uma temperatura diferente da outra extremidade, o termopar produz uma tensão proporcional à variação de temperatura em seus terminais
-+ Quatro efeitos conhecidos ocorrem quando junções de materiais distintos são mantidas a temperaturas diferentes
++ Quatro efeitos conhecidos ocorrem quando junções de materiais distintos são mantidas a temperaturas diferentes: Seebeck, Peltier, Thomson
 + Efeito termoelétrico de Seeback: Dois condutores quando estão submetidos a temperatuas diferentes na JR e na JM surge uma fem nas suas extremidades, representado pelo voltímetro V. O coeficiente de Seeback é a relação entre a tensão e temperatura (medida em mV/C)
 + Efeito termoelétrico de Peltier: Quando uma corrente elétrica i flui na junção entre dois metais diferentes, calor é gerado ou absorvido nesse local em quantidade proporcional à corrente. O circuito poderá gerar ou absorver calor, dependendo do sentido da corrente. Portanto, poderá ser gerado a fem, tanto no aquecimento, como no resfriamento da junção, porém com sentidos opostos de condução
+*** Classificação dos termopares
+**** Tipo básico
++ São os de maior uso industrial
++ Podem ser empregados em atmosferas inertes, oxidants ou redutoras
++ Os fios são de custo relativamente baixo e sua aplicação permite um limite maior de erro (incerteza maior)
++ Exemplos: Termopar tipo T (cobre-constantan), tipo J (ferro-constantan), tipo E (cromel-constantan), tipo K (cromel-alumel), tipo N (nicrosil-nisil)
+
+**** Tipo nobre
++ São chamados nobres por usar a platina como elemento básico
++ Apresentam uma alta precisão devido à homegeniedade e pureza dos fios e podem ser usados em altas temperaturas
++ Exigem instumentos receptores de alta sensibilidade devido à baixa potêNcia termoelétrica
++ Exemplos: Termopar tipo S (platina/rhódio 90/10), tipo R (platina/rhódio 87/13), tipo B (platina-rhódio 70/30 platina-ródio 94/6)
+
+**** Tipo especial
++ São termopares específicos desenvolvidos para atender a aplicaçẽos restritas que não podem ser atendidas pelo tipo básico e nobre
++ Exemplos: Termopar (Tungstênio/Rhênio), termopar (ouro/ferro-chromel)
+
+**** Termopar convencional
++ A junta metálica do termopar pode ser exposta ao meio ou protegida
++ Os termoelementos são acomodados em isoladores cerâmicos, usualmente denominados missangas, as quais apresentam alta condutividade térmica e também alta resistência de isolação
+
+**** Termopar com isolação mineral
++ O termopar é protegido por uma bainha externa metálica tendo em seu interior um pó isolante de óxido de magnésio
++ A durabilidade do  termopar depende da resistência à corrosão da sua bainha e não da resistência à corrosão dos condutores
+
+** Termorresistências (RTD - Resistance Temperature Detector)
++ É um dispositivo de medidade de temperatura resistivo, RTD, sendo um resistor que varia sua resistência em função da temperatura
++ Normalmente o sensor é construído em um filme metálico ou em um pequeno enrolamento à partir de um fio muito fino
++ Os principais metais empregados são ligas compostas por niquel, cobre, ou platina com várias faixas de medidade e de custo
++ Exemplo: Pt100, Pt1000
 
 
-Como pode ser quantificado a perda de carga nos dispositivos por pressão diferencial
+* Democratização do talvez
++ Todos podem falar "talvez", sem distinção de gênero e cor
++ Na duvida, sempre diga "talvez" e nunca diga nunca
++ Ninguém pode te forçar a te dizer sim ou não, se isso acontecer diga "talvez"
++ "Talvez" também pode ser referido como "Maybe", "Perhaps", "Villeicht", mas são versões menos usadas da palavra

@@ -114,3 +114,44 @@ https://luispengler.github.io/virtual-notebook/12th-grade/doc/meioambiente1.png
 + Disjuntores CA
 + DPS CA (Dispositivos de Proteção Surtos)
 + Chave Secionadora CA (DSV) - opcional
+
+* Projeto de sistemas on-grid
+1. Análise de fatura - consumo em kWh durante um período de 1 ano, fazendo uma média - A potência máxima que vc pode instalar é a demanda - Isso vai determinar o tipo do projeto (micro ou mini geração)
+2. Algumas análises
+   a) Análise de sombreamento
+      + Não instale pro sul idiota (aproveitamento coco).
+      + Cuidado com os postes!
+      + Usar camera SLR, ou celular tirando foto a cada 5min (timelapse)
+      + Pegar a potência em W/m^2 em um mapa solar imétrico e os horários de sol de pico
+      + Consultar a disponibilidade anual para conseguir o fator que vai ser usado para
+      + Colocar o painel inclinado conforme sua latitude, não colocar o painel em menos de 10º de inclinação
+
+   b) Oscilações na rede elétrica
+      + Ligou o chuveiro e oscilou a luz, não vai funcionar! (troca as merda dos cabos)
+3. Calcular horas de sol pleno (HSP)
+      + Hora de Sol Pleno (HSP) é uma grandeza que representa a quantidade de horas em que a irradiância solar seria constante de 1000W/m^2
+      + Em campo grande é uns 5,4h HSP
+4. Definir o inversor: mono, bi ou trifásico
+5. String box
+6. Plano de manutenção: Ponto bônus
+
++ A conta:
+  - Consumo a compensar: 300kWh
+  - Consumo no dia: 300/30 = 10kWh
+  - HSP = 5,4h (CG) -> 10kWh/5,4h = 1,85kW
+  - Escolha um painel, neste exemplo usaremos um painel solar fotovoltaico anauger com 340Wp monocristalino, Tensão MPP = 35,7V, Corrente MPP = 9,52 A; Tensão de circuito aberto MPP = 44,6V
+  - Número de paineis = 1,85kW/340 = 5,44 painéis; agora dividimos pelo fator de correção 5,44/0,923 = 5, 89 = 6 painéis
+  - Inversor para 1,8kW (como não existe, usaremos um de 2kW); Para calcular a tensão de circuito aberto = número de paineis x tensão de circuito aberto MPP = 6x44,6 = 268V; Tensão de ponto máximo = 6 x 35,7 = 214V; Um inversor que atende os requisitos é o Mic 2000TC
+
+* Erros comuns em instalações fotovoltaica
++ Causa: engenheiros e técnicos sem capacitação especifica;
++ Dificuldade em monitorar o sistema;
++ Consequência: danos permanentes e graves às instalações, pessoal e material;
++ Inversores suportam sobrecarga de até 20%, mas algumas empresas prestadores fornecem um inversor 20% menor, sempre operando em sobre carga;
++ Isso encurta a vida útil do equipamento caso não esteja instalado em sala refrigerada;
++ Desperdício da capacidade de geração dos módulos
++ Andar sobre os painéis - módulos não são projetados para suportar peso frontal
++ Proteções CA e CC em uma mesma caixa de junção - não pode pela norma
++ Módulos com diferentes orientações em uma mesma string - MPPT não encontra o ponto de máxima potência, dando uma considerável perda na geração
++ Módulos instalados em áreas sujeitas a sombras parciais ou totais
++ Falta de equipotencialização e aterramento - Colocar isolação galvânica

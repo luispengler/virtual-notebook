@@ -186,6 +186,7 @@ https://luispengler.github.io/virtual-notebook/12th-grade/doc/industriais/triang
 
 * Cálculo Luminotécnico (parte 2)
 \[\Phi = \frac{E\cdot S}{Fu\cdot Ftl\]
++ Onde E é lux e S é área
 \[\Phi_{LUM} = n\cdot \Phi_{LÂMP}\]
 + Número de luminárias \[=\frac{\Phi_{T}}{\Phi_{LUM}}\]
 + Fu: Fator de utilização da luminária no recinto. Uso de tabela
@@ -194,3 +195,62 @@ https://luispengler.github.io/virtual-notebook/12th-grade/doc/industriais/triang
 + Teto: Branco = 70%; Claro = 50%; Escuro = 30%
 + Parede: Claro = 50%; Escuro = 30%
 + Piso: Escuro = 10%
+
+* Cálculo do Fu:
+\[k = \frac{(A\times B)}{Hlp\cdot (A+B)\]
++ Onde A é comprimento (m), B é largura (m), Hlp é a distância da luminária ao plano de trabalho (m) e k é o índice do recinto
+
+| Teto-   | 70%        | 50%        |
+| Parede- | 50%/30%    | 50%/30%    |
+| k:      | Piso (10%) | Piso (10%) |
+|         |            |            |
+
++ Exemplo do roteiro: E = 500lux; Fdl = 0,75; h=0,7; Pé direito = 3,5m; Área = 35x20 = 700m²; Teto: Claro (50%); Parede: Claro (50%); Piso: Escuro (10%)
+\[Hlp = 3,5-0,7=2,8m\]
+\[k = \frac{(35\times 20)}{2,8\cdot (35+20)\]
+
+| Teto-   | 70%        | 50%        |
+| Parede- | 50%/30%    | 50%/30%    |
+| k:      | Piso (10%) | Piso (10%) |
+| 4,0     |            | 0,72       |
+| 5,0     |            | 0,76       |
+
++ Nosso k deu entre dois valores de número (4 e 5), logo para descobrir o valor do fu precisaremos fazer uma continha (interpolação)
+
+\[\frac{5-4}{5-4,55} = \frac{0,76-0,72}{0,76-Fu}\]
+\[Fu \approx 0,74\]
+
+* Cálculo Luminotécnico (parte 3)
++ Exemplo da última aula:
++ E = 500 lux; Área: 35x20 m^2; Pé direito: 3,5m; Altura do plano de trabalho: 0,7m; Fator de depreciação: 0,75; Fluxo de cada lâmpada: 2700 lm; Fator de utilização da luminária: 0,74
+\[\Phi = \frac{E\times S}{Fu\times Fdl} = \frac{500\times 700}{0,74\times 0,75} = 630630,60 lm\]
++ Cada luminária possui 2 lâmpadas
+\[\Phi = 2\times 2700 = 5400 lm\]
++ Número de luminárias:
+\[\frac{\Phi_{T}}{\Phi_{LUM}} \approx 117\]
++ Regra para distribuição:
+\[x\leq Hlp\]
+\[y \leq Hlp\]
++ x e y é a distância entre as luminárias
++ Analisar arranjos "linhas x colunas" para a distribuição do fluxo de forma mais homogênea: 9x13
+
+
+** Lista cálculo luminotécnico
+1) Dados: E = 600 lux; A = 9x6m^2; Pé direito: 4,5m; Plano de trabalho está a 0,75m do chão; Paredes e teto claros, piso é escuro; Fluxo de cada lâmpada: 2300 lm; Fdl = 0,78
+\[Hlp = 4,5 - 0,75 = 3,75 m\]
+
+\[k = \frac{9\times 6}{3,75(9+6)} = 0,96\]
+
+
+\[Fu = \frac{1-0,8}{1-0,96} = \frac{0,36-0,3}{0,36-Fu}\]
+
+\[Fu = \frac{0,2}{0,04} = \frac{0,06}{0,36-Fu}\]
+
+\[Fu = 0,348\]
+
+\[Phi = \frac{E\times S}{Fu\times Fdl} = \frac{600\times 54}{0,78\times 0,348} = 119 363,39 lux\]
+
+\[\Phi_{LUM} = 4600 lm\]
+
++ Numero de luminárias:
+\[\frac{\Phi_{T}}{\Phi_{LUM} \approx 26\]

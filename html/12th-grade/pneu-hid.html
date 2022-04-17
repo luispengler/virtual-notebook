@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-06 Wed 10:56 -->
+<!-- 2022-04-17 Sun 08:54 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Pneumática e Hidráulica</title>
@@ -255,6 +255,7 @@
 <li><a href="#orgf3bbbbf">Caso bomba-turbina</a></li>
 </ul>
 </li>
+<li><a href="#org6093fbe">Resolução de Exercícios - Primeiro Bimestre</a></li>
 </ul>
 </div>
 </div>
@@ -264,7 +265,11 @@
 <div class="outline-text-2" id="text-org6aa5c98">
 <ul class="org-ul">
 <li>Parte da mecânica que se dedica à análise do comportamento dos líquidos e gases</li>
-<li>Fluídos não têm forma própria, assumen o formato do recipiente</li>
+<li>Fluídos não têm forma própria, assumen o formato do recipiente (São exemplos: gases e liquidos)</li>
+<li>Os fluidos são caracterizados como uma substância que se deforma continuamente se submetida a uma tensão de cisalhamento</li>
+<li>Diz que um fluido é incompressível se o seu volume não variar quando se aplica uma pressão</li>
+<li>Se o fluido for incompressível sua massa específica é a mesma, não variando quando a pressão varia</li>
+<li>Não existe um fluido idealmente incompressível, mas os liquidos são os que chegam mais próximo disto</li>
 </ul>
 </div>
 </div>
@@ -289,12 +294,19 @@
 
 <div id="outline-container-orge0d225a" class="outline-2">
 <h2 id="orge0d225a">Peso específico relativo para líquidos</h2>
+<div class="outline-text-2" id="text-orge0d225a">
+<ul class="org-ul">
+<li>É simplesmente a relação entre o peso específico do liquido e o peso específico da água</li>
+</ul>
 </div>
-
+</div>
 
 <div id="outline-container-orgb93e2ba" class="outline-2">
 <h2 id="orgb93e2ba">Tensão de cisalhamento</h2>
 <div class="outline-text-2" id="text-orgb93e2ba">
+<ul class="org-ul">
+<li>Definida através da divisão do módulo da componente tangencial da força e a área sobre a qual esta está sendo aplicada</li>
+</ul>
 <p>
 \[\tau=\frac{Ft}{A}=\frac{N}{m^2}\]
 </p>
@@ -306,13 +318,15 @@
 <div class="outline-text-2" id="text-org4c20123">
 <ul class="org-ul">
 <li>Proporcionalidade entre a tensão de cisalhamento e o gradiente da velocidade</li>
+<li>Isso introduz um coeficiente, conhecido como viscosidade absoluta ou dinâmica (\[\mu\])</li>
 </ul>
+
 <p>
 \[\tau=\mu\cdot \frac{dv}{dy}=Pa\cdot s; \frac{N\cdot s}{m^2}; Poise\]
 </p>
 
 <ul class="org-ul">
-<li>Quanto maior o \[\mu\] mais a facilidade de escoar</li>
+<li>Quanto maior o \[\mu\] menor a facilidade de escoar, pois são inversalmente proporcionais</li>
 </ul>
 </div>
 </div>
@@ -323,9 +337,11 @@
 <ul class="org-ul">
 <li>Propriedade definida a partir da viscosidade absoluta pela massa específica</li>
 </ul>
+
 <p>
-\[V=\frac{\mu}{\rho}\]
+\[\nu=\frac{\mu}{\rho}\]
 </p>
+
 <ul class="org-ul">
 <li>Molécula mais simples = menos viscoso</li>
 <li>Gás mais quente = mais viscoso</li>
@@ -342,6 +358,7 @@
 <li>Em vasos comunicantes, o nível é o mesmo, independente da forma</li>
 <li>A pressão é descrita como a força normal aplicada sobre uma superfície</li>
 </ul>
+
 <p>
 \[P=\frac{F_n}{A}\]
 </p>
@@ -448,7 +465,7 @@
 <h3 id="org601584a">O número de Reynolds (Re)</h3>
 <div class="outline-text-3" id="text-org601584a">
 <ul class="org-ul">
-<li>\[Re=\frac{\rho\cdot v\cdot D}{\mu}=\frac{v\cdot D}{\ni}\]</li>
+<li>\[Re=\frac{\rho\cdot v\cdot D}{\mu}=\frac{v\cdot D}{\nu}\]</li>
 <li>Onde:</li>
 </ul>
 <p>
@@ -456,7 +473,7 @@
 \[v = velocidade do escoamento\]
 \[D = diametro do tubo\]
 \[\mu = viscosidade dinamica\]
-\[\ni = velocidade cinemática\]
+\[\nu = velocidade cinemática\]
 </p>
 
 <ul class="org-ul">
@@ -482,7 +499,7 @@
 <p>
 \[Q=\frac{V}{t}=\frac{s\cdot A}{t}\]
 \[v=\frac{s}{t}\]
-\[Q=v&sdot; A]
+\[Q=v\cdot A\]
 </p>
 </div>
 </div>
@@ -491,7 +508,7 @@
 <h3 id="orgf46bff1">Vazão em massa</h3>
 <div class="outline-text-3" id="text-orgf46bff1">
 <p>
-\[Q_m=\frac{m}{t}\
+\[Q_m=\frac{m}{t}\]
 pesquisa sobre m ponto, coloca um ponto em cima do m e isso significa que é pelo tempo
 \[Q_m=\frac{\rho\cdot A\cdot S}{t}=\rho\cdot A\cdot v = \rho\cdot Q\]
 </p>
@@ -574,7 +591,7 @@ pesquisa sobre m ponto, coloca um ponto em cima do m e isso significa que é pel
 <li>Propriedades uniformes nas seções</li>
 </ul>
 <p>
-\[Z_1 + \frac{v^2_{1}}{2g} + \frac{p_1}{\gamma} Z_2 + \frac{v^2_{2}}{2g} + \frac{p_2}{\gamma}\]
+\[Z_1 + \frac{v^2_{1}}{2g} + \frac{p_1}{\gamma} = Z_2 + \frac{v^2_{2}}{2g} + \frac{p_2}{\gamma}\]
 </p>
 </div>
 </div>
@@ -591,10 +608,14 @@ pesquisa sobre m ponto, coloca um ponto em cima do m e isso significa que é pel
 </div>
 </div>
 </div>
+
+<div id="outline-container-org6093fbe" class="outline-2">
+<h2 id="org6093fbe">Resolução de Exercícios - Primeiro Bimestre</h2>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luís Spengler</p>
-<p class="date">Created: 2022-04-06 Wed 10:56</p>
+<p class="date">Created: 2022-04-17 Sun 08:54</p>
 </div>
 </body>
 </html>

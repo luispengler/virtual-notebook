@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-06 Wed 10:56 -->
+<!-- 2022-04-17 Sun 08:54 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Meio Ambiente e Energias Renováveis</title>
@@ -235,6 +235,8 @@
 <li><a href="#org9e93815">Proteção CA</a></li>
 </ul>
 </li>
+<li><a href="#org19b33e6">Projeto de sistemas on-grid</a></li>
+<li><a href="#orgffccea0">Erros comuns em instalações fotovoltaica</a></li>
 </ul>
 </div>
 </div>
@@ -329,7 +331,7 @@
 <li>Abaixo há um gráfico IxW</li>
 </ul>
 
-<div id="org1446cc4" class="figure">
+<div id="org1fedce6" class="figure">
 <p><img src="https://luispengler.github.io/virtual-notebook/12th-grade/doc/meioambiente1.png" alt="meioambiente1.png" title="Curva T-W" style="margin-left: auto;margin-right: auto;background-color: mintcream;display: block;width: 100%;" />
 </p>
 </div>
@@ -485,10 +487,73 @@
 </div>
 </div>
 </div>
+
+<div id="outline-container-org19b33e6" class="outline-2">
+<h2 id="org19b33e6">Projeto de sistemas on-grid</h2>
+<div class="outline-text-2" id="text-org19b33e6">
+<ol class="org-ol">
+<li>Análise de fatura - consumo em kWh durante um período de 1 ano, fazendo uma média - A potência máxima que vc pode instalar é a demanda - Isso vai determinar o tipo do projeto (micro ou mini geração)</li>
+<li>Algumas análises
+<ol class="org-ol">
+<li>Análise de sombreamento
+<ul class="org-ul">
+<li>Não instale pro sul idiota (aproveitamento coco).</li>
+<li>Cuidado com os postes!</li>
+<li>Usar camera SLR, ou celular tirando foto a cada 5min (timelapse)</li>
+<li>Pegar a potência em W/m^2 em um mapa solar imétrico e os horários de sol de pico</li>
+<li>Consultar a disponibilidade anual para conseguir o fator que vai ser usado para</li>
+<li>Colocar o painel inclinado conforme sua latitude, não colocar o painel em menos de 10º de inclinação</li>
+</ul></li>
+
+<li>Oscilações na rede elétrica
+<ul class="org-ul">
+<li>Ligou o chuveiro e oscilou a luz, não vai funcionar! (troca as merda dos cabos)</li>
+</ul></li>
+</ol></li>
+<li>Calcular horas de sol pleno (HSP)
+<ul class="org-ul">
+<li>Hora de Sol Pleno (HSP) é uma grandeza que representa a quantidade de horas em que a irradiância solar seria constante de 1000W/m^2</li>
+<li>Em campo grande é uns 5,4h HSP</li>
+</ul></li>
+<li>Definir o inversor: mono, bi ou trifásico</li>
+<li>String box</li>
+<li>Plano de manutenção: Ponto bônus</li>
+
+<li>A conta:
+<ul class="org-ul">
+<li>Consumo a compensar: 300kWh</li>
+<li>Consumo no dia: 300/30 = 10kWh</li>
+<li>HSP = 5,4h (CG) -&gt; 10kWh/5,4h = 1,85kW</li>
+<li>Escolha um painel, neste exemplo usaremos um painel solar fotovoltaico anauger com 340Wp monocristalino, Tensão MPP = 35,7V, Corrente MPP = 9,52 A; Tensão de circuito aberto MPP = 44,6V</li>
+<li>Número de paineis = 1,85kW/340 = 5,44 painéis; agora dividimos pelo fator de correção 5,44/0,923 = 5, 89 = 6 painéis</li>
+<li>Inversor para 1,8kW (como não existe, usaremos um de 2kW); Para calcular a tensão de circuito aberto = número de paineis x tensão de circuito aberto MPP = 6x44,6 = 268V; Tensão de ponto máximo = 6 x 35,7 = 214V; Um inversor que atende os requisitos é o Mic 2000TC</li>
+</ul></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgffccea0" class="outline-2">
+<h2 id="orgffccea0">Erros comuns em instalações fotovoltaica</h2>
+<div class="outline-text-2" id="text-orgffccea0">
+<ul class="org-ul">
+<li>Causa: engenheiros e técnicos sem capacitação especifica;</li>
+<li>Dificuldade em monitorar o sistema;</li>
+<li>Consequência: danos permanentes e graves às instalações, pessoal e material;</li>
+<li>Inversores suportam sobrecarga de até 20%, mas algumas empresas prestadores fornecem um inversor 20% menor, sempre operando em sobre carga;</li>
+<li>Isso encurta a vida útil do equipamento caso não esteja instalado em sala refrigerada;</li>
+<li>Desperdício da capacidade de geração dos módulos</li>
+<li>Andar sobre os painéis - módulos não são projetados para suportar peso frontal</li>
+<li>Proteções CA e CC em uma mesma caixa de junção - não pode pela norma</li>
+<li>Módulos com diferentes orientações em uma mesma string - MPPT não encontra o ponto de máxima potência, dando uma considerável perda na geração</li>
+<li>Módulos instalados em áreas sujeitas a sombras parciais ou totais</li>
+<li>Falta de equipotencialização e aterramento - Colocar isolação galvânica</li>
+</ul>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luís Spengler</p>
-<p class="date">Created: 2022-04-06 Wed 10:56</p>
+<p class="date">Created: 2022-04-17 Sun 08:54</p>
 </div>
 </body>
 </html>
