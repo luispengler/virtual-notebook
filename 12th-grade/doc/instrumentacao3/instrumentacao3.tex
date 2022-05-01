@@ -1,0 +1,62 @@
+\documentclass{article}
+\title{Identificação de histerese em um Esfigmomanômetro}
+\date{}
+
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[margin=3.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{pgfplots}
+\pgfplotsset{compat = newest}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[parfill]{parskip}
+\usepackage[nottoc]{tocbibind}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{/home/luispengler/drive/LinuxFabrik/Research/read/bib.bib}
+\usepackage{authblk}
+\author[1]{Luís Spengler}
+\affil[1]{Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso do Sul}
+
+\begin{document}
+\maketitle
+
+\section{Introdução}
+
+\section{Problemática}
+
+\section{Objetivo Geral}
+
+\section{Metodologia}
+
+\section{Resultados}
+\begin{tikzpicture}
+	\begin{axis}[
+		xtick distance = 20,
+		ytick distance = 1,
+		grid = both,
+		minor tick num = 1,
+      	        major grid style = {lightgray},
+		minor grid style = {lightgray!25},
+		width = \textwidth,
+		height = 0.5\textwidth,
+		xlabel = {$P(mmHg)$},
+		ylabel = {$U(V)$},]
+
+		\addplot[
+		samples = 200,
+		smooth,
+		thin,
+		red
+		] file[skip first] {data.dat};
+	\end{axis}
+\end{tikzpicture}
+
+
+\section{Conclusão}
+
+\end{document}

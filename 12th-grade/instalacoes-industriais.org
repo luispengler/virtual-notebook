@@ -185,7 +185,8 @@ https://luispengler.github.io/virtual-notebook/12th-grade/doc/industriais/triang
 + Período de manutenção das luminárias/lampadas
 
 * Cálculo Luminotécnico (parte 2)
-\[\Phi = \frac{E\cdot S}{Fu\cdot Ftl\]
+\[\Phi = \frac{E\cdot S}{Fu\cdot Fdl\]
+
 + Onde E é lux e S é área
 \[\Phi_{LUM} = n\cdot \Phi_{LÂMP}\]
 + Número de luminárias \[=\frac{\Phi_{T}}{\Phi_{LUM}}\]

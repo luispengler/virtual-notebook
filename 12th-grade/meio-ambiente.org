@@ -121,7 +121,7 @@ https://luispengler.github.io/virtual-notebook/12th-grade/doc/meioambiente1.png
    a) Análise de sombreamento
       + Não instale pro sul idiota (aproveitamento coco).
       + Cuidado com os postes!
-      + Usar camera SLR, ou celular tirando foto a cada 5min (timelapse)
+      + Usar camera SLR, ou celular tirando foto a cada 5min (timelapse) pra ver as sombras
       + Pegar a potência em W/m^2 em um mapa solar imétrico e os horários de sol de pico
       + Consultar a disponibilidade anual para conseguir o fator que vai ser usado para
       + Colocar o painel inclinado conforme sua latitude, não colocar o painel em menos de 10º de inclinação
@@ -131,12 +131,12 @@ https://luispengler.github.io/virtual-notebook/12th-grade/doc/meioambiente1.png
 3. Calcular horas de sol pleno (HSP)
       + Hora de Sol Pleno (HSP) é uma grandeza que representa a quantidade de horas em que a irradiância solar seria constante de 1000W/m^2
       + Em campo grande é uns 5,4h HSP
-4. Definir o inversor: mono, bi ou trifásico
+4. Definir o inversor: bifásico
 5. String box
 6. Plano de manutenção: Ponto bônus
 
 + A conta:
-  - Consumo a compensar: 300kWh
+  - Consumo a compensar (média anual): 300kWh
   - Consumo no dia: 300/30 = 10kWh
   - HSP = 5,4h (CG) -> 10kWh/5,4h = 1,85kW
   - Escolha um painel, neste exemplo usaremos um painel solar fotovoltaico anauger com 340Wp monocristalino, Tensão MPP = 35,7V, Corrente MPP = 9,52 A; Tensão de circuito aberto MPP = 44,6V
@@ -155,3 +155,21 @@ https://luispengler.github.io/virtual-notebook/12th-grade/doc/meioambiente1.png
 + Módulos com diferentes orientações em uma mesma string - MPPT não encontra o ponto de máxima potência, dando uma considerável perda na geração
 + Módulos instalados em áreas sujeitas a sombras parciais ou totais
 + Falta de equipotencialização e aterramento - Colocar isolação galvânica
+
+* Projeto de sistemas on-grid (nosso trabalho)
++ A conta:
+  - Consumo a compensar (média mensal): 164kWh
+  - Consumo no dia: 164kWh/30 = 5,5kWh (micro)
+  - HSP = 5,4h (CG) -> 5,5kWh/5,4h = 1,018kW
+  - Escolher um painel: 450Wp, Tensão MPP = 41,4V, Corrente MPP = 10,87A, Tensão de circuito aberto MPP = 50V, Corrente de curto circuito = 11.47A
+  - HSP/Wp = 2,26 2,26/0,92 = 2,45 = 3 paineis
+  - Inversor para 1,018kW... (um de 1,5kW) bifásico; Para calcular a tensão de circuito aberto = 3 x 50 = 150V; Tensão de ponto máximo (VMPP) =  3 x 41,4 = 124,2V. Qual inversor atende esses requisitos?
+  - Qual telha? (indicar o valor)
+  - Colocar as 3 fotos e indicar a direção
+  - Indicar "cabo solar" e comprimento a ser utilizado (conforma a norma será utilizado tantos metros)
+  - Indicar que existe um aterramento (conforme a norma será utilizado tantas hastes)
+
+** No projeto secionar:
+1. A fatura de energia elétrica;
+2. A localização geográfica e caracterísitcas ambientais da região;
+3.

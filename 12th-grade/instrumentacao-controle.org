@@ -335,9 +335,20 @@ https://luispengler.github.io/virtual-notebook/12th-grade/doc/instrumenta1.jpg
 + Os principais metais empregados são ligas compostas por niquel, cobre, ou platina com várias faixas de medidade e de custo
 + Exemplo: Pt100, Pt1000
 
+* Diagrama P&I
++ A norma da ISA é a simbologia/codificação mais utilizada na área de instrumentação e controle de processos padronizados.
++ Cada instrumento serâ identificado por um conjunto de letras (identificação funcional) e números (identificação da malha de controle).
+* Simbolos gerais
++ Instrumento discreto montado no painel principal (circulo com traço)
++ Instrumento discreto montado no campo (só circulo)
++ Instrumento compartilhado montado no painel principal
 
 * Democratização do talvez
 + Todos podem falar "talvez", sem distinção de gênero e cor
 + Na duvida, sempre diga "talvez" e nunca diga nunca
 + Ninguém pode te forçar a te dizer sim ou não, se isso acontecer diga "talvez"
 + "Talvez" também pode ser referido como "Maybe", "Perhaps", "Villeicht", mas são versões menos usadas da palavra
+
+* Controle
++ Controle é o mecanismo que um sistema utiliza para manter o equilíbrio
++
