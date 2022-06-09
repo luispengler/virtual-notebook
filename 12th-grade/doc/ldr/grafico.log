@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.5.6)  13 MAY 2022 09:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.5.6)  6 JUN 2022 10:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**instrumentacao3.tex
-(./instrumentacao3.tex
+**grafico.tex
+(./grafico.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-04-10>
 (/usr/share/texmf-dist/tex/latex/base/article.cls
@@ -861,23 +861,23 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 \@quotelevel=\count440
 \@quotereset=\count441
-(./instrumentacao3.aux)
-\openout1 = `instrumentacao3.aux'.
+(./grafico.aux)
+\openout1 = `grafico.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -948,45 +948,49 @@ File: portuguese.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout4 = `instrumentacao3.bcf'.
+\openout4 = `grafico.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'instrumentacao3.bbl' not found.
+Package biblatex Info: ... file 'grafico.bbl' not found.
 
-No file instrumentacao3.bbl.
-Package biblatex Info: Reference section=0 on input line 27.
-Package biblatex Info: Reference segment=0 on input line 27.
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+No file grafico.bbl.
+Package biblatex Info: Reference section=0 on input line 29.
+Package biblatex Info: Reference segment=0 on input line 29.
 PGFPlots: reading {data.dat}
 
-Overfull \hbox (19.39755pt too wide) in paragraph at lines 98--99
+Package pgfplots Warning: Axis range for axis x is approximately empty; enlargi
+ng it (it is [10.000000000:10.000000000]) on input line 51.
+
+ [warning /pgfplots/warning/approx empty range enlarged]
+
+Overfull \hbox (31.7067pt too wide) in paragraph at lines 52--53
 [][] 
  []
 
-[2] (./instrumentacao3.aux)
-Package logreq Info: Writing requests to 'instrumentacao3.run.xml'.
-\openout1 = `instrumentacao3.run.xml'.
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./grafico.aux)
+Package logreq Info: Writing requests to 'grafico.run.xml'.
+\openout1 = `grafico.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34878 strings out of 478238
- 828276 string characters out of 5850457
- 1618887 words of memory out of 5000000
- 52644 multiletter control sequences out of 15000+600000
- 474027 words of font info for 45 fonts, out of 8000000 for 9000
+ 34866 strings out of 478238
+ 828017 string characters out of 5850457
+ 2580789 words of memory out of 5000000
+ 52633 multiletter control sequences out of 15000+600000
+ 473422 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,9n,103p,1204b,1943s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on instrumentacao3.pdf (2 pages, 83487 bytes).
+ 99i,9n,103p,1196b,1929s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on grafico.pdf (1 page, 136448 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
- 27 compressed objects within 1 object stream
+ 41 PDF objects out of 1000 (max. 8388607)
+ 25 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

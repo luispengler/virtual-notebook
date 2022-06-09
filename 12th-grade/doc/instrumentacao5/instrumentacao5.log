@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.5.6)  13 MAY 2022 09:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.5.6)  26 MAY 2022 22:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**instrumentacao3.tex
-(./instrumentacao3.tex
+**instrumentacao5.tex
+(./instrumentacao5.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-04-10>
 (/usr/share/texmf-dist/tex/latex/base/article.cls
@@ -861,23 +861,23 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 \@quotelevel=\count440
 \@quotereset=\count441
-(./instrumentacao3.aux)
-\openout1 = `instrumentacao3.aux'.
+(./instrumentacao5.aux)
+\openout1 = `instrumentacao5.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -948,45 +948,101 @@ File: portuguese.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout4 = `instrumentacao3.bcf'.
+\openout4 = `instrumentacao5.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'instrumentacao3.bbl' not found.
+Package biblatex Info: ... file 'instrumentacao5.bbl' not found.
 
-No file instrumentacao3.bbl.
-Package biblatex Info: Reference section=0 on input line 27.
-Package biblatex Info: Reference segment=0 on input line 27.
+No file instrumentacao5.bbl.
+Package biblatex Info: Reference section=0 on input line 29.
+Package biblatex Info: Reference segment=0 on input line 29.
+(./ligacao1.pdf_tex
+<ligacao1.pdf, id=4, page=1, 632.7386pt x 437.92586pt>
+File: ligacao1.pdf Graphic file (type pdf)
+<use ligacao1.pdf, page 1>
+Package pdftex.def Info: ligacao1.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 283.22162pt x 196.02238pt.
+<ligacao1.pdf, id=5, page=2, 632.7386pt x 437.92586pt>
+File: ligacao1.pdf Graphic file (type pdf)
+<use ligacao1.pdf, page 2>
+Package pdftex.def Info: ligacao1.pdf , page2 used on input line 59.
+(pdftex.def)             Requested size: 283.22162pt x 196.02238pt.
+<ligacao1.pdf, id=6, page=3, 632.7386pt x 437.92586pt>
+File: ligacao1.pdf Graphic file (type pdf)
+<use ligacao1.pdf, page 3>
+Package pdftex.def Info: ligacao1.pdf , page3 used on input line 68.
+(pdftex.def)             Requested size: 283.22162pt x 196.02238pt.
+)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-PGFPlots: reading {data.dat}
+PGFPlots: reading {data0.dat}
 
-Overfull \hbox (19.39755pt too wide) in paragraph at lines 98--99
+Overfull \hbox (18.93152pt too wide) in paragraph at lines 117--118
 [][] 
  []
 
-[2] (./instrumentacao3.aux)
-Package logreq Info: Writing requests to 'instrumentacao3.run.xml'.
-\openout1 = `instrumentacao3.run.xml'.
+[2 <./ligacao1.pdf> <./ligacao1.pdf
+
+pdfTeX warning: pdflatex (file ./ligacao1.pdf): PDF inclusion: multiple pdfs wi
+th page group included in a single page
+> <./ligacao1.pdf
+
+pdfTeX warning: pdflatex (file ./ligacao1.pdf): PDF inclusion: multiple pdfs wi
+th page group included in a single page
+>]
+PGFPlots: reading {data10.dat}
+
+Overfull \hbox (29.84122pt too wide) in paragraph at lines 166--167
+[][] 
+ []
+
+[3]
+PGFPlots: reading {data50.dat}
+
+Overfull \hbox (18.94075pt too wide) in paragraph at lines 211--212
+[][] 
+ []
+
+PGFPlots: reading {data100.dat}
+
+Package pgfplots Warning: Axis range for axis y is approximately empty; enlargi
+ng it (it is [10.000000000:10.000000000]) on input line 258.
+
+ [warning /pgfplots/warning/approx empty range enlarged]
+
+Overfull \hbox (18.92163pt too wide) in paragraph at lines 259--260
+[][] 
+ []
+
+[4] [5] (./instrumentacao5.aux)
+Package logreq Info: Writing requests to 'instrumentacao5.run.xml'.
+\openout1 = `instrumentacao5.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34878 strings out of 478238
- 828276 string characters out of 5850457
- 1618887 words of memory out of 5000000
- 52644 multiletter control sequences out of 15000+600000
- 474027 words of font info for 45 fonts, out of 8000000 for 9000
+ 34933 strings out of 478238
+ 829262 string characters out of 5850457
+ 1630940 words of memory out of 5000000
+ 52691 multiletter control sequences out of 15000+600000
+ 474362 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,9n,103p,1204b,1943s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on instrumentacao3.pdf (2 pages, 83487 bytes).
+ 99i,13n,103p,1204b,1943s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
+share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/p
+ublic/cm-super/sfrm1000.pfb>
+Output written on instrumentacao5.pdf (5 pages, 109629 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
- 27 compressed objects within 1 object stream
+ 69 PDF objects out of 1000 (max. 8388607)
+ 42 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 28 words of extra memory for PDF output out of 10000 (max. 10000000)
 

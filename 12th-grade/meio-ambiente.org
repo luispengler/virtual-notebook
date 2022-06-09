@@ -169,7 +169,13 @@ https://luispengler.github.io/virtual-notebook/12th-grade/doc/meioambiente1.png
   - Indicar "cabo solar" e comprimento a ser utilizado (conforma a norma será utilizado tantos metros)
   - Indicar que existe um aterramento (conforme a norma será utilizado tantas hastes)
 
-** No projeto secionar:
-1. A fatura de energia elétrica;
-2. A localização geográfica e caracterísitcas ambientais da região;
-3.
+* Veículos elétricos
+** Tipos de veiculos
++ Hybrid Electric Vehicle (HEV): Usa tanto um motor elétrico quanto um motor de combustão interna (não pode ser carregado na rede elétrica)
++ Extended Range Electric Vehicle (EREV): Um carro com dois motores que pega suas piores caracteristicas...
++ Battery Electric Vehicle (BEV): Apenas um carro elétrico
++ Fue Cell Vehicle (FCV): Um carro elétrico com células de combustível que se convertem em elétrica
+
+** Impactos dos veículos elétricos
++ O problema principal está na matriz de geração
++

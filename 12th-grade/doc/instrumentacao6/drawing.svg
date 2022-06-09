@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1920"
+   height="1080"
+   viewBox="0 0 1920 1080"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="drawing.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="5.0849091"
+     inkscape:cx="340.71406"
+     inkscape:cy="412.49509"
+     inkscape:window-width="1908"
+     inkscape:window-height="1042"
+     inkscape:window-x="5"
+     inkscape:window-y="31"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <ellipse
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.857449;stroke-linejoin:bevel"
+       id="path61"
+       cx="174.4451"
+       cy="174.4451"
+       rx="24.016369"
+       ry="24.016371" />
+    <ellipse
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.857449;stroke-linejoin:bevel"
+       id="path61-3"
+       cx="174.4451"
+       cy="242.34375"
+       rx="24.016369"
+       ry="24.016371" />
+    <ellipse
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.857449;stroke-linejoin:bevel"
+       id="path61-3-6"
+       cx="174.4451"
+       cy="315.04727"
+       rx="24.016369"
+       ry="24.016371" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:32px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+       x="162.68906"
+       y="186.04936"
+       id="text342"><tspan
+         sodipodi:role="line"
+         id="tspan340"
+         x="162.68906"
+         y="186.04936">N</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:32px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+       x="156.84364"
+       y="252.42764"
+       id="text342-7"><tspan
+         sodipodi:role="line"
+         id="tspan340-5"
+         x="156.84364"
+         y="252.42764">L2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:32px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+       x="157.37717"
+       y="327.04919"
+       id="text342-7-3"><tspan
+         sodipodi:role="line"
+         id="tspan340-5-5"
+         x="157.37717"
+         y="327.04919">L1</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 199.48573,175.68597 125.14809,0.43064 -2.57831,509.54976"
+       id="path586" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 198.63011,312.73358 43.7421,0.436 -0.5915,102.90279"
+       id="path586-6"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.732308px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 241.95155,313.15706 213.2693,-0.20312"
+       id="path857" />
+    <path
+       style="fill:#ff0000;fill-opacity:1;stroke:#0021ff;stroke-width:0.80233px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.612901"
+       d="M 198.38298,240.22924 454.8385,240.02648"
+       id="path857-9" />
+    <rect
+       style="opacity:1;fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:1.90669;stroke-linejoin:bevel;stroke-opacity:1"
+       id="rect1994"
+       width="153.19539"
+       height="148.09331"
+       x="456.11697"
+       y="203.63" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 456.39961,351.35239 609.24917,203.77756"
+       id="path3126" />
+  </g>
+</svg>

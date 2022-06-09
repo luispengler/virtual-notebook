@@ -255,3 +255,259 @@ https://luispengler.github.io/virtual-notebook/12th-grade/doc/industriais/triang
 
 + Numero de luminárias:
 \[\frac{\Phi_{T}}{\Phi_{LUM} \approx 26\]
+
+* Distribuição de luminárias
++ \[X < Hlp\]
++ \[Y < Hlp\]
++ X e Y: Distância entre luminárias
++ Hlp: Distância entre luminária e plano de trabalho
+** Exemplo
++ Área: 8x6m^2
++ Quantidade de luminárias: 12
++ Hlp: 2,8m
++ 3x + 2x/2 = 8m (x aqui é a distância entre luminária e parede)
++ 2y + 2y/2 = 6m
++ x = 2m < Hlp
++ y = 2m < Hlp
+** Exemplo 1
++ Quantidade de luminárias: 12 luminárias
++ Área: 15 x 20m
++ Hlp: 2,8m
++ 7x + 2x/2 = 20 = 2,5m
++ 5y + 2y/2 = 15 = 2,5m
+  48 luminárias (Cálculo exagerado)
+
+* Dimensionamento de condutores
+** 3 critérios
++ Critério da seção mínima - para iluminação 1,5mm^2 e para força 2,5mm^2
++ Critério da capacidade de condução - levamos em consideração a corrente pela fórmula \[I=\frac{S}{V}\] e consultamos as tabelas para possivelmente aplicar o fator de correção
++ Critério do limite de queda de tensão
+
+* Dimensionamento de condutores pt2
++ O resultado tem que se enquadrar nos 3 critérios, sendo o maior número mais valido (porque cabe em todos os critérios lol)
+
+** Exercício proposto
++ 5 circuitos -> Fa = 0,6
++ T = 40C -> Fe= 0,87
+
+*** Critério de Capacidade de Condução de Corrente
+**** Circuito 1
++ \[I=\frac{S}{V} = I = \frac{2000}{127} = 15.74 A\]
++ \[Ib = \frac{15.75}{(0,6\times 0,87)} = 30,17A\]
+**** Circuito 2
++ \[I=\frac{S}{V} = I = \frac{4500}{220} = 20.45 A\]
++ \[Ib = \frac{14.96}{(0,6\times 0,87)} = 28,66A\]
+4 mm^2
+**** Circuito 3
++ \[I=\frac{S}{V} = I = \frac{7500}{220} = 34.09 A\]
++ \[Ib = \frac{14.96}{(0,6\times 0,87)} = 39,18A\]
+6 mm^2
+**** Circuito 4
++ \[I=\frac{S}{V} = I = \frac{3000}{380} = 7.89 A\]
++ \[Ib = \frac{14.96}{(0,6\times 0,87)} = 65,31A\]
+16 mm^2
+**** Circuito 5
+
+* Dimensionamemto de condutores
+** Critério do Limite de Queda de Tensão
++ Fórmulas:
+  \[\R=\rho\cdot \frac{l}{A}\]
+
+  \[V = R\cdot I + V_{t}\]
+
+  + Equações para determinar as seções dos condutores:
+
+\[Sc = \frac{200\cdot \rho\cdot l\cdot I_{b}}{\Delta V\cdot V}\] (para circuitos monofásicos e bifásicos)
+
+Onde Sc é a seção do condutor em mm^2, $\rho$ é a resistividade do material, l é comprimento do circuito em m, $I_{b}$ corrente de projeto em A e $\Delta V$ é queda de tensão admissível em %
+
+\[Sc = \frac{173,205\cdot \rho\cdot l\cdot I_{b}}{\Delta V\cdot V}\] (para circuitos trifásicos)
+
+
++ Exemplo: 1) Um circuito atende a 15 tomadas monofásicas de 100VA. O comprimento total do circuito é 30m. Calcule as seções dos condutores para as seguintes quedas de tensão admissíveis:
+a) 5,0%
+\[Sc = \frac{200\cdot \frac{1}{56}\cdot 11,81\cdot 30}{5\cdot 127} = 1,99 -> 2,5 mm^2\]
+b) 3,5%
+\[Sc = \frac{200\cdot \frac{1}{56}\cdot 11,81\cdot 30}{3,5\cdot 127} = 2,84 -> 4 mm^2\]
+c) 1%
+\[Sc = \frac{200\cdot \frac{1}{56}\cdot 11,81\cdot 30}{1\cdot 127} = 9,96 -> 10 mm^2\]
+
+2) Determine a queda de tensão (%) proporcionada por um condutor de 10mm^2 de um circuito trifásico, 220V, que atende uma carga a 180m do quadro de distribuição. Ib = 30A
+\[10 = \frac{173,205\cdot \frac{1}{56}\cdot 180\cdot 30}{\Delta V\cdot 220}\]
+\[\Delta V = 7,6%\]
+** Limites de Queda de Tensão admissíveis ($\Delta V$)
++ 5\% -> Do ponto de entrega da concessionária em Baixa Tensão (BT) até a última carga
++ 7\% -> Do secundário do transformador da unidade consumidora até a última carga
++ joao.okumoto@ifms.edu.br
+
+*** Exercício 4
++ Queda de tensão admissível $=3\%$
++ Interior de molduras (A1)
++ Temperatura 35C
++ Isolação EPR
++ Ft = 0,96 e Fa = 0,8
+**** Circuito 1
++ Critério 1 (Seção mínima): (Circuito de força) -> $2,5mm^2$
++ Critério 2 (Condução de corrente): Dois condutores (Fase + Neutro) -> $1,5mm^2$
+
+\[I = \frac{S}{V}\]
+
+\[I = \frac{1800}{127} = 14,17 A\]
+
+\[I = \frac{14.17}{Ft\times Fa\]
+
+\[I = \frac{14.17}{0,96\times 0,8}\]
+
+\[I = \frac{14.17}{0,768} = 18,45A\]
+
+Seção (de acordo com a tabela 37): $1,5mm^2$
+
++ Critério 3 (Queda de tensão): -> $15.88mm^2$
+
+\[Sc = \frac{200\cdot \rho\cdot l\cdot I_{b}}{\Delta V\cdot V}\]
+
+\[Sc = \frac{200\cdot 0,0178\cdot 120\cdot 14,17}{3\cdot 127} = \frac{6053,424}{381} = 15.88mm^2\]
+
+**** Circuito 2
++ Critério 1 (Seção mínima): $1,5mm^2$ (Circuito de iluminação)
++ Critério 2 (Condução de corrente): Dois condutores (Fase + Neutro) -> $1,5mm^2$
+
+\[I = \frac{S}{V}\]
+
+\[I = \frac{1650}{127} = 12,99 A\]
+
+\[I = \frac{12,99}{Ft\times Fa\]
+
+\[I = \frac{12,99}{0,96\times 0,8}\]
+
+\[I = \frac{12,99}{0,768} = 16,91 A\]
+
+Seção (de acordo com a tabela 37): $1,5mm^2$
+
++ Critério 3 (Queda de tensão): -> $18,25mm^2$
+
+\[Sc = \frac{200\cdot \rho\cdot l\cdot I_{b}}{\Delta V\cdot V}\]
+
+\[Sc = \frac{200\cdot 0,0178\cdot 150\cdot 12,99}{3\cdot 127} = \frac{6956,145}{381} = 18,25mm^2\]
+**** Circuito 3
++ Critério 1 (Seção mínima): $2,5mm^2$ (Circuito de força)
++ Critério 2 (Condução de corrente): Dois condutores (Fase + Fase) -> $2,5mm^2$
+
+\[I = \frac{S}{V}\]
+
+\[I = \frac{3600}{220} = 16,36 A\]
+
+\[I = \frac{16,36}{Ft\times Fa\]
+
+\[I = \frac{16,36}{0,96\times 0,8}\]
+
+\[I = \frac{16,36}{0,768} = 21,3 A\]
+
+Seção (de acordo com a tabela 37): $2,5mm^2$
+
++ Critério 3 (Queda de tensão): -> $8,84mm^2$
+
+\[Sc = \frac{200\cdot \rho\cdot l\cdot I_{b}}{\Delta V\cdot V}\]
+
+\[Sc = \frac{200\cdot 0,0178\cdot 100\cdot 16,36}{3\cdot 220} = \frac{5840,51}{660} = 8,84mm^2\]
+**** Circuito 4
++ Critério 1 (Seção mínima): $2,5mm^2$ (Circuito de força)
++ Critério 2 (Condução de corrente): Dois condutores (Fase + Fase) -> $6mm^2$
+
+\[I = \frac{S}{V}\]
+
+\[I = \frac{6000}{220} = 27,27 A\]
+
+\[I = \frac{27,27}{Ft\times Fa\]
+
+\[I = \frac{27,27}{0,96\times 0,8}\]
+
+\[I = \frac{27,27}{0,768} = 35,5 A\]
+
+Seção (de acordo com a tabela 37): $6mm^2$
+
++ Critério 3 (Queda de tensão): -> $26,55mm^2$
+
+\[Sc = \frac{200\cdot \rho\cdot l\cdot I_{b}}{\Delta V\cdot V}\]
+
+\[Sc = \frac{200\cdot 0,0178\cdot 180\cdot 27,27}{3\cdot 220} = \frac{17523,702}{660} = 26,55mm^2\]
++ Queda de tensão admissível $=3\%$
++ Interior de molduras (A1)
++ Temperatura 35C
++ Isolação EPR
++ Ft = 0,96 e Fa = 0,8
+**** Circuito 1
++ Critério 1 (Seção mínima): (Circuito de força) -> $2,5mm^2$
++ Critério 2 (Condução de corrente): Dois condutores (Fase + Neutro) -> $1,5mm^2$
+
+\[I = \frac{S}{V}\]
+
+\[I = \frac{1800}{127} = 14,17 A\]
+
+\[I = \frac{14.17}{Ft\times Fa\]
+
+\[I = \frac{14.17}{0,96\times 0,8}\]
+
+\[I = \frac{14.17}{0,768} = 18,45A\]
+
+Seção (de acordo com a tabela 37): $1,5mm^2$
+
++ Critério 3 (Queda de tensão): -> $15.88mm^2$
+
+\[Sc = \frac{200\cdot \rho\cdot l\cdot I_{b}}{\Delta V\cdot V}\]
+
+\[Sc = \frac{200\cdot 0,0178\cdot 120\cdot 14,17}{3\cdot 127} = \frac{6053,424}{381} = 15.88mm^2\]
+*** Exercício 5
++ No interior de canaletas fechadas embutidas no piso (B1)
++ Temperatura 30C
++ Isolação EPR
++ Ft = 0,93 e Fa = 0,7
++ Queda de tensão admissível $=3\%$
+**** Circuito 1
++ 6000VA, 220V (3 condutores), L = 200m
++ Critério 1 (Seção mínima): (Circuito de força) -> $2,5mm^2$
++ Critério 2 (Condução de corrente): Dois condutores (Fase + Neutro) -> $6mm^2$
+
+\[I = \frac{S}{V}\]
+
+\[I = \frac{6000}{220} = 27,27 A\]
+
+\[I = \frac{27,27}{Ft\times Fa\]
+
+\[I = \frac{27,27}{0,93\times 0,7}\]
+
+\[I = \frac{27,27}{0,651} = 41,89A\]
+
+Seção (de acordo com a tabela 37): $6mm^2$
+
++ Critério 3 (Queda de tensão): -> $25,47mm^2$
+
+\[Sc = \frac{173,205\cdot \rho\cdot l\cdot I_{b}}{\Delta V\cdot V}\]
+
+\[Sc = \frac{173,205\cdot 0,0178\cdot 200\cdot 27,27}{3\cdot 220} = \frac{16814,94}{660} = 25,47mm^2\]
+
+**** Circuito 2
++ 9000VA, 220V (3 condutores), L = 250m
++ Critério 1 (Seção mínima): (Circuito de força) -> $2,5mm^2$
++ Critério 2 (Condução de corrente): Dois condutores (Fase + Neutro) -> $16mm^2$
+
+\[I = \frac{S}{V}\]
+
+\[I = \frac{9000}{220} = 45 A\]
+
+\[I = \frac{45}{Ft\times Fa\]
+
+\[I = \frac{45}{0,93\times 0,7}\]
+
+\[I = \frac{45}{0,651} = 69,12 A\]
+
+Seção (de acordo com a tabela 37): $16mm^2$
+
++ Critério 3 (Queda de tensão): -> $52,55mm^2$
+
+\[Sc = \frac{173,205\cdot \rho\cdot l\cdot I_{b}}{\Delta V\cdot V}\]
+
+\[Sc = \frac{173,205\cdot 0,0178\cdot 250\cdot 45}{3\cdot 220} = \frac{34684,3}{660} = 52,55mm^2\]
+
+* Dimensionamento de disjuntores
++

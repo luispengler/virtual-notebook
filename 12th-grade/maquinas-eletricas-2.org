@@ -30,3 +30,83 @@ O professor disse que a tensão era o conceito mais fundamental da eletricidade 
 + Entendemos os tipos de ligações dentro dos motores de indução trifásicos apresentados
 + Um dos modelos era o que eu chamo de "bivolt manual". Era possível ligar ele em 220V, se fosse uma ligação delta. Em 380V esta era uma ligação estrela.
 
+* Lista 2
+** 1
++ Motor que o rotor é excitado por um estator e a velocidade de rotação do eixo é menor que a do campo girante, logo suas velocidades não estão sincronizadas (por isso o nome).
+** 2
+a) Possuem rolamentos dianteiros e traseiros especiais, para garantir vedação. Geralmente precisam de ventilação interna, pois por serem vedados correm o risco maior de sobreaquecimento, por isso em periodos de baixa rotação devem diminuir o torque.
+b) Possui retentor na vedação nos mancais. Grau de proteção IP55 (IPW55 opcional). Potências de 0,5 a 500cv. Possui termostato. Fator de serviço 1,0. Possui um anel de fixação interno em ambas as tampas pra impedir propagação da chama.
+c) Possui o máximo de rendimento e consumo reduzido. Grau de proteção IP55 (IPW55, IP56, IP65 opcionais). Potências de 1 a 500cv. Fator de serviço 1,15. Rendimento de até 96,2%
+d) É um motor com potência mecânica menor que 1cv e geralmente são destinados a aplicações de alta precisão ou robótica
+** 3
++ É a diferença entre a velocidade de rotação do eixo e a velocidade do campo girante.
+** 4
+a) Reduz
+b) Escorregamento aumenta, Frequência mantem, FEM diminui
+c) Aumenta
+d) Aumenta
+e) Aumenta
+f) Mesma
+g) Aumenta
+Quando ocorre o ponto nominal de trabalho
+
+** 5
++ Ensaio a vazio a gente consegue velocidade máxima. Ensaio com rotor bloqueado conseguimos a razão entre corrente de pico e corrente nominal
+** 6
++ Perdas por efeito joule, correntes parasitas, perdas por histerese
+** 7
+O rendimento de um motor assíncrono diminui por causa do aumento das perdas causados pelas correntes harmônicas no enrolamento do motor. A equação para determinar o rendimento do motor assíncrono é:
+\[\eta_{c} = \frac{DFH^2}{\frac{1}{\eta}+DFH^2 - 1}\]
+** 8
++ A: Conjugado nominal
++ B: Conjugado com rotor bloquado
++ C: Conjugado máximo
++ D: Conjugado mínimo
++ E: Escorregamento
++ F: Rotação real
++ G: Rotação nominal
++ H: Rotação síncrona
+
+** 9
++ Categoria N: possui conjugado de partida normal, corrente de partida normal e baixo escorregamento
++ Categoria H: possui conjugado de partida alta, corrente de partida normal e baixo escorregamento
++ Categoria D: possui conjugado de partida alto, corrente de partida normal e alto escorregamento
+** 10
++ São obtidos através de acionamentos, como partida direta, estrela-triangulo, soft-starter
+** 11
++ Categoria NY: semelhantes aos de categoria N, mas projetados pra utilização em chave estrela-triângulo. Em ligação estrela o conjugado mínimo com rotor bloqueado e o conjugado mínimo de partida são 25% dos valores de categoria N.
++ Categoria HY: semelhantes aos de categoria H, mas projetados pra utilização em chave estrela-triângulo. Em ligação estrela o conjugado mínimo com rotor bloqueado e o conjugado mínimo de partida são 25% dos valores de categoria H.
+** 12
++ 60x120/4 = 1800 RPM (Velocidade Síncrona = Velocidade do campo girante)
++ 1800-36 = 1764 = 120f/4 = 58,8Hz
++ Velocidade relativa = Velocidade Síncrona - Velocidade Assíncrona (porque estão no mesmo sentido) = Escorregamento = 2% 1800 RPM = 36 RPM
+** 13
+a) 26,6A
+b) 8
+c) 1760
+d) 1,15
+e) \[ta = \frac{2 \pi \cdot rps\ cdot J}{C}\]
+   rps = 105 600
+   j = 0,04652
+   c = 4,15
+   ta = 7437s
+f) 0,66
+g) 86%
+** 14
++ 0,8
+** 15
+a) mantem
+b) mantem
+c) diminui em 17%
+d) diminui em 17%
+e) diminui em 17%
+f) Aumenta em 20%
+** 16
++ Considerando que o motor é 220Vca 60Hz e que ele apenas pode operar na zona A e B, então a variação de tensão máxima é 10% e -10% e frequência 3% e -5%. Essas faixas correspondem: +10% de 220 = 242V; -10% de 220 = 198V; +3% de 60Hz = 61,8Hz; -5% de 60Hz = 57Hz. Agora temos uma diferença entre a zona A e a zona B. Se o motor funcionar e ele não estiver na zona A, necessariamente ele estará na zona B. Os valores da zona A são +5% de 220V = 230V; -5% de 220V = 210V; +2% de 60Hz = 61,2Hz; -2% de 60Hz = 58,8Hz;
+  Sendo assim (a) está na zona A e deve ser capaz de desempenhar sua função principal continuamente, o mesmo vale para (c). (b) está na zona B e deve ser capaz de desempenhar sua função principal mas com desvio de desempenho superior ao funcionamento do mesmo na zona A. (d) irá funcionar com grandes desvios de desempenho e o seu funcionamento com esta frequência não é recomendado.
+** 17
++ Vantagens: Custo relativamente baixo. Não há limitação no número de manobras. Componentes ocupam pouco espaço. A corrente de partida é reduzida 1/3.
++ Desvantagens: Os motores precisam ter terminais acessíveis. A tensão da rede deve ser a mesma que a tensão em triangulo do motor. O conjugado de partida também é reduzido 1/3.
+** 18
++ Vantagens: Mesmo a corrente de partida sendo aproximadamente igual a da chave estrela-triangulo, na hora da mudança para a tensão da rede o segundo pico se torna mais reduzido, por causa da atuação do auto-transformador.
++ Desvantagens: Todas as desvantagens da chave compensadora são devidos ao uso do auto-transformador. O Custo do auto-transformador é elevado e quadros de instalação são mais caros (porque são maiores). Também há uma limitação da frequência de manobras.

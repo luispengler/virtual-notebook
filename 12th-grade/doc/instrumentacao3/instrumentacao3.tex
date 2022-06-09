@@ -4,7 +4,7 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[portuguese]{babel}
-\usepackage[margin=3.5cm]{geometry}
+\usepackage[margin=2.5cm]{geometry}
 \usepackage{amsmath}
 \usepackage{physics}
 \usepackage{pgfplots}
@@ -14,26 +14,69 @@
 \usepackage{wrapfig}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{tabularx}
 \usepackage[parfill]{parskip}
 \usepackage[nottoc]{tocbibind}
 \usepackage[backend=biber]{biblatex}
 \addbibresource{/home/luispengler/drive/LinuxFabrik/Research/read/bib.bib}
 \usepackage{authblk}
+\renewcommand\Authand{ e }
+\renewcommand\Authands{ e }
 \author[1]{Luís Spengler}
-\affil[1]{Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso do Sul}
+\author[2]{Gustavo Ratier Cardoso}
+\affil[1,2]{Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso do Sul}
 
 \begin{document}
 \maketitle
 
 \section{Introdução}
+Após a utilização de um Esfigmomanômetro, embutido em um kit de instrumentação, na sala de Eletrônica, pode-se notar que houve uma perda de pressão do relógio analógico da ferramenta, em termos gerais, denominada Histerese.
+
+A histerese se desdobra pelas mais variadas formas como a magnética, a elétrica e a resistiva, mas trabalharemos com a histerese pneumática, que está relacionada à pressão, normalmente medida em Pascal (P), em função da tensão elétrica, medida em Volts (V).
 
 \section{Problemática}
+Identificar e quantificar as perdas (histerese) de pressão (mmHg ou Milímetros de Mercúrio) em função do aumento da tensão elétrica (V).
 
 \section{Objetivo Geral}
+Avaliar a possibilidade do instrumento medidor de pressão, o esfigmomanômetro, estar avariado ou fora da capacidade de uso, se tornando inutilizado.
 
 \section{Metodologia}
+Com o uso de um multímetro, se mediu a diferença de potencial conforme se pressionava a bomba de látex do esfigmomanômetro, tendo o aumento de tensão elétrica como resposta esperada;
+
+Após o valor visto de 1,42 V mostrado no aparelho multímetro, foi possível notar que a pressão do esfigmomanômetro estava sendo liberada, sem a menor intervenção humana, com uma velocidade relativamente baixa, isso fez com que se fosse abordada a situação de histerese (perda) dos valores do instrumento pneumático.
 
 \section{Resultados}
+
+Por conseguinte, determinamos um gráfico para representarmos a histerese como taxa de perda relacionada à pressão em função da tensão elétrica, após um certo período. Confira os seguintes dados apurados de tensão elétrica (U) e pressão (P), na tabela e no gráfico obtidos abaixo.
+
+\begin{center}
+\begin{tabularx}{0.2\textwidth} { 
+	| >{\raggedright\arraybackslash}X 
+	| >{\centering\arraybackslash}X 
+	| >{\raggedleft\arraybackslash}X | }
+		\hline
+		P & U     \\
+		\hline
+		20  & 1.42  \\
+		40  & 1.83  \\
+		60  & 2.4   \\
+		80  & 2.9   \\
+		100 & 3.48  \\
+		120 & 4.07  \\
+		140 & 4.71  \\
+		160 & 5.31  \\
+		180 & 5.98  \\
+		200 & 6.61  \\
+		220 & 7.23  \\
+		240 & 7.9   \\
+		260 & 8.57  \\
+		280 & 9.3   \\
+		300 & 10.03 \\
+		\hline
+\end{tabularx}
+\end{center}
+\vspace{5mm}
+
 \begin{tikzpicture}
 	\begin{axis}[
 		xtick distance = 20,
@@ -58,5 +101,6 @@
 
 
 \section{Conclusão}
+Concluímos que o instrumento necessita sim, de ser verificado e reparado, pós checagens mais aprofundadas, pois a histerese relatada neste caso, influencia de maneira negativa demasiada, afetando o trabalho de medição e gerando desvios e erros desnecessários de medição.
 
 \end{document}

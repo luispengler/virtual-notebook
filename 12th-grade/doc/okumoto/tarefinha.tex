@@ -1,0 +1,211 @@
+\documentclass{article}
+\title{Resolução de Exercícios - Instalações Elétricas Industriais}
+\date{}
+
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[margin=3.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[parfill]{parskip}
+\usepackage[nottoc]{tocbibind}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{/home/luispengler/drive/LinuxFabrik/Research/read/bib.bib}
+\usepackage{authblk}
+\renewcommand\Authand{ e }
+\renewcommand\Authands{ e }
+\author[1]{Luís Guilherme Miranda Spengler}
+\author[2]{Diogo Paes Masacottes}
+\affil[1,2]{Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso do Sul}
+
+\begin{document}
+\maketitle
+
+\section{Exercício 4}
+Dados do exercício:
+\begin{itemize}
+
+  \item Queda de tensão admissível $=3\%$
+  \item Interior de molduras (A1)
+  \item Temperatura 35ºC
+  \item Isolação dos condutores é EPR
+  \item Ft = 0,96 e Fa = 0,8
+
+\end{itemize}
+
+\subsection{Circuito 1}
+\begin{itemize}
+  \item Critério 1 (Seção mínima): $2,5mm^2$, pois é um circuito de força
+  \item Critério 2 (Condução de corrente): $1,5mm^2$, conforme os cálculos e consulta na tabela:
+
+\[I = \frac{S}{V}\]
+
+\[I = \frac{1800}{127} = 14,17 A\]
+
+\[I = \frac{14.17}{Ft\times Fa}\]
+
+\[I = \frac{14.17}{0,96\times 0,8}\]
+
+\[I = \frac{14.17}{0,768} = 18,45A\]
+
+  Seção (de acordo com a tabela 37): $1,5mm^2$
+  \item Critério 3 (Queda de tensão): $16mm^2$, conforme os cálculos abaixo:
+
+\[Sc = \frac{200\cdot \rho\cdot l\cdot I_{b}}{\Delta V\cdot V}\]
+
+\[Sc = \frac{200\cdot 0,0178\cdot 120\cdot 14,17}{3\cdot 127} = \frac{6053,424}{381} = 15.88mm^2 \approx 16mm^2\]
+
+\end{itemize}
+
+\textbf{Vale a seção maior, pois atende a todos os critérios: $16mm^2$}
+
+\subsection{Circuito 2}
+\begin{itemize}
+\item Critério 1 (Seção mínima): $1,5mm^2$, pois é um circuito de iluminação
+\item Critério 2 (Condução de corrente): $1,5mm^2$, conforme os cálculos e consulta na tabela:
+
+\[I = \frac{S}{V}\]
+
+\[I = \frac{1650}{127} = 12,99 A\]
+
+\[I = \frac{12,99}{Ft\times Fa}\]
+
+\[I = \frac{12,99}{0,96\times 0,8}\]
+
+\[I = \frac{12,99}{0,768} = 16,91 A\]
+
+Seção (de acordo com a tabela 37): $1,5mm^2$
+
+\item Critério 3 (Queda de tensão): $19mm^2$
+
+\[Sc = \frac{200\cdot \rho\cdot l\cdot I_{b}}{\Delta V\cdot V}\]
+
+        \[Sc = \frac{200\cdot 0,0178\cdot 150\cdot 12,99}{3\cdot 127} = \frac{6936,66}{381} = 18,2mm^2 \approx 19mm^2\]
+\end{itemize}
+
+\textbf{Vale a seção maior, pois atende a todos os critérios: $19mm^2$}
+
+\subsection{Circuito 3}
+
+\begin{itemize}
+\item Critério 1 (Seção mínima): $2,5mm^2$, pois é um circuito de força
+\item Critério 2 (Condução de corrente): $2,5mm^2$, conforme os cálculos e consulta na tabela:
+
+\[I = \frac{S}{V}\]
+
+\[I = \frac{3600}{220} = 16,36 A\]
+
+\[I = \frac{16,36}{Ft\times Fa}\]
+
+\[I = \frac{16,36}{0,96\times 0,8}\]
+
+\[I = \frac{16,36}{0,768} = 21,3 A\]
+
+Seção (de acordo com a tabela 37): $2,5mm^2$
+
+\item Critério 3 (Queda de tensão): $9mm^2$
+
+\[Sc = \frac{200\cdot \rho\cdot l\cdot I_{b}}{\Delta V\cdot V}\]
+
+\[Sc = \frac{200\cdot 0,0178\cdot 100\cdot 16,36}{3\cdot 220} = \frac{5824,16}{660} = 8,82mm^2 \approx 9mm^2\]
+\end{itemize}
+
+\textbf{Vale a seção maior, pois atende a todos os critérios: $9mm^2$}
+
+\subsection{Circuito 4}
+
+\begin{itemize}
+\item Critério 1 (Seção mínima): $2,5mm^2$, pois é um circuito de força
+\item Critério 2 (Condução de corrente): $6mm^2$, conforme os cálculos e consulta na tabela:
+
+\[I = \frac{S}{V}\]
+
+\[I = \frac{6000}{220} = 27,27 A\]
+
+\[I = \frac{27,27}{Ft\times Fa}\]
+
+\[I = \frac{27,27}{0,96\times 0,8}\]
+
+\[I = \frac{27,27}{0,768} = 35,5 A\]
+
+Seção (de acordo com a tabela 37): $6mm^2$
+
+\item Critério 3 (Queda de tensão): $27mm^2$
+
+\[Sc = \frac{200\cdot \rho\cdot l\cdot I_{b}}{\Delta V\cdot V}\]
+
+\[Sc = \frac{200\cdot 0,0178\cdot 180\cdot 27,27}{3\cdot 220} = \frac{17474,616}{660} = 26,47mm^2 \approx 27mm^2\]
+\end{itemize}
+
+\textbf{Vale a seção maior, pois atende a todos os critérios: $27mm^2$}
+
+\section{Exercício 5}
+Dados do exercício:
+\begin{itemize}
+\item Queda de tensão admissível $=3\%$
+\item No interior de canaletas fechadas embutidas no piso (B1)
+\item Temperatura 30ºC
+\item Isolação dos condutores é EPR
+\item Ft = 0,93 e Fa = 0,7
+\end{itemize}
+
+\subsection{Circuito 1}
+\begin{itemize}
+\item 6000VA, 220V (3 condutores pois é trifásico), L = 200m
+\item Critério 1 (Seção mínima): $2,5mm^2$, pois é um circuito de força
+\item Critério 2 (Condução de corrente): $6mm^2$, conforme os cálculos e consulta na tabela:
+
+\[I = \frac{S}{V}\]
+
+\[I = \frac{6000}{220} = 27,27 A\]
+
+\[I = \frac{27,27}{Ft\times Fa}\]
+
+\[I = \frac{27,27}{0,93\times 0,7}\]
+
+\[I = \frac{27,27}{0,651} = 41,89A\]
+
+Seção (de acordo com a tabela 37): $6mm^2$
+
+\item Critério 3 (Queda de tensão): $26mm^2$
+
+\[Sc = \frac{173,205\cdot \rho\cdot l\cdot I_{b}}{\Delta V\cdot V}\]
+
+\[Sc = \frac{173,205\cdot 0,0178\cdot 200\cdot 27,27}{3\cdot 220} = \frac{16814,94}{660} = 25,47mm^2 \approx 26mm^2\]
+\end{itemize}
+
+\textbf{Vale a seção maior, pois atende a todos os critérios: $26mm^2$}
+
+\subsection{Circuito 2}
+\begin{itemize}
+\item 9000VA, 220V (3 condutores pois é trifásico), L = 250m
+\item Critério 1 (Seção mínima): $2,5mm^2$, pois é um circuito de força
+\item Critério 2 (Condução de corrente): $10mm^2$, conforme os cálculos e consulta na tabela:
+
+\[I = \frac{S}{V}\]
+
+\[I = \frac{9000}{220} = 40,9 A\]
+
+\[I = \frac{40,9}{Ft\times Fa}\]
+
+\[I = \frac{40,9}{0,93\times 0,7}\]
+
+\[I = \frac{40,9}{0,651} = 62,84 A\]
+
+Seção (de acordo com a tabela 37): $10mm^2$
+
+\item Critério 3 (Queda de tensão): $48mm^2$
+
+\[Sc = \frac{173,205\cdot \rho\cdot l\cdot I_{b}}{\Delta V\cdot V}\]
+
+\[Sc = \frac{173,205\cdot 0,0178\cdot 250\cdot 40,9}{3\cdot 220} = \frac{31524,17}{660} = 47,76mm^2 \approx 48mm^2\]
+\end{itemize}
+
+\textbf{Vale a seção maior, pois atende a todos os critérios: $48mm^2$}
+
+\end{document}

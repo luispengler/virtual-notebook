@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.5.6)  13 MAY 2022 09:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.5.6)  24 MAY 2022 20:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**instrumentacao3.tex
-(./instrumentacao3.tex
+**instrumentacao4.tex
+(./instrumentacao4.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-04-10>
 (/usr/share/texmf-dist/tex/latex/base/article.cls
@@ -861,23 +861,23 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 \@quotelevel=\count440
 \@quotereset=\count441
-(./instrumentacao3.aux)
-\openout1 = `instrumentacao3.aux'.
+(./instrumentacao4.aux)
+\openout1 = `instrumentacao4.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -948,45 +948,51 @@ File: portuguese.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout4 = `instrumentacao3.bcf'.
+\openout4 = `instrumentacao4.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'instrumentacao3.bbl' not found.
+Package biblatex Info: ... file 'instrumentacao4.bbl' not found.
 
-No file instrumentacao3.bbl.
-Package biblatex Info: Reference section=0 on input line 27.
-Package biblatex Info: Reference segment=0 on input line 27.
+No file instrumentacao4.bbl.
+Package biblatex Info: Reference section=0 on input line 29.
+Package biblatex Info: Reference segment=0 on input line 29.
+<simurelay.png, id=4, 918.43124pt x 899.36pt>
+File: simurelay.png Graphic file (type png)
+<use simurelay.png>
+Package pdftex.def Info: simurelay.png  used on input line 48.
+(pdftex.def)             Requested size: 212.41261pt x 208.00119pt.
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-PGFPlots: reading {data.dat}
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./simurelay.png>]
+<simurelay1.png, id=18, 892.33376pt x 889.3225pt>
+File: simurelay1.png Graphic file (type png)
+<use simurelay1.png>
+Package pdftex.def Info: simurelay1.png  used on input line 56.
+(pdftex.def)             Requested size: 212.41261pt x 211.69122pt.
 
-Overfull \hbox (19.39755pt too wide) in paragraph at lines 98--99
-[][] 
- []
-
-[2] (./instrumentacao3.aux)
-Package logreq Info: Writing requests to 'instrumentacao3.run.xml'.
-\openout1 = `instrumentacao3.run.xml'.
+[2 <./simurelay1.png>] (./instrumentacao4.aux)
+Package logreq Info: Writing requests to 'instrumentacao4.run.xml'.
+\openout1 = `instrumentacao4.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34878 strings out of 478238
- 828276 string characters out of 5850457
- 1618887 words of memory out of 5000000
- 52644 multiletter control sequences out of 15000+600000
- 474027 words of font info for 45 fonts, out of 8000000 for 9000
+ 34419 strings out of 478238
+ 814961 string characters out of 5850457
+ 1600845 words of memory out of 5000000
+ 52184 multiletter control sequences out of 15000+600000
+ 473908 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,9n,103p,1204b,1943s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fon
+ 99i,6n,103p,1204b,1571s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on instrumentacao3.pdf (2 pages, 83487 bytes).
+r17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/sh
+are/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on instrumentacao4.pdf (2 pages, 481733 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
- 27 compressed objects within 1 object stream
+ 50 PDF objects out of 1000 (max. 8388607)
+ 29 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 

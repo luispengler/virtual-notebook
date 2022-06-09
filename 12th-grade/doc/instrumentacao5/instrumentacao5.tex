@@ -1,0 +1,265 @@
+\documentclass{article}
+\title{Amplificador operacional controlado por variação de resistência de entrada}
+\date{}
+
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{pgfplots}
+\pgfplotsset{compat = newest}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tabularx}
+\usepackage[parfill]{parskip}
+\usepackage[nottoc]{tocbibind}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{/home/luispengler/drive/LinuxFabrik/Research/read/bib.bib}
+\usepackage{authblk}
+\renewcommand\Authand{ e }
+\renewcommand\Authands{ e }
+\author[1]{Luís Guilherme Miranda Spengler}
+\author[2]{Diogo Paes Masacottes}
+\affil[1,2]{Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso do Sul}
+
+\begin{document}
+\maketitle
+
+\section{Introdução}
+
+Um amplificador operacional é um amplificador com ganho muito elevado, tendo dois terminais de entrada e um de saída. No circuito performado, na prática, utiliza-se um potenciômetro que varia a tensão do sinal de entrada, para verificar a tensão na saída e observar os efeitos de amplificação. O amplificador operacional, também chamado por alguns de amp-op, nada mais é do que um circuito integrado (CI), capaz de amplificar um sinal de entrada e como próprio nome sugere, o amplificador operacional também consegue realizar operações matemáticas, como, por exemplo, soma, subtração, derivação.
+
+\section{Problemática}
+
+A importância do estudo de amplificadores operacionais se justifica pelo fato de estarmos em constante contato com tal dispositivo eletrônico e também para posterior aplicações como profissionais da área de eletrotécnica.
+
+\section{Objetivo Geral}
+
+Verificar as relações existentes entre a tensão de saída e tensão de entrada conforme a variação do potenciômetro V.S.
+
+\section{Metodologia}
+
+A figura 1 representa o circuito performado, na prática, onde V1 e V2 representam multímetros e suas tensões lidas, AN0 e AN1, respectivamente. Ainda na figura 1, V.S. representará aqui e por todo o artigo, o potenciômetro a ser variado.
+
+\begin{figure}[h!]
+\centering
+\def\svgwidth{0.6\columnwidth}
+\input{ligacao1.pdf_tex}
+\caption{Esquema do circuito}
+\end{figure}
+
+A regulagem de V.S. foi feita empiricamente, sendo 4 padrões de regulagem definidos:
+
+\begin{itemize}
+\item Potenciômetro a 0\%
+\item Potenciômetro a 10\%
+\item Potenciômetro a 50\%
+\item Potenciômetro a 100\%
+\end{itemize}
+
+Após a regulagem de V.S. em cada um dos padrões, foi mensurada a tensão em V1 (entrada) e a tensão em V2 (saída).
+
+\section{Resultados}
+
+Por conseguinte, obtivemos dados relacionando a tensão mensurada por V1 e V2 (em Volts) por 4 amostragens, onde a única variável a sofrer alteração foi a resistência na entrada do amplificador (por V.S.).
+Confira os seguintes dados apurados da tensão elétrica no resistor de entrada (V.S.) e da tensão elétrica na saída do amplificador operacional, na tabela e no gráfico obtidos abaixo com o potenciômetro a 0\%, 10\%, 50\% e 100\%.
+
+Para 0\%:
+
+\begin{center}
+\begin{tabularx}{0.2\textwidth} {
+    | >{\raggedright\arraybackslash}X
+    | >{\centering\arraybackslash}X
+    | >{\raggedleft\arraybackslash}X | }
+            \hline
+V.S. (V) & SAÍDA (V) \\
+\hline
+  0.04 & 0.04 \\
+  1.03 & 1.04 \\
+  2 & 1.78 \\
+  3 & 2.92 \\
+  4.02 & 3.99 \\
+  5.07 & 5.07 \\
+  6.03 & 6.06 \\
+  7.00 & 7.07 \\
+  7.96 & 8.06 \\
+  9.06 & 9.18 \\
+  10 & 10 \\
+\hline
+\end{tabularx}
+\end{center}
+\vspace{1mm}
+
+\begin{tikzpicture}
+  \begin{axis}[
+        xtick distance = 1,
+        ytick distance = 1,
+        grid = both,
+        minor tick num = 1,
+        major grid style = {lightgray},
+        minor grid style = {lightgray!25},
+        width = \textwidth,
+        height = 0.4\textwidth,
+        xlabel = {$V.S. (V)$},
+        ylabel = {$SAIDA (V)$},]
+
+        \addplot[
+        samples = 200,
+        smooth,
+        thin,
+        red
+        ] file[skip first] {data0.dat};
+      \end{axis}
+\end{tikzpicture}
+
+Para 10\%:
+
+\begin{center}
+\begin{tabularx}{0.2\textwidth} {
+    | >{\raggedright\arraybackslash}X
+    | >{\centering\arraybackslash}X
+    | >{\raggedleft\arraybackslash}X | }
+            \hline
+V.S. (V) & SAÍDA (V) \\
+  \hline
+0 & 0 \\
+1.11 & 1.12 \\
+1.97 & 1.78 \\
+3.03 & 2.98 \\
+4.01 & 4.01 \\
+4.98 & 5.05 \\
+6 & 6.12 \\
+6.95 & 7.16 \\
+8.05 & 8.27 \\
+8.99 & 9.22 \\
+10 & 10 \\
+
+\hline
+\end{tabularx}
+\end{center}
+\vspace{5mm}
+
+\begin{tikzpicture}
+  \begin{axis}[
+        xtick distance = 1,
+        ytick distance = 1,
+        grid = both,
+        minor tick num = 1,
+        major grid style = {lightgray},
+        minor grid style = {lightgray!25},
+        width = \textwidth,
+        height = 0.5\textwidth,
+        xlabel = {$V.S. (V)$},
+        ylabel = {$SAIDA (V)$},]
+
+        \addplot[
+        samples = 200,
+        smooth,
+        thin,
+        red
+        ] file[skip first] {data10.dat};
+      \end{axis}
+\end{tikzpicture}
+
+Para 50\%:
+\begin{center}
+\begin{tabularx}{0.2\textwidth} {
+    | >{\raggedright\arraybackslash}X
+    | >{\centering\arraybackslash}X
+    | >{\raggedleft\arraybackslash}X | }
+            \hline
+V.S. (V) & SAÍDA (V) \\
+  \hline
+0.15 & 0.20 \\
+1.06 & 1.20 \\
+2.02 & 2.17 \\
+2.99 & 3.50 \\
+4.10 & 4.96 \\
+5.06 & 5.17 \\
+6.03 & 7.37 \\
+8.07 & 9.92 \\
+10 & 10 \\
+\hline
+\end{tabularx}
+\end{center}
+\vspace{5mm}
+
+\begin{tikzpicture}
+  \begin{axis}[
+        xtick distance = 1,
+        ytick distance = 1,
+        grid = both,
+        minor tick num = 1,
+        major grid style = {lightgray},
+        minor grid style = {lightgray!25},
+        width = \textwidth,
+        height = 0.5\textwidth,
+        xlabel = {$V.S. (V)$},
+        ylabel = {$SAIDA (V)$},]
+
+        \addplot[
+        samples = 200,
+        smooth,
+        thin,
+        red
+        ] file[skip first] {data50.dat};
+      \end{axis}
+\end{tikzpicture}
+
+
+Para 100\%:
+
+\begin{center}
+\begin{tabularx}{0.2\textwidth} {
+    | >{\raggedright\arraybackslash}X
+    | >{\centering\arraybackslash}X
+    | >{\raggedleft\arraybackslash}X | }
+            \hline
+V.S. (V) & SAÍDA (V) \\
+  \hline
+1 & 10 \\
+2 & 10 \\
+3 & 10 \\
+4 & 10 \\
+5 & 10 \\
+6 & 10 \\
+7 & 10 \\
+8 & 10 \\
+9 & 10 \\
+10 & 10 \\
+\hline
+\end{tabularx}
+\end{center}
+\vspace{5mm}
+
+\begin{tikzpicture}
+  \begin{axis}[
+        xtick distance = 1,
+        ytick distance = 1,
+        grid = both,
+        minor tick num = 1,
+        major grid style = {lightgray},
+        minor grid style = {lightgray!25},
+        width = \textwidth,
+        height = 0.5\textwidth,
+        xlabel = {$V.S. (V)$},
+        ylabel = {$SAIDA (V)$},]
+
+        \addplot[
+        samples = 200,
+        smooth,
+        thin,
+        red
+        ] file[skip first] {data100.dat};
+      \end{axis}
+\end{tikzpicture}
+
+\section{Conclusão}
+
+Na relação dos dados obtidos pelas 4 amostragens entendemos que a resistência é única variável que muda na entrada do amplificador e conforme regulamos o potenciômetro, não percebemos alterações relevantes até a tensão de entrada ser de cinco volts. No entanto, esse comportamento é alterado quando o potenciômetro está em 50\%, e todas as tensões de entrada são menores que as de saídas até chegar a 5V. Contudo, ocorre algo quando o potenciômetro está a 100\% e todas as tensões de saídas são iguais a 10V, independente da tensão de entrada.
+
+\end{document}
