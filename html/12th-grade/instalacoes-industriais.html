@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-05-01 Sun 09:11 -->
+<!-- 2022-06-13 Mon 12:00 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Instalações Elétricas Industriais</title>
@@ -233,7 +233,7 @@
 <li><a href="#orgaaf6667">Revisão</a>
 <ul>
 <li><a href="#org55ca754">Potências</a></li>
-<li><a href="#orgfd22ddf">Fator de Potência</a></li>
+<li><a href="#org36c3d14">Fator de Potência</a></li>
 </ul>
 </li>
 <li><a href="#orga465e58">Conteúdo até agora (08/03)</a>
@@ -270,6 +270,29 @@
 <li><a href="#orgd9d13be">Lista cálculo luminotécnico</a></li>
 </ul>
 </li>
+<li><a href="#org23bfa7e">Distribuição de luminárias</a>
+<ul>
+<li><a href="#orga99400c">Exemplo</a></li>
+<li><a href="#orgac084d8">Exemplo 1</a></li>
+</ul>
+</li>
+<li><a href="#orgdadc6ae">Dimensionamento de condutores</a>
+<ul>
+<li><a href="#org7309c01">3 critérios</a></li>
+</ul>
+</li>
+<li><a href="#org04b2865">Dimensionamento de condutores pt2</a>
+<ul>
+<li><a href="#org2dd59e1">Exercício proposto</a></li>
+</ul>
+</li>
+<li><a href="#org789cb92">Dimensionamemto de condutores</a>
+<ul>
+<li><a href="#org6f2347a">Critério do Limite de Queda de Tensão</a></li>
+<li><a href="#org8f8c912">Limites de Queda de Tensão admissíveis (\(\Delta V\))</a></li>
+</ul>
+</li>
+<li><a href="#org68b9a91">Dimensionamento de disjuntores</a></li>
 </ul>
 </div>
 </div>
@@ -294,7 +317,7 @@
 <h3 id="org55ca754">Potências</h3>
 <div class="outline-text-3" id="text-org55ca754">
 
-<div id="org215acdc" class="figure">
+<div id="org8035527" class="figure">
 <p><img src="https://luispengler.github.io/virtual-notebook/12th-grade/doc/industriais/triangulopot.jpg" alt="triangulopot.jpg" title="Triângulo de Potências" style="margin-left: auto;margin-right: auto;background-color: mintcream;display: block;width: 100%;" />
 </p>
 </div>
@@ -311,13 +334,13 @@
 </div>
 </div>
 
-<div id="outline-container-orgfd22ddf" class="outline-3">
-<h3 id="orgfd22ddf">Fator de Potência</h3>
-<div class="outline-text-3" id="text-orgfd22ddf">
+<div id="outline-container-org36c3d14" class="outline-3">
+<h3 id="org36c3d14">Fator de Potência</h3>
+<div class="outline-text-3" id="text-org36c3d14">
 </div>
-<div id="outline-container-org679710b" class="outline-4">
-<h4 id="org679710b">Para QL &gt; QC</h4>
-<div class="outline-text-4" id="text-org679710b">
+<div id="outline-container-org75dbe8e" class="outline-4">
+<h4 id="org75dbe8e">Para QL &gt; QC</h4>
+<div class="outline-text-4" id="text-org75dbe8e">
 <ul class="org-ul">
 <li>\[QL'=QL-QC\]</li>
 <li>Fator de Potência indutivo</li>
@@ -339,9 +362,9 @@
 </p>
 </div>
 </div>
-<div id="outline-container-org75dbe8e" class="outline-4">
-<h4 id="org75dbe8e">Para QL &gt; QC</h4>
-<div class="outline-text-4" id="text-org75dbe8e">
+<div id="outline-container-org7eab15d" class="outline-4">
+<h4 id="org7eab15d">Para QL &gt; QC</h4>
+<div class="outline-text-4" id="text-org7eab15d">
 <ul class="org-ul">
 <li>\[QC=QL=0\]</li>
 <li>Fator de Potência unitário</li>
@@ -418,9 +441,9 @@
 <h3 id="org98b7577">Dados nominais de \[MI3\phi\]</h3>
 <div class="outline-text-3" id="text-org98b7577">
 </div>
-<div id="outline-container-org36c3d14" class="outline-4">
-<h4 id="org36c3d14">Fator de Potência</h4>
-<div class="outline-text-4" id="text-org36c3d14">
+<div id="outline-container-orgf3d7474" class="outline-4">
+<h4 id="orgf3d7474">Fator de Potência</h4>
+<div class="outline-text-4" id="text-orgf3d7474">
 <ul class="org-ul">
 <li>\[F.P.=cos\phi=\frac{P}{S}\]</li>
 </ul>
@@ -870,10 +893,574 @@
 </div>
 </div>
 </div>
+
+<div id="outline-container-org23bfa7e" class="outline-2">
+<h2 id="org23bfa7e">Distribuição de luminárias</h2>
+<div class="outline-text-2" id="text-org23bfa7e">
+<ul class="org-ul">
+<li>\[X < Hlp\]</li>
+<li>\[Y < Hlp\]</li>
+<li>X e Y: Distância entre luminárias</li>
+<li>Hlp: Distância entre luminária e plano de trabalho</li>
+</ul>
+</div>
+<div id="outline-container-orga99400c" class="outline-3">
+<h3 id="orga99400c">Exemplo</h3>
+<div class="outline-text-3" id="text-orga99400c">
+<ul class="org-ul">
+<li>Área: 8x6m^2</li>
+<li>Quantidade de luminárias: 12</li>
+<li>Hlp: 2,8m</li>
+<li>3x + 2x/2 = 8m (x aqui é a distância entre luminária e parede)</li>
+<li>2y + 2y/2 = 6m</li>
+<li>x = 2m &lt; Hlp</li>
+<li>y = 2m &lt; Hlp</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgac084d8" class="outline-3">
+<h3 id="orgac084d8">Exemplo 1</h3>
+<div class="outline-text-3" id="text-orgac084d8">
+<ul class="org-ul">
+<li>Quantidade de luminárias: 12 luminárias</li>
+<li>Área: 15 x 20m</li>
+<li>Hlp: 2,8m</li>
+<li>7x + 2x/2 = 20 = 2,5m</li>
+<li>5y + 2y/2 = 15 = 2,5m
+48 luminárias (Cálculo exagerado)</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdadc6ae" class="outline-2">
+<h2 id="orgdadc6ae">Dimensionamento de condutores</h2>
+<div class="outline-text-2" id="text-orgdadc6ae">
+</div>
+<div id="outline-container-org7309c01" class="outline-3">
+<h3 id="org7309c01">3 critérios</h3>
+<div class="outline-text-3" id="text-org7309c01">
+<ul class="org-ul">
+<li>Critério da seção mínima - para iluminação 1,5mm^2 e para força 2,5mm^2</li>
+<li>Critério da capacidade de condução - levamos em consideração a corrente pela fórmula \[I=\frac{S}{V}\] e consultamos as tabelas para possivelmente aplicar o fator de correção</li>
+<li>Critério do limite de queda de tensão</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org04b2865" class="outline-2">
+<h2 id="org04b2865">Dimensionamento de condutores pt2</h2>
+<div class="outline-text-2" id="text-org04b2865">
+<ul class="org-ul">
+<li>O resultado tem que se enquadrar nos 3 critérios, sendo o maior número mais valido (porque cabe em todos os critérios lol)</li>
+</ul>
+</div>
+
+<div id="outline-container-org2dd59e1" class="outline-3">
+<h3 id="org2dd59e1">Exercício proposto</h3>
+<div class="outline-text-3" id="text-org2dd59e1">
+<ul class="org-ul">
+<li>5 circuitos -&gt; Fa = 0,6</li>
+<li>T = 40C -&gt; Fe= 0,87</li>
+</ul>
+</div>
+
+<div id="outline-container-org75591d7" class="outline-4">
+<h4 id="org75591d7">Critério de Capacidade de Condução de Corrente</h4>
+<div class="outline-text-4" id="text-org75591d7">
+</div>
+<div id="outline-container-org296e53f" class="outline-5">
+<h5 id="org296e53f">Circuito 1</h5>
+<div class="outline-text-5" id="text-org296e53f">
+<ul class="org-ul">
+<li>\[I=\frac{S}{V} = I = \frac{2000}{127} = 15.74 A\]</li>
+<li>\[Ib = \frac{15.75}{(0,6\times 0,87)} = 30,17A\]</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf4e832c" class="outline-5">
+<h5 id="orgf4e832c">Circuito 2</h5>
+<div class="outline-text-5" id="text-orgf4e832c">
+<ul class="org-ul">
+<li>\[I=\frac{S}{V} = I = \frac{4500}{220} = 20.45 A\]</li>
+<li>\[Ib = \frac{14.96}{(0,6\times 0,87)} = 28,66A\]</li>
+</ul>
+<p>
+4 mm^2
+</p>
+</div>
+</div>
+<div id="outline-container-org21fd436" class="outline-5">
+<h5 id="org21fd436">Circuito 3</h5>
+<div class="outline-text-5" id="text-org21fd436">
+<ul class="org-ul">
+<li>\[I=\frac{S}{V} = I = \frac{7500}{220} = 34.09 A\]</li>
+<li>\[Ib = \frac{14.96}{(0,6\times 0,87)} = 39,18A\]</li>
+</ul>
+<p>
+6 mm^2
+</p>
+</div>
+</div>
+<div id="outline-container-orgeb47dd3" class="outline-5">
+<h5 id="orgeb47dd3">Circuito 4</h5>
+<div class="outline-text-5" id="text-orgeb47dd3">
+<ul class="org-ul">
+<li>\[I=\frac{S}{V} = I = \frac{3000}{380} = 7.89 A\]</li>
+<li>\[Ib = \frac{14.96}{(0,6\times 0,87)} = 65,31A\]</li>
+</ul>
+<p>
+16 mm^2
+</p>
+</div>
+</div>
+<div id="outline-container-orgf36c778" class="outline-5">
+<h5 id="orgf36c778">Circuito 5</h5>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org789cb92" class="outline-2">
+<h2 id="org789cb92">Dimensionamemto de condutores</h2>
+<div class="outline-text-2" id="text-org789cb92">
+</div>
+<div id="outline-container-org6f2347a" class="outline-3">
+<h3 id="org6f2347a">Critério do Limite de Queda de Tensão</h3>
+<div class="outline-text-3" id="text-org6f2347a">
+<ul class="org-ul">
+<li><p>
+Fórmulas:
+\[\R=\rho\cdot \frac{l}{A}\]
+</p>
+
+<p>
+\[V = R\cdot I + V_{t}\]
+</p>
+
+<ul class="org-ul">
+<li>Equações para determinar as seções dos condutores:</li>
+</ul></li>
+</ul>
+
+<p>
+\[Sc = \frac{200\cdot \rho\cdot l\cdot I_{b}}{\Delta V\cdot V}\] (para circuitos monofásicos e bifásicos)
+</p>
+
+<p>
+Onde Sc é a seção do condutor em mm^2, \(\rho\) é a resistividade do material, l é comprimento do circuito em m, \(I_{b}\) corrente de projeto em A e \(\Delta V\) é queda de tensão admissível em %
+</p>
+
+<p>
+\[Sc = \frac{173,205\cdot \rho\cdot l\cdot I_{b}}{\Delta V\cdot V}\] (para circuitos trifásicos)
+</p>
+
+
+<ul class="org-ul">
+<li>Exemplo: 1) Um circuito atende a 15 tomadas monofásicas de 100VA. O comprimento total do circuito é 30m. Calcule as seções dos condutores para as seguintes quedas de tensão admissíveis:</li>
+<li>5,0%</li>
+</ul>
+<p>
+\[Sc = \frac{200\cdot \frac{1}{56}\cdot 11,81\cdot 30}{5\cdot 127} = 1,99 -> 2,5 mm^2\]
+</p>
+<ol class="org-ol">
+<li>3,5%</li>
+</ol>
+<p>
+\[Sc = \frac{200\cdot \frac{1}{56}\cdot 11,81\cdot 30}{3,5\cdot 127} = 2,84 -> 4 mm^2\]
+</p>
+<ol class="org-ol">
+<li>1%</li>
+</ol>
+<p>
+\[Sc = \frac{200\cdot \frac{1}{56}\cdot 11,81\cdot 30}{1\cdot 127} = 9,96 -> 10 mm^2\]
+</p>
+
+<ol class="org-ol">
+<li>Determine a queda de tensão (%) proporcionada por um condutor de 10mm^2 de um circuito trifásico, 220V, que atende uma carga a 180m do quadro de distribuição. Ib = 30A</li>
+</ol>
+<p>
+\[10 = \frac{173,205\cdot \frac{1}{56}\cdot 180\cdot 30}{\Delta V\cdot 220}\]
+\[\Delta V = 7,6%\]
+</p>
+</div>
+</div>
+<div id="outline-container-org8f8c912" class="outline-3">
+<h3 id="org8f8c912">Limites de Queda de Tensão admissíveis (\(\Delta V\))</h3>
+<div class="outline-text-3" id="text-org8f8c912">
+<ul class="org-ul">
+<li>5\% -&gt; Do ponto de entrega da concessionária em Baixa Tensão (BT) até a última carga</li>
+<li>7\% -&gt; Do secundário do transformador da unidade consumidora até a última carga</li>
+<li>joao.okumoto@ifms.edu.br</li>
+</ul>
+</div>
+
+<div id="outline-container-orgca51039" class="outline-4">
+<h4 id="orgca51039">Exercício 4</h4>
+<div class="outline-text-4" id="text-orgca51039">
+<ul class="org-ul">
+<li>Queda de tensão admissível \(=3\%\)</li>
+<li>Interior de molduras (A1)</li>
+<li>Temperatura 35C</li>
+<li>Isolação EPR</li>
+<li>Ft = 0,96 e Fa = 0,8</li>
+</ul>
+</div>
+<div id="outline-container-org0b26ff2" class="outline-5">
+<h5 id="org0b26ff2">Circuito 1</h5>
+<div class="outline-text-5" id="text-org0b26ff2">
+<ul class="org-ul">
+<li>Critério 1 (Seção mínima): (Circuito de força) -&gt; \(2,5mm^2\)</li>
+<li>Critério 2 (Condução de corrente): Dois condutores (Fase + Neutro) -&gt; \(1,5mm^2\)</li>
+</ul>
+
+<p>
+\[I = \frac{S}{V}\]
+</p>
+
+<p>
+\[I = \frac{1800}{127} = 14,17 A\]
+</p>
+
+<p>
+\[I = \frac{14.17}{Ft\times Fa\]
+</p>
+
+<p>
+\[I = \frac{14.17}{0,96\times 0,8}\]
+</p>
+
+<p>
+\[I = \frac{14.17}{0,768} = 18,45A\]
+</p>
+
+<p>
+Seção (de acordo com a tabela 37): \(1,5mm^2\)
+</p>
+
+<ul class="org-ul">
+<li>Critério 3 (Queda de tensão): -&gt; \(15.88mm^2\)</li>
+</ul>
+
+<p>
+\[Sc = \frac{200\cdot \rho\cdot l\cdot I_{b}}{\Delta V\cdot V}\]
+</p>
+
+<p>
+\[Sc = \frac{200\cdot 0,0178\cdot 120\cdot 14,17}{3\cdot 127} = \frac{6053,424}{381} = 15.88mm^2\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8b7482c" class="outline-5">
+<h5 id="org8b7482c">Circuito 2</h5>
+<div class="outline-text-5" id="text-org8b7482c">
+<ul class="org-ul">
+<li>Critério 1 (Seção mínima): \(1,5mm^2\) (Circuito de iluminação)</li>
+<li>Critério 2 (Condução de corrente): Dois condutores (Fase + Neutro) -&gt; \(1,5mm^2\)</li>
+</ul>
+
+<p>
+\[I = \frac{S}{V}\]
+</p>
+
+<p>
+\[I = \frac{1650}{127} = 12,99 A\]
+</p>
+
+<p>
+\[I = \frac{12,99}{Ft\times Fa\]
+</p>
+
+<p>
+\[I = \frac{12,99}{0,96\times 0,8}\]
+</p>
+
+<p>
+\[I = \frac{12,99}{0,768} = 16,91 A\]
+</p>
+
+<p>
+Seção (de acordo com a tabela 37): \(1,5mm^2\)
+</p>
+
+<ul class="org-ul">
+<li>Critério 3 (Queda de tensão): -&gt; \(18,25mm^2\)</li>
+</ul>
+
+<p>
+\[Sc = \frac{200\cdot \rho\cdot l\cdot I_{b}}{\Delta V\cdot V}\]
+</p>
+
+<p>
+\[Sc = \frac{200\cdot 0,0178\cdot 150\cdot 12,99}{3\cdot 127} = \frac{6956,145}{381} = 18,25mm^2\]
+</p>
+</div>
+</div>
+<div id="outline-container-org7679b70" class="outline-5">
+<h5 id="org7679b70">Circuito 3</h5>
+<div class="outline-text-5" id="text-org7679b70">
+<ul class="org-ul">
+<li>Critério 1 (Seção mínima): \(2,5mm^2\) (Circuito de força)</li>
+<li>Critério 2 (Condução de corrente): Dois condutores (Fase + Fase) -&gt; \(2,5mm^2\)</li>
+</ul>
+
+<p>
+\[I = \frac{S}{V}\]
+</p>
+
+<p>
+\[I = \frac{3600}{220} = 16,36 A\]
+</p>
+
+<p>
+\[I = \frac{16,36}{Ft\times Fa\]
+</p>
+
+<p>
+\[I = \frac{16,36}{0,96\times 0,8}\]
+</p>
+
+<p>
+\[I = \frac{16,36}{0,768} = 21,3 A\]
+</p>
+
+<p>
+Seção (de acordo com a tabela 37): \(2,5mm^2\)
+</p>
+
+<ul class="org-ul">
+<li>Critério 3 (Queda de tensão): -&gt; \(8,84mm^2\)</li>
+</ul>
+
+<p>
+\[Sc = \frac{200\cdot \rho\cdot l\cdot I_{b}}{\Delta V\cdot V}\]
+</p>
+
+<p>
+\[Sc = \frac{200\cdot 0,0178\cdot 100\cdot 16,36}{3\cdot 220} = \frac{5840,51}{660} = 8,84mm^2\]
+</p>
+</div>
+</div>
+<div id="outline-container-orgc289c4c" class="outline-5">
+<h5 id="orgc289c4c">Circuito 4</h5>
+<div class="outline-text-5" id="text-orgc289c4c">
+<ul class="org-ul">
+<li>Critério 1 (Seção mínima): \(2,5mm^2\) (Circuito de força)</li>
+<li>Critério 2 (Condução de corrente): Dois condutores (Fase + Fase) -&gt; \(6mm^2\)</li>
+</ul>
+
+<p>
+\[I = \frac{S}{V}\]
+</p>
+
+<p>
+\[I = \frac{6000}{220} = 27,27 A\]
+</p>
+
+<p>
+\[I = \frac{27,27}{Ft\times Fa\]
+</p>
+
+<p>
+\[I = \frac{27,27}{0,96\times 0,8}\]
+</p>
+
+<p>
+\[I = \frac{27,27}{0,768} = 35,5 A\]
+</p>
+
+<p>
+Seção (de acordo com a tabela 37): \(6mm^2\)
+</p>
+
+<ul class="org-ul">
+<li>Critério 3 (Queda de tensão): -&gt; \(26,55mm^2\)</li>
+</ul>
+
+<p>
+\[Sc = \frac{200\cdot \rho\cdot l\cdot I_{b}}{\Delta V\cdot V}\]
+</p>
+
+<p>
+\[Sc = \frac{200\cdot 0,0178\cdot 180\cdot 27,27}{3\cdot 220} = \frac{17523,702}{660} = 26,55mm^2\]
+</p>
+<ul class="org-ul">
+<li>Queda de tensão admissível \(=3\%\)</li>
+<li>Interior de molduras (A1)</li>
+<li>Temperatura 35C</li>
+<li>Isolação EPR</li>
+<li>Ft = 0,96 e Fa = 0,8</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8498797" class="outline-5">
+<h5 id="org8498797">Circuito 1</h5>
+<div class="outline-text-5" id="text-org8498797">
+<ul class="org-ul">
+<li>Critério 1 (Seção mínima): (Circuito de força) -&gt; \(2,5mm^2\)</li>
+<li>Critério 2 (Condução de corrente): Dois condutores (Fase + Neutro) -&gt; \(1,5mm^2\)</li>
+</ul>
+
+<p>
+\[I = \frac{S}{V}\]
+</p>
+
+<p>
+\[I = \frac{1800}{127} = 14,17 A\]
+</p>
+
+<p>
+\[I = \frac{14.17}{Ft\times Fa\]
+</p>
+
+<p>
+\[I = \frac{14.17}{0,96\times 0,8}\]
+</p>
+
+<p>
+\[I = \frac{14.17}{0,768} = 18,45A\]
+</p>
+
+<p>
+Seção (de acordo com a tabela 37): \(1,5mm^2\)
+</p>
+
+<ul class="org-ul">
+<li>Critério 3 (Queda de tensão): -&gt; \(15.88mm^2\)</li>
+</ul>
+
+<p>
+\[Sc = \frac{200\cdot \rho\cdot l\cdot I_{b}}{\Delta V\cdot V}\]
+</p>
+
+<p>
+\[Sc = \frac{200\cdot 0,0178\cdot 120\cdot 14,17}{3\cdot 127} = \frac{6053,424}{381} = 15.88mm^2\]
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org7334257" class="outline-4">
+<h4 id="org7334257">Exercício 5</h4>
+<div class="outline-text-4" id="text-org7334257">
+<ul class="org-ul">
+<li>No interior de canaletas fechadas embutidas no piso (B1)</li>
+<li>Temperatura 30C</li>
+<li>Isolação EPR</li>
+<li>Ft = 0,93 e Fa = 0,7</li>
+<li>Queda de tensão admissível \(=3\%\)</li>
+</ul>
+</div>
+<div id="outline-container-org22ee521" class="outline-5">
+<h5 id="org22ee521">Circuito 1</h5>
+<div class="outline-text-5" id="text-org22ee521">
+<ul class="org-ul">
+<li>6000VA, 220V (3 condutores), L = 200m</li>
+<li>Critério 1 (Seção mínima): (Circuito de força) -&gt; \(2,5mm^2\)</li>
+<li>Critério 2 (Condução de corrente): Dois condutores (Fase + Neutro) -&gt; \(6mm^2\)</li>
+</ul>
+
+<p>
+\[I = \frac{S}{V}\]
+</p>
+
+<p>
+\[I = \frac{6000}{220} = 27,27 A\]
+</p>
+
+<p>
+\[I = \frac{27,27}{Ft\times Fa\]
+</p>
+
+<p>
+\[I = \frac{27,27}{0,93\times 0,7}\]
+</p>
+
+<p>
+\[I = \frac{27,27}{0,651} = 41,89A\]
+</p>
+
+<p>
+Seção (de acordo com a tabela 37): \(6mm^2\)
+</p>
+
+<ul class="org-ul">
+<li>Critério 3 (Queda de tensão): -&gt; \(25,47mm^2\)</li>
+</ul>
+
+<p>
+\[Sc = \frac{173,205\cdot \rho\cdot l\cdot I_{b}}{\Delta V\cdot V}\]
+</p>
+
+<p>
+\[Sc = \frac{173,205\cdot 0,0178\cdot 200\cdot 27,27}{3\cdot 220} = \frac{16814,94}{660} = 25,47mm^2\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org04335e3" class="outline-5">
+<h5 id="org04335e3">Circuito 2</h5>
+<div class="outline-text-5" id="text-org04335e3">
+<ul class="org-ul">
+<li>9000VA, 220V (3 condutores), L = 250m</li>
+<li>Critério 1 (Seção mínima): (Circuito de força) -&gt; \(2,5mm^2\)</li>
+<li>Critério 2 (Condução de corrente): Dois condutores (Fase + Neutro) -&gt; \(16mm^2\)</li>
+</ul>
+
+<p>
+\[I = \frac{S}{V}\]
+</p>
+
+<p>
+\[I = \frac{9000}{220} = 45 A\]
+</p>
+
+<p>
+\[I = \frac{45}{Ft\times Fa\]
+</p>
+
+<p>
+\[I = \frac{45}{0,93\times 0,7}\]
+</p>
+
+<p>
+\[I = \frac{45}{0,651} = 69,12 A\]
+</p>
+
+<p>
+Seção (de acordo com a tabela 37): \(16mm^2\)
+</p>
+
+<ul class="org-ul">
+<li>Critério 3 (Queda de tensão): -&gt; \(52,55mm^2\)</li>
+</ul>
+
+<p>
+\[Sc = \frac{173,205\cdot \rho\cdot l\cdot I_{b}}{\Delta V\cdot V}\]
+</p>
+
+<p>
+\[Sc = \frac{173,205\cdot 0,0178\cdot 250\cdot 45}{3\cdot 220} = \frac{34684,3}{660} = 52,55mm^2\]
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org68b9a91" class="outline-2">
+<h2 id="org68b9a91">Dimensionamento de disjuntores</h2>
+<div class="outline-text-2" id="text-org68b9a91">
+<ul class="org-ul">
+<li></li>
+</ul>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luís Spengler</p>
-<p class="date">Created: 2022-05-01 Sun 09:11</p>
+<p class="date">Created: 2022-06-13 Mon 12:00</p>
 </div>
 </body>
 </html>

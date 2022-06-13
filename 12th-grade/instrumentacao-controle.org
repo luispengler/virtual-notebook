@@ -353,3 +353,7 @@ https://luispengler.github.io/virtual-notebook/12th-grade/doc/instrumenta1.jpg
 + PID significa propocional, integral e derivativo
 + O objetivo de um PID é aproveitar as características de cada uma das ações, que funciona melhor em regimes transitórios e permanentes
 + PID consideram uma ação presente, passada e futura
+
+
+* Condicionamento de sinais (não cai na P4)
++
