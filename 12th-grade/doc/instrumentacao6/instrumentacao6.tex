@@ -1,0 +1,62 @@
+\documentclass{article}
+\title{Controle de motor de esteira com sensor capacitivo}
+\date{}
+
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{pgfplots}
+\pgfplotsset{compat = newest}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tabularx}
+\usepackage[parfill]{parskip}
+\usepackage[nottoc]{tocbibind}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{/home/luispengler/drive/LinuxFabrik/Research/read/bib.bib}
+\usepackage{authblk}
+\renewcommand\Authand{ e }
+\renewcommand\Authands{ e }
+\author[1]{Luís Guilherme Miranda Spengler}
+\author[2]{Diogo Paes Masacottes}
+\affil[1,2]{Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso do Sul}
+
+\begin{document}
+\maketitle
+
+\section{Introdução}
+Seguindo o relatório intitulado ``Controle de máquina motora monofásica'', substituimos o acionamento por chave fim de curso por um sensor capacitivo, a fim de ter um atuador operando conforme uma certa condição se faça verdadeira. É grande a utilidade de sistemas de controle que operam conforme uma certa condição se faça verdadeira e até se tornam indispensáveis, já que qualquer sistema de controle simples funciona com base neste princípio. Neste presente artigo é apresentado uma situação em que o controle de uma esteira pode ser efetuado por um sensor capacitivo.
+
+\section{Problemática}
+
+Adentramos no problema considerando uma esteira que realiza o transporte de lixo em uma operação para a reciclagem de lixo encontrado em uma praia. Com o funcionamento do motor que move a esteira, há o aquecimento de seus condutores, principalmente os do enrolamento da bobina, ocasionando em redução da vida útil se o aquecimento for demasiado. Também há consumo de energia elétrica ao se utilizar um motor, principalmente maior potência reativa, gerando gastos extras aos donos da instalação.
+
+\section{Objetivo Geral}
+
+O objetivo é realizar o controle conforme detecção de lixo, para que se positivo a detecção de lixo, o motor acione e a esteira se movimente.
+
+\section{Metodologia}
+
+A figura 1 representa o circuito performado, na prática, onde Q1 corresponde a um disjuntor, KM1 corresponde a ligação feita na contatora. O primeiro componente no lado Vcc é a chave que liga o inversor, logo em seguida o sensor capacitivo. Por último, do lado Vcc, estão as bobinas da contatora. M1 corresponde ao motor 1 da esteira, que só estará ligado se a chave do circuito estiver fechada e o sensor capacitivo fechar o circuito, permitindo a contatora ficar com a chave fechada.
+
+\begin{figure}[h!]
+\centering
+\def\svgwidth{1\columnwidth}
+\input{ligacao.pdf_tex}
+\caption{Esquema do circuito}
+\end{figure}
+
+\section{Resultados}
+
+Porque o motor liga se o sensor capacitivo detectar algo qualquer (lixo) e se não detectar e estiver funcionando, o motor desliga, pode-se deduzir o tipo de controle como de ação liga-desliga (on-off).
+
+\section{Conclusão}
+
+Foi possível identificar, esquematizar e montar um circuito de controle que fizesse com que uma esteira operasse ou não dependendo do estado de um sensor capacitivo.
+
+\end{document}

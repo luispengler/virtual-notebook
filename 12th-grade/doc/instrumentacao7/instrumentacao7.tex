@@ -1,0 +1,87 @@
+\documentclass{article}
+\title{Controle de velocidade de motor baseado em tecnologia pulse-width modulation}
+\date{}
+
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{pgfplots}
+\pgfplotsset{compat = newest}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage[parfill]{parskip}
+\usepackage[nottoc]{tocbibind}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{/home/luispengler/drive/LinuxFabrik/Research/read/bib.bib}
+\usepackage{authblk}
+\renewcommand\Authand{ e }
+\renewcommand\Authands{ e }
+\author[1]{Luís Guilherme Miranda Spengler}
+\author[2]{Diogo Paes Masacottes}
+\affil[1,2]{Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso do Sul}
+
+\begin{document}
+\maketitle
+
+\section{Introdução}
+Com a aplicação de um pulso modulado por largura sobre um intervalo de tempo, pode-se reduzir a potência transmitida à carga. Neste relatório descrevemos um experimento de controle de velocidade de um motor baseado na variação de potência transmitida à carga.
+
+\section{Problemática}
+A importância do estudo da disciplina de controle se justifica pelo fato de estarmos em constante contato com dispositivos operados por sistemas de controle e também para posterior aplicações como profissionais da área de eletrotécnica.
+
+\section{Objetivo Geral}
+Identificar o tipo de controle para incrementar a velocidade do motor, enquanto se observa os efeitos do controle por PWM.
+
+\clearpage
+\section{Metodologia}
+
+Utilizando o kit de instrumentação do laboratório, foi possível montar o circuito da figura 1.
+
+\begin{figure}[h!]
+\centering
+\def\svgwidth{0.6\columnwidth}
+\input{ligacao.pdf_tex}
+\caption{Esquema do circuito}
+\end{figure}
+
+O controle da tensão que vai para o motor DC é feito ajustando o potênciometro de ``Voltage Source'', que fornece só até 10V. O sinal PWM sai de ``PWM Signals''. A velocidade do motor é medida através de um rotary encoder.
+
+Foram medidas as variáveis de tensão, frequência de PWM, Potência (através da relação da tensão e ciclo de trabalho) e frequência de rotação. Os dados obtidos estão na próxima seção.
+
+\section{Resultados}
+
+\begin{center}
+\begin{tabular}{ |p{1.5cm}||p{1.7cm}|p{1cm}|p{2.5cm}|  }
+ \hline
+ \multicolumn{4}{|c|}{Tabela de variáveis} \\
+ \hline
+ Tensão & Frequência & Pot. & Frequência\\
+  \hline
+ $0 \approx 10V$ & PWM & \% & Encoder (F/C1)\\
+  \hline
+  0,02 & 0,10 KHz& 00 & 0 KHz\\
+  0,99 & 0,10 KHz& 10 & 0 KHz\\
+  1,98 & 0,10 KHz& 20 & 0 KHz\\
+  2,99 & 0,10 KHz& 30 & 0 KHz\\
+  4,00 & 0,10 KHz& 40 & 0 KHz\\
+  5,00 & 0,10 KHz& 50 & 0 KHz\\
+  5,92 & 0,12 KHz& 55 & 0,05 KHz\\
+  7,01 & 0,10 KHz& 65 & 0,25 KHz\\
+  7,97 & 0,10 KHz& 75 & 0,55 KHz\\
+  8,92 & 0,10 KHz& 85 & 0,95 KHz\\
+  10,0 & 0,10 KHz& 100 & 1,65 KHz\\
+ \hline
+\end{tabular}
+\end{center}
+
+\section{Conclusão}
+Como é necessário incrementar a tensão na entrada do motor para ter uma maior velocidade (neste caso medida em termos de frequência), pode-se concluir que estamos trabalhando com um sistema em malha fechada manual, enquanto se aprofunda os conhecimentos técnicos de encoders e PWM da disciplina.
+
+\end{document}

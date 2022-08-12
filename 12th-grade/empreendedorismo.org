@@ -1,0 +1,10 @@
+#+TITLE: Empreendedorismo e inovação
+#+DESCRIPTION: Empreendedorismo e inovação - Meu caderno virtual
+#+SETUPFILE: https://luispengler.github.io/site/org-html-themes/org/theme-readtheorg.setup
+#+LaTeX_+HEADER: \usepackage{physics}
+#+LaTeX_+HEADER: \usepackage{amsmath}
+#+OPTIONS: num:nil ^:{} toc:2
+
+* Avaliações
++ 1st bim: 19/08 0-5 pts. (AV1), 30/09 0-5 pts. (AV2) e 09/12 0-10 pts. (REC 1)
++ 2nd bim: 04/11 0-5 pts. (AV1), 02/12 0-5 pts. (AV2) e 16/12 0-10 pts. (REC 2)

@@ -1,0 +1,25 @@
+#+TITLE: História 4
+#+DESCRIPTION: História 4 - Meu caderno virtual
+#+SETUPFILE: https://luispengler.github.io/site/org-html-themes/org/theme-readtheorg.setup
+#+LaTeX_+HEADER: \usepackage{physics}
+#+LaTeX_+HEADER: \usepackage{amsmath}
+#+OPTIONS: num:nil ^:{} toc:2
+
+* Apresentação
++ Tema: A crise de 1929; O facismo
++ Data: 11/08
+
+* 1929 video
+Hello america! We are here on October 29th 1929,  lower Manhattan in New York city and I am doing great. While investors make a huge line in Wall Street waiting for the prices of the New York Stock Exchange, we have some bad news from yesterday. We have confirmation that investors facing margin calls decided to leave the market leaving a huge drop of 38.8 points of the Dow Jones Industrial Average, meaning it went down 12.82%. Oh, wait. What do I have here? I just received information that there are roughly 15,000 people waiting in line for the market to open. It also seems that most of the people out there want to sell their stocks. God bless America as this new day goes by. I am Dennis, and you are listening to WJX.
+
+* Minha apresentação
++ Os EUA parecem ter uma crise a cada mais ou menos 10 anos
++ E os sinais são esses (na tela), também acompanhado de uma contração economica -> Pequenos sinais de uma recessão
++ Não vira uma recessão se a crise foi cuidada a tempo
++ Na crise de 29 tivemos todas essas coisas ruins acontecendo (slides)
++ O pico da crise de 29 (pico pra baixo) foi em 1933
++ Agora olhando para as recessões desde a segunda guerra mundial
++ Podemos notar que duas coisas sempre acontecem: o GDP (a medida da produção economica) cai e o desemprego aumenta
++ Renda do consumidor no Brasil está mais baixo
++ Inflação Brasileira acima de 5% em 2023
++ Uns 40 anos que o crescimento economico é próximo de 1%

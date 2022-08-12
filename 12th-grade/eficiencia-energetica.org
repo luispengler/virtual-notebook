@@ -1,0 +1,67 @@
+#+TITLE: Eficiência energética
+#+DESCRIPTION: Eficiência energética - Meu caderno virtual
+#+SETUPFILE: https://luispengler.github.io/site/org-html-themes/org/theme-readtheorg.setup
+#+LaTeX_+HEADER: \usepackage{physics}
+#+LaTeX_+HEADER: \usepackage{amsmath}
+#+OPTIONS: num:nil ^:{} toc:2
+
+* Sistema de Avaliação
++ P1 -> 10,0 (22/8)
++ P2 -> 10,0
+\[N1 = P1+P2\]
++ P3 -> 10,0
++ P4 -> 10,0
+\[N1 = P3+P4\]
++ Rec 1 - Substituirá N1
++ Rec 2 - Susbtituirá N2
++ 15h/a presencial + 15h/a assíncrona
+
+* Consumo de energia elétrica ou simplesmente energia
+\[C = P\times \Delta t\]
++ P = Potência ativa (W), mas podem aparecer outros tipos de potência
++ \[\Delta t\] intervalo de tempo (h)
+
+* Rendimento
+\[\eta (\%) = \frac{Po}{Pi}\times 100 (\%)\]
+\[Pi = \Sigma perdas + Po\]
+** Eficiência luminosa:
+\[E.L = {\Phi_L} = Fluxo luminoso da lâmpada (lúmens)\]
+\[P = Pot. da lâmpada (W)\]
+
+* Faturamento de Energia Elétrica
+** Grupo A
++ Faturamento de consumo e demanda (kWh);
++ Unidade consumidora com transformador(es);
++ Possibilidade de cobrança em horários diferenciados;
+** Grupo B
++ Faturamento somente de consumo (kWh);
++ Atendimento em BT;
+** Demanda medida, contratada e faturada
++ Medida (DM): Registro da média das potência em um intervalo de 15 minutos. Em um mês (30 dias) serão registradas 4x24x30 = 2880 demandas
++ Controlada (DC): Informada à concessionária para fins de faturamento e análise de disponibilidade do sistma elétrico.
++ Faturada (DF): É a maior entre a medida e a contratada.
+
+* Faturamento de Demanda
++ Demandas medida, contratada e faturada
++ A faturada é a maior entre a medida e a contratada
++ Demanda ultrapassada: valor superior à 5\% da contratada.
++ Faturamento da demanda de ultrapassagem: \[FDU = (DM - DC)\times 2\times TD\]
+
+** Exercício
++ Uma unidade consumidora possui um contrato de demanda de 200kW. Calcule o faturamento para cada situação:
+a) DM = 180 kW
+\[FD = 200x30 = 6000\]
+b) DM = 202 kW
++ Dentro dos 5\% de tolerância
+\[FD = 202\times 30 = 6060\]
+c) DM = 210 kW
++ Limite dos 5\% de tolerância
+\[FD = 210\times 30 = 6300\]
+a) DM = 215 kW
+\[FD = (200x30) + (15x2x30) = 6900\]
+TD = 30 reais por kW
+
++ Em relação à questão anterior qual poderia ser a demanda contratada para não ocorre ultrapassagem de demanda?
+\[DC\times 1,05 = DM\]
+\[DC\times 1,05 = 215\]
+\[DC \approx 205 kW\]

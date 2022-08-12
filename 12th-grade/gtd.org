@@ -1,0 +1,62 @@
+#+TITLE: Geração, Transmissão e Distribuição de Energia Elétrica
+#+DESCRIPTION: Geração, Transmissão e Distribuição de Energia Elétrica - Meu caderno virtual
+#+SETUPFILE: https://luispengler.github.io/site/org-html-themes/org/theme-readtheorg.setup
+#+LaTeX_+HEADER: \usepackage{physics}
+#+LaTeX_+HEADER: \usepackage{amsmath}
+#+OPTIONS: num:nil ^:{} toc:2
+
+* Sistema de Avaliação
++ P1 -> 10,0 (22/8)
++ P2 -> 10,0
+\[N1 = \frac{P1+P2+TS}{2}\]
++ P3 -> 10,0
++ P4 -> 10,0
+\[N2 = \frac{P3+P4+TS}{2}\]
++ Rec 1 - Substituirá N1
++ Rec 2 - Susbtituirá N2
+
+* Conceitos
++ Equipamento <- Unidade consumidora <- Rede de distribuição urbana ou rural <- Linha de transmissão <- Geração
+
+* Dimensionamento de Entrada de Energia em MT
++ Norma de Distribuição (Energisa) -> NDU 002
++ Para carga instalada maior que 75kW ou para casos especiais
++ Carga instalada é a soma de todas as potências dos equipamentos de uma unidade consumidora em condições de entrar em funcionamento (em kW).
+
+* Exemplo: Calcule a carga instalada (kW) para a relação de equipamentos:
+- 2 chuveiros de 5kW -> 10kW
+- TUG - Pot. Total: 3000VA - FP = 0,9 -> 2,7kW
+- Motor de indução - 3cv - rendimento de 85\% -> 2,6kW
++ Carga instalada: CI = 15,3kW
+
+* Fornecimento de Energia em Tensão Primária
++ Norma de Distribuição unificada (NDU02)
+** Rede de Distribuição Urbana (Campo Grande)
++ Tensão Secundária (220/127V);
++ Tensão Primária (13800V).
++ Unidades consumidoras com C.I maior que 75kW necessitam de fornecimento em tensão primária (regra geral).
+** Demanda
++ É a média das potências elétricas, ativas ou reativas, solicitadas ao sistema elétrico, durante um intervalo de tempo.
+** Fator de demanda
++ Razão entre a demanda máxima e a carga instalada em um intervalo de tempo
+
+* Procedimentos para determinação da potência de trasnformação necessária para uma unidade consumidora (NDU02)
+1) Cálculo da carga instalada (kW);
+2) De acordo com o ramo de atividade, determinar o fator de demanda (FD) => NDU 02;
+3) Aplicar o FD na carga instalada para achar a demanda da unidade consumidora: \[D(kW) = FD\times CI\]
+4) Potência de transformação \[=S(kVA) = D/FP = D/0,92\]
+
+
+* Exercício:
++ Uma fábrica de tijolos possui carga instalada igual a 200kW. Dimensione a potência de transformação necessária para atender a unidade consumidora
+
+* Exercício:
++ Dimensione os componentes para entrada de energia que atenderá a potência de transformação do exemplo anterior (tabela 2 - pag 82):
+a) Potência do transformador (kVA) - único:
+\[D(kVA) = 200\times 0,91/0,92 = 197,8kVA\]
++ Usaremos de 225 kVA, pois é a potência mais próxima maior
+b) Tipo de medição (direta ou indireta; relação de transformação do TC, se necessário);
++ Indireta, com TC-400:5
+c) Seção dos condutores do lado secundário (em XLPE/EPR e PVC):
++ EPR/XLPE: 2x{3 de 185 (95)}. PVC = 2x{3 de 300 (150)}
+d) Disjuntor termomagnético em BT:

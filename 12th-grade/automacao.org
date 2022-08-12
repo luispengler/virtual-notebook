@@ -1,0 +1,21 @@
+#+TITLE: Automação industrial
+#+DESCRIPTION: Automação industrial - Meu caderno virtual
+#+SETUPFILE: https://luispengler.github.io/site/org-html-themes/org/theme-readtheorg.setup
+#+LaTeX_+HEADER: \usepackage{physics}
+#+LaTeX_+HEADER: \usepackage{amsmath}
+#+OPTIONS: num:nil ^:{} toc:2
+
+* Datas
++ Avaliações 1st bim: 19/08 (AV1), 23/09 (AV2) e 30/09 (REC)
+
+* Automação
++ Tornar atividades repetitivas automáticas (parecido como tu programou seu arch linux lol)
++ Mecanização é apenas a substituição da parte física do homem, fazendo trabalhos com menos esforço
++ Automação substitui a parte física e o esforço mental do homem, com a utilização de máquinas (hardware and software)
+
+* Automação industrial
++ Envolve vários níveis, desde os equipamentos de "chão de fábrica" até os sistemas supervisiórios
++ A disciplina vai ter um foco na automação industrial com controladores lógicos programáveis
+
+* Exercícios - Relés
++ 1.2, 1.3, 1.4 resolvidos no cardeno

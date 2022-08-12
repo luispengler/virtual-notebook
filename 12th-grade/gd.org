@@ -1,0 +1,21 @@
+#+TITLE: Geração Distribuida
+#+DESCRIPTION: Geração Distribuida - Meu caderno virtual
+#+SETUPFILE: https://luispengler.github.io/site/org-html-themes/org/theme-readtheorg.setup
+#+LaTeX_+HEADER: \usepackage{physics}
+#+LaTeX_+HEADER: \usepackage{amsmath}
+#+OPTIONS: num:nil ^:{} toc:2
+
+* Avaliação
+\[{P_1} = 0,8P + 0,2L\]
+\[{P_2} = 0,8T + 0,2L\]
+
+* Revolução normativa 482 - ANEEL
++ Marco regulatório da compensação de energia através do sistema de créditos
++ Prazo de 36 meses
+* 687
++ Prazo de 60 mses
++ Empreendimento com múltiplas unidades consumidoras
+** Potência Máxima instalada
++ Grupo A = Demanda
++ Grupo B = Consumo (Não pode instalar acima do consumo)
++

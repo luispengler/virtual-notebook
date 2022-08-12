@@ -1,0 +1,12 @@
+#+TITLE: Filosofia 6
+#+DESCRIPTION: Filosofia 6 - Meu caderno virtual
+#+SETUPFILE: https://luispengler.github.io/site/org-html-themes/org/theme-readtheorg.setup
+#+LaTeX_+HEADER: \usepackage{physics}
+#+LaTeX_+HEADER: \usepackage{amsmath}
+#+OPTIONS: num:nil ^:{} toc:2
+
+* Revisão
+** Ordem
++ Filosofos pré-socŕaticos (buscam a arquem pensando no ar, fogo, água, etc)
++ Antiguidade: Sócrates, Platão, Aristóteres -> escolas sofisticas e helenisticas (cinista, céticos)
++ Idade das trevas: Santo Agostinho, Tomás de aquino

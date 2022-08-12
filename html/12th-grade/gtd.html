@@ -6,9 +6,9 @@
 <!-- 2022-08-12 Fri 12:28 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Virtual Notebook</title>
+<title>Geração, Transmissão e Distribuição de Energia Elétrica</title>
 <meta name="author" content="Luís Spengler" />
-<meta name="description" content="luispengler.github.io/site - Official Site of Luís Spengler" />
+<meta name="description" content="Geração, Transmissão e Distribuição de Energia Elétrica - Meu caderno virtual" />
 <meta name="generator" content="Org Mode" />
 <style>
   #content { max-width: 60em; margin: auto; }
@@ -200,62 +200,184 @@
 <script src="httpss://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://luispengler.github.io/site/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
 <script type="text/javascript" src="https://luispengler.github.io/site/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Virtual Notebook</h1>
+<h1 class="title">Geração, Transmissão e Distribuição de Energia Elétrica</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org0fa8163">Sistema de Avaliação</a></li>
+<li><a href="#org980a824">Conceitos</a></li>
+<li><a href="#org0aec63f">Dimensionamento de Entrada de Energia em MT</a></li>
+<li><a href="#orge56d01f">Exemplo: Calcule a carga instalada (kW) para a relação de equipamentos:</a></li>
+<li><a href="#org187b926">Fornecimento de Energia em Tensão Primária</a>
+<ul>
+<li><a href="#org82b4744">Rede de Distribuição Urbana (Campo Grande)</a></li>
+<li><a href="#org8c2d480">Demanda</a></li>
+<li><a href="#orgbb06061">Fator de demanda</a></li>
+</ul>
+</li>
+<li><a href="#orgd01702f">Procedimentos para determinação da potência de trasnformação necessária para uma unidade consumidora (NDU02)</a></li>
+<li><a href="#org80e76e9">Exercício:</a></li>
+<li><a href="#org8f9a8bf">Exercício:</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org0fa8163" class="outline-2">
+<h2 id="org0fa8163">Sistema de Avaliação</h2>
+<div class="outline-text-2" id="text-org0fa8163">
+<ul class="org-ul">
+<li>P1 -&gt; 10,0 (22/8)</li>
+<li>P2 -&gt; 10,0</li>
+</ul>
 <p>
-For nothing is better than being able to write, and read your notebook from anywhere you want!
+\[N1 = \frac{P1+P2+TS}{2}\]
 </p>
-
-<div id="outline-container-org1ecc6ce" class="outline-2">
-<h2 id="org1ecc6ce">Self studying subjects</h2>
-<div class="outline-text-2" id="text-org1ecc6ce">
 <ul class="org-ul">
-<li><a href="https://luispengler.github.io/site/html/org-pages/notes/linear-algebra-intro.html">Intro to Linear Algebra</a>: &ldquo;<i>Linear algebra is the branch of mathematics concerning linear equations, and their representations through matrices and vector spaces.</i>&rdquo;</li>
-
-<li><a href="https://luispengler.github.io/site/html/org-pages/notes/quantum-computing.html">Intro to Quantum Computing</a>: &ldquo;<i>Quantum computing is a type of computation that harnesses the collective properties of quantum states, such as superposition, interference, and entanglement, to perform calculations.</i>&rdquo;</li>
-
-<li><a href="https://luispengler.github.io/site/html/org-pages/notes/particle-physics.html">Particle Physics</a>: &ldquo;<i>Particle physics is a branch of physics that studies the nature of the particles that constitute matter and radiation.</i>&rdquo;</li>
-
-<li><a href="https://luispengler.github.io/site/html/org-pages/notes/dave-on-modern-physics.html">Professor Dave on Modern Physics</a>: &ldquo;<i>Modern physics is a branch of physics that developed in the early 20th century and onward or branches greatly influenced by early 20th century physics.</i>&rdquo;</li>
+<li>P3 -&gt; 10,0</li>
+<li>P4 -&gt; 10,0</li>
+</ul>
+<p>
+\[N2 = \frac{P3+P4+TS}{2}\]
+</p>
+<ul class="org-ul">
+<li>Rec 1 - Substituirá N1</li>
+<li>Rec 2 - Susbtituirá N2</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org41e86e9" class="outline-2">
-<h2 id="org41e86e9">School/College subjects</h2>
-<div class="outline-text-2" id="text-org41e86e9">
-</div>
-<div id="outline-container-org66d8456" class="outline-3">
-<h3 id="org66d8456">12th grade (in Portuguese &#x2013; I&rsquo;m sorry)</h3>
-<div class="outline-text-3" id="text-org66d8456">
+<div id="outline-container-org980a824" class="outline-2">
+<h2 id="org980a824">Conceitos</h2>
+<div class="outline-text-2" id="text-org980a824">
 <ul class="org-ul">
-<li><a href="https://luispengler.github.io/site/html/org-pages/notes/12th-grade/maquinas-eletricas-2.html">Máquinas Elétricas e Acionamentos 2</a>: &ldquo;<i>Máquina síncronas: Princípios de funcionamento (motor e gerador). Tipos de acionamentos. Efeito no Fator de Potência. Métodos de controle. Máquina de indução: princípio de funcionamento (Monofásico e Trifásicos). Partes construtivas. Tipos de Acionamentos. Máquinas e motores especiais</i>&rdquo;</li>
-
-<li><a href="https://luispengler.github.io/site/html/org-pages/notes/12th-grade/biologia.html">Biologia 4</a>: &ldquo;<i>Verminoses humanas. Morfofisiologia Humana básica: sistema digestório, sistema respiratório, sistema circulatório, sistema excretor, sistema nervoso. IST’S – Infecções sexualmente transmissíveis. Ecologia: conceitos básicos. Fluxo de energia, cadeias e teias tróficas. Relações ecológicas: harmônicas e desarmônicas. Sucessão ecológica. Ciclos biogeoquímicos. Poluições</i>&rdquo;</li>
-
-<li><a href="https://luispengler.github.io/site/html/org-pages/notes/12th-grade/sistemas-digitais.html">Sistemas Digitais e Microcontrolados</a>: &ldquo;<i>Circuitos digitais sequenciais. Registradores e memórias. Microcontroladores: características, arquitetura básica e Tipos. Noções de Programação e instruções básicas. Softwares e Kits didáticos. Familiarização com esquemas eletroeletrônicos. Desenvolvimento de projetos e aplicações práticas com o Microcontrolador. Projetos aplicados: Desenvolvimento de projetos práticos aplicados, visando a sistematização do conhecimento</i>&rdquo;</li>
-
-<li><a href="https://luispengler.github.io/site/html/org-pages/notes/12th-grade/historia.html">História 3</a>: &ldquo;<i>Trabalho e meio ambiente nas sociedades pré-industriais. Sociedades hidráulicas (Mesopotâmia e Egito). Escravidão na Antiguidade; Escravidão na modernidade; Escravidão e pós-abolição no Brasil. Os indígenas brasileiros e sua relação produtiva com a natureza. Servidão no período medieval. II - Terra, propriedade e conflitos. Propriedade privada e coletiva; Função social da terra. Feudalismo; Capitanias hereditárias; Lei de terras (1850).Início da República no Brasil; Movimentos sociais camponeses (Canudos, Contestado, MST). III - Trabalho, tecnologia e a sociedade capitalista. O que é Capitalismo? Primeira Revolução Industrial; Segunda Revolução Industrial e consequências contemporâneas. Trabalho infantil; Trabalho feminino; Lutas pelos direitos trabalhistas. Socialismo e Comunismo; Guerra Fria. Vargas e o trabalhismo, JK e a industrialização no Brasil. Sociedade de consumo. Meio Ambiente e Ecologia;</i>&rdquo;</li>
-
-<li><a href="https://luispengler.github.io/site/html/org-pages/notes/12th-grade/portuguese.html">Língua Portuguesa e Literatura Brasileira 5</a>: &ldquo;<i>Leitura e produção de textos: leitura e escrita; gêneros textuais argumentativos da esfera jornalística. Reflexão linguística: produção textual e argumentação; competência leitora e habilidades de leitura; orações complexas e grupos oracionais; fatores/critérios de textualidade. Literatura de Língua Portuguesa: Modernismo; Literaturas africanas de língua portuguesa.</i>&rdquo;</li>
-
-<li><a href="https://luispengler.github.io/site/html/org-pages/notes/12th-grade/matematica.html">Matemática 5</a>: &ldquo;<i>Geometria Plana. Polígonos regulares inscritos na circunferência. Área de regiões determinadas por polígonos. Área de regiões circulares. Geometria Espacial. Sólidos Geométricos. Poliedros (prismas e pirâmides). Corpos redondos (cones, cilindros, esfera</i>&rdquo;</li>
-
-<li><a href="https://luispengler.github.io/site/html/org-pages/notes/12th-grade/quimica-4.html">Química 4</a>: &ldquo;<i>Introdução à Química Orgânica. Funções Orgânicas. Isomeria plana e espacial. Reações Orgânicas. Polímeros</i>&rdquo;</li>
-
-<li>Pneumática e Hidráulica: &ldquo;<i>Fundamentos da mecânica dos fluidos. Componentes hidráulicos e pneumáticos. Características e diferenças entre circuitos pneumáticos e hidráulicos. Linhas pneumáticas e hidráulicas. Automação com circuitos pneumáticos e hidráulicos.</i>&rdquo;</li>
-
-<li><a href="https://luispengler.github.io/site/html/org-pages/notes/12th-grade/instalacoes-industriais.html">Instalações Elétricas Industriais</a>: &ldquo;<i>Luminotécnica: lâmpadas, luminárias e acessórios (reatores, relés fotoelétricos, sensores de presença, dimmers); Cálculo luminotécnico - Método dos Lúmens. Dados nominais de motores elétricos de indução; dimensionamento de condutores (Revisão e aplicação do Critério do Limite de Queda de Tensão); dimensionamentos de eletrocalhas; cálculo de demanda para dimensionamento de quadros de distribuição; noções de corrente de curto-circuito; dimensionamentos de disjuntores termomagnéticos através da análise de curvas de atuação.</i>&rdquo;</li>
-
-<li><a href="https://luispengler.github.io/site/html/org-pages/notes/12th-grade/instrumentacao-controle.html">Instrumentação e Controle</a>: &ldquo;<i>Instrumentação Industrial. Processos (características). Principais Grandezas físicas na instrumentação Industrial. Classificação dos instrumentos. Simbologia na instrumentação (diagramas P&amp;I). Conceitos básicos de controle de processos. Princípios de controle (malha aberta e fechada). Noções do controle (P, PI, PID). Sensores industriais. Condicionamento de sinais. O amplificador operacional e suas aplicações. Circuitos de condicionamento com o Amplificador operacional. Projetos práticos aplicados visando a sistematização do conhecimento</i>&rdquo;</li>
-
-<li><a href="https://luispengler.github.io/site/html/org-pages/notes/12th-grade/meio-ambient.html">Meio Ambiente e Energias Renováveis</a>: &ldquo;<i>Conceito de Energia e fontes de energia. Política e Gestão ambiental de energias renováveis. Energias renováveis: conceitos gerais e tipos. Fundamentos da Energia Solar Fotovoltaica. Tecnologia Fotovoltaica: módulos, Arranjos, Células. Boas práticas em sistemas de geração fotovoltaica. Mercado de energia</i>&rdquo;</li>
-
-<li>Educação Física 5: &ldquo;<i>Bases técnicas e táticas de esportes coletivos 4; atividade física e exercício físico 2; expressão corporal e atividades rítmicas 1; lutas 2.</i>&rdquo;</li>
+<li>Equipamento &lt;- Unidade consumidora &lt;- Rede de distribuição urbana ou rural &lt;- Linha de transmissão &lt;- Geração</li>
 </ul>
 </div>
+</div>
+
+<div id="outline-container-org0aec63f" class="outline-2">
+<h2 id="org0aec63f">Dimensionamento de Entrada de Energia em MT</h2>
+<div class="outline-text-2" id="text-org0aec63f">
+<ul class="org-ul">
+<li>Norma de Distribuição (Energisa) -&gt; NDU 002</li>
+<li>Para carga instalada maior que 75kW ou para casos especiais</li>
+<li>Carga instalada é a soma de todas as potências dos equipamentos de uma unidade consumidora em condições de entrar em funcionamento (em kW).</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge56d01f" class="outline-2">
+<h2 id="orge56d01f">Exemplo: Calcule a carga instalada (kW) para a relação de equipamentos:</h2>
+<div class="outline-text-2" id="text-orge56d01f">
+<ul class="org-ul">
+<li>2 chuveiros de 5kW -&gt; 10kW</li>
+<li>TUG - Pot. Total: 3000VA - FP = 0,9 -&gt; 2,7kW</li>
+<li>Motor de indução - 3cv - rendimento de 85\% -&gt; 2,6kW</li>
+<li>Carga instalada: CI = 15,3kW</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org187b926" class="outline-2">
+<h2 id="org187b926">Fornecimento de Energia em Tensão Primária</h2>
+<div class="outline-text-2" id="text-org187b926">
+<ul class="org-ul">
+<li>Norma de Distribuição unificada (NDU02)</li>
+</ul>
+</div>
+<div id="outline-container-org82b4744" class="outline-3">
+<h3 id="org82b4744">Rede de Distribuição Urbana (Campo Grande)</h3>
+<div class="outline-text-3" id="text-org82b4744">
+<ul class="org-ul">
+<li>Tensão Secundária (220/127V);</li>
+<li>Tensão Primária (13800V).</li>
+<li>Unidades consumidoras com C.I maior que 75kW necessitam de fornecimento em tensão primária (regra geral).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8c2d480" class="outline-3">
+<h3 id="org8c2d480">Demanda</h3>
+<div class="outline-text-3" id="text-org8c2d480">
+<ul class="org-ul">
+<li>É a média das potências elétricas, ativas ou reativas, solicitadas ao sistema elétrico, durante um intervalo de tempo.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbb06061" class="outline-3">
+<h3 id="orgbb06061">Fator de demanda</h3>
+<div class="outline-text-3" id="text-orgbb06061">
+<ul class="org-ul">
+<li>Razão entre a demanda máxima e a carga instalada em um intervalo de tempo</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd01702f" class="outline-2">
+<h2 id="orgd01702f">Procedimentos para determinação da potência de trasnformação necessária para uma unidade consumidora (NDU02)</h2>
+<div class="outline-text-2" id="text-orgd01702f">
+<ol class="org-ol">
+<li>Cálculo da carga instalada (kW);</li>
+<li>De acordo com o ramo de atividade, determinar o fator de demanda (FD) =&gt; NDU 02;</li>
+<li>Aplicar o FD na carga instalada para achar a demanda da unidade consumidora: \[D(kW) = FD\times CI\]</li>
+<li>Potência de transformação \[=S(kVA) = D/FP = D/0,92\]</li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-org80e76e9" class="outline-2">
+<h2 id="org80e76e9">Exercício:</h2>
+<div class="outline-text-2" id="text-org80e76e9">
+<ul class="org-ul">
+<li>Uma fábrica de tijolos possui carga instalada igual a 200kW. Dimensione a potência de transformação necessária para atender a unidade consumidora</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8f9a8bf" class="outline-2">
+<h2 id="org8f9a8bf">Exercício:</h2>
+<div class="outline-text-2" id="text-org8f9a8bf">
+<ul class="org-ul">
+<li>Dimensione os componentes para entrada de energia que atenderá a potência de transformação do exemplo anterior (tabela 2 - pag 82):</li>
+<li>Potência do transformador (kVA) - único:</li>
+</ul>
+<p>
+\[D(kVA) = 200\times 0,91/0,92 = 197,8kVA\]
+</p>
+<ul class="org-ul">
+<li>Usaremos de 225 kVA, pois é a potência mais próxima maior</li>
+<li>Tipo de medição (direta ou indireta; relação de transformação do TC, se necessário);</li>
+<li>Indireta, com TC-400:5</li>
+<li>Seção dos condutores do lado secundário (em XLPE/EPR e PVC):</li>
+<li>EPR/XLPE: 2x{3 de 185 (95)}. PVC = 2x{3 de 300 (150)}</li>
+<li>Disjuntor termomagnético em BT:</li>
+</ul>
 </div>
 </div>
 </div>

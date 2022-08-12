@@ -1,0 +1,113 @@
+#+TITLE: Estatistica
+#+DESCRIPTION: Instalações Elétricas Industriais - Meu caderno virtual
+#+SETUPFILE: https://luispengler.github.io/site/org-html-themes/org/theme-readtheorg.setup
+#+LaTeX_+HEADER: \usepackage{physics}
+#+LaTeX_+HEADER: \usepackage{amsmath}
+#+OPTIONS: num:nil ^:{} toc:2
+
+* Avaliações
++ Lista de exercícios - 29/08
++ Prova parcial - 12/09
++ Prova bimestral - 26/09
+
+* População ou amostra
+** Tamanho da populaçõa
++ Margem de erro é medido de acordo com o objetivo, e pode ir até 5%
++ Casos que a margem de erro é 5% são apenas pesquisas informativas e que não tenham risco de vida
++ Assim, podemos calcular o tamanho de amostra
+** Exemplo 1
++ População -> 3200
++ Margem de erro -> 5%
+\[Ao = \frac{1}{Eo}^2\]
+\[Ao = 400\]
+\[Af = \frac{P*Ao}{P+Ao}\]
+\[Af = 356\] (arredondado para a maior unidade)
++ A porcentagem da população (tamanho da amostra) que temos que utilizar é dado por uma regra de 3, onde 3200 é 100\%, então 356 (Amostra final) corresponde a 11,125\%
+** Exemplo 2
++ População = 120.000, população masculina = 55.000, população feminina = 65.000
++ Eo = 4%
++ Utilizando aleatória simples (utiliza o todo)
+\[Ao = \frac{1}{0,04}^2\]
+\[Ao = 125\]
+\[Af = \frac{120000*625}{120000+625 = 622 pessoas\]
+\[X\% = 0,52%\]
++ Utilizando amostragem estratificada
++ Masculino
+\[Afm = \frac{P*Ao}{P+Ao} = \frac{55.000*625}{55.000+625} = 618\]
+\[X\% = 1,12\% (considerando 55000 pessoas\]
++ Feminino
+\[Aff = \frac{P*Ao}{P+Ao} = \frac{65.000*625}{65.000+625} = 620\]
+\[X\% = 0,95\% (considerando 65000 pessoas)\]
++ A soma dos grupos nos diz quantas pessoas temos que entrevistar
+\[Af = Afm + Aff = 1238\]
+\[X\% = 1,03\% (considerando 120000 pessoas)\]
+
+* Variáveis
++ Perguntas objetivas -> Dominío de resposta
++ Se alguém não responder uma pergunta temos um problema com nosso instrumento de coleta de dados
++ Temos variáveis qualitativas e quantitativas
++ Quantitativa pode ser discreta e contínua
++ Qualitativa pode ser nominal (que pode ser exclusivo) e ordinal
+
+* Exercício - Revisão
++ Com uma população de 14363 pessoas Ana decidiu fazer uso de amostragem, para tanto, definiu uma margem de erro de 4\%. Qual o tamanho da amostra?
+\[Ao = \frac{1}{Eo}^2\]
+\[Ao = 625\]
+\[Af = \frac{P*Ao}{P+Ao}\]
+\[Af = \frac{14363*625}{14363+625}\]
+\[Af = 599\] (arredondado para a maior unidade)
++ A porcentagem da população (tamanho da amostra) que temos que utilizar é dado por uma regra de 3, onde 14363 é 100\%, logo 599 é 4,17\%
+
+* Exercício 2 - Revisão
+** Classifique as variáveis listadas a seguir
++ Nº de filhos - Quantitativa discreta
++ Tipo sanguíneo - Qualitativo nominal
++ Escola de dor - Qualitativo ordinal
++ CPF - Qualitativo nominal
++ Massa - Quantitativo contínuo
++ IMC - Quantitativo contínuo
++ Nota - Quantitativo contínuo
++ Salario - Quantitativo contínuo
+
+* Exercício - Revisão
++ Paulo lançou 4 vezes um dado (fair)
++ 1 1 6 5 4 4 3 2 3 4 5 1 6 6 5 5 1 3 2 2 6 1 5 2 2 4 3 2 3
++ Pode aplicar as técnicas estatísticas linearmente, ou agrupados
++ Distribuição de frequência absoluta
++ Distribuição de frequência absoluta
+
+| nº | f |
+|  1 | 5 |
+|  2 | 6 |
+|  3 | 5 |
+|  4 | 4 |
+|  5 | 5 |
+|  6 | 4 |
+
++ Distribuição de Classe
+| nº       | f |
+| 1 -> 3   |   |
+| 4 -> 6   | 5 |
+| Acima de |   |
+
+* Exerício 2
++ Considerando a distribuição de frequência absoluta calcular média, moda e frequência relativa
+
+|   nº filhos |  f |
+|           0 | 12 |
+|           1 | 23 |
+|           2 | 49 |
+|           3 | 26 |
+|           4 |  8 |
+| Acima de 4n |  3 |
+
++ Média: \[X = (0*12)+(1*23) + (2*49) + (3*26) + (4*8) + (5*3)/121\] = 2,03 filhos
++ Moda: 2
++ Frequência relativa:
+|   nº filhos | fr                  |
+|           0 | 12x100/121= 9.91\%  |
+|           1 | 23x100/121= 19.00\% |
+|           2 | 49x100/121= 40.49\% |
+|           3 | 26x100/121= 21.48\% |
+|           4 | 8x100/121= 6.61\%   |
+| Acima de 4n | 3x100/121= 2.47\%   |
