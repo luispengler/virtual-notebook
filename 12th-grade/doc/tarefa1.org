@@ -1,36 +1,12 @@
-#+TITLE: Projetos de Baixa e Alta tensão
+#+TITLE: Tarefa entrada de serviço - Projetos AT e BT
 #+DESCRIPTION: Projetos de Baixa e Alta tensão - Meu caderno virtual
 #+SETUPFILE: https://luispengler.github.io/site/org-html-themes/org/theme-readtheorg.setup
 #+LaTeX_+HEADER: \usepackage{physics}
 #+LaTeX_+HEADER: \usepackage{amsmath}
 #+OPTIONS: num:nil ^:{} toc:2
 
-* Entrada de serviços (NDU01)
-+ Demanda -> Circuito de alimentação
-+ Potência Instalada -> Circuito terminal
-
-* Limites de Fornecimento (Para cargas até 75kW)
-+ Tipo M (dois fios - Fase + Neutro)
-+ Tipo B (três fios - Fase + Fase + Neutro)
-+ Tipo T (quatro fios - Fase + Fase + Fase + Neutro)
-
-* Atividade
-** Cálculo da demanda
-| Equip.            | Pot (kW) | QUAT. | Pot Total | Demanda                                       |
-| TUG               | 45       |     - |        45 | D1 (tomada e ilum) = 12x0.86+68x0.5 = 44,32kW |
-| ILUM              | 35       |     - |        35 | D2 (aquecedor de água) = 30x0.66 = 19,8 kW    |
-| FORNO MIC         | 1,2      |     4 |       4,8 | D3 = 4.8x0.7 = 3,4kW                          |
-| CHUVEIRO          | 7,5      |     4 |        30 | D4 = 0kW                                      |
-| SPLIT 18000 BTU   | 2,6      |    25 |        65 | D5 = 137*0.77 = 105,5kW                       |
-| SPLIT 30000 BTU   | 3,6      |    20 |        72 | D6 (demanda de motores elétricos) = 16,21kW   |
-| MOTOR MONO 1/3 cv | 0,52     |     4 |       2,1 |                                               |
-| MOTOR TRIF 4 cv   | 3,82     |     4 |      5,28 |                                               |
-| MOTOR TRIF 2 cv   | 1,94     |     3 |      5,82 |                                               |
-|                   |          |       |       275 | D=189,23                                      |
-+ A partir de 17700W (pela norma) temos que calcular a demanda
-
 * Determine a entrada de serviço da residência que possui o seguinte quadro geral (NDU01)
-+ Se for bifásica ou trifásica, fazer o calculo da demanda
++ Alunos: Luís Guilherme Miranda Spengler e Raquel Braiani Pinheiro
 | Circuito | Ambie.       | Tipo  |  Pot. | Tensão | IC    | Cabo | Disj | Demanda                                 |
 |        1 | Quarto 1     | Ar    |  1400 |    220 | 9,79  | 2,5  | 2x20 | D1 (tomada e ilum) = 13x0.24 = 3,12 kW  |
 |        2 | Quarto 2     | Ar    |  1400 |    220 | 9,79  | 2,5  | 2x20 | D2 (aquecedor de ag) =  12x0.7 = 8,4 kW |
@@ -51,11 +27,11 @@
 |       17 | Tomadas      |       |  1000 |    127 | 17,25 | 2,5  | 1x16 |                                         |
 |          |              |       | 32600 |        |       |      |      |                                         |
 
++ Potência total: 36,6kW
++ Demanda total: 17,888kW
 + cabo, fio, disjuntor, poste -> 4 fios, 3 fases,
 + Ramal de ligação (multiplex): 3x1x25+25 mm^2
 + Ramal de entrada embutido e subterrâneo (70): 3#25(25) mm^2
 + Aterramento: 16mm^2
 + Disjuntor 80A
 + Poste concreto duplo T 100 daN, aço galvanizado 200 daN
-
-* Fator de Potência

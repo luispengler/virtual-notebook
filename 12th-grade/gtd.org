@@ -60,3 +60,82 @@ b) Tipo de medição (direta ou indireta; relação de transformação do TC, se
 c) Seção dos condutores do lado secundário (em XLPE/EPR e PVC):
 + EPR/XLPE: 2x{3 de 185 (95)}. PVC = 2x{3 de 300 (150)}
 d) Disjuntor termomagnético em BT:
+
+* Exercício (lista):
++ Uma unidade consumidora de energia elétrica que atua no ramo de supermercados deseja que sua entrada de energia seja dimensionada. Ela possui a seguinte relação de equipamentos (cargas):
+
++ 10 motores de indução trifásicos de 5 cv, com rendimento de 87%;
++ 2 motores de indução trifásicos de 10 cv, com rendimento de 88%;
++ 6 motores de indução monofásicos de ¼ cv, com rendimento de 85%;
++ Potência total em iluminação igual a 30 kVA, com fator de potência de 0,90;
++ Potência total em tomadas de uso geral (TUG) igual a 20 kVA, com fator de potência de 0,88;
++ 6 chuveiros elétricos de 5 kW;
++ 4 condicionadores de ar, tipo split, de 2,5 kVA cada, com fator de potência de 0,86.
+
+a) Calcule a carga instalada da unidade consumidora (kW);
+ - 1 cv = 735,498W
+ - 1/4 cv = 183,874W, com 85% -> 216,32W -> 6 de cada = 1,297 kW
+ - 5 cv = 3677,49W, com 87% -> 845,40 W -> 10 de cada = 42,270 kW
+ - 10 cv = 7354,98W, com 88% -> 8357,93W -> 2 de cada = 16,715 kW
+ - 30 kVA, com 0,9 de F.P = 27kW
+ - 20 kVA, com 0,88 de F.P = 17,6 kW
+ - 6 chuveiros elétricos = 30 kW
+ - 2,5 kVA, com 0,86 vezes 4 = 8,6 kW
+ - Carga instalada (soma de todos os resultados anteriores) = 143,482 kW
+
+b) Calcule a potência, em kVA, necessária para o(s) transformador(es) da entrada de serviço. Considere o fator de potência igual a 0,92 como referência;
+ - Multiplicando 143,482 kW por 0,98
+ - Dividindo 140,61 por 0,92 =  152,84 kVA
+
+c) Consulte a Norma de Distribuição Unificada nº 2, da concessionária de energia local (Energisa) para verificar qual ou quais potência(s) do(s) transformadores atenderia(m) à unidade consumidora. Tensão secundária: 220/127V;
+ - Transformador de 225 kVA (mais próximo de 152,84)
+
+d) A medição será em baixa tensão ou média tensão? Por quê?
+ - Baixa tensão, pois utilizou um transformador menor que 300kVA
+
+e) De acordo com a norma, dimensione os condutores do lado secundário do(s) transformador(es). Apresente as especificações tanto para a isolação em PVC quanto em EPR/XLPE. Indique qual seria a seção dos condutores fase e neutro, além de quantos condutores por função poderiam ser utilizados.
+ - EPR/XLPE: 2x{3#185(95). PVC = 2x{3#300(150)
+   - EPR/XLPE - FASES: 2 condutores por fase de 185 mm^2 (cada), totalizando 6 condutores fase. NEUTRO: 2 condutores por neutro de 95mm^2 (cada), totalizando 2 condutores por neutro
+   - PVC - FASES: 2 condutores por fase de 300 mm^2 (cada), totalizando 6 condutores fase. NEUTRO: 2 condutores por neutro de 150mm^2 (cada), totalizando 2 condutores por neutro
+
+
+f) Qual(is) seria(m) o(s) valor(es) nominal(ais) do(s) disjuntor(es) geral(is) em baixa tensão? Caso seja necessário mais de um transformador, indique para cada um qual seria seu valor.
+ - 600A, com CC de 10KA
+
+* Outro exercício
++ Uma unidade consumidora de energia elétrica que atua no ramo de indústria têxtil deseja que sua entrada de energia seja dimensionada. Ela possui a seguinte relação de equipamentos (cargas):
+
++ 20 motores de indução trifásicos de 3 cv, com rendimento de 83%;
++ 15 motores de indução monofásicos de 1/4 cv, com rendimento de 85%;
++ Potência total em iluminação igual a 50 kVA, com fator de potência de 0,90;
++ Potência total em tomadas de uso geral (TUG) igual a 20 kVA, com fator de potência 0,88;
++ 8 condicionadores de ar, tipo split, de 3,5 kVA cada, com fator de potência de 0,86;
+
+a) Calcule a carga instalada da unidade consumidora (kW);
+  - 1 cv = 736W
+  - 3 cv = W, com 83% ->  W -> 20 de cada = 53,204kW
+  - 1/4 cv = 184W, com 85% -> 216,32W -> 15 de cada = 3,247kW
+  - 50 kVA, com 0,9 de F.P = 45kW
+  - 3,5 kVA, com 0,86 vezes 8 =  24,08kW
+  - Carga instalada (soma de todos os resultados anteriores) = 125,531 kW
+
+b) Calcule a potência, em kVA, necessária para o(s) transformador(es) da entrada de serviço. Considere o fator de potência igual a 0,92 como referência;
+  - Usando a demanda típica: 52%
+  - Multiplicando 125,531 kW por 0,52
+  - Dividindo 65,276 por 0,92 =  70,95 kVA
+
+c) Consulte a Norma de Distribuição Unificada nº 2, da concessionária de energia local (Energisa) para verificar qual ou quais potência(s) do(s) transformadores atenderia(m) à unidade consumidora. Tensão secundária: 220/127V;
+  - Transformador de 75 kVA (mais próximo de 70,95)
+
+d) A medição será em baixa tensão ou média tensão? Por quê?
+  - Baixa tensão, pois utilizou um transformador menor que 300kVA
+
+e) De acordo com a norma, dimensione os condutores do lado secundário do(s) transformador(es). Apresente as especificações tanto para a isolação em PVC quanto em EPR/XLPE. Indique qual seria a seção dos condutores fase e neutro, além de quantos condutores por função poderiam ser utilizados.
+  - EPR/XLPE: 3#95(50). PVC = -
+   - EPR/XLPE - FASES: 3 condutores fase de 95 mm^2. NEUTRO: 1 condutores neutro de 50mm^2
+
+f) Qual(is) seria(m) o(s) valor(es) nominal(ais) do(s) disjuntor(es) geral(is) em baixa tensão? Caso seja necessário mais de um transformador, indique para cada um qual seria seu valor.
+  - Corrente nominal = 200A, com CC de 10KA
+
+* Treino pra prova
++ Sempre que tiver mais que um transformador e/ou o transformador consumir mais que 300kVA é média tensão?

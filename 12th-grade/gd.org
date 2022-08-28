@@ -9,13 +9,32 @@
 \[{P_1} = 0,8P + 0,2L\]
 \[{P_2} = 0,8T + 0,2L\]
 
-* Revolução normativa 482 - ANEEL
+* Revolução normativa 482/12 - ANEEL
 + Marco regulatório da compensação de energia através do sistema de créditos
 + Prazo de 36 meses
 * 687
-+ Prazo de 60 mses
++ Prazo de 60 meses
 + Empreendimento com múltiplas unidades consumidoras
 ** Potência Máxima instalada
 + Grupo A = Demanda
 + Grupo B = Consumo (Não pode instalar acima do consumo)
-+
+
+* Mudanças da 482/12
++ Passou de 36 para 60 meses (como visto na 687)
++ Mudou de <100kW para 75kW (micro geração)
++ Mudou de 100kW-1mW para 75kW-5mW (mini geração)
+* Lei 14.300/22
++ Marco legal do micro e mini geração de energia
++ Até 7 janeiro de 2023 -> isento até 2045
++ A partir 2023 -> 15%
++ A partir 2024 -> 30%
++ A partir 2025 -> 45%
++ A partir 2026 -> 60%
++ A partir 2027 -> 75%
++ A partir 2028 -> 90%
++ Custo de disponibilidade
++ Excedente de energia -> Agora é por prioridade, em vez de divisão igual entre as unidades consumidoras
++ Paga o injetado
+
+* Trabalho da pesquisa
+https://presrepublica.jusbrasil.com.br/legislacao/1348064891/lei-14300-22

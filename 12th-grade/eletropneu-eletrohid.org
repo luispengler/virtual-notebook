@@ -1,0 +1,55 @@
+#+TITLE: Acionamento Eletropneumático e Eletro Hidráulico
+#+DESCRIPTION: Acionamento Eletropneumático e Eletro Hidráulico - Meu caderno virtual
+#+SETUPFILE: https://luispengler.github.io/site/org-html-themes/org/theme-readtheorg.setup
+#+LaTeX_+HEADER: \usepackage{physics}
+#+LaTeX_+HEADER: \usepackage{amsmath}
+#+OPTIONS: num:nil ^:{} toc:2
+
+* Exercícios 1
+** O que é ar, qual a sua composição e quais são as impurezas que podemos encontrar nele?
++ 78\% de N2, 21\% de O2 e outros gases. Impurezas podem ser partículas sólidas (poeiras), às vezes muito vapor de água pode ser considerado impurezas.
+** Quais são as cidades que estão situadas nas maiores altitudes do Brasil e no mundo? O que acontece com as pessoas que vivem neste lugar?
++ Campos do Jordão (1620), Senador Amaral (1505), Bom Repouso (1360) - Brasil. La Paz na Bolivia (3869), Quito no Equador (2784), Toluca no Mexico (2648). O pulmão dessas pessoas é ligeiramente mais forte que os das pessoas vivendo em altitudes mais baixas, devido ao esforço de juntar moléculas de ar mais espaçadas entre si (rarefeito).
+** Explique o fenômeno de ar rarefeito e algumas aplicações em que podemos utilizá-lo
++ Ar mais longe do centro da Terra, onde a força gravitacinal é mais fraca. Em camadas de ar mais distantes do centro, as moléculas de ar se encontram mais distantes, requerendo mais esforço a um morador para respirar. Podemos utilizar em sprays. O gás ao sair, expande-se, absorvendo energia térmica de agitação, mas note que inicialmente o gás se encontra comprimido e após receber energia térmica de agitação se expande, estando rarefeito. O ar tendo menos densidade, por quaisquiser motivos, é chamado de rarefeito.
+** O que astronautas fazem ao chegar na Terra?
++ Eles passam por vários exames, assim como tratamentos para controlar a pressão arterial e exercícios físicos para recuperar a massa muscular perdida no espaço. Exerícios de orientação e às vezes experimentos científicos são submetidos para verificar condições que diferentes sistemas do corpo se encontram após recente volta do espaço.
+* Exercícios 2
+** Quais são os riscos envolvidos quando estamos operando sistemas pneumáticos? Explique.
++ Os riscos envolvem o escape do ar comprimido. Atingindo-se a pele pode haver penetração e dano nos orgãos, principalmente o ouvido que é um orgão exposto. Se existe presença de substâncias inflamáveis, deve se tomar mais cuidado, pois o ar comprimido pode gerar eletricidade estática quando escapa de uma mangueira muito rapidamente.
+** Qual norma regulamentadora apresenta informações sobre a sinalização de segurança em ambientes de trabalho? Quais são as cores indicadas para as tubulações industriais?
++ ANSI B11.2-2013. Vermelho, violeta, laranja, amarelo, azul, verde e branco
+** Quais são os tipos de compressores? Como eles funcionam? Quais são as manuntenções e inspeções mais realizadas?
++ Compressores dinâmicos: O ar ganha mais energia cinética e se torna mais comprimido, aumentando sua pressão. Compressores positivos: O ar admitido tem seu volume reduzido, aumentando sua pressão; Troca de óleo no compressor (verificação do nível de ebulição), drenagem para retirada de água são as inspeções mais realizadas.
+** Quais são os tipos de filtros existentes em circuitos pneumáticos? Explique suas diferenças, vantagens e desvantagens.
++ Os tipos de filtros variam na micragem das partículas, onde podem deixar passar ou não partículas de determinado tamanho, e.g. fumaça, névoa, poeira, carvão pulverizado, etc. Também variam no tipo de fluido que normalmente escoa por eles, havendo filtros diferentes para ar, água e óleos. Um filtro com micragem menor, é melhor para filtrar partículas menores.
+** Quais são os tipos de secadores de ar utilizados em circuitos pneumáticos? Explique como funcionam.
++ Secagem por refrigeração: Funciona como um ar-condicionado. O ar é admitido com uma temperatura maior e com mais umidade, após o processo de refrigeração, que conta com uma máquina térmica e um gás refrigerante, o conteúdo da água e do ar é separado. Secagem por absorção: Pastilhas absorvem a umidade em uma etapa da filtragem do ar com vapor de água.
+* Exercícios 3
+** Quais são as vantagens de se utilizar redes de ar comprimido fechadas e abertas? Busque exemplos de industrias que utilizam estes tipos de circuitos
++ Fechadas: Manutenção de uma pressão constante. Proporciona uma distribuição uniforme do ar entre as partes consumidoras
++ Abertas: Mais viável de se manter a longas distâncias
++ Siderurgicas, refinarias e automobilistica para redes de ar fechado. Borracharias utilizam redes de ar aberto.
+** Quais são os tipos de válvulas mais utilizadas para sistemas de ar comprimido? Explique como são construídas e seu funcionamento
++ Válvulas de fechamento e podem ser do tipo esfera, diafragma (as duas mais comuns) e gaveta. A tipo esfera tem uma esfera controlando o fluxo de ar. Ela é vazada no meio e quando o furo está paralelo ao fluxo, ocorre a passagem deste. A tipo diafragma, possui uma borracha na perpendicular do fluxo. Quando o registro é torcido de forma fechar a válvula, o diafragma é empurrado para dentro interrompendo a passagem do fluido;
+** Quais cuidados e características devemos levar em consideração na hora de se projetar uma rede de ar comprimido?
++ Devemos tomar cuidado com a ligação entre os tubos, para mitigar efeitos da dilatação térmica e evitar possíveis riscos da vazão do fluido. Dependendo do tipo de ligação escolhido, deve-se utilizar fita FKM (ligações roscadas) e remoção de escamas de óxido (união por solda). Também deve-se tomar cuidados quanto as curvaturas para evitar-se perdas por turbulência. A tubulação instalada deve possuir inclinação no sentido do fluxo interior para favorecer o recolhimento de uma eventual condensação. É preferível que os tubos sejam resistentes a oxidação, para a tubulação principal, e alta resistência e durabilidade, para a tubulação secundária. Conexões escolhidas necessitam oferecer recursos que poupem tempo, dimensões compactas e não apresentarem quedas de pressão.
+** Quais são os tipos de drenos/purgadores mais comuns e como estes funcionam?
++ Dreno aberto, dreno de sucção fechada, dreno de reservatório. Dreno aberto: Um pino de saída de dreno aberto ou coletor aberto é simplesmente um transistor que está conectado ao solo. Sempre que aplicamos uma entrada alta no gate, o dreno e a fonte entram em curto. Sempre que aplicamos entrada baixa no gate, o dreno e a fonte são desconectados. Para simplificar, o dreno aberto é como um interruptor que será conectado ou desconectado com base no sinal de entrada fornecido. Dreno de sucção fechada: conhecido como dreno de portovac, é um sistema de drenagem fechado que utiliza de uma leve sucção (vácuo), apresentando um aspecto de sanfona.
+** Faça uma lista com os tipos de conexões, materias de tubulações e elementos vedadores mais utilizados em sistemas pneumáticos
++ Conexões: Retas, L, T giratório, Dupla, Cruzada, Y, Y Dupla, Roscada ou Passa Muro
++ Materias de tubulações: polipropileno reticulado -> plasticos de engenharia
++ Elementos vedadores: Anéis O'Ring, V'Ring, Raspadores, Gaxetas, Jogo de Chevron
+
+* Revisão
++ Caracterisitas do ar
++ Principio de Pascal
++ Composição do ar
++ Norma: NR26 -> EPI (eq. prot. ind.) vs EPC (eq. prot. coletiva). Ar comprimido na cor azul, verde pra água, vapor é branco
++ Manuntenção e tipos de compressores
++ Filtros (qulecentes)
++ Secadores de ar (adsorção, absorção e mais um outro)
++ Distribuição do ar comprimido
++ Cuidados na distribuição -> Capacidade das máquinas, layout, perdas
++ Trocadores de calor
++ Tipos de dreno, purgadores

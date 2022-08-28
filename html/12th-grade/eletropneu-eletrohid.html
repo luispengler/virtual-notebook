@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-08-28 Sun 18:50 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Acionamento Eletropneumático e Eletro Hidráulico</title>
+<meta name="author" content="Luís Spengler" />
+<meta name="description" content="Acionamento Eletropneumático e Eletro Hidráulico - Meu caderno virtual" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="https://luispengler.github.io/site/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://luispengler.github.io/site/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="httpss://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="httpss://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://luispengler.github.io/site/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://luispengler.github.io/site/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Acionamento Eletropneumático e Eletro Hidráulico</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org06f51a0">Exercícios 1</a>
+<ul>
+<li><a href="#org45d1880">O que é ar, qual a sua composição e quais são as impurezas que podemos encontrar nele?</a></li>
+<li><a href="#org868322f">Quais são as cidades que estão situadas nas maiores altitudes do Brasil e no mundo? O que acontece com as pessoas que vivem neste lugar?</a></li>
+<li><a href="#org1dbc25b">Explique o fenômeno de ar rarefeito e algumas aplicações em que podemos utilizá-lo</a></li>
+<li><a href="#orgab63d01">O que astronautas fazem ao chegar na Terra?</a></li>
+</ul>
+</li>
+<li><a href="#orgce8feec">Exercícios 2</a>
+<ul>
+<li><a href="#org7a7502a">Quais são os riscos envolvidos quando estamos operando sistemas pneumáticos? Explique.</a></li>
+<li><a href="#orga7fbb1f">Qual norma regulamentadora apresenta informações sobre a sinalização de segurança em ambientes de trabalho? Quais são as cores indicadas para as tubulações industriais?</a></li>
+<li><a href="#orgdf19110">Quais são os tipos de compressores? Como eles funcionam? Quais são as manuntenções e inspeções mais realizadas?</a></li>
+<li><a href="#orgf2c3e35">Quais são os tipos de filtros existentes em circuitos pneumáticos? Explique suas diferenças, vantagens e desvantagens.</a></li>
+<li><a href="#org0339c57">Quais são os tipos de secadores de ar utilizados em circuitos pneumáticos? Explique como funcionam.</a></li>
+</ul>
+</li>
+<li><a href="#org3965ef5">Exercícios 3</a>
+<ul>
+<li><a href="#org22bc7dc">Quais são as vantagens de se utilizar redes de ar comprimido fechadas e abertas? Busque exemplos de industrias que utilizam estes tipos de circuitos</a></li>
+<li><a href="#orgd66b834">Quais são os tipos de válvulas mais utilizadas para sistemas de ar comprimido? Explique como são construídas e seu funcionamento</a></li>
+<li><a href="#orgc58c733">Quais cuidados e características devemos levar em consideração na hora de se projetar uma rede de ar comprimido?</a></li>
+<li><a href="#orgfc844c8">Quais são os tipos de drenos/purgadores mais comuns e como estes funcionam?</a></li>
+<li><a href="#orgeb96aef">Faça uma lista com os tipos de conexões, materias de tubulações e elementos vedadores mais utilizados em sistemas pneumáticos</a></li>
+</ul>
+</li>
+<li><a href="#orgff1df63">Revisão</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org06f51a0" class="outline-2">
+<h2 id="org06f51a0">Exercícios 1</h2>
+<div class="outline-text-2" id="text-org06f51a0">
+</div>
+<div id="outline-container-org45d1880" class="outline-3">
+<h3 id="org45d1880">O que é ar, qual a sua composição e quais são as impurezas que podemos encontrar nele?</h3>
+<div class="outline-text-3" id="text-org45d1880">
+<ul class="org-ul">
+<li>78\% de N2, 21\% de O2 e outros gases. Impurezas podem ser partículas sólidas (poeiras), às vezes muito vapor de água pode ser considerado impurezas.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org868322f" class="outline-3">
+<h3 id="org868322f">Quais são as cidades que estão situadas nas maiores altitudes do Brasil e no mundo? O que acontece com as pessoas que vivem neste lugar?</h3>
+<div class="outline-text-3" id="text-org868322f">
+<ul class="org-ul">
+<li>Campos do Jordão (1620), Senador Amaral (1505), Bom Repouso (1360) - Brasil. La Paz na Bolivia (3869), Quito no Equador (2784), Toluca no Mexico (2648). O pulmão dessas pessoas é ligeiramente mais forte que os das pessoas vivendo em altitudes mais baixas, devido ao esforço de juntar moléculas de ar mais espaçadas entre si (rarefeito).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1dbc25b" class="outline-3">
+<h3 id="org1dbc25b">Explique o fenômeno de ar rarefeito e algumas aplicações em que podemos utilizá-lo</h3>
+<div class="outline-text-3" id="text-org1dbc25b">
+<ul class="org-ul">
+<li>Ar mais longe do centro da Terra, onde a força gravitacinal é mais fraca. Em camadas de ar mais distantes do centro, as moléculas de ar se encontram mais distantes, requerendo mais esforço a um morador para respirar. Podemos utilizar em sprays. O gás ao sair, expande-se, absorvendo energia térmica de agitação, mas note que inicialmente o gás se encontra comprimido e após receber energia térmica de agitação se expande, estando rarefeito. O ar tendo menos densidade, por quaisquiser motivos, é chamado de rarefeito.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgab63d01" class="outline-3">
+<h3 id="orgab63d01">O que astronautas fazem ao chegar na Terra?</h3>
+<div class="outline-text-3" id="text-orgab63d01">
+<ul class="org-ul">
+<li>Eles passam por vários exames, assim como tratamentos para controlar a pressão arterial e exercícios físicos para recuperar a massa muscular perdida no espaço. Exerícios de orientação e às vezes experimentos científicos são submetidos para verificar condições que diferentes sistemas do corpo se encontram após recente volta do espaço.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgce8feec" class="outline-2">
+<h2 id="orgce8feec">Exercícios 2</h2>
+<div class="outline-text-2" id="text-orgce8feec">
+</div>
+<div id="outline-container-org7a7502a" class="outline-3">
+<h3 id="org7a7502a">Quais são os riscos envolvidos quando estamos operando sistemas pneumáticos? Explique.</h3>
+<div class="outline-text-3" id="text-org7a7502a">
+<ul class="org-ul">
+<li>Os riscos envolvem o escape do ar comprimido. Atingindo-se a pele pode haver penetração e dano nos orgãos, principalmente o ouvido que é um orgão exposto. Se existe presença de substâncias inflamáveis, deve se tomar mais cuidado, pois o ar comprimido pode gerar eletricidade estática quando escapa de uma mangueira muito rapidamente.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga7fbb1f" class="outline-3">
+<h3 id="orga7fbb1f">Qual norma regulamentadora apresenta informações sobre a sinalização de segurança em ambientes de trabalho? Quais são as cores indicadas para as tubulações industriais?</h3>
+<div class="outline-text-3" id="text-orga7fbb1f">
+<ul class="org-ul">
+<li>ANSI B11.2-2013. Vermelho, violeta, laranja, amarelo, azul, verde e branco</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdf19110" class="outline-3">
+<h3 id="orgdf19110">Quais são os tipos de compressores? Como eles funcionam? Quais são as manuntenções e inspeções mais realizadas?</h3>
+<div class="outline-text-3" id="text-orgdf19110">
+<ul class="org-ul">
+<li>Compressores dinâmicos: O ar ganha mais energia cinética e se torna mais comprimido, aumentando sua pressão. Compressores positivos: O ar admitido tem seu volume reduzido, aumentando sua pressão; Troca de óleo no compressor (verificação do nível de ebulição), drenagem para retirada de água são as inspeções mais realizadas.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf2c3e35" class="outline-3">
+<h3 id="orgf2c3e35">Quais são os tipos de filtros existentes em circuitos pneumáticos? Explique suas diferenças, vantagens e desvantagens.</h3>
+<div class="outline-text-3" id="text-orgf2c3e35">
+<ul class="org-ul">
+<li>Os tipos de filtros variam na micragem das partículas, onde podem deixar passar ou não partículas de determinado tamanho, e.g. fumaça, névoa, poeira, carvão pulverizado, etc. Também variam no tipo de fluido que normalmente escoa por eles, havendo filtros diferentes para ar, água e óleos. Um filtro com micragem menor, é melhor para filtrar partículas menores.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0339c57" class="outline-3">
+<h3 id="org0339c57">Quais são os tipos de secadores de ar utilizados em circuitos pneumáticos? Explique como funcionam.</h3>
+<div class="outline-text-3" id="text-org0339c57">
+<ul class="org-ul">
+<li>Secagem por refrigeração: Funciona como um ar-condicionado. O ar é admitido com uma temperatura maior e com mais umidade, após o processo de refrigeração, que conta com uma máquina térmica e um gás refrigerante, o conteúdo da água e do ar é separado. Secagem por absorção: Pastilhas absorvem a umidade em uma etapa da filtragem do ar com vapor de água.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org3965ef5" class="outline-2">
+<h2 id="org3965ef5">Exercícios 3</h2>
+<div class="outline-text-2" id="text-org3965ef5">
+</div>
+<div id="outline-container-org22bc7dc" class="outline-3">
+<h3 id="org22bc7dc">Quais são as vantagens de se utilizar redes de ar comprimido fechadas e abertas? Busque exemplos de industrias que utilizam estes tipos de circuitos</h3>
+<div class="outline-text-3" id="text-org22bc7dc">
+<ul class="org-ul">
+<li>Fechadas: Manutenção de uma pressão constante. Proporciona uma distribuição uniforme do ar entre as partes consumidoras</li>
+<li>Abertas: Mais viável de se manter a longas distâncias</li>
+<li>Siderurgicas, refinarias e automobilistica para redes de ar fechado. Borracharias utilizam redes de ar aberto.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd66b834" class="outline-3">
+<h3 id="orgd66b834">Quais são os tipos de válvulas mais utilizadas para sistemas de ar comprimido? Explique como são construídas e seu funcionamento</h3>
+<div class="outline-text-3" id="text-orgd66b834">
+<ul class="org-ul">
+<li>Válvulas de fechamento e podem ser do tipo esfera, diafragma (as duas mais comuns) e gaveta. A tipo esfera tem uma esfera controlando o fluxo de ar. Ela é vazada no meio e quando o furo está paralelo ao fluxo, ocorre a passagem deste. A tipo diafragma, possui uma borracha na perpendicular do fluxo. Quando o registro é torcido de forma fechar a válvula, o diafragma é empurrado para dentro interrompendo a passagem do fluido;</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc58c733" class="outline-3">
+<h3 id="orgc58c733">Quais cuidados e características devemos levar em consideração na hora de se projetar uma rede de ar comprimido?</h3>
+<div class="outline-text-3" id="text-orgc58c733">
+<ul class="org-ul">
+<li>Devemos tomar cuidado com a ligação entre os tubos, para mitigar efeitos da dilatação térmica e evitar possíveis riscos da vazão do fluido. Dependendo do tipo de ligação escolhido, deve-se utilizar fita FKM (ligações roscadas) e remoção de escamas de óxido (união por solda). Também deve-se tomar cuidados quanto as curvaturas para evitar-se perdas por turbulência. A tubulação instalada deve possuir inclinação no sentido do fluxo interior para favorecer o recolhimento de uma eventual condensação. É preferível que os tubos sejam resistentes a oxidação, para a tubulação principal, e alta resistência e durabilidade, para a tubulação secundária. Conexões escolhidas necessitam oferecer recursos que poupem tempo, dimensões compactas e não apresentarem quedas de pressão.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfc844c8" class="outline-3">
+<h3 id="orgfc844c8">Quais são os tipos de drenos/purgadores mais comuns e como estes funcionam?</h3>
+<div class="outline-text-3" id="text-orgfc844c8">
+<ul class="org-ul">
+<li>Dreno aberto, dreno de sucção fechada, dreno de reservatório. Dreno aberto: Um pino de saída de dreno aberto ou coletor aberto é simplesmente um transistor que está conectado ao solo. Sempre que aplicamos uma entrada alta no gate, o dreno e a fonte entram em curto. Sempre que aplicamos entrada baixa no gate, o dreno e a fonte são desconectados. Para simplificar, o dreno aberto é como um interruptor que será conectado ou desconectado com base no sinal de entrada fornecido. Dreno de sucção fechada: conhecido como dreno de portovac, é um sistema de drenagem fechado que utiliza de uma leve sucção (vácuo), apresentando um aspecto de sanfona.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgeb96aef" class="outline-3">
+<h3 id="orgeb96aef">Faça uma lista com os tipos de conexões, materias de tubulações e elementos vedadores mais utilizados em sistemas pneumáticos</h3>
+<div class="outline-text-3" id="text-orgeb96aef">
+<ul class="org-ul">
+<li>Conexões: Retas, L, T giratório, Dupla, Cruzada, Y, Y Dupla, Roscada ou Passa Muro</li>
+<li>Materias de tubulações: polipropileno reticulado -&gt; plasticos de engenharia</li>
+<li>Elementos vedadores: Anéis O&rsquo;Ring, V&rsquo;Ring, Raspadores, Gaxetas, Jogo de Chevron</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgff1df63" class="outline-2">
+<h2 id="orgff1df63">Revisão</h2>
+<div class="outline-text-2" id="text-orgff1df63">
+<ul class="org-ul">
+<li>Caracterisitas do ar</li>
+<li>Principio de Pascal</li>
+<li>Composição do ar</li>
+<li>Norma: NR26 -&gt; EPI (eq. prot. ind.) vs EPC (eq. prot. coletiva). Ar comprimido na cor azul, verde pra água, vapor é branco</li>
+<li>Manuntenção e tipos de compressores</li>
+<li>Filtros (qulecentes)</li>
+<li>Secadores de ar (adsorção, absorção e mais um outro)</li>
+<li>Distribuição do ar comprimido</li>
+<li>Cuidados na distribuição -&gt; Capacidade das máquinas, layout, perdas</li>
+<li>Trocadores de calor</li>
+<li>Tipos de dreno, purgadores</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Luís Spengler</p>
+<p class="date">Created: 2022-08-28 Sun 18:50</p>
+</div>
+</body>
+</html>

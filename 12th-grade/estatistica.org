@@ -74,7 +74,6 @@
 + 1 1 6 5 4 4 3 2 3 4 5 1 6 6 5 5 1 3 2 2 6 1 5 2 2 4 3 2 3
 + Pode aplicar as técnicas estatísticas linearmente, ou agrupados
 + Distribuição de frequência absoluta
-+ Distribuição de frequência absoluta
 
 | nº | f |
 |  1 | 5 |
@@ -86,8 +85,8 @@
 
 + Distribuição de Classe
 | nº       | f |
-| 1 -> 3   |   |
-| 4 -> 6   | 5 |
+| 1 <- 3   |   |
+| 4 <- 6   | 5 |
 | Acima de |   |
 
 * Exerício 2
@@ -111,3 +110,86 @@
 |           3 | 26x100/121= 21.48\% |
 |           4 | 8x100/121= 6.61\%   |
 | Acima de 4n | 3x100/121= 2.47\%   |
+
+* Organizando dados - Distribuição de classe
++ Distribuição em classe é só para variáveis quantitativas discretas e contínuas
++ Considerando os dados referente a avaliação parcial segue as notas
+  | 7,2 | 8,1  | 9,1 | 2,0 | 6,8 |
+  | 4,0 | 6,5  | 9,3 | 8,0 | 9,0 |
+  | 6,3 | 7,2, | 8,4 | 6,0 | 5,5 |
+  | 8,4 | 4,2  | 3,0 | 2,5 | 6,6 |
+  | 9,0 | 9,8  | 2,1 | 6,9 | 4,1 |
++ Maior nota= 9,8
++ Menor nota= 2,0
++ Amplitude amostral= Maior nota - menor nota = 9,8 - 2,0 = 7,8
+
+| Nota    |  f |  \% | fa |
+| 2 <- 4  |  4 |  16 |  4 |
+| 4 <- 6  |  4 |  16 |  8 |
+| 6 <- 8  |  8 |  32 | 16 |
+| 8 <- 10 |  9 |  36 | 25 |
+| ......  | 25 | 100 |    |
++ Cada intervalo na coluna da nota é uma classe e a diferença entre a maior e menor é a amplitude da classe (h) -> limite superior - limite inferior
++ É normatizado que a tabela tenha abertura nas laterais (diferente do representado aqui) e não tenha divisão entre as linhas
++ \% Relação da parte em relação ao todo expresso em \% \[\frac{4}{25}\cdots 100 =\]
+
++ O número de classe é um número inteiro próximo de K:
+\[K = 1 + 3,3log(n)\]
+Considerando n = 600 elementos
+\[K = 1 + 3,3log(600)\]
+\[K = 1 + 3,3\times 2,7\]
+\[K = 1 + 9,14\]
+\[K = 10,14\]
++ K é 10 ou 11
+** Amplitude da classe para k = 10
+\[ampclasse = \frac{AmplitudeAmostral}{K}\]
+** Amplitude da classe para k = 11
+\[ampclasse = \frac{AmplitudeAmostral}{K}\]
+
+* Organizando altura
+| 1,78 | 1,55 | 1,74 | 1,76 | 1,82 | 1,75  |
+| 1,60 | 1,71 | 1,63 | 1,80 | 1,70 | 1,77  |
+| 1,84 | 1,75 | 1,74 | 1,72 | 1,76 | 1,58  |
+| 1,60 | 1,73 | 1,75 | 1,54 | 1,74 | 1,76  |
+| 1,70 | 1,74 | 1,76 | 1,70 | 1,74 | c1,66 |
+| 1,60 | 1,57 | 1,65 | 1,63 |      |       |
+
++ k = 5,917 -> 5 ou 6
+\[ampclasse = \frac{0,3}{6} = 0,05\]
++ Maior valor = 1,84
++ Menor valor = 1,54
++ Amplitude amostral = 0,3
+| Altura        |  f | \%    | fa |
+| 1,54 <- 1,59  |  4 | 12,90 |  4 |
+| 1,59 <- 1,64  |  5 | 16,13 |  9 |
+| 1,64 <- 1,69  |  2 | 6,45  | 11 |
+| 1,69 <- 1,74  |  5 | 16,13 | 16 |
+| 1,74 <- 1,79  | 12 | 38,70 | 28 |
+| 1,79 <-> 1,84 |  3 | 9,68  | 31 |
+
+* Exercício avaliativo
++ Grupo: 03 acadêmicos
++ Passo 1 -> Elaborar um objetivo de pesquisa na área do seu curso técnico e 03 específicos
++ Lembre-se: Deve iniciar com verbo no infinito
++ Passo 2 -> Elaborar um instrumento de coleta de dados, constituida de 15 questões, organizadas em definição de perfil específica no tema
+** O exercicio
++ Passo 1: Avaliar o perfil dos acadêmicos formando no curso técnico integrado em eletrotecnica considerado o grau de empregabilidade
++ Traçar as qualidades exigidas pelo mercado de trabalho na aŕea de eletrotécnica e o perfil dos acadêmicos
++ Correlacionar os dados dos acadêmicos com o exigido pelo mercado de trabalho
++ Elaborar uma escala de nível de preparação considerando o perfil avaliado e o quanto eles se considera apto a determinada vaga
++ Passo 2:
+  1) Qual o seu sexo? (  ) Feminino (  ) Masculino
+  2) Quanto tempo durou sua formação técnica durante o ensino médio? (  ) 2 anos (  ) 2 anos e meio (  ) 3 anos (  ) 3 anos e meio (  ) 4 anos ou mais
+  3) Durante seu ensino médio, você realizou trabalho de conclusão de curso (TCC)? (  ) Sim (  ) Não
+  4) Em uma escala de 1 a 5, quão importante você acredita que foi ou seria a realização do TCC para o mercado de trabalho?
+  5) Durante seu ensino médio, você realizou estágio na área técnica? (  ) Sim (  ) Não
+  6) Em uma escala de 1 a 5, quão importante você acredita que foi seu estágio para sua formação técnica?
+  7) Em uma escala de 1 a 5, quão importante você acredita que foram as aulas de laboratório para sua formação como técnico?
+  8) Em uma escala de 1 a 5, quão importante você acredita que foram as aulas teóricas para sua formação como técnico?
+  9) Você acredita ter algum conhecimento que não foi abordado durante sua formação técnica? (  ) Sim (  ) Não
+  10) A pandemia afetou seu acesso a informação das aulas de laboratório ou teóricas? (  ) Sim (  ) Não
+  11) Qua(is)l disciplina(s) você acredita ter contribuido mais para a sua formação técnica? (O domínio se refere as disciplinas técnicas encontradas na matriz do curso)
+  12) Pretende entrar no mercado de trabalho logo após sua formação no ensino médio técnico? (  ) Sim (  ) Não
+  13) Pretende ir ao nível superior para se especializar na área? (  ) Sim (  ) Não
+  14) Você acredita que a estrutura da sua escola colaborou para sua preparação técnica? (  ) Sim (  ) Não
+  15) No geral, você se considera apto a trabalhar na área de eletrotécnica?

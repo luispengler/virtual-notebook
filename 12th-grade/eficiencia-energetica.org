@@ -65,3 +65,30 @@ TD = 30 reais por kW
 \[DC\times 1,05 = DM\]
 \[DC\times 1,05 = 215\]
 \[DC \approx 205 kW\]
+
+* 15/8
++ Modalidade tarifárias (Grupo A) - Faturamento
+** Verde
++ Demanda única (kW)
++ Consumo no Horário de Ponta (kWh)
++ Consumo no Horário Fora de Ponta (kWh)
+** Azul
++ Demanda no Horário de Ponta (kW)
++ Demanda no Horário Fora de Ponta (kW)
++ Consumo no Horário de Ponta (kWh)
++ Consumo no Hoário Fora de Ponta (kWh)
+** Horário de ponta
++ 3h consecutivas de segunda a sexta feira, com exceção de feriados nacionais. Em MS -> 17h30 até 20h30
+
+** Exemplo: Modalidade Verde
++ DMp = 30kW
++ DC = 100kW
++ Cfp = 25000kWh
++ TCp = R$ 3,44/kWh
+
++ DMfp = 120kW
++ Cp = 1000kWh
++ TD = R$40,29/kW
++ TCfp = R$ 0,48/kWh
+
++ Faturamento Total (FT) = (CpxTCp) + (CfpxTCfp) + (DCxTD) + (DMfp-DCx2xTD) = (1000x3,44) + (25000x0,48) + (100x40,29) + (20x2x40,29) = R$ 21080,6

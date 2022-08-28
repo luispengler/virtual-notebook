@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-08-12 Fri 12:32 -->
+<!-- 2022-08-28 Sun 18:50 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Eficiência energética</title>
@@ -248,6 +248,14 @@
 <li><a href="#orgf3d7297">Exercício</a></li>
 </ul>
 </li>
+<li><a href="#orgd51ade4">15/8</a>
+<ul>
+<li><a href="#org40e9043">Verde</a></li>
+<li><a href="#org50b5de6">Azul</a></li>
+<li><a href="#orgb312a71">Horário de ponta</a></li>
+<li><a href="#orgd80d726">Exemplo: Modalidade Verde</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -398,10 +406,67 @@ TD = 30 reais por kW
 </div>
 </div>
 </div>
+
+<div id="outline-container-orgd51ade4" class="outline-2">
+<h2 id="orgd51ade4">15/8</h2>
+<div class="outline-text-2" id="text-orgd51ade4">
+<ul class="org-ul">
+<li>Modalidade tarifárias (Grupo A) - Faturamento</li>
+</ul>
+</div>
+<div id="outline-container-org40e9043" class="outline-3">
+<h3 id="org40e9043">Verde</h3>
+<div class="outline-text-3" id="text-org40e9043">
+<ul class="org-ul">
+<li>Demanda única (kW)</li>
+<li>Consumo no Horário de Ponta (kWh)</li>
+<li>Consumo no Horário Fora de Ponta (kWh)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org50b5de6" class="outline-3">
+<h3 id="org50b5de6">Azul</h3>
+<div class="outline-text-3" id="text-org50b5de6">
+<ul class="org-ul">
+<li>Demanda no Horário de Ponta (kW)</li>
+<li>Demanda no Horário Fora de Ponta (kW)</li>
+<li>Consumo no Horário de Ponta (kWh)</li>
+<li>Consumo no Hoário Fora de Ponta (kWh)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb312a71" class="outline-3">
+<h3 id="orgb312a71">Horário de ponta</h3>
+<div class="outline-text-3" id="text-orgb312a71">
+<ul class="org-ul">
+<li>3h consecutivas de segunda a sexta feira, com exceção de feriados nacionais. Em MS -&gt; 17h30 até 20h30</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd80d726" class="outline-3">
+<h3 id="orgd80d726">Exemplo: Modalidade Verde</h3>
+<div class="outline-text-3" id="text-orgd80d726">
+<ul class="org-ul">
+<li>DMp = 30kW</li>
+<li>DC = 100kW</li>
+<li>Cfp = 25000kWh</li>
+<li>TCp = R$ 3,44/kWh</li>
+
+<li>DMfp = 120kW</li>
+<li>Cp = 1000kWh</li>
+<li>TD = R$40,29/kW</li>
+<li>TCfp = R$ 0,48/kWh</li>
+
+<li>Faturamento Total (FT) = (CpxTCp) + (CfpxTCfp) + (DCxTD) + (DMfp-DCx2xTD) = (1000x3,44) + (25000x0,48) + (100x40,29) + (20x2x40,29) = R$ 21080,6</li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luís Spengler</p>
-<p class="date">Created: 2022-08-12 Fri 12:32</p>
+<p class="date">Created: 2022-08-28 Sun 18:50</p>
 </div>
 </body>
 </html>
