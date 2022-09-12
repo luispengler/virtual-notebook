@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-08-28 Sun 18:50 -->
+<!-- 2022-09-09 Fri 16:26 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Projetos de Baixa e Alta tensão</title>
@@ -216,7 +216,23 @@
 </ul>
 </li>
 <li><a href="#orgbd752bb">Determine a entrada de serviço da residência que possui o seguinte quadro geral (NDU01)</a></li>
-<li><a href="#org0e809d3">Fator de Potência</a></li>
+<li><a href="#org2a63b3a">Correção de Fator de Potência</a>
+<ul>
+<li><a href="#org2cb143a">FP Baixo</a></li>
+<li><a href="#org275421b">Correção</a></li>
+<li><a href="#org18cc09b">Correção na entrada de energia de baixa tensão:</a></li>
+<li><a href="#org6a6b147">Correção por grupo de cargas</a></li>
+<li><a href="#org8e7a147">Correção localizada:</a></li>
+<li><a href="#org2e3cab0">Correção mista</a></li>
+<li><a href="#org5023b80">Critérios para correção mista</a></li>
+</ul>
+</li>
+<li><a href="#org56205d1">Exemplo (drawing on notebook)</a></li>
+<li><a href="#orgf6fefaa">Exemplo (1)</a>
+<ul>
+<li><a href="#org1a97d8f">Resolução</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -630,13 +646,130 @@
 </div>
 </div>
 
-<div id="outline-container-org0e809d3" class="outline-2">
-<h2 id="org0e809d3">Fator de Potência</h2>
+<div id="outline-container-org2a63b3a" class="outline-2">
+<h2 id="org2a63b3a">Correção de Fator de Potência</h2>
+<div class="outline-text-2" id="text-org2a63b3a">
+</div>
+<div id="outline-container-org2cb143a" class="outline-3">
+<h3 id="org2cb143a">FP Baixo</h3>
+<div class="outline-text-3" id="text-org2cb143a">
+<ul class="org-ul">
+<li>Limite na geração/distribuição</li>
+<li>Perdas</li>
+<li>Tensões baixas</li>
+<li>Sobrecarga nos equipamentos de manobra</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org275421b" class="outline-3">
+<h3 id="org275421b">Correção</h3>
+<div class="outline-text-3" id="text-org275421b">
+<ul class="org-ul">
+<li>Na entrada de energia de alta tensão corrige o FP visto pela concessionária</li>
+<li>Permanecendo internamente todos os incovenientes do baixo FP e o custo é elevado</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org18cc09b" class="outline-3">
+<h3 id="org18cc09b">Correção na entrada de energia de baixa tensão:</h3>
+<div class="outline-text-3" id="text-org18cc09b">
+<ul class="org-ul">
+<li>Permite uma correção significativa, normalmente com bancos automaticos de capacitores</li>
+<li>Esse tipo de correção é feito normalmente em instalações com elevado numero de cargas com potências diferentes e regime de utilização pouco uniformes</li>
+<li>A principal desvantagem consiste em não haver alivio sensivel nos alimentadores de cada equipamento</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6a6b147" class="outline-3">
+<h3 id="org6a6b147">Correção por grupo de cargas</h3>
+<div class="outline-text-3" id="text-org6a6b147">
+<ul class="org-ul">
+<li>O capacitor é instalado de forma a corrigir um setor ou um conjunto de pequnas máquinas (menor 10cv)</li>
+<li>É instalado junto ao quadro que alimenta esses equipamentos, desvantagem não diminui a corrente nos circuitos de alimentação de cada equipamento</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8e7a147" class="outline-3">
+<h3 id="org8e7a147">Correção localizada:</h3>
+<div class="outline-text-3" id="text-org8e7a147">
+<ul class="org-ul">
+<li>É obtida instalando-se os capacitores junto ao equipamento que se pretende corrigir</li>
+<li>Representa do ponto de vista técnica a melhor solução</li>
+<li>Tendo como vantagem: reduz perdas energéticas em toda a instalação</li>
+<li>Diminui a carga nos circuitos de alimentação dos equipamentos</li>
+<li>Pode-se usar em sistema único de acionamento para a carga e o capacitor, economizando-se equipamento de manobra</li>
+<li>Gera potência ativa somente onde é necessário</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2e3cab0" class="outline-3">
+<h3 id="org2e3cab0">Correção mista</h3>
+<div class="outline-text-3" id="text-org2e3cab0">
+<ul class="org-ul">
+<li>No ponto de conservação de energia, considerando aspectos técnicos, financeiros e práticos torna-se a melhor solução</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5023b80" class="outline-3">
+<h3 id="org5023b80">Critérios para correção mista</h3>
+<div class="outline-text-3" id="text-org5023b80">
+<ul class="org-ul">
+<li>Instala-se um capacitor fixo diretamente no lado secundário do trafo</li>
+<li>Motor de 10cv ou + são corrigidos localmente</li>
+<li>Motores menores que 10cv corrige-se por grupos</li>
+<li>Redes próprias para iluminação de lâmpada de descarga, corrige na entrada da rede</li>
+<li>Na entrada instala-se um banco automático de pequena potência para equalização final</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org56205d1" class="outline-2">
+<h2 id="org56205d1">Exemplo (drawing on notebook)</h2>
+<div class="outline-text-2" id="text-org56205d1">
+<ul class="org-ul">
+<li>Uma instalação tem uma carga de 90kW e fp de 0,75</li>
+<li>Calcule a potência reativa -&gt; RVA -&gt; 79,37 kVAr (Q = S.senteta)</li>
+<li>Calcule a potência aparente original -&gt; 120 kVA</li>
+<li>Corrigir para 0,92 indutiva</li>
+<li>Recalcule a potência aparente após a correção -&gt; 98kVA</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf6fefaa" class="outline-2">
+<h2 id="orgf6fefaa">Exemplo (1)</h2>
+<div class="outline-text-2" id="text-orgf6fefaa">
+<ul class="org-ul">
+<li>Em uma unidade consumidora existem as seguintes cargas:</li>
+<li>1. Potência entrada 40kW/fp = 0,8</li>
+<li>2. Potência entrada 30kW/fp = 0,65</li>
+<li>3. 3 motores 1,5 cv/4 polos, fp = 0,8, p = 83%</li>
+<li>4. 2 motores 7,5 cv/4 polos, fp = 0,82, p = 85%</li>
+<li>5. 1 motor 10c cv/4 polos, fp = 0,83, p = 88%</li>
+<li>Calcule o transformador para atender a instalação</li>
+<li>Calcule o capacitor para corrigir para 0,92</li>
+<li>Recalcule o trafo</li>
+</ul>
+</div>
+<div id="outline-container-org1a97d8f" class="outline-3">
+<h3 id="org1a97d8f">Resolução</h3>
+<div class="outline-text-3" id="text-org1a97d8f">
+<ul class="org-ul">
+<li>1. 50 kVA</li>
+<li>2. 46.15 kVA</li>
+<li>3. 4,9 kVA</li>
+<li>4. 15,83 kVA</li>
+<li>5. 10 kVA</li>
+<li>Transformador = 126,88 kVA</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luís Spengler</p>
-<p class="date">Created: 2022-08-28 Sun 18:50</p>
+<p class="date">Created: 2022-09-09 Fri 16:26</p>
 </div>
 </body>
 </html>

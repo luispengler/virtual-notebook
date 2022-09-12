@@ -20,4 +20,20 @@ https://luispengler.github.io/virtual-notebook/12th-grade/doc/quadroinicialsocil
 
 * 19/07
 + Para Marx, o trabalho é a essência humana e o trabalho abstrato seria alienação
-+
+
+* 02/09
+** Mais valia
++ A mais valia representa a /disparidade entre o salário pago e o valor produzido pelo trabalho/. Dessa maneira, ela pode ser entendida como o trabalho não pago, ou seja, são horas que o trabalhador cumpre o valor que gera pelos quais não é remunerada. A alienação exerce um papel fundamental na exploração da mais valia. O afastamentodo trabalhador do produto final de seus trabalho é o que possibilita a divisão do trabalho em TRABALHO NECESSÁRIO e TRABALHO EXCESSIVO.
+
+** Mais valia absoluta
++ A mais valia absoluta é prolongar a jornada de trabalho para além do tempo necessário. Ou seja, aumenta-se a jornada de trabalho sem que o salário tenha um aumento
++ Dia de trabalho = 12 horas -> trabalho necessário = 6 horas, trabalho excedente = 6 horas
++ Aumenta a jornada de trabalho = +2 horas
++ Dia de trabalho = 14 horas -> trabalho necessário = 6 horas, trabalho excedente = 8 horas
++ Ex: Aumenta a carga horária sem aumentar o salário
+
+** Mais valia relativa
++ Também é possível aumentar a exploração de mais valia sem alterar o número de horas trabalhadas. Isso pode ser feito por meio de melhorias nos processos técnicos de trabalho, que aumentam a produtividade. Adquirir máquinas que tornem o trabalho mais rápido ou organizar a disposição dos trabalhadores na fábrica de modo mais eficiente.
++ Ex: Mantem ou até reduz sua jornada de trabalho, mas sua produção aumenta nesse período
+
++ Pesquisar os livros que cada um escreveu

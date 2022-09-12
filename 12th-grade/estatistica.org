@@ -193,3 +193,64 @@ Considerando n = 600 elementos
   13) Pretende ir ao nível superior para se especializar na área? (  ) Sim (  ) Não
   14) Você acredita que a estrutura da sua escola colaborou para sua preparação técnica? (  ) Sim (  ) Não
   15) No geral, você se considera apto a trabalhar na área de eletrotécnica?
+
+* Métricas de posicionamento
++ Mediana (AKA quartil 2)
++ Quartil 1
++ Quartil 3
++ 50% - mediana - 50%
++ 25% -> 1/4 dos posicionamentos -> quartil 1
++ 75% dos posicionamentos -> quartil 3
+  + Considere os dados referente a variável idade
+| 12 |  8 | 1ºp  |              |                                          |
+| 11 |  8 | 2ºp  |              |                                          |
+|  8 |  9 | 3ºp  |              | Até aqui 25% entre 3 e 4 (Q1) = 9,5      |
+| 14 | 10 | 4ºp  |              |                                          |
+| 10 | 11 | 5ºp  |              |                                          |
+|  9 | 11 | 6ºp  | Até aqui 50% |                                          |
+|  8 | 12 | 7ºp  | Mediana = 12 |                                          |
+| 14 | 12 | 8ºp  |              |                                          |
+| 12 | 12 | 9ºp  |              |                                          |
+| 11 | 13 | 10ºp |              | Até aqui 75% entre o 10 e 11 (Q3) = 13,5 |
+| 12 | 14 | 11ºp |              |                                          |
+| 13 | 14 | 12ºp |              |                                          |
+| 15 | 15 | 13ºp | Até aqui 50% |                                          |
+
++ Em uma distribuição de classe
+\[Q1 = lim_{inf} + [(\frac{\frac{Ef}{4} - faa}{f})]\cdot H\]
+\[Q2 = lim_{inf} + [(\frac{\frac{Ef}{2} - faa}{f})]\cdot H\]
+\[Q3 = lim_{inf} + [(\frac{\frac{3Ef}{4} - faa}{f})]\cdot H\]
+
++ Calcular média, mediana, Q1, Q3 e moda da distribuição de classe a seguir
+| nota    |  f | Pm         | Pm*f |
+| 0 <- 2  | 12 | 2+0/2 = 1  |   12 |
+| 2 <- 4  | 21 | 2+4/2 = 3  |   63 |
+| 4 <- 6  | 18 | 4+6/2 = 5  |   90 |
+| 6 <- 8  | 14 | 6+8/2 = 7  |   98 |
+| 8 <- 10 |  7 | 8+10/2 = 9 |   63 |
+|         | 72 |            |  326 |
+
+\[X = 326/72 = 4,53 nota\]
++ Mediana -> Ef/2 = 72/2 = 36 (essa é a posição)
+
+\[med = lim_{inf} + [(\frac{\frac{Ef}{2} - faa}{f})]\cdot H\]
+\[med = 4 + [(\frac{36 - 33}{18})]\cdot 2\]
+\[med = 4,333\]
+
++ Q1 = Ef/4 = 72/4 = 18
+\[Q1 = lim_{inf} + [(\frac{\frac{Ef}{4} - faa}{f})]\cdot H\]
+
+\[Q1 = 2 + [(\frac{18 - 12}{21})]\cdot 2\]
+\[Q1 = 2,57\]
+
++ Q3 = 3Ef/4 = 54
+\[Q3 = lim_{inf} + [(\frac{\frac{3Ef}{4} - faa}{f})]\cdot H\]
+\[Q3 = 6 + [(\frac{54 - 51}{14})]\cdot 2\]
+\[Q3 = 6,42\]
+
+** Moda
+ + Passo 1: Localiza a classe que contém a moda (classe de maior frequência): 2 <- 4 21
+\[moda = lim_{inf} + [(\frac{fant}{fant+fpost})]\cdot H\]
+\[moda = 2 + [(\frac{12}{12+18})]\cdot 2\]
+\[moda = 2,8\]
++ Moda < Mediana < Média

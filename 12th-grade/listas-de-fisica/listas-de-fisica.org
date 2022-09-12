@@ -20,7 +20,7 @@
 **** Movimentos Circulares
 + Bloco 1 -> Nível 2 (6-9/3)
 + Bloco 2 -> Nível 2 (20-34/14) + Nível 3 (35-45/10) + PR (46-52/6)
-+ Apêndice (53-56)
++ Apêndice (53-56/3)
 **** Vetores e Cinemática vetorial
 + Bloco 1 -> Nível 2 (10-24/14)
 + Bloco 2 -> Nível 2 (30-38/8)
@@ -67,13 +67,14 @@
 **** Estática dos sólidos
 + Bloco 1 -> Nível 1 (1-11/10) + Nível 2 (12-21/9)
 + Bloco 2 -> Nível 1 (22-37/15) + Nível 2 (38-55/17)
-+ Bloco 3 -> Nível 1 (56-60/4) Nível 2 (61-64/3) + Nível 3 (65-77/12) + PR (78-95/17)
++ Bloco 3 -> Nível 1 (56-60/4) + Nível 2 (61-64/3) + Nível 3 (65-77/12) + PR (78-95/17)
 **** Estática dos fluidos
-+ Bloco 1 -> Nível 2
-+ Bloco 2 -> Nível 2
-+ Bloco 3 -> Nível 2
-+ Bloco 4 -> Nível 2 + Nível 3 + PR
-+ Apêndice
++ Bloco 1 -> Nível 2 (6-15/9)
++ Bloco 2 -> Nível 2 (25-33/8)
++ Bloco 3 -> Nível 2 (39-47/8)
++ Bloco 4 -> Nível 1 (48-60/12) + Nível 2 (61-79/18) + Nível 3 (80-101/21) + PR (102-107/5)
++ Apêndice (1-18/17)
+*** Total = 977 -> Nível 1(66), Nível 2(519), Nível 3(222), PR(126), Apêndice(44)
 ** Volume 2
 *** Parte 1
 **** Temperatura
@@ -101,11 +102,11 @@
 + Bloco 1 -> Nível 2 (10-25/15)
 + Bloco 2 -> Nível 2 (36-46/10)
 + Bloco 3 -> Nível 2 (54-64/10) + Nível 3 (65-84/19) + PR (85-97/12)
-*** Parte 2
+*** Parte 2 (read until here for last hour counting)
 **** Movimento harmônico simples
 + Bloco 1 -> Nível 2
 **** Ondas
-+ Bloco 1 -> Nível 2
++ Bloco 2 -> Nível 2
 **** Acústica
 + Bloco 1 -> Nível 2
 *** Parte 3
@@ -134,7 +135,7 @@
 + Bloco 3 -> Nível 2 (57-64/7)
 + Bloco 4 -> Nível 2 (74-82/8)
 + Bloco 5 -> Nível 2 (91-101/10) + Nível 3 (102-118/16) + PR (119-127/8)
-*** Parte 2
+*** Parte 2 (read until here for last hour counting)
 **** Corrente elétrica e resistores
 + Bloco 1 -> Nível 2
 **** Associação de resistores e medidas elétricas

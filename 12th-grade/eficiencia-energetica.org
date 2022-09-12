@@ -92,3 +92,118 @@ TD = 30 reais por kW
 + TCfp = R$ 0,48/kWh
 
 + Faturamento Total (FT) = (CpxTCp) + (CfpxTCfp) + (DCxTD) + (DMfp-DCx2xTD) = (1000x3,44) + (25000x0,48) + (100x40,29) + (20x2x40,29) = R$ 21080,6
+
+* Prof
+[8/28, 6:41 PM] Luis Spengler: XI - demanda: média das potências elétricas ativas ou reativas, injetada ou requerida do sistema
+elétrico de distribuição durante um intervalo de tempo especificado;
+XII - demanda contratada: demanda de potência ativa a ser obrigatória e continuamente
+disponibilizada pela distribuidora no ponto de conexão, conforme valor e período de vigência fixados em
+contrato, em kW (quilowatts);
+XIII - demanda medida: maior demanda de potência ativa injetada ou requerida do sistema
+elétrico de distribuição pela carga ou geração, verificada por medição e integralizada em intervalos de 15
+minutos durante o período de faturamento, em kW (quilowatts);
+[8/28, 6:41 PM] Luis Spengler: RESPOSTA DA 14: XXXVIII - posto tarifário: período em horas para aplicação das tarifas de forma diferenciada ao
+longo do dia, considerando a seguinte divisão:
+a) posto tarifário ponta: período composto por 3 horas diárias consecutivas definidas pela
+distribuidora considerando a curva de carga de seu sistema elétrico, aprovado pela ANEEL para toda a
+área de concessão ou permissão, não se aplicando aos sábados, domingos, terça-feira de carnaval, sextafeira da Paixão, Corpus Christi e aos feriados nacionais dos dias 1º de janeiro, 21 de abril, 1º de maio, 7 de
+setembro, 12 de outubro, 2 de novembro, 15 de novembro e 25 de dezembro;
+b) posto tarifário intermediário: período de duas horas, sendo uma hora imediatamente anterior
+e outra imediatamente posterior ao horário de ponta, aplicado apenas para o grupo B; e
+c) posto tarifário fora de ponta: período composto pelo conjunto das horas diárias consecutivas
+e complementares àquelas definidas nos postos ponta e, para o grupo B, intermediário
+[8/28, 6:41 PM] Luis Spengler: XVI - energia elétrica ativa: aquela que pode ser convertida em outra forma de energia, em kWh
+(quilowatts-hora);
+XVII - energia elétrica reativa: aquela que circula entre os diversos campos elétricos e
+magnéticos de um sistema de corrente alternada sem produzir trabalho, em kvarh (quilovolt-ampèrereativo-hora);
+[8/28, 6:41 PM] Luis Spengler: Das Modalidades Tarifárias Horárias
+...Art. 213. A modalidade tarifária horária verde é caracterizada por:
+I -1 (uma) tarifa para a demanda, sem segmentação horária;
+II - 1 (uma) tarifa para o consumo de energia elétrica para o posto tarifário ponta; e
+III - 1 (uma) tarifa para o consumo de energia elétrica para o posto tarifário fora de ponta.
+Art. 214. A modalidade tarifária horária azul é caracterizada por:
+I - 1 (uma) tarifa para a demanda para o posto tarifário ponta;
+II - 1 (uma) tarifa para a demanda para o posto tarifário fora de ponta;
+III - 1 (uma) tarifa para o consumo de energia elétrica para o posto tarifário ponta; e
+IV - 1 (uma) tarifa para o consumo de energia elétrica para o posto tarifário fora de ponta.
+[8/28, 6:41 PM] Luis Spengler: XXIII - grupo A: grupamento composto de unidades consumidoras com conexão em tensão
+maior ou igual a 2,3 kV, ou atendidas a partir de sistema subterrâneo de distribuição em tensão menor que
+2,3 kV, e subdividido nos seguintes subgrupos:
+a) subgrupo A1: tensão de conexão maior ou igual a 230 kV;
+b) subgrupo A2: tensão de conexão maior ou igual a 88 kV e menor ou igual a 138 kV;
+c) subgrupo A3: tensão de conexão igual a 69 kV;
+d) subgrupo A3a: tensão de conexão maior ou igual a 30 kV e menor ou igual a 44 kV;
+e) subgrupo A4: tensão de conexão maior ou igual a 2,3 kV e menor ou igual a 25 kV; e
+f) subgrupo AS: tensão de conexão menor que 2,3 kV, a partir de sistema subterrâneo de
+distribuição;
+XXIV - grupo B: grupamento composto de unidades consumidoras com conexão em tensão
+menor que 2,3 kV e subdividido nos seguintes subgrupos:
+a) subgrupo B1: residencial;
+b) subgrupo B2: rural;
+c) subgrupo B3: demais classes; e
+d) subgrupo B4: Iluminação Pública;
+
+[8/28, 6:41 PM] Luis Spengler: DE CÁLCULOS CAIRÁ SOMENTE AS MODALIDADES AZUL E VERDE, DO GRUPO A. E A CONVENCIONAL DO GRUPO B (SÓ FATURA CONSUMO).
+[8/28, 6:41 PM] Luis Spengler: Toda esses artigos com estruturas e definições foram explicados em sala. É a base para a lista. Estudem o que está no caderno e o que está na lista. Bom domingo e bons estudos!
+[8/28, 6:41 PM] Luis Spengler: CORRIGIDO:
+
+1) Defina Carga Instalada (kW).
+
+“É a soma das potências nominais, dos equipamentos elétricos instalados na unidade consumidora, em condições de entrar em funcionamento, expressa em quilowatts (kW).” (NDU 2 - Energisa)
+
+2) Defina Demanda (kW).
+
+“É a média das potências elétricas, ativas ou reativas, solicitadas ao sistema elétrico, durante um intervalo de tempo especificado.”
+
+3) Uma residência possui consumo médio mensal de 350 kWh. Calcule seu faturamento, considerando a tarifa de consumo igual a R$ 1,01 / kWh.
+
+FT = 350 x 1,01 = R$ 353,50
+
+4) Uma unidade consumidora enquadrada na modalidade tarifária verde possui demanda contratada igual a 120 kW. A tarifa é de R$ 40,03 / kW. Calcule o faturamento de demanda para as 5 situações:
+
+a) Demanda medida (kW) = 100 kW; FD = 120 x 40,03 = R$ 4.803,60
+b) Demanda medida (kW) = 125 kW;FD = 125 x 40,03 = R$ 5.003,75
+c) Demanda medida (kW) = 128 kW; FD =  (120 x 40,03) + (8 x 2 x 40,03) = R$ 5.444,08
+d) Demanda medida (kW) = 90 kW; FD = 120 x 40,03 = R$ 4.803,60
+e) Demanda medida (kW) = 80 kW. FD = 120 x 40,03 = R$ 4.803,60
+
+5) Qual seria o contrato de demanda mais conveniente considerando o histórico de demandas medidas apresentado na questão 4? DC = 96 kW (considerando cobrança total realizada nas 5 situações). Mesmo pagando algumas ultrapassagens de demandas, compensaria as demandas não utilizadas.
+
+6) Considerando o contrato da questão 5, um consumo no horário de ponta igual a 5000 kWh e um consumo no horário fora de ponta de 30000 kWh, calcule o faturamento total para uma demanda medida de 105 kW. Tarifa de consumo no horário de ponta: R$ 3,44 / kWh. Tarifa de consumo no horário fora de ponta: R$ 0,48 / kWh.
+FT = (5000 x 3,44) + (30000 x 0,48) + (96 x 40,03) + [(105 – 96) x 2 40,03] = R$ 36.163.42
+
+7) Explique como é feito o faturamento de energia e demanda na modalidade tarifária azul. Como é feito o faturamento de demandas? (Explique citando os tipos de demanda que são levadas em consideração, além de tolerâncias existentes). Como é feito o faturamento de consumos?
+
+Faturamento de demandas: Um contrato para o horário de ponta e outro para o horário fora de ponta. Entre a medida e a contratada, fatura-se a maior. Se a medida for 5% maior que a contratada, fatura-se a demanda contratada multiplicada pela tarifa, mais o que ultrapassou multiplicado pelo dobro da tarifa.
+
+Faturamento de consumos: Um faturamento para o horário de ponta e outro para o horário fora de ponta.
+[8/28, 6:48 PM] Luis Spengler: RESPOSTA DA 14: XXXVIII - posto tarifário: período em horas para aplicação das tarifas de forma diferenciada ao
+longo do dia, considerando a seguinte divisão:
+a) posto tarifário ponta: período composto por 3 horas diárias consecutivas definidas pela
+distribuidora considerando a curva de carga de seu sistema elétrico, aprovado pela ANEEL para toda a
+área de concessão ou permissão, não se aplicando aos sábados, domingos, terça-feira de carnaval, sextafeira da Paixão, Corpus Christi e aos feriados nacionais dos dias 1º de janeiro, 21 de abril, 1º de maio, 7 de
+setembro, 12 de outubro, 2 de novembro, 15 de novembro e 25 de dezembro;
+b) posto tarifário intermediário: período de duas horas, sendo uma hora imediatamente anterior
+e outra imediatamente posterior ao horário de ponta, aplicado apenas para o grupo B; e
+c) posto tarifário fora de ponta: período composto pelo conjunto das horas diárias consecutivas
+e complementares àquelas definidas nos postos ponta e, para o grupo B, intermediário
+
+* Medidas de Eficiência para reduzir custos no horário de ponta
++ Carga horária mensal: 22x3 = 66h (aprox)
+** Deslocamento ou redução de cargas
++ Parar de utilizar cargas em horários de ponto
+** Utilização de grupo motor gerador a Diesel
++ Analisar inverstimento inicial no equipamento e instalações;
++ Analisar custos com combustível e manutenção;
++ Analisar impacto ambiental
++ Analisar partidas de motores
++ Com investimento
+** Utilização de Controlador de Demanda
++ Analisar custos de investimento
++ Definir prioridade de cargas a serem controladas
++ Analisar sistema de automação (supervisório)
+** Substituição de equipamentos convencionais por eficientes
++ Luminárias/lâmpadas;
++ Motores;
++ Condicionadores de ar.
++ Qualquer substituição tem investimento

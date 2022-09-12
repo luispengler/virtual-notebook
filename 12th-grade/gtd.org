@@ -139,3 +139,32 @@ f) Qual(is) seria(m) o(s) valor(es) nominal(ais) do(s) disjuntor(es) geral(is) e
 
 * Treino pra prova
 + Sempre que tiver mais que um transformador e/ou o transformador consumir mais que 300kVA é média tensão?
+
+* Diagramas unifilares
++ MT -> 13,8kV. Três pontos aterrados -> para raios, secundário do transformador e massa (parte metalicas)
++ Medição direta em BT
++ foto
++ Chave seccionadora
++ Condutores fase em MT
++ Para raios
++ Transformador
++ Condutores fase e neutro em BT
++ Medição direta
++ Disjuntor tripolar
++ Malha de aterramento
+
+* Trabalho
++ Até 3 componentes
++ Projeto de entrada de energia em MT
++ Composição: Memorial descrito
++ Desenhos e detalhes de acordo com a norma; NDU 2 (Energia)
++ Diagrama com indicação de dimensionamento
++ Relação de materiais
+** Potências
++ 112,5 kVA
++ Pode fazer em mureta
++ Prazo: 28/9 -> pdf por email, arquivo único
+
+* Sistema Interligado Nacional (SIN)
++ Possui o mapa dinâmico de transmissão e usinas
++ ons.org.br

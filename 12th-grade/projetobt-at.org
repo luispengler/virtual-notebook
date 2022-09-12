@@ -58,4 +58,59 @@
 + Disjuntor 80A
 + Poste concreto duplo T 100 daN, aço galvanizado 200 daN
 
-* Fator de Potência
+* Correção de Fator de Potência
+** FP Baixo
++ Limite na geração/distribuição
++ Perdas
++ Tensões baixas
++ Sobrecarga nos equipamentos de manobra
+** Correção
++ Na entrada de energia de alta tensão corrige o FP visto pela concessionária
++ Permanecendo internamente todos os incovenientes do baixo FP e o custo é elevado
+** Correção na entrada de energia de baixa tensão:
++ Permite uma correção significativa, normalmente com bancos automaticos de capacitores
++ Esse tipo de correção é feito normalmente em instalações com elevado numero de cargas com potências diferentes e regime de utilização pouco uniformes
++ A principal desvantagem consiste em não haver alivio sensivel nos alimentadores de cada equipamento
+** Correção por grupo de cargas
++ O capacitor é instalado de forma a corrigir um setor ou um conjunto de pequnas máquinas (menor 10cv)
++ É instalado junto ao quadro que alimenta esses equipamentos, desvantagem não diminui a corrente nos circuitos de alimentação de cada equipamento
+** Correção localizada:
++ É obtida instalando-se os capacitores junto ao equipamento que se pretende corrigir
++ Representa do ponto de vista técnica a melhor solução
++ Tendo como vantagem: reduz perdas energéticas em toda a instalação
++ Diminui a carga nos circuitos de alimentação dos equipamentos
++ Pode-se usar em sistema único de acionamento para a carga e o capacitor, economizando-se equipamento de manobra
++ Gera potência ativa somente onde é necessário
+** Correção mista
++ No ponto de conservação de energia, considerando aspectos técnicos, financeiros e práticos torna-se a melhor solução
+** Critérios para correção mista
++ Instala-se um capacitor fixo diretamente no lado secundário do trafo
++ Motor de 10cv ou + são corrigidos localmente
++ Motores menores que 10cv corrige-se por grupos
++ Redes próprias para iluminação de lâmpada de descarga, corrige na entrada da rede
++ Na entrada instala-se um banco automático de pequena potência para equalização final
+
+* Exemplo (drawing on notebook)
++ Uma instalação tem uma carga de 90kW e fp de 0,75
++ Calcule a potência reativa -> RVA -> 79,37 kVAr (Q = S.senteta)
++ Calcule a potência aparente original -> 120 kVA
++ Corrigir para 0,92 indutiva
++ Recalcule a potência aparente após a correção -> 98kVA
+
+* Exemplo (1)
++ Em uma unidade consumidora existem as seguintes cargas:
++ 1. Potência entrada 40kW/fp = 0,8
++ 2. Potência entrada 30kW/fp = 0,65
++ 3. 3 motores 1,5 cv/4 polos, fp = 0,8, p = 83%
++ 4. 2 motores 7,5 cv/4 polos, fp = 0,82, p = 85%
++ 5. 1 motor 10c cv/4 polos, fp = 0,83, p = 88%
++ Calcule o transformador para atender a instalação
++ Calcule o capacitor para corrigir para 0,92
++ Recalcule o trafo
+** Resolução
++ 1. 50 kVA
++ 2. 46.15 kVA
++ 3. 4,9 kVA
++ 4. 15,83 kVA
++ 5. 10 kVA
++ Transformador = 126,88 kVA
