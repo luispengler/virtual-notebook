@@ -207,3 +207,33 @@ e complementares àquelas definidas nos postos ponta e, para o grupo B, intermed
 + Motores;
 + Condicionadores de ar.
 + Qualquer substituição tem investimento
+
+* Eficiência Energética - Iluminação
++ Eficiência luminosa: Relaçã oentre o fluxo luminoso emitido por uma fonte luminosa e sua potência em watts
++ \[E.L = \frac{\Phi}{P}\] (lm/W) (IRC)
++ Medidas de eficiência energética em iluminação: Substituição de lâmpadas, luminárias e reatores
++ Alteração de características do ambiente: cores, alturas, uso de iluminação natural
++ Substituição de lâmpadas tubulares em uma mesma luminária, considerar:
++ Comprimento; diâmetro; eficiência luminosa; tipo; IRC; vida útil
+
+* Substituição de lâmpadas em uma mesma luminária
++ Comparar:
+  - Eficiência luminosa;
+  - Fluxo luminoso;
+  - Potência;
+  - IRC;
+  - Temperatura de cor;
+  - Acessórios;
+  - Comprimento;
+  - Diâmetro.
+
+* Atividade: Considerando a sala de aula: (até 3 crianças, entrega: 26/09 email)
++ 8 luminárias com 2 lâmpadas fluorescentes tubulares de 32W, com 1 reator duplo em cada luminária.
++ Fluxo de cada lâmpada: 2100 lúmens
++ Potência do reator: 10W
++ Comprimento de cada lâmpada: 1,2-1,3m (aprox)
++ Pesquisar e propor a substituição das lâmpadas (5 opções)
++ Sem reduizr os níveis de iluminamento e os IRCs, além das potências
+
+* Resolução
++ Potência por luminária: 2x32 + 10 = 74W

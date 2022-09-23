@@ -254,3 +254,90 @@ Considerando n = 600 elementos
 \[moda = 2 + [(\frac{12}{12+18})]\cdot 2\]
 \[moda = 2,8\]
 + Moda < Mediana < Média
+
+* Métricas de dispersão
+| Nota    | 1ºb | 2ºb | 3ºb | 4ºb | média |
+| Carlos  | 5,0 | 5,0 | 5,0 | 5,0 | 5,0   |
+| Fabio   | 2,0 | 8,0 | 2,0 | 8,0 | 5,0   |
+| Rui     | 6,0 | 4,0 | 4,0 | 6,0 | 5,0   |
+| Wíllian | 10  | 0   | 10  | 0   | 5,0   |
++ Apesar de as médias serem iguais, o comportamento das notas são diferentes
++ Amplitude amostral
++ Variância
++ Desvio padrão
++ Covariância
+
++ Considere a distribuição de classe a seguir, calcular o desvio padrão
++ Desvio médio: o quanto cada classe se afasta da média
++ Desvio médio quadrado: considero o tamanho da amostra
+  | Nota    |  f | P.M | P.M. * f | Desvio médio     | (Desvio médio)^2   |
+  | 0 <- 2  |  4 |   1 |        4 | 1 - 5,08 = -4,08 | (-4,08)^2 = 16,64  |
+  | 2 <- 4  | 12 |   3 |       36 | 3 - 5,08 = -2,08 | (-2,08)^2 = 4,32   |
+  | 4 <- 6  | 16 |   5 |       80 | 5 - 5,08 = -0,08 | (-0,08)^2 = 0,0064 |
+  | 6 <- 8  |  8 |   7 |       56 | 7 - 5,08 =  1,92 | (1,92)^2 = 3,68    |
+  | 8 <- 10 |  7 |   9 |       63 | 9 - 5,08 =  3,92 | (3,92)^2 = 15,36   |
+  | Total   | 47 |     |      239 |                  | 34,88              |
++ X = 239/47 = 5,08
+\[\sigma = \sqrt{\frac{\Sigma (desviomedio)^2}{n}} = \sqrt{\frac{40,0064}{47}} = \sqrt{0,8512} = 0,922\]
++ Média mais desvio padrão = 6,002
++ Média = 5,08
++ Média menos desvio padrão = 4,158
++ Entre 6,002 e 4,158 encontra-se a maioria dos alunos, quem está em cima e em baixo está fora do padrão
++ Para que eu possa comparar essa média com a média de outra turma, eu uso a covariância
++ \[Cov = \frac{\sigma}{X} * 100 = \frac{0,922}{5,08}*100 = 18,14\%\]
+
+* Exercícios
+1) Considerando uma média de X = 36,4 unidades e um desvio padrão de 0,46 unidades^2 determinar a covariância
+
++ \[Cov = \frac{\sigma}{X} * 100 = \frac{0,46}{36,4}*100 = 1,26\%\]
+
+2) Qual a diferença de uma amostragem aleatoria simples e uma estratificada
++ Amostragem aleatória não existe nenhuma variável que interfere na opnião dos entrevistado, apresentando comportamento universal entre seus componentes, já a amostragem determinada variável obriga a dividir o grupo em subgrupos
+3) O que é uma amostragem de conglomerado?
++ Estrutura organizacional pronta considerando o olhar do entrevistador
+4) Cita três métricas de tendência central de posicionamento
++ Mediana, quartil 1 e quartil 3
+5) O que vem a ser o processo de inferência estatistica?
++ É a transposição dos resultados da amostragem a população a ela vinculada -> não é obrigatório, só precisa se usar a amostragem
+6) Considere a questões abaixo
+   A sua idade está vinculada a qual faixa estária?
+   ( ) De 14 a 16 anos
+   ( ) De 17 a 19 anos
+   ( ) De 20 a 22 anos
+   ( ) Acima de 22 anoas
+   Classficar a variável
+   - Qualitativa nominal
+   Qual a sua idade?
+   Classificar a variável
+   - Qualitativa discreta
+
+| IMC     |  f | fa |
+| 16 <-18 |  2 |  2 |
+| 18 <-20 | 16 | 18 |
+| 20 <-22 | 22 | 40 |
+| 22 <-24 | 14 | 54 |
+| 24 <-26 | 10 | 64 |
+|         |    |    |
++ Calcular as métricas de posicionamento
++ Passo 1 -> Definir a posição
++ Passo 2 -> Localizar classe
++ Passo 3 -> Calcular:
+*  Mediana
+  + P1 -> 64/2 = 32
+  + P2 -> 20 <-22 f= 22
+  + P3 ->
+
+\[med = lim_{inf} + [(\frac{\frac{\Sigma f}{2} - faa}{f})]\cdot H\]
+\[med = 20 + [(\frac{32 - 18}{22})]\cdot 2\] = 21,27
+* Quartil 1
++ P1 -> 64/4 = 16
++ P2 -> 18 <-20 f= 16
+\[Q1 = lim_{inf} + [(\frac{\frac{\Sigma f}{4} - faa}{f})]\cdot H\]
+\[Q1 = 18 + [(\frac{\frac{16 - 2}{16})]\cdot 2\] =  19,75
+
+* Quartil 3
++ P1 -> 64*3/4 = 48
++ P2 -> 22 <-24 = 14
+
+\[Q1 = lim_{inf} + [(\frac{\frac{\Sigma f \cdot 3}{4} - faa}{f})]\cdot H\]
+\[Q1 = 22 + [(\frac{\frac{48 - 40}{14})]\cdot 2\] = 23,14

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-09-09 Fri 16:26 -->
+<!-- 2022-09-23 Fri 13:02 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Estatistica</title>
@@ -238,13 +238,13 @@
 </ul>
 </li>
 <li><a href="#org18aed5d">Variáveis</a></li>
-<li><a href="#orge11ef9b">Exercício - Revisão</a></li>
+<li><a href="#org899d9ac">Exercício - Revisão</a></li>
 <li><a href="#orgb21e340">Exercício 2 - Revisão</a>
 <ul>
 <li><a href="#orgd34810c">Classifique as variáveis listadas a seguir</a></li>
 </ul>
 </li>
-<li><a href="#org899d9ac">Exercício - Revisão</a></li>
+<li><a href="#org332dadb">Exercício - Revisão</a></li>
 <li><a href="#orgf5b626e">Exerício 2</a></li>
 <li><a href="#org14ec8d5">Organizando dados - Distribuição de classe</a>
 <ul>
@@ -263,6 +263,11 @@
 <li><a href="#org3180140">Moda</a></li>
 </ul>
 </li>
+<li><a href="#orgcd77108">Métricas de dispersão</a></li>
+<li><a href="#orgab0785c">Exercícios</a></li>
+<li><a href="#orgea7e83f">Mediana</a></li>
+<li><a href="#org966ef1d">Quartil 1</a></li>
+<li><a href="#orge830cee">Quartil 3</a></li>
 </ul>
 </div>
 </div>
@@ -363,9 +368,9 @@
 </div>
 </div>
 
-<div id="outline-container-orge11ef9b" class="outline-2">
-<h2 id="orge11ef9b">Exercício - Revisão</h2>
-<div class="outline-text-2" id="text-orge11ef9b">
+<div id="outline-container-org899d9ac" class="outline-2">
+<h2 id="org899d9ac">Exercício - Revisão</h2>
+<div class="outline-text-2" id="text-org899d9ac">
 <ul class="org-ul">
 <li>Com uma população de 14363 pessoas Ana decidiu fazer uso de amostragem, para tanto, definiu uma margem de erro de 4\%. Qual o tamanho da amostra?</li>
 </ul>
@@ -403,9 +408,9 @@
 </div>
 </div>
 
-<div id="outline-container-org899d9ac" class="outline-2">
-<h2 id="org899d9ac">Exercício - Revisão</h2>
-<div class="outline-text-2" id="text-org899d9ac">
+<div id="outline-container-org332dadb" class="outline-2">
+<h2 id="org332dadb">Exercício - Revisão</h2>
+<div class="outline-text-2" id="text-org332dadb">
 <ul class="org-ul">
 <li>Paulo lançou 4 vezes um dado (fair)</li>
 <li>1 1 6 5 4 4 3 2 3 4 5 1 6 6 5 5 1 3 2 2 6 1 5 2 2 4 3 2 3</li>
@@ -1220,10 +1225,328 @@ Considerando n = 600 elementos
 </div>
 </div>
 </div>
+
+<div id="outline-container-orgcd77108" class="outline-2">
+<h2 id="orgcd77108">Métricas de dispersão</h2>
+<div class="outline-text-2" id="text-orgcd77108">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Nota</td>
+<td class="org-left">1ºb</td>
+<td class="org-left">2ºb</td>
+<td class="org-left">3ºb</td>
+<td class="org-left">4ºb</td>
+<td class="org-left">média</td>
+</tr>
+
+<tr>
+<td class="org-left">Carlos</td>
+<td class="org-left">5,0</td>
+<td class="org-left">5,0</td>
+<td class="org-left">5,0</td>
+<td class="org-left">5,0</td>
+<td class="org-left">5,0</td>
+</tr>
+
+<tr>
+<td class="org-left">Fabio</td>
+<td class="org-left">2,0</td>
+<td class="org-left">8,0</td>
+<td class="org-left">2,0</td>
+<td class="org-left">8,0</td>
+<td class="org-left">5,0</td>
+</tr>
+
+<tr>
+<td class="org-left">Rui</td>
+<td class="org-left">6,0</td>
+<td class="org-left">4,0</td>
+<td class="org-left">4,0</td>
+<td class="org-left">6,0</td>
+<td class="org-left">5,0</td>
+</tr>
+
+<tr>
+<td class="org-left">Wíllian</td>
+<td class="org-left">10</td>
+<td class="org-left">0</td>
+<td class="org-left">10</td>
+<td class="org-left">0</td>
+<td class="org-left">5,0</td>
+</tr>
+</tbody>
+</table>
+<ul class="org-ul">
+<li>Apesar de as médias serem iguais, o comportamento das notas são diferentes</li>
+<li>Amplitude amostral</li>
+<li>Variância</li>
+<li>Desvio padrão</li>
+<li>Covariância</li>
+
+<li>Considere a distribuição de classe a seguir, calcular o desvio padrão</li>
+<li>Desvio médio: o quanto cada classe se afasta da média</li>
+<li><p>
+Desvio médio quadrado: considero o tamanho da amostra
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Nota</td>
+<td class="org-right">f</td>
+<td class="org-right">P.M</td>
+<td class="org-right">P.M. * f</td>
+<td class="org-left">Desvio médio</td>
+<td class="org-left">(Desvio médio)^2</td>
+</tr>
+
+<tr>
+<td class="org-left">0 &lt;- 2</td>
+<td class="org-right">4</td>
+<td class="org-right">1</td>
+<td class="org-right">4</td>
+<td class="org-left">1 - 5,08 = -4,08</td>
+<td class="org-left">(-4,08)^2 = 16,64</td>
+</tr>
+
+<tr>
+<td class="org-left">2 &lt;- 4</td>
+<td class="org-right">12</td>
+<td class="org-right">3</td>
+<td class="org-right">36</td>
+<td class="org-left">3 - 5,08 = -2,08</td>
+<td class="org-left">(-2,08)^2 = 4,32</td>
+</tr>
+
+<tr>
+<td class="org-left">4 &lt;- 6</td>
+<td class="org-right">16</td>
+<td class="org-right">5</td>
+<td class="org-right">80</td>
+<td class="org-left">5 - 5,08 = -0,08</td>
+<td class="org-left">(-0,08)^2 = 0,0064</td>
+</tr>
+
+<tr>
+<td class="org-left">6 &lt;- 8</td>
+<td class="org-right">8</td>
+<td class="org-right">7</td>
+<td class="org-right">56</td>
+<td class="org-left">7 - 5,08 =  1,92</td>
+<td class="org-left">(1,92)^2 = 3,68</td>
+</tr>
+
+<tr>
+<td class="org-left">8 &lt;- 10</td>
+<td class="org-right">7</td>
+<td class="org-right">9</td>
+<td class="org-right">63</td>
+<td class="org-left">9 - 5,08 =  3,92</td>
+<td class="org-left">(3,92)^2 = 15,36</td>
+</tr>
+
+<tr>
+<td class="org-left">Total</td>
+<td class="org-right">47</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">239</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">34,88</td>
+</tr>
+</tbody>
+</table></li>
+<li>X = 239/47 = 5,08</li>
+</ul>
+<p>
+\[\sigma = \sqrt{\frac{\Sigma (desviomedio)^2}{n}} = \sqrt{\frac{40,0064}{47}} = \sqrt{0,8512} = 0,922\]
+</p>
+<ul class="org-ul">
+<li>Média mais desvio padrão = 6,002</li>
+<li>Média = 5,08</li>
+<li>Média menos desvio padrão = 4,158</li>
+<li>Entre 6,002 e 4,158 encontra-se a maioria dos alunos, quem está em cima e em baixo está fora do padrão</li>
+<li>Para que eu possa comparar essa média com a média de outra turma, eu uso a covariância</li>
+<li>\[Cov = \frac{\sigma}{X} * 100 = \frac{0,922}{5,08}*100 = 18,14\%\]</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgab0785c" class="outline-2">
+<h2 id="orgab0785c">Exercícios</h2>
+<div class="outline-text-2" id="text-orgab0785c">
+<ol class="org-ol">
+<li>Considerando uma média de X = 36,4 unidades e um desvio padrão de 0,46 unidades^2 determinar a covariância</li>
+
+<li>\[Cov = \frac{\sigma}{X} * 100 = \frac{0,46}{36,4}*100 = 1,26\%\]</li>
+
+<li>Qual a diferença de uma amostragem aleatoria simples e uma estratificada</li>
+<li>Amostragem aleatória não existe nenhuma variável que interfere na opnião dos entrevistado, apresentando comportamento universal entre seus componentes, já a amostragem determinada variável obriga a dividir o grupo em subgrupos</li>
+<li>O que é uma amostragem de conglomerado?</li>
+<li>Estrutura organizacional pronta considerando o olhar do entrevistador</li>
+<li>Cita três métricas de tendência central de posicionamento</li>
+<li>Mediana, quartil 1 e quartil 3</li>
+<li>O que vem a ser o processo de inferência estatistica?</li>
+<li>É a transposição dos resultados da amostragem a população a ela vinculada -&gt; não é obrigatório, só precisa se usar a amostragem</li>
+<li><p>
+Considere a questões abaixo
+A sua idade está vinculada a qual faixa estária?
+( ) De 14 a 16 anos
+( ) De 17 a 19 anos
+( ) De 20 a 22 anos
+( ) Acima de 22 anoas
+Classficar a variável
+</p>
+<ul class="org-ul">
+<li>Qualitativa nominal</li>
+</ul>
+<p>
+Qual a sua idade?
+Classificar a variável
+</p>
+<ul class="org-ul">
+<li>Qualitativa discreta</li>
+</ul></li>
+</ol>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">IMC</td>
+<td class="org-right">f</td>
+<td class="org-right">fa</td>
+</tr>
+
+<tr>
+<td class="org-left">16 &lt;-18</td>
+<td class="org-right">2</td>
+<td class="org-right">2</td>
+</tr>
+
+<tr>
+<td class="org-left">18 &lt;-20</td>
+<td class="org-right">16</td>
+<td class="org-right">18</td>
+</tr>
+
+<tr>
+<td class="org-left">20 &lt;-22</td>
+<td class="org-right">22</td>
+<td class="org-right">40</td>
+</tr>
+
+<tr>
+<td class="org-left">22 &lt;-24</td>
+<td class="org-right">14</td>
+<td class="org-right">54</td>
+</tr>
+
+<tr>
+<td class="org-left">24 &lt;-26</td>
+<td class="org-right">10</td>
+<td class="org-right">64</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+<ul class="org-ul">
+<li>Calcular as métricas de posicionamento</li>
+<li>Passo 1 -&gt; Definir a posição</li>
+<li>Passo 2 -&gt; Localizar classe</li>
+<li>Passo 3 -&gt; Calcular:</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgea7e83f" class="outline-2">
+<h2 id="orgea7e83f">Mediana</h2>
+<div class="outline-text-2" id="text-orgea7e83f">
+<ul class="org-ul">
+<li>P1 -&gt; 64/2 = 32</li>
+<li>P2 -&gt; 20 &lt;-22 f= 22</li>
+<li>P3 -&gt;</li>
+</ul>
+
+<p>
+\[med = lim_{inf} + [(\frac{\frac{\Sigma f}{2} - faa}{f})]\cdot H\]
+\[med = 20 + [(\frac{32 - 18}{22})]\cdot 2\] = 21,27
+</p>
+</div>
+</div>
+<div id="outline-container-org966ef1d" class="outline-2">
+<h2 id="org966ef1d">Quartil 1</h2>
+<div class="outline-text-2" id="text-org966ef1d">
+<ul class="org-ul">
+<li>P1 -&gt; 64/4 = 16</li>
+<li>P2 -&gt; 18 &lt;-20 f= 16</li>
+</ul>
+<p>
+\[Q1 = lim_{inf} + [(\frac{\frac{\Sigma f}{4} - faa}{f})]\cdot H\]
+\[Q1 = 18 + [(\frac{\frac{16 - 2}{16})]\cdot 2\] =  19,75
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge830cee" class="outline-2">
+<h2 id="orge830cee">Quartil 3</h2>
+<div class="outline-text-2" id="text-orge830cee">
+<ul class="org-ul">
+<li>P1 -&gt; 64*3/4 = 48</li>
+<li>P2 -&gt; 22 &lt;-24 = 14</li>
+</ul>
+
+<p>
+\[Q1 = lim_{inf} + [(\frac{\frac{\Sigma f \cdot 3}{4} - faa}{f})]\cdot H\]
+\[Q1 = 22 + [(\frac{\frac{48 - 40}{14})]\cdot 2\] = 23,14
+</p>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luís Spengler</p>
-<p class="date">Created: 2022-09-09 Fri 16:26</p>
+<p class="date">Created: 2022-09-23 Fri 13:02</p>
 </div>
 </body>
 </html>

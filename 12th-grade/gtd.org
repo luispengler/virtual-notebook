@@ -168,3 +168,65 @@ f) Qual(is) seria(m) o(s) valor(es) nominal(ais) do(s) disjuntor(es) geral(is) e
 * Sistema Interligado Nacional (SIN)
 + Possui o mapa dinâmico de transmissão e usinas
 + ons.org.br
+
+* Redes de Distribuição (NDU 06)
++ Rede primaria (13,8 kV) 3 fases
++ Rede secundária (220/127V) 3 fases + 1 N
++ Componentes: condutores, postes, transformadores, isoladores, acessórios...
++ Dimensionadas de acordo com as cargas instaladas e demandas das unidades consumidoras
++ Outros serviços: telefonia, internet, TV a cabo
+** Tipos de projetos de redes: (pg. 18 - NDU 06)
++ Expansão;
++ Reforma; "Substituição"
++ Reforço. "Aumento".
+
+* Atividade do dia 12/09
+1. Estrutura N1/T1 possui 1 cruzeta, 3 isoladores, está posicionada em tangêcia ou em alguns casos em ângulos, sendo que neste último a instalação dos condutores nos isoladores deverá ser feita na lateral. A cruzeta das estruturas N1/T1 deve ser instalada do lado oposto ao sentido de tracionamento dos condutores. A estrutura N2/T2 possui 2 cruzetas e 6 isoladores, posicionada em ângulo pouco acentuados ou em tangências. Foi vetada sua utilização em derivação e fim de rede. A estrutura N3/T3 possui 2 cruzetas, 3 isoladores e é utilizada em derivações e fim de rede. A estrutura N4/T4 tem 2 cruzetas, 7 isoladores e é utilizada em ângulos muito acentuados, em mudança de bitolas de condutores e em tangentes.
+2. a) Parte de uma rede primaria numa determinada área de uma localidade que alimenta, diretamente ou por intermédio de seus ramais, transformadores de distribuição da concessionária e/ou de consumidores. b) Ligação feita em qualquer ponto de uma rede de distribuição para um alimentador, ramal de alimentador, transformador de distribuição ou ponto de entrega. c) Parta de um alimentador de distribuição que transporta a parcela principal de carga total. Normalmente é constituído por condutor de bitola mais elevada, caracterizao por um dos seguintes fatores: Transporte do total ou de parcela ponderável da carga servida pelo alimentador. Alimentação ao principal consumidor do alimentador. Interligação com outro alimentador, permitindo transferência de carga entre os alimentadores. d) Parte de um alimentador de distribuição que deriva diretamente do tronco do alimentador e) Rede de distribuição situada dentro do perímetro urbano de cidades, vilas, assentamentos e povoados
+3. Tensão primaria (13,8/7,96 kV), tensão secundária (220/127V). Pode variar 5% acima e 7% abaixo.
+4. Os condutores da rede primária serão de alumínio: 50mm^2, 120mm^2, 185mm^2 para seção nominal, com diâmetros externos aproximados em 14,7, 19,4, 22,6 mm. Os condutores da rede secundária serão condutores de alumínio multiplexados, com condutores fase em alumínio isolados em polietleno (XLPE) para 0,6/1kV e condutor mensageiro (neutro) nu em liga de alumínio. Esses circuitos trifásicos são compostos por 4 fios em qualquer um das configurações: 3x1x35 + 35mm^2, 3x1x70 + 70 mm^2, 3x1x120 + 70mm^2
+5. O estai é o termo usado para designar cada um dos cabos utilizados na fixação do poste.
+
+* Atividade
+Curso Técnico de Nível Médio Integrado em Eletrotécnica. Geração, Transmissão e Distribuição de Energia Elétrica
+
+
+EXERCÍCIOS
+
+
+PARA A REALIZAÇÃO DA ATIVIDADE ACESSE O SITE: http://www.ons.org.br/paginas/sobre-o-sin/mapas
+
+
+1) De acordo com o Mapa Dinâmico do Sistema Interligado Nacional (SIN), quantas linhas de transmissão atendem a cidade de Corumbá/MS? Qual é sua identificação (nome)? Qual é a sua tensão nominal?
+   - Uma linha de transmissão. Linha LT 230kV Anastacio/Corumba 2 C 2 MS. 230kV
+
+
+2) De acordo com o Mapa Dinâmico do Sistema Interligado Nacional (SIN), cite 2 linhas de transmissão que atendem a cidade de Campo Grande/MS? Quais são suas identificações (nomes)? Quais são suas tensões nominais?
+   - Linha LT 138kV CG M. Couto/C.G. Imbirussu 1 MS -> 138kV
+
+   - Linha LT 230kV Chapadao /Imbirussu C 1 MS -> 230kV
+
+3) De acordo com o Mapa Dinâmico do Sistema Interligado Nacional (SIN), cite os nomes de 4 subestações que atendem Campo Grande/MS, além de suas capacidades.
+   - Subestação CG Almoxarif. 0MW
+
+   - Subestação C.G. Lageado. 25MW
+
+   - Usina William Arjona. 206MW
+
+   - Subestação IMBIRUSSU. 550MW
+
+4) De acordo com o Mapa Dinâmico do Sistema Interligado Nacional (SIN), cite os nomes de 6 usinas eólicas localizadas no nordeste brasileiro, além de suas capacidades de geração.
+   - Usina Rio do Fogo. 49MW
+
+   - Usina Riachão I. 30MW
+
+   - Usina Riachão II. 27MW
+
+   - Usina Riachão IV. 30MW
+
+   - Usina Riachão VI. 30MW
+
+   - Usina União dos Ventos 01. 22MW
+
+5) De acordo com o Mapa Dinâmico do Sistema Interligado Nacional (SIN), cite o nome de 1 usina nuclear situada no Brasil? Em que cidade/estado está localizada? Qual sua capacidade de geração? Quantas linhas de transmissão partem dela e quais suas tensões nominais?
+   - Usina ALM. ÁLVARO ALBERTO I. Angra dos Reis/RJ. 1990MW. 1 linha de transmissão -> Linha LT 500kV ANGRA/ANGRA FUR C 2 RJ, com tensão nominal de 500kV

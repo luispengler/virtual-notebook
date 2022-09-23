@@ -19,3 +19,6 @@
 
 * Exercícios - Relés
 + 1.2, 1.3, 1.4 resolvidos no cardeno
+
+* Aula 16/09
++ na duvida usa o modo 5 ou 6 no contador
