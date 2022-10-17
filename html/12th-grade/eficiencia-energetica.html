@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-09-23 Fri 13:02 -->
+<!-- 2022-10-17 Mon 11:19 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Eficiência energética</title>
@@ -269,6 +269,15 @@
 <li><a href="#orge4988f5">Substituição de lâmpadas em uma mesma luminária</a></li>
 <li><a href="#org7c67129">Atividade: Considerando a sala de aula: (até 3 crianças, entrega: 26/09 email)</a></li>
 <li><a href="#org49b8e44">Resolução</a></li>
+<li><a href="#org7e47fad">Eficiência Energética em motores de indução trifásicos</a></li>
+<li><a href="#org57a9e1c">Aplicação de Inversor ou Conversor de Frequência</a></li>
+<li><a href="#org32f0e59">Trabalho Qualidade e Eficiência energética</a></li>
+<li><a href="#org2dd4e33">Distribuição de luminárias</a>
+<ul>
+<li><a href="#org7008115">Exemplo</a></li>
+</ul>
+</li>
+<li><a href="#org630230b">Faturamento de energia e demanda reativas</a></li>
 </ul>
 </div>
 </div>
@@ -737,10 +746,164 @@ e complementares àquelas definidas nos postos ponta e, para o grupo B, intermed
 </ul>
 </div>
 </div>
+
+<div id="outline-container-org7e47fad" class="outline-2">
+<h2 id="org7e47fad">Eficiência Energética em motores de indução trifásicos</h2>
+<div class="outline-text-2" id="text-org7e47fad">
+<p>
+-&gt; Motores convencionais -&gt; motores de alto rendimento;
+</p>
+<ul class="org-ul">
+<li>Princípio de funcionamento igual;</li>
+<li>Materiais e componentes projetados para reduzir as perdas;</li>
+</ul>
+<ul class="org-ul">
+<li>Perdas podem ser calor, magnética, mecânica</li>
+</ul>
+<p>
+\[\eta (\%) = \frac{Po}{Pi}\times 100 \%\]
+\[Pi = Po + \Sigma perdas\]
+\[C = P \times \Delta t\]
+</p>
+<ul class="org-ul">
+<li>Ex: Um motor 100cv com rendimento de 85\% é substituído por outro comrendimento de 95\%. Considerando que ele funciona 120 horas por mês, qual foi a economia (em kWh) obtida?</li>
+</ul>
+<p>
+\[Pi = \frac{Po}{\eta} = \frac{100 \times 736}{0,85} = 86,59kW\]
+\[C = 10390,8 kWh\]
+\[Pi = \frac{Po}{\eta} = \frac{100 \times 736}{0,95} = 77,47kW\]
+\[C = 9296,4 kWh\]
+\[Economia = 1094,4 kWh\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org57a9e1c" class="outline-2">
+<h2 id="org57a9e1c">Aplicação de Inversor ou Conversor de Frequência</h2>
+<div class="outline-text-2" id="text-org57a9e1c">
+<p>
+\[\eta_{s} = \frac{120f}{p}\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org32f0e59" class="outline-2">
+<h2 id="org32f0e59">Trabalho Qualidade e Eficiência energética</h2>
+<div class="outline-text-2" id="text-org32f0e59">
+<ol class="org-ol">
+<li>a (F)
+b (F)
+c (F)
+d (F)</li>
+<li>d</li>
+
+<li>E = 500 lux; A = 10x8m^2; Pé direito: 4,0m; Plano de trabalho está a 0,7m do chão; Paredes e teto claros, piso é escuro; Fluxo de cada lâmpada: 2400lm; Fdl = 0,75</li>
+</ol>
+
+<p>
+\[Hlp = 4,0 - 0,7 = 3,3 m\]
+</p>
+
+<p>
+\[k = \frac{10\times 8}{3,3(10+8)} = 1,347\]
+</p>
+
+<ul class="org-ul">
+<li>Teto = 50\%</li>
+<li>Parede = 50\%</li>
+<li>Piso = 10\%</li>
+</ul>
+
+<p>
+\[Fu = \frac{1,5-1,25}{1,5-1,347} = \frac{0,48-0,43}{0,48-Fu}\]
+</p>
+
+
+<p>
+\[Fu = \frac{0,25}{0,153} = \frac{0,05}{0,48-Fu}\]
+</p>
+
+<p>
+\[Fu = 0,44\]
+</p>
+
+<p>
+\[Phi = \frac{E\times S}{Fu\times Fdl} = \frac{500\times 80}{0,44\times 0,75} =  121 212,1212 lux\]
+</p>
+
+<p>
+\[\Phi_{LUM} = 2400 lm\]
+</p>
+
+<p>
+\[\frac{\Phi_{T}}{\Phi_{LUM}} \approx 51\]
+</p>
+
+<ol class="org-ol">
+<li></li>
+
+
+<li>Área: 10x8m^2</li>
+<li>Quantidade de luminárias: 51</li>
+<li>Hlp: 3,3m</li>
+<li>3x + 2x/2 = 10m (x aqui é a distância entre luminária e parede)</li>
+<li>2y + 2y/2 = 8m</li>
+<li>x = 2m &lt; Hlp</li>
+<li>y = 2m &lt; Hlp</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org2dd4e33" class="outline-2">
+<h2 id="org2dd4e33">Distribuição de luminárias</h2>
+<div class="outline-text-2" id="text-org2dd4e33">
+<ul class="org-ul">
+<li>\[X < Hlp\]</li>
+<li>\[Y < Hlp\]</li>
+<li>X e Y: Distância entre luminárias</li>
+<li>Hlp: Distância entre luminária e plano de trabalho</li>
+</ul>
+</div>
+<div id="outline-container-org7008115" class="outline-3">
+<h3 id="org7008115">Exemplo</h3>
+<div class="outline-text-3" id="text-org7008115">
+<ul class="org-ul">
+<li>Área: 8x6m^2</li>
+<li>Quantidade de luminárias: 12</li>
+<li>Hlp: 2,8m</li>
+<li>3x + 2x/2 = 8m (x aqui é a distância entre luminária e parede)</li>
+<li>2y + 2y/2 = 6m</li>
+<li>x = 2m &lt; Hlp</li>
+<li>y = 2m &lt; Hlp</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org630230b" class="outline-2">
+<h2 id="org630230b">Faturamento de energia e demanda reativas</h2>
+<div class="outline-text-2" id="text-org630230b">
+<ul class="org-ul">
+<li>Art. 302 (norma 1000 aneel)</li>
+<li>Fr (fator de potência de referência) = 0,92 (cap/ind)</li>
+<li>Grupo A;</li>
+<li>Em MS: 23:30h-05:30h (capacitivo), 05:30h-23:30h (indutivo) -&gt; Todos os dias</li>
+</ul>
+
+<p>
+\[E_{RE} = \Sigma [EEAM_{T} \times (\frac{fr}{fT} - 1)] \times V_{ERE}\]
+</p>
+<ul class="org-ul">
+<li>ERE = Faturamento de Energia ou Consumo de Reativos (R$);</li>
+<li>EEAMT = Energia Elétrica Ativa Medida em um intervalo de t = 1 horas (kWh ou mWh);</li>
+<li>ft = Fator de Potência horário;</li>
+</ul>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luís Spengler</p>
-<p class="date">Created: 2022-09-23 Fri 13:02</p>
+<p class="date">Created: 2022-10-17 Mon 11:19</p>
 </div>
 </body>
 </html>

@@ -237,3 +237,88 @@ e complementares àquelas definidas nos postos ponta e, para o grupo B, intermed
 
 * Resolução
 + Potência por luminária: 2x32 + 10 = 74W
+
+* Eficiência Energética em motores de indução trifásicos
+-> Motores convencionais -> motores de alto rendimento;
+ - Princípio de funcionamento igual;
+ - Materiais e componentes projetados para reduzir as perdas;
++ Perdas podem ser calor, magnética, mecânica
+\[\eta (\%) = \frac{Po}{Pi}\times 100 \%\]
+\[Pi = Po + \Sigma perdas\]
+\[C = P \times \Delta t\]
++ Ex: Um motor 100cv com rendimento de 85\% é substituído por outro comrendimento de 95\%. Considerando que ele funciona 120 horas por mês, qual foi a economia (em kWh) obtida?
+\[Pi = \frac{Po}{\eta} = \frac{100 \times 736}{0,85} = 86,59kW\]
+\[C = 10390,8 kWh\]
+\[Pi = \frac{Po}{\eta} = \frac{100 \times 736}{0,95} = 77,47kW\]
+\[C = 9296,4 kWh\]
+\[Economia = 1094,4 kWh\]
+
+* Aplicação de Inversor ou Conversor de Frequência
+\[\eta_{s} = \frac{120f}{p}\]
+
+* Trabalho Qualidade e Eficiência energética
+1.
+   a (F)
+   b (F)
+   c (F)
+   d (F)
+2.
+   d
+
+3. E = 500 lux; A = 10x8m^2; Pé direito: 4,0m; Plano de trabalho está a 0,7m do chão; Paredes e teto claros, piso é escuro; Fluxo de cada lâmpada: 2400lm; Fdl = 0,75
+
+\[Hlp = 4,0 - 0,7 = 3,3 m\]
+
+\[k = \frac{10\times 8}{3,3(10+8)} = 1,347\]
+
++ Teto = 50\%
++ Parede = 50\%
++ Piso = 10\%
+
+\[Fu = \frac{1,5-1,25}{1,5-1,347} = \frac{0,48-0,43}{0,48-Fu}\]
+
+
+\[Fu = \frac{0,25}{0,153} = \frac{0,05}{0,48-Fu}\]
+
+\[Fu = 0,44\]
+
+\[Phi = \frac{E\times S}{Fu\times Fdl} = \frac{500\times 80}{0,44\times 0,75} =  121 212,1212 lux\]
+
+\[\Phi_{LUM} = 2400 lm\]
+
+\[\frac{\Phi_{T}}{\Phi_{LUM}} \approx 51\]
+
+4.
+
++ Área: 10x8m^2
++ Quantidade de luminárias: 51
++ Hlp: 3,3m
++ 3x + 2x/2 = 10m (x aqui é a distância entre luminária e parede)
++ 2y + 2y/2 = 8m
++ x = 2m < Hlp
++ y = 2m < Hlp
+
+* Distribuição de luminárias
++ \[X < Hlp\]
++ \[Y < Hlp\]
++ X e Y: Distância entre luminárias
++ Hlp: Distância entre luminária e plano de trabalho
+** Exemplo
++ Área: 8x6m^2
++ Quantidade de luminárias: 12
++ Hlp: 2,8m
++ 3x + 2x/2 = 8m (x aqui é a distância entre luminária e parede)
++ 2y + 2y/2 = 6m
++ x = 2m < Hlp
++ y = 2m < Hlp
+
+* Faturamento de energia e demanda reativas
++ Art. 302 (norma 1000 aneel)
++ Fr (fator de potência de referência) = 0,92 (cap/ind)
++ Grupo A;
++ Em MS: 23:30h-05:30h (capacitivo), 05:30h-23:30h (indutivo) -> Todos os dias
+
+\[E_{RE} = \Sigma [EEAM_{T} \times (\frac{fr}{fT} - 1)] \times V_{ERE}\]
++ ERE = Faturamento de Energia ou Consumo de Reativos (R$);
++ EEAMT = Energia Elétrica Ativa Medida em um intervalo de t = 1 horas (kWh ou mWh);
++ ft = Fator de Potência horário;

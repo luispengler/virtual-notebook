@@ -341,3 +341,90 @@ Considerando n = 600 elementos
 
 \[Q1 = lim_{inf} + [(\frac{\frac{\Sigma f \cdot 3}{4} - faa}{f})]\cdot H\]
 \[Q1 = 22 + [(\frac{\frac{48 - 40}{14})]\cdot 2\] = 23,14
+
+* Revisão básica
++ Tipos de variáveis?
++ Tipos de amostragem e como calcular
++ Calcular a amplitude de classe
++ Calcular média e mediana a partir da distribuição de classe
+
+* Métricas de dispersão
++ Variância
++ Desvio padrão
++ Covariância
++ Covariância -> Métrica expressa em \%, permite comparações com cenários diferenciados
++ Desvio padrão -> Expressa o comportamento dos dados em torno da média
++ Variância -> Considera o tamanho da amostra
++ Considerando uma média x = 20,6 e um desvio padrão de 0,67 sua covariância é igual a ->
++ \[cov = \frac{\sigma}{X}\times 100 = \frac{0,67}{20,6}\times 100 = 3,25\] -> Baixa dispersão
++ Parâmetro estatístico em relação a métrica covariância:
++ Até 25\% baixa dispersão
++ De 25 a 55 média dispersão
++ Acima de 55 alta dispersão
+
+* Calculando desvio padrão
+** Passos
+1) Calcular a média
++ Calcular ponto médio
++ Multiplicar ponto médio pela frequência
++ Realizar a somatória e dividir por n
+2) Calcular a variância
++ Calcular desvio médio -> O quanto cada elemento se afasta da média
++ Elevar o desvio médio ao quadrado
++ Realizar a somatória
+3) Calcular o desvio padrão
+\[\sigma = \sqrt{\frac{\Sigma (desviomedio)^2}{n}}\]
+
+* Calcular o desvio padrão da distribuição de classe a seguir
+| Peso (kg) |  f |
+| 40 <- 45  | 12 |
+| 45 <- 50  | 14 |
+| 50 <- 55  | 20 |
+| 55 <- 60  | 19 |
+
+* Revisão conteúdo
+| Leitura número livros |  f | Pn   | Pn*f  |
+| 0 <- 5                | 12 | 2,5  | 30    |
+| 5 <- 10               | 15 | 7,5  | 112,5 |
+| 10 <- 15              |  9 | 12,5 | 112,5 |
+| 15 <- 20              |  7 | 17,5 | 122,5 |
+| 20 <- 25              |  5 | 22,5 | 112,5 |
+|                       | 48 |      | 490   |
+
+X = 490/48 = 10,20
+
+* Mediana
++ P1 -> 48/2 = 24 posição
++ P2 -> 5 <- 10 f= 27
++ P3 ->
+\[med = lim_{inf} + [(\frac{\frac{\Sigma f}{2} - faa}{f})]\cdot H\]
+\[med = 5 + [(\frac{24 - 12}{15})]\cdot 5\] = 9
+
+* Quartil 1
++ P1 -> 48/4 = 12 posição
++ P2 -> 0 <- 5 f= 12
++ P3 ->
+\[Q1 = lim_{inf} + [(\frac{\frac{\Sigma f}{4} - faa}{f})]\cdot H\]
+\[Q1 = 0 + [(\frac{12 - 0}{12})]\cdot 5\] = 5
+
+* Quartil 3
++ P1 -> 48*3/4 = 36
++ P2 -> 10 <-15 = 9
+
+\[Q1 = lim_{inf} + [(\frac{\frac{\Sigma f \cdot 3}{4} - faa}{f})]\cdot H\]
+\[Q1 = 10 + [(\frac{\frac{36 - 27}{9})]\cdot 5\] = 15
+
+
+* Moda
+\[Moda = lim_{inf} + \frac{fant}{fant+fpost}\cdot H\]
+\[Moda = 5 + \frac{12}{12+9}\cdot 5 = 5,23\]
+
+* Introdução a probabilidade
++ Ligado a eventos, na forma de dados armazenados ou provenientes de experimentos
++ Trabalha com eventos ou com experimentos
+
+1) Espaço amostral -> Lançar um dado: 6 elementos (1,2,3,4,5,6), Retirar um carta da baralho = 52
+* Definir espaço amostral dos eventos abaixo
+a) Lançar dois dados simultaneamente
+espaço amostral 1 = {(1,1),(1,2),(1,3),(1,4),(1,5),(1,6),(2,1),(2,2),(2,3),(2,4),(2,5),(2,6),(3,1),(3,2),(3,3),(3,4),(3,5),(3,6),(4,1),(4,2),(4,3),(4,4),(4,5),(4,6),(5,1),(5,2),(5,3),(5,4),(5,5),(5,6),(6,1),(6,2),(6,3),(6,4),(6,5),(6,6)} -> Probabilidade de cair dois dados iguais = 6/36 = 1/6
+b) Lançar duas moedas

@@ -51,3 +51,33 @@ https://presrepublica.jusbrasil.com.br/legislacao/1348064891/lei-14300-22
 
 * Avaliação da apresentação
 + Não é só ler o texto da lei, tem que dar uma explicação
+
+* 6 questões para a prova do nosso grupo
++ 3 - verdadeiro e falso (letras a-e)
++ 2 - multipla escolha (letras a-e)
++ 1 - questão aberta
+** Capítulo 3
+1) Quais fatores devem ser levados em consideração para o atendimento às solicitações de nova conexão ou alteração da conexão existente para instalação de microgeração ou minigeração distribuída? R: Cálculo da participação financeira da concessionária ou permissionária e a possível participação financeira do consumidor-gerador titular da unidade consumidora
+2) Nas alternativas abaixo, assinale a única opção que indica corretamente quem é o responsável financeiramente pelo sistema indicado: a) a distribuidora é responsável técnica e financeiramente pelo sistema de medição da microgeração distribuida b) a distribuidora é responsável técnica e financeiramente pelo sistema de medição da minigeração distribuida c) a distribuidora é responsável técnica e financeiramente pelo sistema de medição da minigeração e microgeração distribuida d) Os custos de adequação do sistema de medição para conexão da minigeração distribuida não são de responsabilidade do interessado e) Os custos de adequação do sistema de medição para conexão da microgeração distribuida são de responsabilidade do interessado R: a)
+** Capítulo 4
+3) Dentre as alternativas abaixo assinale a falsa sobre a possibilidade de aderência ao SCEE pelos consumidores de energia, pessoas físicas ou jurídicas, e suas respectivas unidades consumidoras a) com microgeração distribuída com geração local ou remota b) com minigeração distribuída com geração local ou remota c) integrantes de empreendimento com múltiplas unidades consumidoras d) com geração compartilhada ou integrantes de geração compartilhada e) consumidores que tenham documentos que comprovam a posse de propriedade do imóvel onde se encontra instalada ou será instalada a microgeração ou minigeração distribuida, que o consumidor tenha alugado ou arrendado terrenos, lotes e propriedades em condições nas quais o valor do aluguel ou do arrendamento se dê em real por unidade de energia elétrica R: e
+4) Dentre as alternativas abaixo, assinale verdadeiro ou falso sobre a lei 14.300 capítulo 4, art 12., referente ao ciclo de faturamento para cada posto tarifário
+   (  ) O excedente de energia elétrica de um posto tarifário deve ser inicialmente alocado no mesmo posto tarifário
+   (  ) quando a unidade consumidora estiver em local diferente da geração, o faturamente deve considera a energia consumida
+   (  ) o consumidor-gerador titular da unidade consumidora onde se encontra instalada a microgeração ou minigeração distribuida pode solicitar alteração dos percentuais
+   (  ) em postos tarifários distintos do que foi gerado, não deve-se observar a relação entre as componentes tarifárias que recuperem os cutos pela compra de energia elétrica (  ) O excedente de energia elétrica de um posto tarifário deve ser inicialmente alocado para outros postos tarifários da mesma unidade consumidora que gerou a energia elétrica R: V, V, V, F, F
+
+5) Dentre as alternativas abaixo, assinale verdadeiro ou falso sobre a lei 14.300 capítulo 4, art 13., referente aos créditos de energia elétrica:
+   (  ) Os créditos de energia elétrica expiram em 60 (sessenta) meses após a data de faturamento em que foram gerados e serão revertidos em prol da modalidade tarifária que o consumidor participa
+   (  ) Na microgeração ou na minigeração distribúida, o consumidor-gerador titular da unidade consumidora pode solicitar a distribuição do saldo existente para outras unidades consumidoras
+   (  ) Caso não ocorra a solicitação de alocação dos créditos do consumidor-gerador não implicará na realocação
+   (  ) Pode ser feita a solicitação de alocação dos créditos do consumidor-gerador para determinada unidade em até 90 (noventa) dias após o encerramento da relação contratual
+   (  ) Pode ser feita a solicitação de alocação dos créditos do consumidor-gerador para determinada unidade em até 30 (trinta) dias após o encerramento da relação contratual
+    R: V, V, F, F, V
+6) Dentre as alternativas abaixo, assinale verdadeiro ou falso sobre a lei 14.300 capítulo 4, art 17., referente as regras tarifárias estabelecidadas pela ANEEL:
+   (  ) As unidades consumidoras serão faturadas pela incidência sobre a energia elétrica ativa consumida da rede de distribuição
+   (  ) Competirá ao Conselho Nacional de Política Energética (CNPE), estabelecer as diretrizes para valoração dos custos e dos benefícios da microgeração e minigeração distribuída
+   (  ) No estabelecimentos das diretrizes não deverá considerar todos os benefícios
+   (  ) Após o transcurso dos prazos de transição a unidade consumidora participante não será faturada pela mesma modalidade tarifária vigente estipulada em regulação da ANEEL
+   (  ) O prazo para a ANEEL estabelecer os cálculos da valoração dos benefícios é de até 18 (dezoito) meses
+R: V, V, F, F, V

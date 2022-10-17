@@ -118,3 +118,36 @@
 * Lista 1
 1. a) V b) V c) V d) V e) V
 2.
+
+* Correção da prova
+3. D1 = 20800 -> 20000x0,6 + 800x0,7 = 17760W
+   D2 = 21000 -> 21000x0,7 = 14700W
+   D3 = 2400 -> 2400x0,75 = 1800W
+   D4 = 0
+   D5 = 10400 -> 10400x1 = 10400W
+   DT = 44600
+5. Carga 1: 3x4cv fp = 72 p = 80%
+   P1 = 3x4x736/0,8 = 11040W
+   S1 = P1/FP = 11040/0,72 = 1533,33 VA
+   Q1^2 = S^2 - P^2 = 10640,94 VAR
+   Carga 2:
+   P2 = 2736/0,83 = 1773,49W
+   S2 = 1773,49/0,83 = 2216,87 VA
+   Q2 = 1330,13 VAR
+   Carga 3:
+   P3 = 5x736 = 18400W
+   S3 = 28307,69 VA
+   Q3 = 21511,98 VAR
+
+   P transformador > 45775,13 VA
+
+* SPDA
++ SPDA -> Sistema de proteção de descargas atmosféricas
++ Usa a parte 3 da norma NBR 5419
++ Dividido em subsistemas: captação, descida, dispersão
++ Captação -> Para raio, gaiola de faraday
++ Dividio em Classes: 1) Fábricas de explosivos 2) Escolas, igrejas, comércios, etc 3) Residências 4) Armazenamento
++ Em residências constuma-se apenas fazer o SPDA interno e não incluir o externo (com captação)
+** Projeto de SPDA
++ Normalmente usamos a gaiola e o para-raio (até 60m)
++ A gaiola é melhor que o para raio

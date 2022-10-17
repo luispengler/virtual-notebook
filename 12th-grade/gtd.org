@@ -230,3 +230,50 @@ PARA A REALIZAÇÃO DA ATIVIDADE ACESSE O SITE: http://www.ons.org.br/paginas/so
 
 5) De acordo com o Mapa Dinâmico do Sistema Interligado Nacional (SIN), cite o nome de 1 usina nuclear situada no Brasil? Em que cidade/estado está localizada? Qual sua capacidade de geração? Quantas linhas de transmissão partem dela e quais suas tensões nominais?
    - Usina ALM. ÁLVARO ALBERTO I. Angra dos Reis/RJ. 1990MW. 1 linha de transmissão -> Linha LT 500kV ANGRA/ANGRA FUR C 2 RJ, com tensão nominal de 500kV
+
+* Atividade 26/09
+Grupo de até 3 estudantes.
+Prazo: 26/9/2022 - 23:59h.
+
+Pesquise:
+
+1) Quais as vantagens das usinas hidrelétricas em relação às outras fontes de energia no Brasil? Cite 4
+
+- fonte limpa e renovável
+- custo de produção de energia baixo
+- não produz gases do efeito estufa
+- custo baixo de produção de energia
+
+2) Quais as desvantagens das usinas hidrelétricas em relação às outras fontes de energia no Brasil? Cite 4.
+- alteração do curso e do nível natural dos rios
+- diminuição da geração nos períodos de seca
+- realocação das populações ribeirinhas e nativas
+- influência na flora e a fauna das áreas alagadas
+
+3) O que significa SIN em se tratando de Geração, Transmissão e Geração de Energia Elétrica? Qual é sua finalidade? Por quantos subsistemas ele é constituído?
+
+O Sistema Interligado Nacional é composto pelo sistema elétrico do país a qual é conectado quase todas as unidades de geração com as unidades de transmissão e as unidades de transmissão conectadas com as unidades de distribuição. É constituído por 4 subsistemas: Sul, Sudeste/Centro-Oeste, Nordeste e a maior parte do Norte.
+
+4) O que significa ONS em se tratando de Geração, Transmissão e Geração de Energia Elétrica? Qual é sua finalidade?
+O ONS (Operador Nacional do Sistema Elétrico) e é o orgão que coordenada e controla a operação das instalações de geração e transmissão de energia elétrica no Sistema Interligado Nacional. Sua finalidade é gerenciar as diferentes fontes de energia e a rede de transmissão, mantendo assim a segurança do suprimento elétrico em todo o país.
+
+5) O que significa ANEEL em se tratando de Geração, Transmissão e Geração de Energia Elétrica? Qual é sua finalidade?
+ANEEL é a Agência Nacional de Energia Elétrica e é a agência reguladora do setor elétrico brasileiro, com a finalidade de regular e fiscalizar a geração, transmissão e distribuição de energia elétrica, como também a sua comercialização
+
+6) Qual é o segundo tipo de usina geradora mais presente no território nacional? Qual é sua capacidade de geração total?
+Eólica, 22,214GW
+
+7) Qual é o terceiro tipo de usina geradora mais presente no território nacional? Qual é sua capacidade de geração total?
+Biomassa, 14,989GW
+
+8) Quais são as 2 principais classes de tensão de linhas de transmissão existentes em território nacional?
+- A1 (Tensão de fornecimento igual ou superior a 230kV) e A2 (Tensão de fornecimento entre 88kV e 138kV)
+
+9) O que são sistemas isolados em se tratando de SIN? Cite 2 regiões/locais onde estão presentes.
+- Sistemas de energia elétrica que a carga não está conectada à geração e não é necessário sua conexão à malha interligada de transmissão. Boa Vista (Roraima) e Fernando de Noronha
+
+10) Qual é a finalidade das subestações em se tratando de interligação entre os sistema de transmissão e as redes de distribuição? Descreva suas principais partes.
+- Esse tipo de subestação não faz alteração de tensão e apenas isola sistemas, interliga circuitos e faz a interligação entre subestações de distribuição e centrais de transmissão. Chaves seccionadora  que além de desempenhar a função de interruptor, é capaz de, na posição aberta, garantir a distância de isolamento , de acordo o nível de tensão do circuito. Para-raios que são utilizados para proteger os equipamentos de uma subestação das descargas atmosféricas que podem provocar sobretensões elevadas no sistema (sobretensões de origem externa). Transformador de Instrumentos (TC's e TP's) são equipamentos que garantem o funcionamento dos dispositivos de proteção e segurança funcionamento adequado, sem que para isso estejam ligados em grandes valores de correntes ou tensão.
+LEMBRETE: A entrega do projeto de entrada de energia elétrica foi adiado para o dia 3/10/2022.
+
+Composição da P2: Projeto (5,0) + Atividade SIN (2,0) + Atividade 3 (3,0) + Atividade estruturas/definições (1,0) = 11,0 pontos.
