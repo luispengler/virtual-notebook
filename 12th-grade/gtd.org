@@ -277,3 +277,16 @@ Biomassa, 14,989GW
 LEMBRETE: A entrega do projeto de entrada de energia elétrica foi adiado para o dia 3/10/2022.
 
 Composição da P2: Projeto (5,0) + Atividade SIN (2,0) + Atividade 3 (3,0) + Atividade estruturas/definições (1,0) = 11,0 pontos.
+
+* Rede de Distribuição Urbana
++ Componentes do levantamento de campo da aula passada
++ O 4º condutor na entrada de energia subterrânea do câmpus Campo Grande?
++ Componentes do levantamento de campo da aula passada:
+  + Banco de Capacitores trifásicos em média tensão: melhorar níveis de tensão e corrigir o FP
+  + Chave faca (Média Tensão): Utilizada para seccionamento (manobra) -> Três unidades
+  + Chave fusível (Média Tensão): Proteção contra correntes e curto-circuito e manobra
+  + Outros: Rede de Distribuição em BT em MT
+  + MT: 3 condutores (Fases) - 13,8 kV
+  + BT: 4 condutores (3 Fases + Neutro) - 220/127V
+  + Estruturas N1, N3, N4
+  + Isoladores, cruzetas, postes de concreto

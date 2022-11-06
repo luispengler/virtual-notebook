@@ -428,3 +428,62 @@ X = 490/48 = 10,20
 a) Lançar dois dados simultaneamente
 espaço amostral 1 = {(1,1),(1,2),(1,3),(1,4),(1,5),(1,6),(2,1),(2,2),(2,3),(2,4),(2,5),(2,6),(3,1),(3,2),(3,3),(3,4),(3,5),(3,6),(4,1),(4,2),(4,3),(4,4),(4,5),(4,6),(5,1),(5,2),(5,3),(5,4),(5,5),(5,6),(6,1),(6,2),(6,3),(6,4),(6,5),(6,6)} -> Probabilidade de cair dois dados iguais = 6/36 = 1/6
 b) Lançar duas moedas
+
+* Probabilidade - Para onde vamos
++ Probabiidade de um evento (acontecimento) ocorrer
++ Suponha que voce queira obter a possibilidade de 3 dourado jovens, passarem, sem nenhum dano através de uma turbina de uma das barragens hidroelétricas. Após várias amostragem fica determinado que 85 para cada cem jovens passam, sem perigo pela turbina. Assim pode-se dizer que a probabilidade de um, dois ou três peixes passarem pela turbina
++ um peixe = 85/100 = 0,85
++ dois peixes = 85/100x85/100 = 0,723
++ três peixes = 85/100x85/100x85/100 = 0,614
++ n peixes = (85/100)^n
++ Experimento estatístico -> é uma ação ou um ensaio por meio do qual resultados específicos (contagem, medidas ou respostas) são os fidas
++ Conjunto de todos resultados possíveis é denominado espaço amostral
+
+* Evento simples -> somente um resultado
++ Evento a -> para controle de qualidade, selecione, ao acaso, um chip de computador com defeito, fabricado naquele dia
++ Evento b -> joga-se 1 dado, obter pelo menos um 4
+
+** Tipos de probabilidade
++ clássica -> é usada quando cada resultado do espaço amostral tem a mesma probabilidade de ocorrer
+  p (e) = n resultados em e/n total de resultados
++ Lançar 1 dado e sair o número 5
+\[\Omega = {1,2,3,4,5,6}\]
++ Evento: sair o número 5
+P = 1/6
++ probabilidade empírica: baseia-se em observações obtidas de experimento probabilisticos
+  p (e) = frequência evento (e)/frequência total
+
+| tipo de peixe |  f |
+| A             | 13 |
+| B             | 17 |
+| C             | 20 |
+| n             | 40 |
+evento a = 13/40 = 0,325
+
++ probabilidade subjetiva -> intuição
+
+* Exercícios
++ Considere a tabela a seguir
+| Idade dos funcionários |     |
+| 15 <- 24               | 366 |
+| 25 <- 34               | 233 |
+| 35 <- 44               | 180 |
+| 45 <- 54               | 125 |
+| 55 <- 64               |  42 |
++ Determine a probabilidade de um funcionário escolhido ao acaso ter idade entre 15 a 24 anos
+p (e) = 366/946
+
++ Complemento de evento:
+  P (e) + P (e)' = 1
+  + Jogar um dado e considera E como sair pelo menos 5
+    E = {5,6}
+    E' = {1,2,3,4}
+    P(Et) = P(E) + P(E')
+    P(Et) = P(5) x P(E) + P(E')
+
++ Pense rápido: Determine quais os números abaixo podem representar a probabilidade de um evento. Justifique:
+a) 0 (Yes, Intervalo é de 0 a 1)
+b) 1,5 (No, intervalo é de 0 a 1)
+c) -1 (No, intervalo é de 0 a 1)
+d) 50% (Yes, igual a 1/2)
+e) 2/3 (Yes, intervalo é de 0 a 1)

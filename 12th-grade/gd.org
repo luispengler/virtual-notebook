@@ -81,3 +81,9 @@ https://presrepublica.jusbrasil.com.br/legislacao/1348064891/lei-14300-22
    (  ) Após o transcurso dos prazos de transição a unidade consumidora participante não será faturada pela mesma modalidade tarifária vigente estipulada em regulação da ANEEL
    (  ) O prazo para a ANEEL estabelecer os cálculos da valoração dos benefícios é de até 18 (dezoito) meses
 R: V, V, F, F, V
+
+
+* Cogeração de Energia
++ Geração distribuída = Próximo da UC
++ Geração por fontes renováveis = Fontes que o meio ambiente pode repor
++ Cogeração de energia = conversão e aproveitamento em mais de uma forma de energia

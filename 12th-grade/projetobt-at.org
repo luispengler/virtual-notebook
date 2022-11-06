@@ -151,3 +151,7 @@
 ** Projeto de SPDA
 + Normalmente usamos a gaiola e o para-raio (até 60m)
 + A gaiola é melhor que o para raio
+
+* SPDA
++ Subsistema de captação -> Franklin (<60m), gaiola farad, esfera girante
++ Subsistema de descida -> Classe (distâncias maxima entre os condutores)

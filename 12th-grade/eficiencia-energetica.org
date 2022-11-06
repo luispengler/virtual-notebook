@@ -312,7 +312,7 @@ e complementares àquelas definidas nos postos ponta e, para o grupo B, intermed
 + x = 2m < Hlp
 + y = 2m < Hlp
 
-* Faturamento de energia e demanda reativas
+* Faturamento de consumo de energia e demanda reativas
 + Art. 302 (norma 1000 aneel)
 + Fr (fator de potência de referência) = 0,92 (cap/ind)
 + Grupo A;
@@ -322,3 +322,15 @@ e complementares àquelas definidas nos postos ponta e, para o grupo B, intermed
 + ERE = Faturamento de Energia ou Consumo de Reativos (R$);
 + EEAMT = Energia Elétrica Ativa Medida em um intervalo de t = 1 horas (kWh ou mWh);
 + ft = Fator de Potência horário;
++ Vere = Valor da tarifa do consumo;
++ \[\Sigma\] é o somatório do mês
++ Norma -> Bandeira verde do subgrupo B1 -> R$/kWh ou R$/MWh
++ Exemplo: Calcule os faturamentos de consumo de energia reativa: (Vere = 1,01 R$/kWh)
+  a) 15:30h - 150 kWh - ft = 0,85 (ind)
+\[E_{RE} = \Sigma [150 \times (\frac{0,92}{0,85} - 1)] \times 1,01 = 12,48\]
+  a) 16:30h - 120 kWh - ft = 0,80 (cap)
+Só é cobrado indutivo
+  b) 01:30h - 100 kWh - ft = 0,81 (cap)
+\[E_{RE} = \Sigma [100 \times (\frac{0,92}{0,81} - 1)] \times 1,01 = 13,72\]
+  a) 08:00h - 95 kWh - ft = 0,95 (ind)
+Maior que 0,92
