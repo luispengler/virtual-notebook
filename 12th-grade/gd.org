@@ -87,3 +87,30 @@ R: V, V, F, F, V
 + Geração distribuída = Próximo da UC
 + Geração por fontes renováveis = Fontes que o meio ambiente pode repor
 + Cogeração de energia = conversão e aproveitamento em mais de uma forma de energia
+
+* Projeto de um sistema off grid
+** Enumerar a pot instalada
++ 10 lâmpadas -> ligadas por 3h, de 6W -> 10x3x6 = 180W/h (dia) -> 5400W/h (mês)
++ 2 geladeira -> ligadas por 6h, 200W -> 2400W/h (dia) -> 72kW/h (mês)
++ 2 televisão -> ligadas por 8h, 100W -> 1600W/h (dia) -> 48kW/h (mês)
++ Não colocar chuveiro
++ 1 Computador -> ligadas por 6h, 100W -> 600W/h (dia) -> 18kW/h (mês)
++ Potência total: 143,4kW
+** Cálculo das baterias
++ Curva de vida útil, nunca descarregar mais que 50%
++ Pensar no tempo que as baterias tem que funcionar -> usamos 1 dia
++ 4780W -> 20% das baterias -> Logo 100% das baterias aprox 24kW -> Dividindo por 12 = 2kA -> 10 baterias de 200Ah
++ Agora considerando 10% de perda nas cargas e descargas, multiplica por 81/100 -> 24kW/0,81 = aprox 30kW
++ 30kW/12V = 2,5kA -> 10 baterias de 250Ah
+** Cálculo dos paineis
++ Como a gente só carrega 20% das baterias, só precisamos de 20% da potência das baterias por dias
++ 4780W/0,81 (10% de perda na carga + 10% de perda na saida) = aprox 5900W/h (dia)
+** Número de painéis
++ Correção para inclinação dos paineis
++ Taca na tabela e consegue 0,91
++ Horas de sol pleno CG -> 5,4h
++ 5900W/0,91 x 5,4h x 300W (cadapainel) = 5 paineis de 300W
+** Cálculo do inversor
++ Considerar a demanda máxima
+** Cálculo do controlador de carga
++ 5900W/12V = 491A -> controlador de 80A = 6 controladores de carga

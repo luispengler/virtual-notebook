@@ -290,3 +290,9 @@ Composição da P2: Projeto (5,0) + Atividade SIN (2,0) + Atividade 3 (3,0) + At
   + BT: 4 condutores (3 Fases + Neutro) - 220/127V
   + Estruturas N1, N3, N4
   + Isoladores, cruzetas, postes de concreto
+
+* Linhas de transmissão/redes de distribuição
++ Torres -> Linhas
++ Postes -> Distribuição aérea
++ Postes -> concreto
+-> Distribuição subterrânea

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-11-05 Sat 22:54 -->
+<!-- 2022-11-27 Sun 21:44 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Geração Distribuida</title>
@@ -249,6 +249,16 @@
 </ul>
 </li>
 <li><a href="#org95ef488">Cogeração de Energia</a></li>
+<li><a href="#org4ecc54a">Projeto de um sistema off grid</a>
+<ul>
+<li><a href="#org385257b">Enumerar a pot instalada</a></li>
+<li><a href="#orgf17e0f4">Cálculo das baterias</a></li>
+<li><a href="#org5e49123">Cálculo dos paineis</a></li>
+<li><a href="#org67b6053">Número de painéis</a></li>
+<li><a href="#org96f073c">Cálculo do inversor</a></li>
+<li><a href="#org5353561">Cálculo do controlador de carga</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -417,10 +427,77 @@ R: V, V, F, F, V
 </ul>
 </div>
 </div>
+
+<div id="outline-container-org4ecc54a" class="outline-2">
+<h2 id="org4ecc54a">Projeto de um sistema off grid</h2>
+<div class="outline-text-2" id="text-org4ecc54a">
+</div>
+<div id="outline-container-org385257b" class="outline-3">
+<h3 id="org385257b">Enumerar a pot instalada</h3>
+<div class="outline-text-3" id="text-org385257b">
+<ul class="org-ul">
+<li>10 lâmpadas -&gt; ligadas por 3h, de 6W -&gt; 10x3x6 = 180W/h (dia) -&gt; 5400W/h (mês)</li>
+<li>2 geladeira -&gt; ligadas por 6h, 200W -&gt; 2400W/h (dia) -&gt; 72kW/h (mês)</li>
+<li>2 televisão -&gt; ligadas por 8h, 100W -&gt; 1600W/h (dia) -&gt; 48kW/h (mês)</li>
+<li>Não colocar chuveiro</li>
+<li>1 Computador -&gt; ligadas por 6h, 100W -&gt; 600W/h (dia) -&gt; 18kW/h (mês)</li>
+<li>Potência total: 143,4kW</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf17e0f4" class="outline-3">
+<h3 id="orgf17e0f4">Cálculo das baterias</h3>
+<div class="outline-text-3" id="text-orgf17e0f4">
+<ul class="org-ul">
+<li>Curva de vida útil, nunca descarregar mais que 50%</li>
+<li>Pensar no tempo que as baterias tem que funcionar -&gt; usamos 1 dia</li>
+<li>4780W -&gt; 20% das baterias -&gt; Logo 100% das baterias aprox 24kW -&gt; Dividindo por 12 = 2kA -&gt; 10 baterias de 200Ah</li>
+<li>Agora considerando 10% de perda nas cargas e descargas, multiplica por 81/100 -&gt; 24kW/0,81 = aprox 30kW</li>
+<li>30kW/12V = 2,5kA -&gt; 10 baterias de 250Ah</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5e49123" class="outline-3">
+<h3 id="org5e49123">Cálculo dos paineis</h3>
+<div class="outline-text-3" id="text-org5e49123">
+<ul class="org-ul">
+<li>Como a gente só carrega 20% das baterias, só precisamos de 20% da potência das baterias por dias</li>
+<li>4780W/0,81 (10% de perda na carga + 10% de perda na saida) = aprox 5900W/h (dia)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org67b6053" class="outline-3">
+<h3 id="org67b6053">Número de painéis</h3>
+<div class="outline-text-3" id="text-org67b6053">
+<ul class="org-ul">
+<li>Correção para inclinação dos paineis</li>
+<li>Taca na tabela e consegue 0,91</li>
+<li>Horas de sol pleno CG -&gt; 5,4h</li>
+<li>5900W/0,91 x 5,4h x 300W (cadapainel) = 5 paineis de 300W</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org96f073c" class="outline-3">
+<h3 id="org96f073c">Cálculo do inversor</h3>
+<div class="outline-text-3" id="text-org96f073c">
+<ul class="org-ul">
+<li>Considerar a demanda máxima</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5353561" class="outline-3">
+<h3 id="org5353561">Cálculo do controlador de carga</h3>
+<div class="outline-text-3" id="text-org5353561">
+<ul class="org-ul">
+<li>5900W/12V = 491A -&gt; controlador de 80A = 6 controladores de carga</li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luís Spengler</p>
-<p class="date">Created: 2022-11-05 Sat 22:54</p>
+<p class="date">Created: 2022-11-27 Sun 21:44</p>
 </div>
 </body>
 </html>
