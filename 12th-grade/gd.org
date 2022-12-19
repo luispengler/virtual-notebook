@@ -96,6 +96,9 @@ R: V, V, F, F, V
 + Não colocar chuveiro
 + 1 Computador -> ligadas por 6h, 100W -> 600W/h (dia) -> 18kW/h (mês)
 + Potência total: 143,4kW
+** Cálculo do inversor
++ Considerar a potência instalada
++ 10x6 + 2x200 + 2x100 + 1x100 = 760W -> Inversor de 1kW
 ** Cálculo das baterias
 + Curva de vida útil, nunca descarregar mais que 50%
 + Pensar no tempo que as baterias tem que funcionar -> usamos 1 dia
@@ -105,12 +108,42 @@ R: V, V, F, F, V
 ** Cálculo dos paineis
 + Como a gente só carrega 20% das baterias, só precisamos de 20% da potência das baterias por dias
 + 4780W/0,81 (10% de perda na carga + 10% de perda na saida) = aprox 5900W/h (dia)
++ 5900W/0,91 x 5,4h x 300W (cadapainel) = 5 paineis de 300W
 ** Número de painéis
 + Correção para inclinação dos paineis
 + Taca na tabela e consegue 0,91
 + Horas de sol pleno CG -> 5,4h
-+ 5900W/0,91 x 5,4h x 300W (cadapainel) = 5 paineis de 300W
-** Cálculo do inversor
-+ Considerar a demanda máxima
 ** Cálculo do controlador de carga
 + 5900W/12V = 491A -> controlador de 80A = 6 controladores de carga
++ Indicar como está ligado as baterias, controlador de carga e paineis
+** Corrente dos disjuntores
++ 10 baterias de 220 ampere = 2200A
++ O disjuntor será calculado em termos do inversor instalado: 1kW
++ Tensão das baterias = 12V
++ Para 10 baterias = 1kW/12Vx10 = aprox 10A
+
+* Adicionais
++ Indicar os materiais, o preço
+* Monday
++ PE -> 13h
+
+* Projeto da minha casa
+** Enumerar a pot instalada
++ 1 lâmpada  (quarto) -> ligada por 5h, de 6W -> 1x5x6 = 300W/h (dia) -> 9000W/h (mês)
++ 2 lâmpadas (quarto 2) -> ligada por 4h, de 9W -> 2x4x9 = 72W/h (dia) -> 2160W/h (mês)
++ 3 lâmpadas (banheiros) -> ligada por 2h, de 6W -> 3x2x6 = 36W/h (dia) -> 1080W/h (mês)
++ 3 lâmpadas (cozinha) -> ligada por 6h, de 9W -> 3x6x9 = 162W/h (dia) -> 4860W/h (mês)
++ 3 lâmpadas (area de serviço) -> ligado por 6h, de 9W -> 162W/h (dia) -> 4860W/h (mês)
++ 1 computador -> ligado por 8h, de 240W -> 1920W/h (dia) -> 57600W/h (mês)
++ 1 televisão -> ligado por 6h, de 100W -> 600W/h (dia) -> 18000W/h (mês)
++ 1 geladeira -> ligado por 6h, de 200W -> 1200W/h (dia) -> 36000W/h (mês)
++ 1 microondas -> ligado por 15min, de 2000W -> 500W/h (dia) -> 15000W/h (mês)
++ 1 ventilador -> ligado por 8h, de 60W -> 480W/h (dia) -> 14400W/h (mês)
++ Total = 162,9W/h (mês)
+** Cálculo do inversor
++ 6 + 18 + 18 + 27 + 27 + 240 + 100 + 200 + 200 + 60 = 896 W -> Inversor de 1kW
+** Cálculo das baterias
++ Pensar no tempo que as baterias tem que funcionar -> usamos 1 dia
++ 5432W -> 20% das baterias -> Logo 100% das baterias = 27160W -> 27600W (that corresponds to) -> Dividindo por 12 = 2263A -> 10 baterias de 200Ah
++ Agora considerando 10% de perda nas cargas e descargas, multiplica por 81/100 -> 24kW/0,81 = aprox 30kW
++ 30kW/12V = 2,5kA -> 10 baterias de 250Ah
