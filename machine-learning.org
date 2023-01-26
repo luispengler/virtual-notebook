@@ -1,0 +1,29 @@
+#+TITLE: Machine Learning
+#+DESCRIPTION: Machinen Learning
+#+SETUPFILE: https://luispengler.github.io/site/org-html-themes/org/theme-readtheorg.setup
+#+OPTIONS: num:nil ^:{} toc:1
+
+* Introduction
+So, my mentor gave me my first task to learn some stuff around NumPy, Panda, and Scikit-Learn until Sunday (today is Thursday). But he also said some stuff about watching StatQuest YouTube videos about Machine Learning
++ My mentor is [[https://scholar.google.com/citations?user=cHCDiIYAAAAJ][Dr. Abhijit Sen]], and we are starting research through the project [[https://www.ndeavours.org/][Ndeavours]]
++ Keep tuned for updates into what we are doing - I don't know yet because we just started, but it will have something to do with AI.
+
+* Decision Tree and Black Line
++ They are a simple machine learning method
++ Their purpose is to predict something, or classify someone/something
+** Deriving Machine Learning
++ With decision trees and black lines we can see that generaly machine learning is all about making predictions and classifications
+* Main ideas
++ The original data is called training data
++ The black line is fit to training data, but we could also use the green squiggle
++ But how much better is the green squiggle than the black line? To determine this we need testing data
++ The testing data is used to compare the predictions made by the black line to the predicitons made by the green squiggle
++ Summing the diference of the real data vs the predicted data by the black line and the green squiggle is a way we can tell which one predicts better (in ML we are more interested in a model predicting better than it fitting the training data better)
+** Summarizing
++ First, we use Testing Data to evaluate Machine Learning methods
++ Second, don't be fooled by how well a Machine Learning method fits the Training Data
++ Note: Fitting the Training Data well but making poor predictions is called the Bias-Variance Tradeoff
+
+* Resources
+** Videos
++ Playlist: [[https://youtube.com/playlist?list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF][Machine Learning]]

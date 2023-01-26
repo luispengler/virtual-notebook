@@ -6,9 +6,9 @@
 <!-- 2023-01-26 Thu 18:35 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Virtual Notebook</title>
+<title>Machine Learning</title>
 <meta name="author" content="Luís Spengler" />
-<meta name="description" content="luispengler.github.io/site - Official Site of Luís Spengler" />
+<meta name="description" content="Machinen Learning" />
 <meta name="generator" content="Org Mode" />
 <style>
   #content { max-width: 60em; margin: auto; }
@@ -203,57 +203,81 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Virtual Notebook</h1>
-<p>
-For nothing is better than being able to write, and read your notebook from anywhere you want!
-</p>
-
-<div id="outline-container-org66f0737" class="outline-2">
-<h2 id="org66f0737">Self studying subjects</h2>
-<div class="outline-text-2" id="text-org66f0737">
-<ul class="org-ul">
-<li><a href="https://luispengler.github.io/virtual-notebook/html/linear-algebra-intro.html">Intro to Linear Algebra</a>: &ldquo;<i>Linear algebra is the branch of mathematics concerning linear equations, and their representations through matrices and vector spaces.</i>&rdquo;</li>
-
-<li><a href="https://luispengler.github.io/virtual-notebook/html/quantum-computing.html">Intro to Quantum Computing</a>: &ldquo;<i>Quantum computing is a type of computation that harnesses the collective properties of quantum states, such as superposition, interference, and entanglement, to perform calculations.</i>&rdquo;</li>
-
-<li><a href="https://luispengler.github.io/virtual-notebook/html/particle-physics.html">Intro to Particle Physics</a>: &ldquo;<i>Particle physics is a branch of physics that studies the nature of the particles that constitute matter and radiation.</i>&rdquo;</li>
-
-<li><a href="https://luispengler.github.io/virtual-notebook/html/dave-on-modern-physics.html">Professor Dave on Modern Physics</a>: &ldquo;<i>Modern physics is a branch of physics that developed in the early 20th century and onward or branches greatly influenced by early 20th century physics.</i>&rdquo;</li>
+<h1 class="title">Machine Learning</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org16d7fd1">Introduction</a></li>
+<li><a href="#orgc133e37">Decision Tree and Black Line</a></li>
+<li><a href="#org3c6de36">Main ideas</a></li>
+<li><a href="#org62d909f">Resources</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgd51f889" class="outline-2">
-<h2 id="orgd51f889">School/College subjects</h2>
-<div class="outline-text-2" id="text-orgd51f889">
-</div>
-<div id="outline-container-org279d9ea" class="outline-3">
-<h3 id="org279d9ea">12th grade (in Portuguese &#x2013; I&rsquo;m sorry)</h3>
-<div class="outline-text-3" id="text-org279d9ea">
+<div id="outline-container-org16d7fd1" class="outline-2">
+<h2 id="org16d7fd1">Introduction</h2>
+<div class="outline-text-2" id="text-org16d7fd1">
+<p>
+So, my mentor gave me my first task to learn some stuff around NumPy, Panda, and Scikit-Learn until Sunday (today is Thursday). But he also said some stuff about watching StatQuest YouTube videos about Machine Learning
+</p>
 <ul class="org-ul">
-<li><a href="https://luispengler.github.io/virtual-notebook/html/12th-grade/maquinas-eletricas-2.html">Máquinas Elétricas e Acionamentos 2</a>: &ldquo;<i>Máquina síncronas: Princípios de funcionamento (motor e gerador). Tipos de acionamentos. Efeito no Fator de Potência. Métodos de controle. Máquina de indução: princípio de funcionamento (Monofásico e Trifásicos). Partes construtivas. Tipos de Acionamentos. Máquinas e motores especiais</i>&rdquo;</li>
+<li>My mentor is <a href="https://scholar.google.com/citations?user=cHCDiIYAAAAJ">Dr. Abhijit Sen</a>, and we are starting research through the project <a href="https://www.ndeavours.org/">Ndeavours</a></li>
+<li>Keep tuned for updates into what we are doing - I don&rsquo;t know yet because we just started, but it will have something to do with AI.</li>
+</ul>
+</div>
+</div>
 
-<li><a href="https://luispengler.github.io/virtual-notebook/html/12th-grade/biologia.html">Biologia 4</a>: &ldquo;<i>Verminoses humanas. Morfofisiologia Humana básica: sistema digestório, sistema respiratório, sistema circulatório, sistema excretor, sistema nervoso. IST’S – Infecções sexualmente transmissíveis. Ecologia: conceitos básicos. Fluxo de energia, cadeias e teias tróficas. Relações ecológicas: harmônicas e desarmônicas. Sucessão ecológica. Ciclos biogeoquímicos. Poluições</i>&rdquo;</li>
+<div id="outline-container-orgc133e37" class="outline-2">
+<h2 id="orgc133e37">Decision Tree and Black Line</h2>
+<div class="outline-text-2" id="text-orgc133e37">
+<ul class="org-ul">
+<li>They are a simple machine learning method</li>
+<li>Their purpose is to predict something, or classify someone/something</li>
+</ul>
+</div>
+<div id="outline-container-orgfbf82e8" class="outline-3">
+<h3 id="orgfbf82e8">Deriving Machine Learning</h3>
+<div class="outline-text-3" id="text-orgfbf82e8">
+<ul class="org-ul">
+<li>With decision trees and black lines we can see that generaly machine learning is all about making predictions and classifications</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org3c6de36" class="outline-2">
+<h2 id="org3c6de36">Main ideas</h2>
+<div class="outline-text-2" id="text-org3c6de36">
+<ul class="org-ul">
+<li>The original data is called training data</li>
+<li>The black line is fit to training data, but we could also use the green squiggle</li>
+<li>But how much better is the green squiggle than the black line? To determine this we need testing data</li>
+<li>The testing data is used to compare the predictions made by the black line to the predicitons made by the green squiggle</li>
+<li>Summing the diference of the real data vs the predicted data by the black line and the green squiggle is a way we can tell which one predicts better (in ML we are more interested in a model predicting better than it fitting the training data better)</li>
+</ul>
+</div>
+<div id="outline-container-orge35144f" class="outline-3">
+<h3 id="orge35144f">Summarizing</h3>
+<div class="outline-text-3" id="text-orge35144f">
+<ul class="org-ul">
+<li>First, we use Testing Data to evaluate Machine Learning methods</li>
+<li>Second, don&rsquo;t be fooled by how well a Machine Learning method fits the Training Data</li>
+<li>Note: Fitting the Training Data well but making poor predictions is called the Bias-Variance Tradeoff</li>
+</ul>
+</div>
+</div>
+</div>
 
-<li><a href="https://luispengler.github.io/virtual-notebook/html/12th-grade/sistemas-digitais.html">Sistemas Digitais e Microcontrolados</a>: &ldquo;<i>Circuitos digitais sequenciais. Registradores e memórias. Microcontroladores: características, arquitetura básica e Tipos. Noções de Programação e instruções básicas. Softwares e Kits didáticos. Familiarização com esquemas eletroeletrônicos. Desenvolvimento de projetos e aplicações práticas com o Microcontrolador. Projetos aplicados: Desenvolvimento de projetos práticos aplicados, visando a sistematização do conhecimento</i>&rdquo;</li>
-
-<li><a href="https://luispengler.github.io/virtual-notebook/html/12th-grade/historia.html">História 3</a>: &ldquo;<i>Trabalho e meio ambiente nas sociedades pré-industriais. Sociedades hidráulicas (Mesopotâmia e Egito). Escravidão na Antiguidade; Escravidão na modernidade; Escravidão e pós-abolição no Brasil. Os indígenas brasileiros e sua relação produtiva com a natureza. Servidão no período medieval. II - Terra, propriedade e conflitos. Propriedade privada e coletiva; Função social da terra. Feudalismo; Capitanias hereditárias; Lei de terras (1850).Início da República no Brasil; Movimentos sociais camponeses (Canudos, Contestado, MST). III - Trabalho, tecnologia e a sociedade capitalista. O que é Capitalismo? Primeira Revolução Industrial; Segunda Revolução Industrial e consequências contemporâneas. Trabalho infantil; Trabalho feminino; Lutas pelos direitos trabalhistas. Socialismo e Comunismo; Guerra Fria. Vargas e o trabalhismo, JK e a industrialização no Brasil. Sociedade de consumo. Meio Ambiente e Ecologia;</i>&rdquo;</li>
-
-<li><a href="https://luispengler.github.io/virtual-notebook/html/12th-grade/portuguese.html">Língua Portuguesa e Literatura Brasileira 5</a>: &ldquo;<i>Leitura e produção de textos: leitura e escrita; gêneros textuais argumentativos da esfera jornalística. Reflexão linguística: produção textual e argumentação; competência leitora e habilidades de leitura; orações complexas e grupos oracionais; fatores/critérios de textualidade. Literatura de Língua Portuguesa: Modernismo; Literaturas africanas de língua portuguesa.</i>&rdquo;</li>
-
-<li><a href="https://luispengler.github.io/virtual-notebook/html/12th-grade/matematica.html">Matemática 5</a>: &ldquo;<i>Geometria Plana. Polígonos regulares inscritos na circunferência. Área de regiões determinadas por polígonos. Área de regiões circulares. Geometria Espacial. Sólidos Geométricos. Poliedros (prismas e pirâmides). Corpos redondos (cones, cilindros, esfera</i>&rdquo;</li>
-
-<li><a href="https://luispengler.github.io/virtual-notebook/html/12th-grade/quimica-4.html">Química 4</a>: &ldquo;<i>Introdução à Química Orgânica. Funções Orgânicas. Isomeria plana e espacial. Reações Orgânicas. Polímeros</i>&rdquo;</li>
-
-<li>Pneumática e Hidráulica: &ldquo;<i>Fundamentos da mecânica dos fluidos. Componentes hidráulicos e pneumáticos. Características e diferenças entre circuitos pneumáticos e hidráulicos. Linhas pneumáticas e hidráulicas. Automação com circuitos pneumáticos e hidráulicos.</i>&rdquo;</li>
-
-<li><a href="https://luispengler.github.io/virtual-notebook/html/12th-grade/instalacoes-industriais.html">Instalações Elétricas Industriais</a> &ldquo;<i>Luminotécnica: lâmpadas, luminárias e acessórios (reatores, relés fotoelétricos, sensores de presença, dimmers); Cálculo luminotécnico - Método dos Lúmens. Dados nominais de motores elétricos de indução; dimensionamento de condutores (Revisão e aplicação do Critério do Limite de Queda de Tensão); dimensionamentos de eletrocalhas; cálculo de demanda para dimensionamento de quadros de distribuição; noções de corrente de curto-circuito; dimensionamentos de disjuntores termomagnéticos através da análise de curvas de atuação.</i>&rdquo;</li>
-
-<li><a href="https://luispengler.github.io/virtual-notebook/html/12th-grade/instrumentacao-controle.html">Instrumentação e Controle</a>: &ldquo;<i>Instrumentação Industrial. Processos (características). Principais Grandezas físicas na instrumentação Industrial. Classificação dos instrumentos. Simbologia na instrumentação (diagramas P&amp;I). Conceitos básicos de controle de processos. Princípios de controle (malha aberta e fechada). Noções do controle (P, PI, PID). Sensores industriais. Condicionamento de sinais. O amplificador operacional e suas aplicações. Circuitos de condicionamento com o Amplificador operacional. Projetos práticos aplicados visando a sistematização do conhecimento</i>&rdquo;</li>
-
-<li><a href="https://luispengler.github.io/virtual-notebook/html/12th-grade/meio-ambiente.html">Meio Ambiente e Energias Renováveis</a>:&ldquo;<i>Conceito de Energia e fontes de energia. Política e Gestão ambiental de energias renováveis. Energias renováveis: conceitos gerais e tipos. Fundamentos da Energia Solar Fotovoltaica. Tecnologia Fotovoltaica: módulos, Arranjos, Células. Boas práticas em sistemas de geração fotovoltaica. Mercado de energia</i>&rdquo;</li>
-
-<li>Educação Física 5: &ldquo;<i>Bases técnicas e táticas de esportes coletivos 4; atividade física e exercício físico 2; expressão corporal e atividades rítmicas 1; lutas 2.</i>&rdquo;</li>
+<div id="outline-container-org62d909f" class="outline-2">
+<h2 id="org62d909f">Resources</h2>
+<div class="outline-text-2" id="text-org62d909f">
+</div>
+<div id="outline-container-org6ac4b3d" class="outline-3">
+<h3 id="org6ac4b3d">Videos</h3>
+<div class="outline-text-3" id="text-org6ac4b3d">
+<ul class="org-ul">
+<li>Playlist: <a href="https://youtube.com/playlist?list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF">Machine Learning</a></li>
 </ul>
 </div>
 </div>
