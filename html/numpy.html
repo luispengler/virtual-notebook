@@ -6,8 +6,9 @@
 <!-- 2023-01-26 Thu 17:51 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Lista1 - 29/08</title>
+<title>NumPy - Learning some basics</title>
 <meta name="author" content="Luís Spengler" />
+<meta name="description" content="NumPy - Learning some basics" />
 <meta name="generator" content="Org Mode" />
 <style>
   #content { max-width: 60em; margin: auto; }
@@ -193,25 +194,159 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
 </style>
+<link rel="stylesheet" type="text/css" href="https://luispengler.github.io/site/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://luispengler.github.io/site/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="httpss://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="httpss://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://luispengler.github.io/site/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://luispengler.github.io/site/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Lista1 - 29/08</h1>
+<h1 class="title">NumPy - Learning some basics</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orge45c8be">1. Ex</a></li>
+<li><a href="#orgb470d01">Introduction</a></li>
+<li><a href="#org8d6e1bd">What is NumPy?</a></li>
+<li><a href="#org6e86802">Some code I followed along with</a></li>
+<li><a href="#org564ef59">Resources</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orge45c8be" class="outline-2">
-<h2 id="orge45c8be"><span class="section-number-2">1.</span> Ex</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-orgb470d01" class="outline-2">
+<h2 id="orgb470d01">Introduction</h2>
+<div class="outline-text-2" id="text-orgb470d01">
+<p>
+So, my mentor gave me my first task to learn some stuff around NumPy, Panda, and Scikit-Learn until Sunday (today is Thursday).
+</p>
 <ul class="org-ul">
-<li>14,7,4,3,14,2,8,3,5,13,8,9,12</li>
+<li>My mentor is <a href="https://scholar.google.com/citations?user=cHCDiIYAAAAJ">Dr. Abhijit Sen</a>, and we are starting research through the project <a href="https://www.ndeavours.org/">Ndeavours</a></li>
+<li>Keep tuned for updates into what we are doing - I don&rsquo;t know yet because we just started, but it will have something to do with AI.</li>
 </ul>
+</div>
+</div>
+
+<div id="outline-container-org8d6e1bd" class="outline-2">
+<h2 id="org8d6e1bd">What is NumPy?</h2>
+<div class="outline-text-2" id="text-org8d6e1bd">
+<ul class="org-ul">
+<li>A multi-dimensional array library, meaning you can use it to store all sorts of data, in 1D arrays up to 3D arrays (I guess you could go more, but I don&rsquo;t know if it&rsquo;s true)</li>
+</ul>
+</div>
+<div id="outline-container-org2e7929e" class="outline-3">
+<h3 id="org2e7929e">NumPy vs Lists</h3>
+<div class="outline-text-3" id="text-org2e7929e">
+<ul class="org-ul">
+<li>Lists are slow and NumPy fast</li>
+<li>NumPy uses Fixed Type -&gt; it stores all data into a 32 bit memory (int32), and you can specify other bit values for saving (int16, int8 for example)</li>
+<li>Lists uses a built-in inttype for python that contains four different things (object value, object type, reference count, and size)</li>
+</ul>
+</div>
+<div id="outline-container-org7088bf3" class="outline-4">
+<h4 id="org7088bf3">Representing 5</h4>
+<div class="outline-text-4" id="text-org7088bf3">
+<ul class="org-ul">
+<li>So as an example, 5 that can be read as 00000101 in bynary is represented with</li>
+<li>3 empty bytes + 00000101 in NumPy</li>
+<li>3 int64 + 3 empty bytes + 00000101 in Lists</li>
+<li>The difference in memory is huge!</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb17841d" class="outline-4">
+<h4 id="orgb17841d">Takeaway</h4>
+<div class="outline-text-4" id="text-orgb17841d">
+<ul class="org-ul">
+<li>NumPy is faster to read less bytes of memory</li>
+<li>No type checking when interating through objects</li>
+<li>NumPy also utilizes contiguous memory (not gonna explain it here)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge340aa2" class="outline-4">
+<h4 id="orge340aa2">The difference in utilzation</h4>
+<div class="outline-text-4" id="text-orge340aa2">
+<ul class="org-ul">
+<li>In Lists you can do Insertion, deletion, appending, concatenation, etc.</li>
+</ul>
+
+<p>
+<code>a = [1,3,5]</code>
+<code>b = [1,2,3]</code>
+<code>a*b = ERROR</code>
+</p>
+
+<ul class="org-ul">
+<li>In NumPy you can do Insertion, deletion, appending, concatenation, etc + Lost More</li>
+</ul>
+
+<p>
+<code>a = np.array([1,3,5])</code>
+<code>b = np.array([1,2,3])</code>
+<code>a*b = np.array([1,6,15])</code>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7c8c853" class="outline-3">
+<h3 id="org7c8c853">Applications</h3>
+<div class="outline-text-3" id="text-org7c8c853">
+<ul class="org-ul">
+<li>A MATLAB Replacement (maybe)</li>
+<li>Plotting (Matplotlib)</li>
+<li>Backend (Pandas, Connect 4, Digital Photography) -&gt; Guess I will be learning it primarly for Pandas</li>
+<li>Machine Learning -&gt; Guess I will be learning it for this reason</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6e86802" class="outline-2">
+<h2 id="org6e86802">Some code I followed along with</h2>
+<div class="outline-text-2" id="text-org6e86802">
+<pre class="example">
+#!/usr/bin/env python3
+
+# Load in NumPy (remember to pip install numpy first)
+import numpy as np
+
+# The Basics
+a = np.array([1,2,3], dtype='int16' )
+print(a)
+b = np.array([[9.0,8.0,7.0], [6.0,5.0,4.0]])
+print(b)
+# Get Dimension
+print(a.ndim)
+# Get Shape
+print(b.shape)
+# Get Type
+print(a.dtype)
+print(b.dtype)
+# Get Size
+print(a.itemsize)
+print(b.itemsize)
+# Get total size
+print(a.size * a.itemsize) # or using:
+print(a.nbytes)
+
+</pre>
+</div>
+</div>
+<div id="outline-container-org564ef59" class="outline-2">
+<h2 id="org564ef59">Resources</h2>
+<div class="outline-text-2" id="text-org564ef59">
+</div>
+<div id="outline-container-org24cef59" class="outline-3">
+<h3 id="org24cef59">Videos</h3>
+<div class="outline-text-3" id="text-org24cef59">
+<ul class="org-ul">
+<li>Python NumPy Tutorial for Beginners</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
