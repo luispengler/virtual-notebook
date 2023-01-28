@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-01-26 Thu 18:35 -->
+<!-- 2023-01-27 Fri 20:10 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Machine Learning</title>
@@ -211,6 +211,9 @@
 <li><a href="#org16d7fd1">Introduction</a></li>
 <li><a href="#orgc133e37">Decision Tree and Black Line</a></li>
 <li><a href="#org3c6de36">Main ideas</a></li>
+<li><a href="#orgf9f43c4">Cross Validation</a></li>
+<li><a href="#org79056ef">The Confusion Matrix</a></li>
+<li><a href="#org6c45282">Sensitivity and Specificity</a></li>
 <li><a href="#org62d909f">Resources</a></li>
 </ul>
 </div>
@@ -269,6 +272,61 @@ So, my mentor gave me my first task to learn some stuff around NumPy, Panda, and
 </div>
 </div>
 
+<div id="outline-container-orgf9f43c4" class="outline-2">
+<h2 id="orgf9f43c4">Cross Validation</h2>
+<div class="outline-text-2" id="text-orgf9f43c4">
+<ul class="org-ul">
+<li>It allows us to compare different machine learning methods and get a sense of how well they will work in practice</li>
+<li>For the example in the video (2/87) we could use Logistic Regression, support vector machines (SVM), K-nearest neighbors, etc</li>
+</ul>
+</div>
+<div id="outline-container-org99327e3" class="outline-3">
+<h3 id="org99327e3">Why we need the data</h3>
+<div class="outline-text-3" id="text-org99327e3">
+<ul class="org-ul">
+<li>For training the machine learning methods and testing the machine learning methods</li>
+<li>We shouldn&rsquo;t use all the data to train the ML method, neither reuse the same data for training and testing</li>
+<li>A better idea would be to use the first 75% of the data for training and 25% of the data for testing, so that we could then compare methods by seeing how weel each one catagorized the test data</li>
+<li>But is using the first 75% for training and 25% at the bottom for testing the best idea? Well, it won&rsquo;t matter much answering this question since cross validation in practice tries different ways of dividing the data for each ML method and summarizes the results at the end</li>
+<li>In this example, diving the data into 4 blocks is called Four-Fold Cross Validation. In an extreme case, we could call each individual sample a block, and this would be called &ldquo;Leave One Out Cross Validation&rdquo;. In practice, it is very common to divide the data into 10 blocks. This is called Ten-Fold Cross Validation</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org79056ef" class="outline-2">
+<h2 id="org79056ef">The Confusion Matrix</h2>
+<div class="outline-text-2" id="text-org79056ef">
+<ul class="org-ul">
+<li>It is simply a way of telling if the ML algorithm predicted the output correctly.</li>
+<li>In the left side of the table we use the prediction row. In the top part of the table we use the actual line. Therefore, diagonally you are going to have only the results truly predicted by the ML algorithm and anything else would be a wrong prediction</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6c45282" class="outline-2">
+<h2 id="org6c45282">Sensitivity and Specificity</h2>
+<div class="outline-text-2" id="text-org6c45282">
+<ul class="org-ul">
+<li>We can use them to help us decide which machine learning method would be best for our data</li>
+<li>Used in the Confusion Matrix. Remember: rows correspond to what was predicted and columns correspond to the known truth</li>
+<li>Sensitivity (in the example of heart disease identification) tells us what percentage of these patients (w/ heart disease) were correctly identified -&gt; Sensitivity = True Positives / (True Positives + False Negatives)</li>
+<li>Specificity tells us what percentage of these patients without heart disease were correctly identified -&gt; Specificity = True Negatives / (True Negatives + False Positives)</li>
+<li>If correctly identifying positives is the most important thing to do with the data, we should choose a method with higher sensitivity</li>
+<li>Otherwise (correctly identifying negative) then we should be more emphatic on the specificity</li>
+</ul>
+</div>
+<div id="outline-container-org4a2de17" class="outline-3">
+<h3 id="org4a2de17">With larger confusion matrices</h3>
+<div class="outline-text-3" id="text-org4a2de17">
+<ul class="org-ul">
+<li>For larger confusion matrices that are no single values of sensitivity and specificity that work for the entire matrix</li>
+<li>Instead, we calculate a different sensitivity and specificity for each category</li>
+</ul>
+</div>
+</div>
+</div>
+
 <div id="outline-container-org62d909f" class="outline-2">
 <h2 id="org62d909f">Resources</h2>
 <div class="outline-text-2" id="text-org62d909f">
@@ -285,7 +343,7 @@ So, my mentor gave me my first task to learn some stuff around NumPy, Panda, and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luís Spengler</p>
-<p class="date">Created: 2023-01-26 Thu 18:35</p>
+<p class="date">Created: 2023-01-27 Fri 20:10</p>
 </div>
 </body>
 </html>

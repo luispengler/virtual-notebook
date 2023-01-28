@@ -24,6 +24,31 @@ So, my mentor gave me my first task to learn some stuff around NumPy, Panda, and
 + Second, don't be fooled by how well a Machine Learning method fits the Training Data
 + Note: Fitting the Training Data well but making poor predictions is called the Bias-Variance Tradeoff
 
+* Cross Validation
++ It allows us to compare different machine learning methods and get a sense of how well they will work in practice
++ For the example in the video (2/87) we could use Logistic Regression, support vector machines (SVM), K-nearest neighbors, etc
+** Why we need the data
++ For training the machine learning methods and testing the machine learning methods
++ We shouldn't use all the data to train the ML method, neither reuse the same data for training and testing
++ A better idea would be to use the first 75% of the data for training and 25% of the data for testing, so that we could then compare methods by seeing how weel each one catagorized the test data
++ But is using the first 75% for training and 25% at the bottom for testing the best idea? Well, it won't matter much answering this question since cross validation in practice tries different ways of dividing the data for each ML method and summarizes the results at the end
++ In this example, diving the data into 4 blocks is called Four-Fold Cross Validation. In an extreme case, we could call each individual sample a block, and this would be called "Leave One Out Cross Validation". In practice, it is very common to divide the data into 10 blocks. This is called Ten-Fold Cross Validation
+
+* The Confusion Matrix
++ It is simply a way of telling if the ML algorithm predicted the output correctly.
++ In the left side of the table we use the prediction row. In the top part of the table we use the actual line. Therefore, diagonally you are going to have only the results truly predicted by the ML algorithm and anything else would be a wrong prediction
+
+* Sensitivity and Specificity
++ We can use them to help us decide which machine learning method would be best for our data
++ Used in the Confusion Matrix. Remember: rows correspond to what was predicted and columns correspond to the known truth
++ Sensitivity (in the example of heart disease identification) tells us what percentage of these patients (w/ heart disease) were correctly identified -> Sensitivity = True Positives / (True Positives + False Negatives)
++ Specificity tells us what percentage of these patients without heart disease were correctly identified -> Specificity = True Negatives / (True Negatives + False Positives)
++ If correctly identifying positives is the most important thing to do with the data, we should choose a method with higher sensitivity
++ Otherwise (correctly identifying negative) then we should be more emphatic on the specificity
+** With larger confusion matrices
++ For larger confusion matrices that are no single values of sensitivity and specificity that work for the entire matrix
++ Instead, we calculate a different sensitivity and specificity for each category
+
 * Resources
 ** Videos
 + Playlist: [[https://youtube.com/playlist?list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF][Machine Learning]]

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-01-26 Thu 18:35 -->
+<!-- 2023-01-27 Fri 20:10 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>NumPy - Learning some basics</title>
@@ -445,9 +445,65 @@ b[0] = 100
 print(a)
 </pre>
 
+
 <ul class="org-ul">
 <li>The rest are jupyter notebooks, which are very bad to paste here :(</li>
 </ul>
+</div>
+
+<div id="outline-container-org3cecb32" class="outline-3">
+<h3 id="org3cecb32">Code I followed with codemy.com</h3>
+<div class="outline-text-3" id="text-org3cecb32">
+<pre class="example">
+#!/usr/bin/env python3
+
+import numpy as np
+
+list1 = [1,2,3,4,5]
+#print(list1)
+#print(list1[0])
+
+list2 = ["John Elder", 41, list1, True]
+#print(list2)
+
+# Numpy - Numeric Python
+# ndarray = n-dimensional array
+
+np1 = np.array([0,1,2,3,4,5,6,7,8,9])
+print(np1)
+print(np1.shape)
+
+# Range
+np2 = np.arange(10)
+print(np2)
+
+# Step
+np3 = np.arange(0,10,2)
+print(np3)
+
+# Zeros
+np4 = np.zeros(10)
+print(np4)
+
+# Multidimensional zeros
+np5 = np.zeros((2,10))
+print(np5)
+
+# Full
+np6 = np.full((10), 6)
+print(np6)
+
+# Multidimensional full
+np7 = np.full((2,10), 6)
+print(np7)
+
+# Convert Python lists to np
+my_list = [1,2,3,4,5]
+np8 = np.array(my_list)
+print(np8)
+print(np8[0])
+</pre>
+</div>
 </div>
 </div>
 <div id="outline-container-org564ef59" class="outline-2">
@@ -467,7 +523,7 @@ print(a)
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luís Spengler</p>
-<p class="date">Created: 2023-01-26 Thu 18:35</p>
+<p class="date">Created: 2023-01-27 Fri 20:10</p>
 </div>
 </body>
 </html>
