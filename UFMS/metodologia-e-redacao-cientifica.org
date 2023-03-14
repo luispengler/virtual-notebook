@@ -1,0 +1,6 @@
+#+TITLE: Metodologia e Redação Cientifica
+#+DESCRIPTION: Metodologia e Redação Científica - Meu caderno virtual
+#+SETUPFILE: https://luispengler.github.io/site/org-html-themes/org/theme-readtheorg.setup
+#+LaTeX_+HEADER: \usepackage{physics}
+#+LaTeX_+HEADER: \usepackage{amsmath}
+#+OPTIONS: num:nil ^:{} toc:2

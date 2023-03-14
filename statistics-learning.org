@@ -1,0 +1,239 @@
+#+TITLE: Statistics Learning
+#+DESCRIPTION: Statistics Learning
+#+SETUPFILE: https://luispengler.github.io/site/org-html-themes/org/theme-readtheorg.setup
+#+OPTIONS: num:nil ^:{} toc:1
+
+* Introduction
+So, my mentor gave me my second task to get the most out of "An Introduction to Statistical Learning - with Applications in R" chapters 1-4, and 10. The dataset to be used is a Acorrelation between scores and hours.
++ My mentor is [[https://scholar.google.com/citations?user=cHCDiIYAAAAJ][Dr. Abhijit Sen]], and we are starting research through the project [[https://www.ndeavours.org/][Ndeavours]]
++ Keep tuned for updates into what we are doing - I don't know yet because we just started, but it will have something to do with AI.
+
+* Notes
+** Introduction Chapter
++ When we want to predict a non-numerical value, i.e. a categorical or qualitative output, the kind of problem it constitutes is known as a Classification Problem.
++ If we are not trying to predict anything, i.e. not output, the kind of problem it constitutes is known as a clustering problem - for indicated reading I will not study this
++ "No single approach will perform well in all possible applications"
++ This chapter provides useful information on the representation of math in the textbook - ref to it if needed
+** Second Chapter
++ Inputs can be called predictors, independent variables, features, variables
++ Output can be called response, dependent variable
++ Relationship of input and output can be seen:
+  \[Y = f(X) + \epsilon\]
++ Above, f is some fixed but unknown function of \[X_{1}, ...., X_{p}\], and \[\epsilon\] is a random error term, and has mean zero.
++ The function f may involve more than one input variable
++ Statistical learning refers to a set of approaches for estimating f.
+*** Why estimate f?
++ Two main reasons: prediction and inference
++ Linear models allow for relatively simple and interpretable interference, but might not accuratly predict \[Y\]. Some non-linear models present the oppost outcome to linear ones.
+**** Prediction
+\[\hat{Y} = \hat{f}(X)\]
++ The formula above is used to predict the value of \[Y\]. \[\hat{f}\] represents our estimate of \[f\], and \[\hat{Y}\] represents the resulting prediction for \[Y\]. In this setting, \[\hat{f}\] is often treated as a black box, because we are not concerned with its form, as long as it accuratly predicts \[Y\].
++ The accuracy of \[\hat{Y}\] as a prediction depends on two quantities that the book calls reducible error and irreducible error; the reducible comes from the different between \[\hat{f}\] and \[f\]. This error is reducible because we can improve the accuracy of \[\hat{f}\] using a more appropriate statistical learning technique. The irreducible comes from the dependence of \[Y\] in \[\epsilon\], and this last quantity may contain unmeasured variables that are useful for predicting \[Y\], and since we didn't measure them, the \[Y\] prediction will not be at its best...
++ The book focuses on techniques for estimating \[f\] while minimazing the reducible error (because it is possible!)
+**** Inference
++ It tries to understand the association between \[Y\] and \[X_{1},....,X_{p}\]. We want to understand the relationships between the response and its predictors, and it questions various aspects of this relationship.
+*** How do we estimate f?
++ We want to find a function \[^{f}\] such that \[Y \approx \hat{f}(X)\] for any observation \[(X,Y)\]. Most statistical learning methods for this can be categorized as either paremetric or non-parametric.
+**** Parametric
++ It makes assumptions about the form (shape) of \[f\]. Assuming, for example, it is linear, the problem gets simplified to the point where we only need to estimate the \[p + 1\] coefficients of \[\beta_{0}, \beta_{1},....,\beta_{p}\]. In summary, this model-based approach reduces the problem of estimating \[f\] down to one of estimating a set of parameters.
+**** Non-parametric
++ Doesn't make assumptions about the form of \[f\], seeking an estimate that gets as close to the data points as possible without being too rough or wiggly. Although it requires a much larger number of observations than the parametrics, they have are very likely to get close to the true form of \[f\].
+*** The Trade-Off Between Prediction Accuracy and Model Interpretability
++ In general, as the flexibility of a method increases, its interpretability decreases
++ If we are more interested in inference, then restrictive models are much more interpretable and better for it
++ Least squares linear regression is relatively inflexible but is quite interpretable
++ When we want to predict, it is intuitive that we think we need the most flexible model available. However, this is not always the case due to overfitting of data.
+
+*** Regression versus Classification Problems
++ It is a tendency to refer to quantitative response problems as regression problems, and qualitative ones as classification problems. Even though we might choose a model based on the response type we have, the predictor type doesn't have that much importance, provided we coded it prior to the analysis.
+
+*** Assessing Model Accuracy
++ There is no model that works best for every type of problem out there. Therefore, it is necessary to select the best one that works out for the specific problem you are working with, and this is one of the most challenging parts of performing statistical learning.
+**** Measuring the Quality of Fit
++ To quantify the extent to which the predicted response value for a given observation is close to the true response for that observation we commonly use the mean squared error (MSE):
+\[MSE = \frac{1}{n} \sum\limits_{i=1}^n (y_{i} - \hat{f}(x_{i}))^2\]
++ The MSE will be small if the predicted responses are very close to the true responses, and will be large for some observations that the predicted and true responses differ substantially
++ The formula shown above is computed using the training data, but in reality we don't really care how well our model makes predictions on training data, rather we are interested in the accuracy of the predictions that we obtain when we apply our method to previously unseen test data
++ We want to choose the method that gives the lowest test MSE, as opposed to the lowest training MSE
+**** Measuring the test MSE
+\[Ave(y_{0} - \hat{f}(x_{0}))^2\]
++ We would like to select a model for which this quantity is as small as possible
++ To do that, in some settings we may have a test dataset available, so we use that data we use the method that gives use the lowest test MSE possible
++ If there is no available test dataset, should we apply the method the minimizes the training MSE? Well, there is no guarantee that the method with the lowest training MSE will also have the lowest test MSE. Many statistical learning methods also try to minimize the training MSE, but the test MSE often ends up being much largert
++ To solve this problem, we can even use some of the training data as the testing data. This is known as cross-validation
++ As model flexibility increases, training MSE will decrease, but the test MSE may not
+**** Overfitting
++ When a given method gives a small training MSE but a large test MSE we say we are overfitting the data.
++ Our statistical learning procedure is trying to hard to find patterns in the data that don't exist, patterns caused by random chance rather than the true unknown function f
+**** The Bias-Variance Trade-Off
++ In order to minimize the expected test error, we need to select a statistical learning method that simultaneously achieves low variance and low bias.
++ Variance refers to the amount \[\hat{f}\] would change if we estimated it using different training data. Ideally, the estimate for \[\hat{f}\] should not very much between training sets. If a method has high variance, then small changes in the training set can result in large changes in \[\hat{f}\]. In general, more flexible statistical methods have higher variance
++ Bias refers to the error that is introduced in approximating a real-life problem, which may be extremely complicated, by a much simpler model. Generally, more flexible statistical methods result in less bias.
++ Generalizing, as we use more flexible methods, the variance will increase and the bias will decrease. As we increase the flexibility of a class of methods, the bias tends to initially decrease faster than the variance increases, meaning the expected test MSE declines. However, at some point increasing flexibility has little impact on the bias but starts to significantly increase the variance, then the expected test MSE increases. This is known as the Bias-Variance Trade-Off.
++ Good test set performance of a statistical learning method requires low variance as well as low squared bias. It is refered to as a trade-off, because it is extremely easy to obtain a method with extremly low bias but high variance, or a method with very low variance but high bias. The challenge is finding a method for which both the variance and the squared bias are low.
+**** The Classification Setting
++ Many of the concepts discussed so far (like the bias-variance trade-off) transfer over to the classification setting, with the some modifications due to the fact the \[y_{i}\] is now qualitative
++ The most common approach for quantifying the accuracy of our estimate \[\hat{f}\] is the training error rate
+\[ \frac{1}{n} \sum\limits_{i=1}^n I(\hat y_{i} \neq \hat y_{i})^2\]
++ \[\hat{y}\] is the predicted class label for the \[i\]th observation using \[\hat{f}\]. \[I(\hat y_{i} \neq \hat y_{i})^2\] is an indicator variable that equals 1 if \[\hat y_{i}\] and \[\hat y_{i}\] differ, and it equals 0 if \[\hat y_{i} = \hat y_{i}\]. If \[I(\hat y_{i} \neq \hat y_{i})^2 = 0\] then ith observation was classified correctly, otherwise it was misclassified. Then, the equation above computes the fraction of incorrect classifications. Its name is training error rate, because it is applied to training data. Just like in regression setting, here we are also more interested in the predictions, therefore test error rate will be more useful.
+\[Ave(I(\hat y_{0} \neq \hat y_{0}))\]
++ A good classifier is one for which the test error given by the above equation is smallest;
++ The test error given by the above equation is minimized, on average, by a very simple classifier that assigns each observation to the most likely class, given its predictor values. Simply put, if you had to estimate if X belongs to Brazil or Argentina, the frontier between two countries corresponds to what is known as Bayes decision boundary. In this boundary, the chance of belonging to either side is 50%, and if X is in Brazil, this region is assigned as > 50%.
++ The Bayes classifier produces the lowest possible test error rate, called Bayes error rate, and it is analogous to the irreducible error
++ In theory we would always like to use the Bayes classifier, but for real data, we don't know the conditional distribution of \[Y\] given \[X\], so computing the Bayes classifier is impossible.
++ Therefore, it remains an unattainable gold standard to which we compare other methods. Many approaches try to estimate the conditional distribution of \[Y\] given \[X\], and then classify a given observation to the class with the highest estimated probability. One such method is the K-nearest neighbors (KNN) classifier.
+**** The K-Nearest Neighbors (KNN) classifier
++ The KNN takes a parameter known as \[K\]. So if \[K=3\], in a dataset, it will get the three closest points to what you are trying to predict, and will determine whether or not what you are trying to predict belongs to a certain classification based on the classification of the three closest points (Because \[K=3\]). If two of the three points are blue, and only one is orange, the KNN will tell you the point you are trying to predict is also blue.
++ It is a very simple approach, but it can yield results very close to the Bayes classifier
++ The choice of what \[K\] equals to has drastic effect on the results obtained. If smaller, it is more flexible, and larger, less flexibile. The small K corresponds to a classifier with low bias but very high variance, a large one corresponds to higher bias but lower variance.
++ In both the regression and classification settings, choosing the correct level of flexibility is critical to the success of any statistical learning method.
+
+** Third Chapter
+*** Simple Linear Regression
++ A straightforward approach for predicting a quantitative response \[Y\] on the basis of a single predictor variable \[X\]. It is mathematically written as
+\[Y \approx \beta_{0} + \beta_{1}X\]
++ We can also say that we are regressing Y on X
+**** Estimating the Coefficients
++ When making predictions, we can rewrite the above equation as (note the \[\beta\] have hat symbols on)
+\[\hat{y} = \hat\beta_{0} + \hat\beta_{1}x\]
++ The hat symbols on top of \[\beta\] mean they are unknown parameters (they can also be used to indicate predictions such as \[\hat{y}\])
++ \[\beta_{0}\] is the intercept, and \[\beta_{1}\] is the slope
++ When estimating those coefficients, we want them to be as close as possible to all n data points we have. There are a number of ways of measuring closeness, but the most common approach consists of minimizing the least squares criterion
+**** Assessing the Accuracy of the Coefficient Estimates
++ If \[f\] is to approximated by a linear function, then we can write this relationship as
+\[Y = \beta_{0} + \beta{1}X + \epsilon\]
++ The error term, \[\epsilon\], is a catch-all for what we miss with this simple model: the true relationship is not linear, there may be other variables that cause variation in Y, and there may be measurement error. We then assume the error term is independent of X. The model given by the eq above defines the population regression line, which is the best linear approximation to the true relationship between X and Y.
++ The least squares regression coefficient estimates (eq which i did not show here) characterize the least squares line (given by  \[\^y = \beta_{0} + \beta_{1}x\]) (note the \[\beta\] have hat symbols on)
++ In real applications, we have access to a set of observations from which we can compute the least squares line, however the population regression is unobserved
++ We can think of the least squares as an analogy to the mean of a sample. The sample is smaller than the population, therefore, deriving the mean from it is different than deriving the mean from the population. An avarage of the sample mean over many data sets, however, will be very close to the population mean. In another situation, a single estimate of the sample mean may be a substantial understimate or overstimate of the population mean. We can even calculate how far this estimate will be with the formula below
+\[Var({\hat\mu}) = SE(\hat\mu)^2 = \frac{\sigma^2}{n}\]
++ This formula gives us the standard error of \[\hat\mu\], written as \[SE(\hat \mu)\]. \[\sigma\] is the standard deviation of each of the realizations of \[y_{i}\] of \[Y^2\]. This means that the standard error tells us the avarage amount that this estimate \[\hat \mu\] differs from the actual value of \[\mu\]. To compute the standard error associated with \[\hat \beta_{0}\] and \[\hat \beta_{1}\] we can use some bigger formulas which I will not write here but you can find them on the book as 3.8
++ In general, \[\sigma^2\] is not known, but can be estimated from the data. This estimate of \[\sigma\] is known as the residual standard error, and it is given by the formula
+\[RSE = \sqrt{RSS/(n-2)}\]
++ We should also write \[\hat SE(\hat \beta_{1})\] to indicate that \[\sigma^2\] was estimated from the data.
++ Standard errors can be used to compute confidence intervals. A 95% confidence interval has the following property: if we take repeated samples and construct the confidence interval for each sample, 95% of the intervals will contain the true unknown value of the paramter. Of course, the greater the range of values, the higher the confidence.
++ For linear regression, the 95\% confidence interval for \[\beta_{1}\] approximately takes the form
+\[\hat \beta_{1} \pm 2\cdot SE(\beta_{1})\]
++ This means that this interval has approximately a 95\% chance to contain the true value of \[beta_{1}\]. The same relation here applies for \[\hat \beta_{0}\].
++ This part of the book is addressing the hypothesis test on the coefficients, and I didn't stop to understand much of it so I am not writting it here. What I got that is important is the p-value
++ I have heard of the p-value before, and I was always curious to understand what it meant. I think I finally got a grasp of it when I read:
+#+BEGIN_QUOTE
+a small p-value indicates that it is unlikely to observe such a substantial association between the predictor and the response due to chance, in the absence of any real association between the predictor and the response. Hence, if we see a small p-value, then we can infer that there is an association between the predictor and the response.
+#+END_QUOTE
++ To sum up, small enough p-values tell us that there is a relationship between \[X\] and \[Y\]. Typical values are 5\% or 1\%;
+**** Assessing the Accuracy of the Model
++ After we determined the p-value is small enough for us to procede believing in a relationship between \[X\] and \[Y\], we will want to quantify the extent to which the model fits the data.
++ The quality of a linear regression fit is typically assessed using two related quantities: the residual standard error (RSE) and the \[R^2\] statistic
++ The RSE is the avarage amount that the response will deviate from the true regression line. This measure is considered a measure of the lack of fit of the model to the data. It attempts to calculate how far off we would be in our predictions, even if we knew exactly the values of \[\beta_{0}\] and \[\beta_{1}\]
++ In summary, if \[\hat y_{i} \approx y_{i}\] then the RSE will be small, and if \[\hat y_{i}\] is far away, then the RSE may be quite large.
++ RSE provides an absolute measure of lack of fit of the model to the data. However, it is measured in units of \[Y\], so it is not always clear what constitutes a good RSE. To solve this problem, we can look at the \[R^2\] statistic.
++ An \[R^2\] statistic close to 1 indicates that a large proportion of the variability in the response is explained by the regression, however a number closer to 0 indicates that this regression does not explain much of the variability in the response. The latter happens when the model is wrong, or the error variance \[\sigma^2\] is high, or both.
+*** Multiple Linear Regression
++ We can modify our linear regression equation:
+\[Y = \beta_{0} + \beta_{1}X\]
++ to now accomodate p predictors:
+\[Y = \beta_{0} + \beta_{1}X_{1} = \beta_{2}X_{2} + ... + \beta_{p}X_{p}\]
+**** Estimating the Regression Coefficients
++ As in linear regression, our coefficients are unknown and must be estimated. We can make the predictions modifying the last formula to:
+\[\hat y = \hat \beta_{0} + \hat \beta_{1}X_{1} = \hat \beta_{2}X_{2} + ... + \hat \beta_{p}X_{p}\]
++ The parameters are estimated using the same least squares approach used in the context of linear regression
+**** Some Important Questions
+1. Is at least one of the predictors \[X_{1}, X_{2}, . . . , X_{p}\] useful in predicting the response?
+2. Do all the predictors help to explain Y , or is only a subset of the predictors useful?
+3. How well does the model fit the data?
+4. Given a set of predictor values, what response value should we predict, and how accurate is our prediction?
+**** Potential Problems
++ When we fit a linear regression model to a particular data set, many problems may occur. Most common among these are the following:
+1. Non-linearity of the response-predictor relationships
+2. Correlation of error terms.
+3. Non-constant variance of error terms.
+4. Outliers.
+5. High-leverage points.
+6. Collinearity.
+
+** Fourth Chapter - Classification
++ Qualitative variables are often referred to as categorical
++ This chapter describes approaches for predicting qualitative responses, a process known as classification
++ Predicting a qualitative response can be referred to as classifying that observation
++ There are many possible classification techniques, or classifiers, that one might use to predict a qualitative response. We will discuss some widely-used classifiers like logistic regression, linear discriminant analysis, quadratic disciminant analysis, naive Bayes, and K-nearest neighbors
+*** An Overview of Classification
++ They occur often (maybe more often than regression problems). The book gives the following examples:
+1. A person arrives at the emergency room with a set of symptoms that could possibly be attributed to one of three medical conditions. Which of the three conditions does the individual have?
+2. An online banking service must be able to determine whether or not a transaction being performed on the site is fraudulent, on the basis of the user’s IP address, past transaction history, and so forth.
+3. On the basis of DNA sequence data for a number of patients with  and without a given disease, a biologist would like to figure out which DNA mutations are deleterious (disease-causing) and which are not.
+*** Why not Linear Regression?
++ In short, there is no natural way to convert a qualitative response variable with more than two levels into a quantiative response that is ready for linear regression. In N.1 (a person arrives...), there is three medical conditions to be assigned, meaning three levels. It will not work appropriatly with linear regression, since in this case a different ordering of the disease mean a completely different model -> A regression method cannot accomodate a qualitative response with more than two classes
++ A regression method will not provide meaningful estimates of \[Pr(Y|X)\], even with just two classes. So it is preferable to use a classification method that was made for qualitative response values
+*** Logistic Regression
++ Rather than modeling a yes or no response directly, logistic regression models the probability that Y belongs to a particular category
+**** The Logistic Model
++ Any time a straight line is fit to a binary response that is codad as 0 or 1, in principle we can always predict \[p(X) < 0\] for some values of \[X\] and \[p(X) > 1\] for others. To avoid this, we must model \[p(X)\] using a function that gives outputs between 0 and 1 for all values of X. Many functions meet this description, and in logistic regression we have the logistic function for this:
+\[p(X) = \frac{e^{\beta_{0} + \beta_{1}X}}{1 + e^{\beta_{0} + \beta_{1}X}}\]
++ To fit the model we use a method called maximum likelihood. Its intuition is as follows:
+
+#+BEGIN_QUOTE
+we seek estimates for \[\beta_{0}\] and \[\beta_{1}\] such that the predicted probability \[\hat p(x_{i})\] of default for each individual, using the logistic function, corresponds as closely as possible to the individual's observed default status. In other words, we try to find \[\hat \beta_{0}\] and \[\hat \beta_{1}\] such that plubbing these estimates into the model for \[p(X)\], given in the logistic function, yields a number close to one for all individuals who defaulted, and a number close to zero for all individuals who did not.
+#+END_QUOTE
+
++ Maximum likelihood is a very general approach. In the linear regression setting, the least squares approach is a special case of maximum likelihood
+**** Making Predictions
++ To fit a model that uses a qualitative predictor, we simple create a dummy variable that takes on a value for 1 is positive and 0 if negative
+*** Multinomial Logistic Regression
++ The logistic regression approach we have seen only allows for K=2 classes for the response variable, but it is possible to extend this. Known as Multinomial Logistic Regression, we choose one of the response variable to be the baseline. Consequently, a different baseline will result in different coefficients, but its prediction will still be the same
++ Another approach is called softmax coding. Instead of choosing a baseline, we treat all K classes symmetrically
+*** Generative Models for Classification
++ We can't always use logistic regression because when there is substantial separation between two classes, the parameter estimates for the logistic regression model become unstable. If the distribution of the predictors X is approximately normal in each of the classes and the sample size is small, then there might me other approaches more accurate than logistic regression
+**** Quadratic Discriminant Analysi
++ The choice in usage between LDA and QDA comes from the bias-variance trade-off. The LDA has smaller variance but bigger bias, contrary to the QDA.
+**** Naive Bayes
++ It assumes that the p covariates are independent within each class. Whether we believe it or not, and even though this not true in most settings (that they are independent), it often leads to pretty good results. To see the dependency of the p covariates, we need huge amounts of data, which is not always available. Therefore, assuming no relationship ends up being the best option.
+*** A comparison of classification models
++ Any classifier with a linear decision boundary is a special case of naive Bayes. This means LDA is a special case of naive Bayes
++ Because KNN is completely non-parametric, we can expect this approach to dominate LDA and logistic regression when the decision boundary is highly non-linear, provided that n is very large and p is small
++ In settings where the decision boundary is non-linear but n is only modest, or p is not very small, then QDA may be preferred to KNN. That is due to the fact QDA can provide a non-linear decision boundary while taking advantage of a parametric form, which means that it requires a smaller sample size for accurate classification, relative to KNN
+**** Generalized Linear Models in Greater Generality
++ For linear regression, we typically assume that Y follows a Gaussian or normal distribution. For logistic regression, we assume that Y follows a Bernoulli distribution. For Poisson regression (not discussed on these notes), we assume that Y follows a Poisson distribution
++ These distributions above are all members of a wider class of distributions known as exponential family. There is also exponential distribution, Gamma distribution, and the negative binominal distribution as known members of this family.
++ Linear regression, logistic regression, and Poisson are three examples of generalized linear models (GLMs).
+
+** Tenth Chapter - Deep Learning
++ A fundamental basis of deep learning is the neural network
++ They became famous in the late 80s, but the hype was a bit lost because of SVMs, boosting, random forests. While these methods were more automatic, neural networks required a lot of tinkering. The new methods also outperformed poorly-trained neural networks.
++ Neural networks resurfaced after 2010 with the name of deep learning
+*** Single Layer Neural Networks
++ A neural network takes an input of \[p\] variables \[X = (X_{1}, X_{2},...,X_{p})\] and builds a nonlinear function \[f(X)\] to predict the response \[Y\].
++ I didn't get much of the math :(, but I saw that there was a nonlinear transformation from the linear functions at \[X_{p}\]
+*** Multilayer Neural Networks
+#+BEGIN_QUOTE
+Modern neural networks typically have more than one hidden layer, and often many units per layer. In theory a single hidden layer with a large number of units has the ability to approximate most functions. However, the learning task of discovering a good solution is made much easier with multiple layers each of modest size.
+#+END_QUOTE
+*** Convolutional Neural Networks
++ CNNs mimic to some degree how humans classify images, by recognizing specific features or patterns anywhere in the image that distinguish each particular object class
+**** Convolution Layers
+#+BEGIN_QUOTE
+A convolution layer is made up of a large number of convolution filters, each of which is a template that determines whether a particular local feature is present in an image. A convolution filter relies on a very simple operation, called a convolution, which basically amounts to repeatedly multiplying matrix elements and then adding the results.
+#+END_QUOTE
++ The convolution image highlights regions of the original image that resemble the convolution filter
++ In a convolution layer, we use a whole bank of filters to pick out a variety of differently-oriented edges and shapes in the image.
++ Using predefined filters is common in image processing, but with CNNs the filters are learned for the specific classification task
+**** Pooling Layers
++ A pooling layer provides a way to condense a large image into a smaller summary image
+**** Data Augmentation
++ Each training image is replicated many times, with each replicate randomly distorted in a natural way such that human recognition is unaffected
++ This is a way of increasing the training set considerably with somewhat different examples, and thus protect against overfitting
+
+* Playing with the data - My Homework
+#+BEGIN_QUOTE
+1) HOURS AND SCORE...hour is input and score is output (useful for linear regression regression and non linear regression too)
+2) hours,score,conce.level...here take hours and concentration level as input and score is the output (useful for multi linear regression)
+3) last one is for classification where you use input hurs,scores and concentration level to predict if someone passes the physics exam or not (classification problem)
+
+Play around as much as you can. Make sure to visualize data before fitting them into the ML model. Note that data is always split into a train and test data set. The model is trained using a train dataset and the power of the model is checked using a test dataset.
+#+END_QUOTE
++ In 3, I think logistic regression and LDA would be nice models, maybe QDA and naive Bayes if it is moderatly non-linear
+
+* My considerations
++ This book is primarly aimed at advanced undegraduate students, and while I understood most of the main ideas in the chapters I read, I feel like I couldn't get the most of math due to my non-existant college background
+
+* Resources
++ Book: An Introduction to Statistical Learning - with Applications in R

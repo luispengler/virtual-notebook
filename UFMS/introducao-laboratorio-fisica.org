@@ -1,0 +1,13 @@
+#+TITLE: Introdução ao Laboratório de Física
+#+DESCRIPTION: Introdução ao Laboratório de Física - Meu caderno virtual
+#+SETUPFILE: https://luispengler.github.io/site/org-html-themes/org/theme-readtheorg.setup
+#+LaTeX_+HEADER: \usepackage{physics}
+#+LaTeX_+HEADER: \usepackage{amsmath}
+#+OPTIONS: num:nil ^:{} toc:2
+
+* Introdução
++ Material de apoio no AVA
++ Tem 10 avaliações por semestre (basicamente toda aula)
++ Site da [[https://sites.google.com/site/labfisufms][aula]]
++ Relatórios/atividades podem ser entregues em até uma semana após a execução do experimento. Após isso só vale 50\% da nota.
++ Não será aceito relatório de quem não executou o experimento

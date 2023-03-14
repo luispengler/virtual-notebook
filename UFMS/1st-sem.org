@@ -1,0 +1,6 @@
+#+TITLE: Primeiro semestre de Física Bacharelado (UFMS) - my notes.
+#+DESCRIPTION: Primeiro semestre de Física Bacharelado (IFMS) - my notes
+#+SETUPFILE: https://luispengler.github.io/site/org-html-themes/org/theme-readtheorg.setup
+#+OPTIONS: num:nil ^:{} toc:1
+
+||

@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-03-14 Tue 17:56 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Statistics Learning</title>
+<meta name="author" content="Luís Spengler" />
+<meta name="description" content="Statistics Learning" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="https://luispengler.github.io/site/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://luispengler.github.io/site/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="httpss://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="httpss://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://luispengler.github.io/site/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://luispengler.github.io/site/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Statistics Learning</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org90f9526">Introduction</a></li>
+<li><a href="#org3a116c4">Notes</a></li>
+<li><a href="#org8402827">Playing with the data - My Homework</a></li>
+<li><a href="#org04dca78">My considerations</a></li>
+<li><a href="#org7d0ec21">Resources</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org90f9526" class="outline-2">
+<h2 id="org90f9526">Introduction</h2>
+<div class="outline-text-2" id="text-org90f9526">
+<p>
+So, my mentor gave me my second task to get the most out of &ldquo;An Introduction to Statistical Learning - with Applications in R&rdquo; chapters 1-4, and 10. The dataset to be used is a Acorrelation between scores and hours.
+</p>
+<ul class="org-ul">
+<li>My mentor is <a href="https://scholar.google.com/citations?user=cHCDiIYAAAAJ">Dr. Abhijit Sen</a>, and we are starting research through the project <a href="https://www.ndeavours.org/">Ndeavours</a></li>
+<li>Keep tuned for updates into what we are doing - I don&rsquo;t know yet because we just started, but it will have something to do with AI.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3a116c4" class="outline-2">
+<h2 id="org3a116c4">Notes</h2>
+<div class="outline-text-2" id="text-org3a116c4">
+</div>
+<div id="outline-container-org2c0555c" class="outline-3">
+<h3 id="org2c0555c">Introduction Chapter</h3>
+<div class="outline-text-3" id="text-org2c0555c">
+<ul class="org-ul">
+<li>When we want to predict a non-numerical value, i.e. a categorical or qualitative output, the kind of problem it constitutes is known as a Classification Problem.</li>
+<li>If we are not trying to predict anything, i.e. not output, the kind of problem it constitutes is known as a clustering problem - for indicated reading I will not study this</li>
+<li>&ldquo;No single approach will perform well in all possible applications&rdquo;</li>
+<li>This chapter provides useful information on the representation of math in the textbook - ref to it if needed</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb04470b" class="outline-3">
+<h3 id="orgb04470b">Second Chapter</h3>
+<div class="outline-text-3" id="text-orgb04470b">
+<ul class="org-ul">
+<li>Inputs can be called predictors, independent variables, features, variables</li>
+<li>Output can be called response, dependent variable</li>
+<li>Relationship of input and output can be seen:
+\[Y = f(X) + \epsilon\]</li>
+<li>Above, f is some fixed but unknown function of \[X_{1}, ...., X_{p}\], and \[\epsilon\] is a random error term, and has mean zero.</li>
+<li>The function f may involve more than one input variable</li>
+<li>Statistical learning refers to a set of approaches for estimating f.</li>
+</ul>
+</div>
+<div id="outline-container-org419c296" class="outline-4">
+<h4 id="org419c296">Why estimate f?</h4>
+<div class="outline-text-4" id="text-org419c296">
+<ul class="org-ul">
+<li>Two main reasons: prediction and inference</li>
+<li>Linear models allow for relatively simple and interpretable interference, but might not accuratly predict \[Y\]. Some non-linear models present the oppost outcome to linear ones.</li>
+</ul>
+</div>
+<div id="outline-container-org2f1cec9" class="outline-5">
+<h5 id="org2f1cec9">Prediction</h5>
+<div class="outline-text-5" id="text-org2f1cec9">
+<p>
+\[\hat{Y} = \hat{f}(X)\]
+</p>
+<ul class="org-ul">
+<li>The formula above is used to predict the value of \[Y\]. \[\hat{f}\] represents our estimate of \[f\], and \[\hat{Y}\] represents the resulting prediction for \[Y\]. In this setting, \[\hat{f}\] is often treated as a black box, because we are not concerned with its form, as long as it accuratly predicts \[Y\].</li>
+<li>The accuracy of \[\hat{Y}\] as a prediction depends on two quantities that the book calls reducible error and irreducible error; the reducible comes from the different between \[\hat{f}\] and \[f\]. This error is reducible because we can improve the accuracy of \[\hat{f}\] using a more appropriate statistical learning technique. The irreducible comes from the dependence of \[Y\] in \[\epsilon\], and this last quantity may contain unmeasured variables that are useful for predicting \[Y\], and since we didn&rsquo;t measure them, the \[Y\] prediction will not be at its best&#x2026;</li>
+<li>The book focuses on techniques for estimating \[f\] while minimazing the reducible error (because it is possible!)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf2da107" class="outline-5">
+<h5 id="orgf2da107">Inference</h5>
+<div class="outline-text-5" id="text-orgf2da107">
+<ul class="org-ul">
+<li>It tries to understand the association between \[Y\] and \[X_{1},....,X_{p}\]. We want to understand the relationships between the response and its predictors, and it questions various aspects of this relationship.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbbcb1ef" class="outline-4">
+<h4 id="orgbbcb1ef">How do we estimate f?</h4>
+<div class="outline-text-4" id="text-orgbbcb1ef">
+<ul class="org-ul">
+<li>We want to find a function \[^{f}\] such that \[Y \approx \hat{f}(X)\] for any observation \[(X,Y)\]. Most statistical learning methods for this can be categorized as either paremetric or non-parametric.</li>
+</ul>
+</div>
+<div id="outline-container-org3b4f6ee" class="outline-5">
+<h5 id="org3b4f6ee">Parametric</h5>
+<div class="outline-text-5" id="text-org3b4f6ee">
+<ul class="org-ul">
+<li>It makes assumptions about the form (shape) of \[f\]. Assuming, for example, it is linear, the problem gets simplified to the point where we only need to estimate the \[p + 1\] coefficients of \[\beta_{0}, \beta_{1},....,\beta_{p}\]. In summary, this model-based approach reduces the problem of estimating \[f\] down to one of estimating a set of parameters.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3ea3110" class="outline-5">
+<h5 id="org3ea3110">Non-parametric</h5>
+<div class="outline-text-5" id="text-org3ea3110">
+<ul class="org-ul">
+<li>Doesn&rsquo;t make assumptions about the form of \[f\], seeking an estimate that gets as close to the data points as possible without being too rough or wiggly. Although it requires a much larger number of observations than the parametrics, they have are very likely to get close to the true form of \[f\].</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbc0953d" class="outline-4">
+<h4 id="orgbc0953d">The Trade-Off Between Prediction Accuracy and Model Interpretability</h4>
+<div class="outline-text-4" id="text-orgbc0953d">
+<ul class="org-ul">
+<li>In general, as the flexibility of a method increases, its interpretability decreases</li>
+<li>If we are more interested in inference, then restrictive models are much more interpretable and better for it</li>
+<li>Least squares linear regression is relatively inflexible but is quite interpretable</li>
+<li>When we want to predict, it is intuitive that we think we need the most flexible model available. However, this is not always the case due to overfitting of data.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1340320" class="outline-4">
+<h4 id="org1340320">Regression versus Classification Problems</h4>
+<div class="outline-text-4" id="text-org1340320">
+<ul class="org-ul">
+<li>It is a tendency to refer to quantitative response problems as regression problems, and qualitative ones as classification problems. Even though we might choose a model based on the response type we have, the predictor type doesn&rsquo;t have that much importance, provided we coded it prior to the analysis.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgbcecf4b" class="outline-4">
+<h4 id="orgbcecf4b">Assessing Model Accuracy</h4>
+<div class="outline-text-4" id="text-orgbcecf4b">
+<ul class="org-ul">
+<li>There is no model that works best for every type of problem out there. Therefore, it is necessary to select the best one that works out for the specific problem you are working with, and this is one of the most challenging parts of performing statistical learning.</li>
+</ul>
+</div>
+<div id="outline-container-org5efcb9a" class="outline-5">
+<h5 id="org5efcb9a">Measuring the Quality of Fit</h5>
+<div class="outline-text-5" id="text-org5efcb9a">
+<ul class="org-ul">
+<li>To quantify the extent to which the predicted response value for a given observation is close to the true response for that observation we commonly use the mean squared error (MSE):</li>
+</ul>
+<p>
+\[MSE = \frac{1}{n} \sum\limits_{i=1}^n (y_{i} - \hat{f}(x_{i}))^2\]
+</p>
+<ul class="org-ul">
+<li>The MSE will be small if the predicted responses are very close to the true responses, and will be large for some observations that the predicted and true responses differ substantially</li>
+<li>The formula shown above is computed using the training data, but in reality we don&rsquo;t really care how well our model makes predictions on training data, rather we are interested in the accuracy of the predictions that we obtain when we apply our method to previously unseen test data</li>
+<li>We want to choose the method that gives the lowest test MSE, as opposed to the lowest training MSE</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org43b02c0" class="outline-5">
+<h5 id="org43b02c0">Measuring the test MSE</h5>
+<div class="outline-text-5" id="text-org43b02c0">
+<p>
+\[Ave(y_{0} - \hat{f}(x_{0}))^2\]
+</p>
+<ul class="org-ul">
+<li>We would like to select a model for which this quantity is as small as possible</li>
+<li>To do that, in some settings we may have a test dataset available, so we use that data we use the method that gives use the lowest test MSE possible</li>
+<li>If there is no available test dataset, should we apply the method the minimizes the training MSE? Well, there is no guarantee that the method with the lowest training MSE will also have the lowest test MSE. Many statistical learning methods also try to minimize the training MSE, but the test MSE often ends up being much largert</li>
+<li>To solve this problem, we can even use some of the training data as the testing data. This is known as cross-validation</li>
+<li>As model flexibility increases, training MSE will decrease, but the test MSE may not</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4d14cdd" class="outline-5">
+<h5 id="org4d14cdd">Overfitting</h5>
+<div class="outline-text-5" id="text-org4d14cdd">
+<ul class="org-ul">
+<li>When a given method gives a small training MSE but a large test MSE we say we are overfitting the data.</li>
+<li>Our statistical learning procedure is trying to hard to find patterns in the data that don&rsquo;t exist, patterns caused by random chance rather than the true unknown function f</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1396b0c" class="outline-5">
+<h5 id="org1396b0c">The Bias-Variance Trade-Off</h5>
+<div class="outline-text-5" id="text-org1396b0c">
+<ul class="org-ul">
+<li>In order to minimize the expected test error, we need to select a statistical learning method that simultaneously achieves low variance and low bias.</li>
+<li>Variance refers to the amount \[\hat{f}\] would change if we estimated it using different training data. Ideally, the estimate for \[\hat{f}\] should not very much between training sets. If a method has high variance, then small changes in the training set can result in large changes in \[\hat{f}\]. In general, more flexible statistical methods have higher variance</li>
+<li>Bias refers to the error that is introduced in approximating a real-life problem, which may be extremely complicated, by a much simpler model. Generally, more flexible statistical methods result in less bias.</li>
+<li>Generalizing, as we use more flexible methods, the variance will increase and the bias will decrease. As we increase the flexibility of a class of methods, the bias tends to initially decrease faster than the variance increases, meaning the expected test MSE declines. However, at some point increasing flexibility has little impact on the bias but starts to significantly increase the variance, then the expected test MSE increases. This is known as the Bias-Variance Trade-Off.</li>
+<li>Good test set performance of a statistical learning method requires low variance as well as low squared bias. It is refered to as a trade-off, because it is extremely easy to obtain a method with extremly low bias but high variance, or a method with very low variance but high bias. The challenge is finding a method for which both the variance and the squared bias are low.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc0d2eb3" class="outline-5">
+<h5 id="orgc0d2eb3">The Classification Setting</h5>
+<div class="outline-text-5" id="text-orgc0d2eb3">
+<ul class="org-ul">
+<li>Many of the concepts discussed so far (like the bias-variance trade-off) transfer over to the classification setting, with the some modifications due to the fact the \[y_{i}\] is now qualitative</li>
+<li>The most common approach for quantifying the accuracy of our estimate \[\hat{f}\] is the training error rate</li>
+</ul>
+<p>
+\[ \frac{1}{n} \sum\limits_{i=1}^n I(\hat y_{i} \neq \hat y_{i})^2\]
+</p>
+<ul class="org-ul">
+<li>\[\hat{y}\] is the predicted class label for the \[i\]th observation using \[\hat{f}\]. \[I(\hat y_{i} \neq \hat y_{i})^2\] is an indicator variable that equals 1 if \[\hat y_{i}\] and \[\hat y_{i}\] differ, and it equals 0 if \[\hat y_{i} = \hat y_{i}\]. If \[I(\hat y_{i} \neq \hat y_{i})^2 = 0\] then ith observation was classified correctly, otherwise it was misclassified. Then, the equation above computes the fraction of incorrect classifications. Its name is training error rate, because it is applied to training data. Just like in regression setting, here we are also more interested in the predictions, therefore test error rate will be more useful.</li>
+</ul>
+<p>
+\[Ave(I(\hat y_{0} \neq \hat y_{0}))\]
+</p>
+<ul class="org-ul">
+<li>A good classifier is one for which the test error given by the above equation is smallest;</li>
+<li>The test error given by the above equation is minimized, on average, by a very simple classifier that assigns each observation to the most likely class, given its predictor values. Simply put, if you had to estimate if X belongs to Brazil or Argentina, the frontier between two countries corresponds to what is known as Bayes decision boundary. In this boundary, the chance of belonging to either side is 50%, and if X is in Brazil, this region is assigned as &gt; 50%.</li>
+<li>The Bayes classifier produces the lowest possible test error rate, called Bayes error rate, and it is analogous to the irreducible error</li>
+<li>In theory we would always like to use the Bayes classifier, but for real data, we don&rsquo;t know the conditional distribution of \[Y\] given \[X\], so computing the Bayes classifier is impossible.</li>
+<li>Therefore, it remains an unattainable gold standard to which we compare other methods. Many approaches try to estimate the conditional distribution of \[Y\] given \[X\], and then classify a given observation to the class with the highest estimated probability. One such method is the K-nearest neighbors (KNN) classifier.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc650e6a" class="outline-5">
+<h5 id="orgc650e6a">The K-Nearest Neighbors (KNN) classifier</h5>
+<div class="outline-text-5" id="text-orgc650e6a">
+<ul class="org-ul">
+<li>The KNN takes a parameter known as \[K\]. So if \[K=3\], in a dataset, it will get the three closest points to what you are trying to predict, and will determine whether or not what you are trying to predict belongs to a certain classification based on the classification of the three closest points (Because \[K=3\]). If two of the three points are blue, and only one is orange, the KNN will tell you the point you are trying to predict is also blue.</li>
+<li>It is a very simple approach, but it can yield results very close to the Bayes classifier</li>
+<li>The choice of what \[K\] equals to has drastic effect on the results obtained. If smaller, it is more flexible, and larger, less flexibile. The small K corresponds to a classifier with low bias but very high variance, a large one corresponds to higher bias but lower variance.</li>
+<li>In both the regression and classification settings, choosing the correct level of flexibility is critical to the success of any statistical learning method.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org859054a" class="outline-3">
+<h3 id="org859054a">Third Chapter</h3>
+<div class="outline-text-3" id="text-org859054a">
+</div>
+<div id="outline-container-org14eb928" class="outline-4">
+<h4 id="org14eb928">Simple Linear Regression</h4>
+<div class="outline-text-4" id="text-org14eb928">
+<ul class="org-ul">
+<li>A straightforward approach for predicting a quantitative response \[Y\] on the basis of a single predictor variable \[X\]. It is mathematically written as</li>
+</ul>
+<p>
+\[Y \approx \beta_{0} + \beta_{1}X\]
+</p>
+<ul class="org-ul">
+<li>We can also say that we are regressing Y on X</li>
+</ul>
+</div>
+<div id="outline-container-orgf69dc17" class="outline-5">
+<h5 id="orgf69dc17">Estimating the Coefficients</h5>
+<div class="outline-text-5" id="text-orgf69dc17">
+<ul class="org-ul">
+<li>When making predictions, we can rewrite the above equation as (note the \[\beta\] have hat symbols on)</li>
+</ul>
+<p>
+\[\hat{y} = \hat\beta_{0} + \hat\beta_{1}x\]
+</p>
+<ul class="org-ul">
+<li>The hat symbols on top of \[\beta\] mean they are unknown parameters (they can also be used to indicate predictions such as \[\hat{y}\])</li>
+<li>\[\beta_{0}\] is the intercept, and \[\beta_{1}\] is the slope</li>
+<li>When estimating those coefficients, we want them to be as close as possible to all n data points we have. There are a number of ways of measuring closeness, but the most common approach consists of minimizing the least squares criterion</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb02cb6e" class="outline-5">
+<h5 id="orgb02cb6e">Assessing the Accuracy of the Coefficient Estimates</h5>
+<div class="outline-text-5" id="text-orgb02cb6e">
+<ul class="org-ul">
+<li>If \[f\] is to approximated by a linear function, then we can write this relationship as</li>
+</ul>
+<p>
+\[Y = \beta_{0} + \beta{1}X + \epsilon\]
+</p>
+<ul class="org-ul">
+<li>The error term, \[\epsilon\], is a catch-all for what we miss with this simple model: the true relationship is not linear, there may be other variables that cause variation in Y, and there may be measurement error. We then assume the error term is independent of X. The model given by the eq above defines the population regression line, which is the best linear approximation to the true relationship between X and Y.</li>
+<li>The least squares regression coefficient estimates (eq which i did not show here) characterize the least squares line (given by  \[\^y = \beta_{0} + \beta_{1}x\]) (note the \[\beta\] have hat symbols on)</li>
+<li>In real applications, we have access to a set of observations from which we can compute the least squares line, however the population regression is unobserved</li>
+<li>We can think of the least squares as an analogy to the mean of a sample. The sample is smaller than the population, therefore, deriving the mean from it is different than deriving the mean from the population. An avarage of the sample mean over many data sets, however, will be very close to the population mean. In another situation, a single estimate of the sample mean may be a substantial understimate or overstimate of the population mean. We can even calculate how far this estimate will be with the formula below</li>
+</ul>
+<p>
+\[Var({\hat\mu}) = SE(\hat\mu)^2 = \frac{\sigma^2}{n}\]
+</p>
+<ul class="org-ul">
+<li>This formula gives us the standard error of \[\hat\mu\], written as \[SE(\hat \mu)\]. \[\sigma\] is the standard deviation of each of the realizations of \[y_{i}\] of \[Y^2\]. This means that the standard error tells us the avarage amount that this estimate \[\hat \mu\] differs from the actual value of \[\mu\]. To compute the standard error associated with \[\hat \beta_{0}\] and \[\hat \beta_{1}\] we can use some bigger formulas which I will not write here but you can find them on the book as 3.8</li>
+<li>In general, \[\sigma^2\] is not known, but can be estimated from the data. This estimate of \[\sigma\] is known as the residual standard error, and it is given by the formula</li>
+</ul>
+<p>
+\[RSE = \sqrt{RSS/(n-2)}\]
+</p>
+<ul class="org-ul">
+<li>We should also write \[\hat SE(\hat \beta_{1})\] to indicate that \[\sigma^2\] was estimated from the data.</li>
+<li>Standard errors can be used to compute confidence intervals. A 95% confidence interval has the following property: if we take repeated samples and construct the confidence interval for each sample, 95% of the intervals will contain the true unknown value of the paramter. Of course, the greater the range of values, the higher the confidence.</li>
+<li>For linear regression, the 95\% confidence interval for \[\beta_{1}\] approximately takes the form</li>
+</ul>
+<p>
+\[\hat \beta_{1} \pm 2\cdot SE(\beta_{1})\]
+</p>
+<ul class="org-ul">
+<li>This means that this interval has approximately a 95\% chance to contain the true value of \[beta_{1}\]. The same relation here applies for \[\hat \beta_{0}\].</li>
+<li>This part of the book is addressing the hypothesis test on the coefficients, and I didn&rsquo;t stop to understand much of it so I am not writting it here. What I got that is important is the p-value</li>
+<li>I have heard of the p-value before, and I was always curious to understand what it meant. I think I finally got a grasp of it when I read:</li>
+</ul>
+<blockquote>
+<p>
+a small p-value indicates that it is unlikely to observe such a substantial association between the predictor and the response due to chance, in the absence of any real association between the predictor and the response. Hence, if we see a small p-value, then we can infer that there is an association between the predictor and the response.
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>To sum up, small enough p-values tell us that there is a relationship between \[X\] and \[Y\]. Typical values are 5\% or 1\%;</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5399c9f" class="outline-5">
+<h5 id="org5399c9f">Assessing the Accuracy of the Model</h5>
+<div class="outline-text-5" id="text-org5399c9f">
+<ul class="org-ul">
+<li>After we determined the p-value is small enough for us to procede believing in a relationship between \[X\] and \[Y\], we will want to quantify the extent to which the model fits the data.</li>
+<li>The quality of a linear regression fit is typically assessed using two related quantities: the residual standard error (RSE) and the \[R^2\] statistic</li>
+<li>The RSE is the avarage amount that the response will deviate from the true regression line. This measure is considered a measure of the lack of fit of the model to the data. It attempts to calculate how far off we would be in our predictions, even if we knew exactly the values of \[\beta_{0}\] and \[\beta_{1}\]</li>
+<li>In summary, if \[\hat y_{i} \approx y_{i}\] then the RSE will be small, and if \[\hat y_{i}\] is far away, then the RSE may be quite large.</li>
+<li>RSE provides an absolute measure of lack of fit of the model to the data. However, it is measured in units of \[Y\], so it is not always clear what constitutes a good RSE. To solve this problem, we can look at the \[R^2\] statistic.</li>
+<li>An \[R^2\] statistic close to 1 indicates that a large proportion of the variability in the response is explained by the regression, however a number closer to 0 indicates that this regression does not explain much of the variability in the response. The latter happens when the model is wrong, or the error variance \[\sigma^2\] is high, or both.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org077ea42" class="outline-4">
+<h4 id="org077ea42">Multiple Linear Regression</h4>
+<div class="outline-text-4" id="text-org077ea42">
+<ul class="org-ul">
+<li>We can modify our linear regression equation:</li>
+</ul>
+<p>
+\[Y = \beta_{0} + \beta_{1}X\]
+</p>
+<ul class="org-ul">
+<li>to now accomodate p predictors:</li>
+</ul>
+<p>
+\[Y = \beta_{0} + \beta_{1}X_{1} = \beta_{2}X_{2} + ... + \beta_{p}X_{p}\]
+</p>
+</div>
+<div id="outline-container-org25483a6" class="outline-5">
+<h5 id="org25483a6">Estimating the Regression Coefficients</h5>
+<div class="outline-text-5" id="text-org25483a6">
+<ul class="org-ul">
+<li>As in linear regression, our coefficients are unknown and must be estimated. We can make the predictions modifying the last formula to:</li>
+</ul>
+<p>
+\[\hat y = \hat \beta_{0} + \hat \beta_{1}X_{1} = \hat \beta_{2}X_{2} + ... + \hat \beta_{p}X_{p}\]
+</p>
+<ul class="org-ul">
+<li>The parameters are estimated using the same least squares approach used in the context of linear regression</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga5a542e" class="outline-5">
+<h5 id="orga5a542e">Some Important Questions</h5>
+<div class="outline-text-5" id="text-orga5a542e">
+<ol class="org-ol">
+<li>Is at least one of the predictors \[X_{1}, X_{2}, . . . , X_{p}\] useful in predicting the response?</li>
+<li>Do all the predictors help to explain Y , or is only a subset of the predictors useful?</li>
+<li>How well does the model fit the data?</li>
+<li>Given a set of predictor values, what response value should we predict, and how accurate is our prediction?</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org9d20fce" class="outline-5">
+<h5 id="org9d20fce">Potential Problems</h5>
+<div class="outline-text-5" id="text-org9d20fce">
+<ul class="org-ul">
+<li>When we fit a linear regression model to a particular data set, many problems may occur. Most common among these are the following:</li>
+<li>Non-linearity of the response-predictor relationships</li>
+<li>Correlation of error terms.</li>
+<li>Non-constant variance of error terms.</li>
+<li>Outliers.</li>
+<li>High-leverage points.</li>
+<li>Collinearity.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgeb12c76" class="outline-3">
+<h3 id="orgeb12c76">Fourth Chapter - Classification</h3>
+<div class="outline-text-3" id="text-orgeb12c76">
+<ul class="org-ul">
+<li>Qualitative variables are often referred to as categorical</li>
+<li>This chapter describes approaches for predicting qualitative responses, a process known as classification</li>
+<li>Predicting a qualitative response can be referred to as classifying that observation</li>
+<li>There are many possible classification techniques, or classifiers, that one might use to predict a qualitative response. We will discuss some widely-used classifiers like logistic regression, linear discriminant analysis, quadratic disciminant analysis, naive Bayes, and K-nearest neighbors</li>
+</ul>
+</div>
+<div id="outline-container-org794d59e" class="outline-4">
+<h4 id="org794d59e">An Overview of Classification</h4>
+<div class="outline-text-4" id="text-org794d59e">
+<ul class="org-ul">
+<li>They occur often (maybe more often than regression problems). The book gives the following examples:</li>
+<li>A person arrives at the emergency room with a set of symptoms that could possibly be attributed to one of three medical conditions. Which of the three conditions does the individual have?</li>
+<li>An online banking service must be able to determine whether or not a transaction being performed on the site is fraudulent, on the basis of the user’s IP address, past transaction history, and so forth.</li>
+<li>On the basis of DNA sequence data for a number of patients with  and without a given disease, a biologist would like to figure out which DNA mutations are deleterious (disease-causing) and which are not.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org18f464c" class="outline-4">
+<h4 id="org18f464c">Why not Linear Regression?</h4>
+<div class="outline-text-4" id="text-org18f464c">
+<ul class="org-ul">
+<li>In short, there is no natural way to convert a qualitative response variable with more than two levels into a quantiative response that is ready for linear regression. In N.1 (a person arrives&#x2026;), there is three medical conditions to be assigned, meaning three levels. It will not work appropriatly with linear regression, since in this case a different ordering of the disease mean a completely different model -&gt; A regression method cannot accomodate a qualitative response with more than two classes</li>
+<li>A regression method will not provide meaningful estimates of \[Pr(Y|X)\], even with just two classes. So it is preferable to use a classification method that was made for qualitative response values</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga3f7b11" class="outline-4">
+<h4 id="orga3f7b11">Logistic Regression</h4>
+<div class="outline-text-4" id="text-orga3f7b11">
+<ul class="org-ul">
+<li>Rather than modeling a yes or no response directly, logistic regression models the probability that Y belongs to a particular category</li>
+</ul>
+</div>
+<div id="outline-container-org239d91f" class="outline-5">
+<h5 id="org239d91f">The Logistic Model</h5>
+<div class="outline-text-5" id="text-org239d91f">
+<ul class="org-ul">
+<li>Any time a straight line is fit to a binary response that is codad as 0 or 1, in principle we can always predict \[p(X) < 0\] for some values of \[X\] and \[p(X) > 1\] for others. To avoid this, we must model \[p(X)\] using a function that gives outputs between 0 and 1 for all values of X. Many functions meet this description, and in logistic regression we have the logistic function for this:</li>
+</ul>
+<p>
+\[p(X) = \frac{e^{\beta_{0} + \beta_{1}X}}{1 + e^{\beta_{0} + \beta_{1}X}}\]
+</p>
+<ul class="org-ul">
+<li>To fit the model we use a method called maximum likelihood. Its intuition is as follows:</li>
+</ul>
+
+<blockquote>
+<p>
+we seek estimates for \[\beta_{0}\] and \[\beta_{1}\] such that the predicted probability \[\hat p(x_{i})\] of default for each individual, using the logistic function, corresponds as closely as possible to the individual&rsquo;s observed default status. In other words, we try to find \[\hat \beta_{0}\] and \[\hat \beta_{1}\] such that plubbing these estimates into the model for \[p(X)\], given in the logistic function, yields a number close to one for all individuals who defaulted, and a number close to zero for all individuals who did not.
+</p>
+</blockquote>
+
+<ul class="org-ul">
+<li>Maximum likelihood is a very general approach. In the linear regression setting, the least squares approach is a special case of maximum likelihood</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2f8db22" class="outline-5">
+<h5 id="org2f8db22">Making Predictions</h5>
+<div class="outline-text-5" id="text-org2f8db22">
+<ul class="org-ul">
+<li>To fit a model that uses a qualitative predictor, we simple create a dummy variable that takes on a value for 1 is positive and 0 if negative</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb09751a" class="outline-4">
+<h4 id="orgb09751a">Multinomial Logistic Regression</h4>
+<div class="outline-text-4" id="text-orgb09751a">
+<ul class="org-ul">
+<li>The logistic regression approach we have seen only allows for K=2 classes for the response variable, but it is possible to extend this. Known as Multinomial Logistic Regression, we choose one of the response variable to be the baseline. Consequently, a different baseline will result in different coefficients, but its prediction will still be the same</li>
+<li>Another approach is called softmax coding. Instead of choosing a baseline, we treat all K classes symmetrically</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga48811d" class="outline-4">
+<h4 id="orga48811d">Generative Models for Classification</h4>
+<div class="outline-text-4" id="text-orga48811d">
+<ul class="org-ul">
+<li>We can&rsquo;t always use logistic regression because when there is substantial separation between two classes, the parameter estimates for the logistic regression model become unstable. If the distribution of the predictors X is approximately normal in each of the classes and the sample size is small, then there might me other approaches more accurate than logistic regression</li>
+</ul>
+</div>
+<div id="outline-container-orgcd68056" class="outline-5">
+<h5 id="orgcd68056">Quadratic Discriminant Analysi</h5>
+<div class="outline-text-5" id="text-orgcd68056">
+<ul class="org-ul">
+<li>The choice in usage between LDA and QDA comes from the bias-variance trade-off. The LDA has smaller variance but bigger bias, contrary to the QDA.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org057065b" class="outline-5">
+<h5 id="org057065b">Naive Bayes</h5>
+<div class="outline-text-5" id="text-org057065b">
+<ul class="org-ul">
+<li>It assumes that the p covariates are independent within each class. Whether we believe it or not, and even though this not true in most settings (that they are independent), it often leads to pretty good results. To see the dependency of the p covariates, we need huge amounts of data, which is not always available. Therefore, assuming no relationship ends up being the best option.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org8bfa62f" class="outline-4">
+<h4 id="org8bfa62f">A comparison of classification models</h4>
+<div class="outline-text-4" id="text-org8bfa62f">
+<ul class="org-ul">
+<li>Any classifier with a linear decision boundary is a special case of naive Bayes. This means LDA is a special case of naive Bayes</li>
+<li>Because KNN is completely non-parametric, we can expect this approach to dominate LDA and logistic regression when the decision boundary is highly non-linear, provided that n is very large and p is small</li>
+<li>In settings where the decision boundary is non-linear but n is only modest, or p is not very small, then QDA may be preferred to KNN. That is due to the fact QDA can provide a non-linear decision boundary while taking advantage of a parametric form, which means that it requires a smaller sample size for accurate classification, relative to KNN</li>
+</ul>
+</div>
+<div id="outline-container-orga1437c9" class="outline-5">
+<h5 id="orga1437c9">Generalized Linear Models in Greater Generality</h5>
+<div class="outline-text-5" id="text-orga1437c9">
+<ul class="org-ul">
+<li>For linear regression, we typically assume that Y follows a Gaussian or normal distribution. For logistic regression, we assume that Y follows a Bernoulli distribution. For Poisson regression (not discussed on these notes), we assume that Y follows a Poisson distribution</li>
+<li>These distributions above are all members of a wider class of distributions known as exponential family. There is also exponential distribution, Gamma distribution, and the negative binominal distribution as known members of this family.</li>
+<li>Linear regression, logistic regression, and Poisson are three examples of generalized linear models (GLMs).</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2b2e242" class="outline-3">
+<h3 id="org2b2e242">Tenth Chapter - Deep Learning</h3>
+<div class="outline-text-3" id="text-org2b2e242">
+<ul class="org-ul">
+<li>A fundamental basis of deep learning is the neural network</li>
+<li>They became famous in the late 80s, but the hype was a bit lost because of SVMs, boosting, random forests. While these methods were more automatic, neural networks required a lot of tinkering. The new methods also outperformed poorly-trained neural networks.</li>
+<li>Neural networks resurfaced after 2010 with the name of deep learning</li>
+</ul>
+</div>
+<div id="outline-container-orgfd3389c" class="outline-4">
+<h4 id="orgfd3389c">Single Layer Neural Networks</h4>
+<div class="outline-text-4" id="text-orgfd3389c">
+<ul class="org-ul">
+<li>A neural network takes an input of \[p\] variables \[X = (X_{1}, X_{2},...,X_{p})\] and builds a nonlinear function \[f(X)\] to predict the response \[Y\].</li>
+<li>I didn&rsquo;t get much of the math :(, but I saw that there was a nonlinear transformation from the linear functions at \[X_{p}\]</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0eccab5" class="outline-4">
+<h4 id="org0eccab5">Multilayer Neural Networks</h4>
+<div class="outline-text-4" id="text-org0eccab5">
+<blockquote>
+<p>
+Modern neural networks typically have more than one hidden layer, and often many units per layer. In theory a single hidden layer with a large number of units has the ability to approximate most functions. However, the learning task of discovering a good solution is made much easier with multiple layers each of modest size.
+</p>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-org80832aa" class="outline-4">
+<h4 id="org80832aa">Convolutional Neural Networks</h4>
+<div class="outline-text-4" id="text-org80832aa">
+<ul class="org-ul">
+<li>CNNs mimic to some degree how humans classify images, by recognizing specific features or patterns anywhere in the image that distinguish each particular object class</li>
+</ul>
+</div>
+<div id="outline-container-orgaf6fac9" class="outline-5">
+<h5 id="orgaf6fac9">Convolution Layers</h5>
+<div class="outline-text-5" id="text-orgaf6fac9">
+<blockquote>
+<p>
+A convolution layer is made up of a large number of convolution filters, each of which is a template that determines whether a particular local feature is present in an image. A convolution filter relies on a very simple operation, called a convolution, which basically amounts to repeatedly multiplying matrix elements and then adding the results.
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>The convolution image highlights regions of the original image that resemble the convolution filter</li>
+<li>In a convolution layer, we use a whole bank of filters to pick out a variety of differently-oriented edges and shapes in the image.</li>
+<li>Using predefined filters is common in image processing, but with CNNs the filters are learned for the specific classification task</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8edac9e" class="outline-5">
+<h5 id="org8edac9e">Pooling Layers</h5>
+<div class="outline-text-5" id="text-org8edac9e">
+<ul class="org-ul">
+<li>A pooling layer provides a way to condense a large image into a smaller summary image</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org84077ce" class="outline-5">
+<h5 id="org84077ce">Data Augmentation</h5>
+<div class="outline-text-5" id="text-org84077ce">
+<ul class="org-ul">
+<li>Each training image is replicated many times, with each replicate randomly distorted in a natural way such that human recognition is unaffected</li>
+<li>This is a way of increasing the training set considerably with somewhat different examples, and thus protect against overfitting</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8402827" class="outline-2">
+<h2 id="org8402827">Playing with the data - My Homework</h2>
+<div class="outline-text-2" id="text-org8402827">
+<blockquote>
+<ol class="org-ol">
+<li>HOURS AND SCORE&#x2026;hour is input and score is output (useful for linear regression regression and non linear regression too)</li>
+<li>hours,score,conce.level&#x2026;here take hours and concentration level as input and score is the output (useful for multi linear regression)</li>
+<li>last one is for classification where you use input hurs,scores and concentration level to predict if someone passes the physics exam or not (classification problem)</li>
+</ol>
+
+<p>
+Play around as much as you can. Make sure to visualize data before fitting them into the ML model. Note that data is always split into a train and test data set. The model is trained using a train dataset and the power of the model is checked using a test dataset.
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>In 3, I think logistic regression and LDA would be nice models, maybe QDA and naive Bayes if it is moderatly non-linear</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org04dca78" class="outline-2">
+<h2 id="org04dca78">My considerations</h2>
+<div class="outline-text-2" id="text-org04dca78">
+<ul class="org-ul">
+<li>This book is primarly aimed at advanced undegraduate students, and while I understood most of the main ideas in the chapters I read, I feel like I couldn&rsquo;t get the most of math due to my non-existant college background</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7d0ec21" class="outline-2">
+<h2 id="org7d0ec21">Resources</h2>
+<div class="outline-text-2" id="text-org7d0ec21">
+<ul class="org-ul">
+<li>Book: An Introduction to Statistical Learning - with Applications in R</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Luís Spengler</p>
+<p class="date">Created: 2023-03-14 Tue 17:56</p>
+</div>
+</body>
+</html>

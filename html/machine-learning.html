@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-01-28 Sat 15:05 -->
+<!-- 2023-03-14 Tue 17:56 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Machine Learning</title>
@@ -200,6 +200,27 @@
 <script src="httpss://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://luispengler.github.io/site/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
 <script type="text/javascript" src="https://luispengler.github.io/site/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content" class="content">
@@ -209,11 +230,9 @@
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
 <li><a href="#org16d7fd1">Introduction</a></li>
-<li><a href="#orgc133e37">Decision Tree and Black Line</a></li>
-<li><a href="#org3c6de36">Main ideas</a></li>
-<li><a href="#orgf9f43c4">Cross Validation</a></li>
-<li><a href="#org79056ef">The Confusion Matrix</a></li>
-<li><a href="#org6c45282">Sensitivity and Specificity</a></li>
+<li><a href="#org532c865">StatQuest</a></li>
+<li><a href="#org0a4b77d">CodeBasics</a></li>
+<li><a href="#org9c3ac9a">Deep Learning with Python - François Chollet</a></li>
 <li><a href="#org62d909f">Resources</a></li>
 </ul>
 </div>
@@ -232,26 +251,30 @@ So, my mentor gave me my first task to learn some stuff around NumPy, Panda, and
 </div>
 </div>
 
-<div id="outline-container-orgc133e37" class="outline-2">
-<h2 id="orgc133e37">Decision Tree and Black Line</h2>
-<div class="outline-text-2" id="text-orgc133e37">
+<div id="outline-container-org532c865" class="outline-2">
+<h2 id="org532c865">StatQuest</h2>
+<div class="outline-text-2" id="text-org532c865">
+</div>
+<div id="outline-container-orgc133e37" class="outline-3">
+<h3 id="orgc133e37">Decision Tree and Black Line</h3>
+<div class="outline-text-3" id="text-orgc133e37">
 <ul class="org-ul">
 <li>They are a simple machine learning method</li>
 <li>Their purpose is to predict something, or classify someone/something</li>
 </ul>
 </div>
-<div id="outline-container-orgfbf82e8" class="outline-3">
-<h3 id="orgfbf82e8">Deriving Machine Learning</h3>
-<div class="outline-text-3" id="text-orgfbf82e8">
+<div id="outline-container-orgfbf82e8" class="outline-4">
+<h4 id="orgfbf82e8">Deriving Machine Learning</h4>
+<div class="outline-text-4" id="text-orgfbf82e8">
 <ul class="org-ul">
 <li>With decision trees and black lines we can see that generaly machine learning is all about making predictions and classifications</li>
 </ul>
 </div>
 </div>
 </div>
-<div id="outline-container-org3c6de36" class="outline-2">
-<h2 id="org3c6de36">Main ideas</h2>
-<div class="outline-text-2" id="text-org3c6de36">
+<div id="outline-container-org3c6de36" class="outline-3">
+<h3 id="org3c6de36">Main ideas</h3>
+<div class="outline-text-3" id="text-org3c6de36">
 <ul class="org-ul">
 <li>The original data is called training data</li>
 <li>The black line is fit to training data, but we could also use the green squiggle</li>
@@ -260,9 +283,9 @@ So, my mentor gave me my first task to learn some stuff around NumPy, Panda, and
 <li>Summing the diference of the real data vs the predicted data by the black line and the green squiggle is a way we can tell which one predicts better (in ML we are more interested in a model predicting better than it fitting the training data better)</li>
 </ul>
 </div>
-<div id="outline-container-orge35144f" class="outline-3">
-<h3 id="orge35144f">Summarizing</h3>
-<div class="outline-text-3" id="text-orge35144f">
+<div id="outline-container-orge35144f" class="outline-4">
+<h4 id="orge35144f">Summarizing</h4>
+<div class="outline-text-4" id="text-orge35144f">
 <ul class="org-ul">
 <li>First, we use Testing Data to evaluate Machine Learning methods</li>
 <li>Second, don&rsquo;t be fooled by how well a Machine Learning method fits the Training Data</li>
@@ -272,17 +295,17 @@ So, my mentor gave me my first task to learn some stuff around NumPy, Panda, and
 </div>
 </div>
 
-<div id="outline-container-orgf9f43c4" class="outline-2">
-<h2 id="orgf9f43c4">Cross Validation</h2>
-<div class="outline-text-2" id="text-orgf9f43c4">
+<div id="outline-container-orgf9f43c4" class="outline-3">
+<h3 id="orgf9f43c4">Cross Validation</h3>
+<div class="outline-text-3" id="text-orgf9f43c4">
 <ul class="org-ul">
 <li>It allows us to compare different machine learning methods and get a sense of how well they will work in practice</li>
 <li>For the example in the video (2/87) we could use Logistic Regression, support vector machines (SVM), K-nearest neighbors, etc</li>
 </ul>
 </div>
-<div id="outline-container-org99327e3" class="outline-3">
-<h3 id="org99327e3">Why we need the data</h3>
-<div class="outline-text-3" id="text-org99327e3">
+<div id="outline-container-org99327e3" class="outline-4">
+<h4 id="org99327e3">Why we need the data</h4>
+<div class="outline-text-4" id="text-org99327e3">
 <ul class="org-ul">
 <li>For training the machine learning methods and testing the machine learning methods</li>
 <li>We shouldn&rsquo;t use all the data to train the ML method, neither reuse the same data for training and testing</li>
@@ -294,9 +317,9 @@ So, my mentor gave me my first task to learn some stuff around NumPy, Panda, and
 </div>
 </div>
 
-<div id="outline-container-org79056ef" class="outline-2">
-<h2 id="org79056ef">The Confusion Matrix</h2>
-<div class="outline-text-2" id="text-org79056ef">
+<div id="outline-container-org79056ef" class="outline-3">
+<h3 id="org79056ef">The Confusion Matrix</h3>
+<div class="outline-text-3" id="text-org79056ef">
 <ul class="org-ul">
 <li>It is simply a way of telling if the ML algorithm predicted the output correctly.</li>
 <li>In the left side of the table we use the prediction row. In the top part of the table we use the actual line. Therefore, diagonally you are going to have only the results truly predicted by the ML algorithm and anything else would be a wrong prediction</li>
@@ -304,9 +327,9 @@ So, my mentor gave me my first task to learn some stuff around NumPy, Panda, and
 </div>
 </div>
 
-<div id="outline-container-org6c45282" class="outline-2">
-<h2 id="org6c45282">Sensitivity and Specificity</h2>
-<div class="outline-text-2" id="text-org6c45282">
+<div id="outline-container-org6c45282" class="outline-3">
+<h3 id="org6c45282">Sensitivity and Specificity</h3>
+<div class="outline-text-3" id="text-org6c45282">
 <ul class="org-ul">
 <li>We can use them to help us decide which machine learning method would be best for our data</li>
 <li>Used in the Confusion Matrix. Remember: rows correspond to what was predicted and columns correspond to the known truth</li>
@@ -316,13 +339,304 @@ So, my mentor gave me my first task to learn some stuff around NumPy, Panda, and
 <li>Otherwise (correctly identifying negative) then we should be more emphatic on the specificity</li>
 </ul>
 </div>
-<div id="outline-container-org4a2de17" class="outline-3">
-<h3 id="org4a2de17">With larger confusion matrices</h3>
-<div class="outline-text-3" id="text-org4a2de17">
+<div id="outline-container-org4a2de17" class="outline-4">
+<h4 id="org4a2de17">With larger confusion matrices</h4>
+<div class="outline-text-4" id="text-org4a2de17">
 <ul class="org-ul">
 <li>For larger confusion matrices that are no single values of sensitivity and specificity that work for the entire matrix</li>
 <li>Instead, we calculate a different sensitivity and specificity for each category</li>
 </ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6454a7c" class="outline-3">
+<h3 id="org6454a7c">Bias and Variance</h3>
+<div class="outline-text-3" id="text-org6454a7c">
+<ul class="org-ul">
+<li>As we don&rsquo;t know the true formula of a two variable relationship, we will try some algorithms to do it</li>
+<li>Remember to split the data in two sets: training and testing</li>
+<li>The first ML algorithm we use is called linear regression, and it creates a straight line, because it doesn&rsquo;t have the flexibility to accurately replicate the arc in the true relationship (no matter how hard we try) -&gt; This straight line will never capture the true relationship between the true variables, and this is called bias</li>
+<li>Because the straight line can&rsquo;t curve, it has a relatively large amount of bias</li>
+<li>A squiggly line (made by another ML algorithm) is super flexible and hugs the training set along the arc of the true relationship, meaning a very little bias</li>
+<li>It is possible to compare those two with the calculation of their sums of squares (in the training set contest, the squiggly line wins&#x2026;)</li>
+<li>In the testing set contest, the straight line wins, because the squiggly line did a bad job in fitting the testing data</li>
+<li>The difference in fits between data sets is called variance</li>
+<li>The squiggly line has little bias, because it can adapt to the true relationship in the training set, but it has high variability because it results in vastly different sums of squares for both the training and testing sets (it can also be said that the squiggly line is overfit) (it is hard to predict how it will do in the future)</li>
+<li>The ideal algorithm in ML has low bias and low variability -&gt; this is done by finding the sweet spot between a simple model and a complex model</li>
+<li>Three commonly used methods for finding this sweet spot are regularization, boosting, and bagging (random forest)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgdb8bc1e" class="outline-3">
+<h3 id="orgdb8bc1e">ROC and AUC</h3>
+<div class="outline-text-3" id="text-orgdb8bc1e">
+</div>
+<div id="outline-container-org9740c28" class="outline-4">
+<h4 id="org9740c28">Basics of Logistic Regression</h4>
+<div class="outline-text-4" id="text-org9740c28">
+<ul class="org-ul">
+<li>They y-axis has two categories</li>
+<li>The x-axis only has one</li>
+<li>In this regression, the y-axis is converted to the probability something is true and it ranges from 0 to 1</li>
+<li>If we want to tell if something is true or not, then we need to turn probabilities into classifications -&gt; maybe setting a threeshold at 0.5</li>
+<li>We classify some of the data to see if it got it right or wrong, then plot it into a confusion matrix to summarize the classifications</li>
+<li>Once the confusion matrix is filled in, we can calculate Sensitivity and Specificity to evaluate this Logistic Regression when 0.5 is the threshold for being true</li>
+<li>If we used another threshold, we would need to evaluate our priorities (is it more import to identify the false or the true cases? Remember Sensitivity and Specificity&#x2026;)</li>
+<li>But how do we determine which threshold is the best? Well, we don&rsquo;t need to test every single opition, in some cases, close threesholds will give you the exact same confusion matrix</li>
+<li>But even if we made one confusion matrix for each threshold that matttered, it would result in a confusingly large number of confusion matrices</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org36d5e79" class="outline-4">
+<h4 id="org36d5e79">Receiver Operator Characteristic (ROC) graphs</h4>
+<div class="outline-text-4" id="text-org36d5e79">
+<ul class="org-ul">
+<li>Instead of being overwhelmed with confusion matrices, ROC graphs provide a simple way to summarize all of the information</li>
+<li>The y-axis shows the True Positive Rate (from 0 to 1) (same thing as Sensitivity, ref to it for calculation)</li>
+<li>The x-axis shows the False Positive Rate (from 0 to 1) (calulated by 1 - Sensitivity or False Positives / (False Positives + True Negatives))</li>
+<li>For learning how to plot the graph ref to video: &ldquo;ROC and AUC, Clearly Explained!&rdquo; but it can be summarized as: increase the threshold and plot the point</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7201fee" class="outline-4">
+<h4 id="org7201fee">Area Under the Curve (AUC)</h4>
+<div class="outline-text-4" id="text-org7201fee">
+<ul class="org-ul">
+<li>It is used to compare on ROC curve to another</li>
+<li>If the AUC for the red ROC curve is greater than the AUC for the blue ROC curve, it suggests that the red curve is better</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge1d5841" class="outline-4">
+<h4 id="orge1d5841">Considerations</h4>
+<div class="outline-text-4" id="text-orge1d5841">
+<ul class="org-ul">
+<li>ROC graphs are drawn using True Positive Rates and False Positive Rates, but it can be done substituting the latter with precision (true positives / (true positives + false positives)) (proportion of positive results that were correctly classified)</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5ad45b7" class="outline-3">
+<h3 id="org5ad45b7">Fitting a line to data aka Least Squares aka Linear Regression</h3>
+<div class="outline-text-3" id="text-org5ad45b7">
+<ul class="org-ul">
+<li>We usually like to add a line to our data for us to see better what the trend is</li>
+<li>How to decide between lines? We can measure how well it fits by seeing how close it is to the data points</li>
+<li>One way to decide is by summing the squares of the difference between the y mean and the data point, something like this: (b is the y mean and y is the data point)</li>
+</ul>
+<p>
+\[(b-y_{1})^2 + (b-y_{2})^2 + (b-y_{3})^2\]
+</p>
+<ul class="org-ul">
+<li>This method above is known as the &ldquo;sum of squared residuals&rdquo;, because the residuals are the differences between the real data and the line, and we are assuming the square of these values</li>
+<li>To find the sweet spot of the line we need to have the smallest sum of squares, to do so we use the method called &ldquo;Least Squares&rdquo;, given by the equation below:</li>
+</ul>
+<p>
+\[((a\cdot x_{1} + b)-y_{1})^2 + ((a\cdot x_{2} + b)-y_{2})^2 + ...\]
+</p>
+<ul class="org-ul">
+<li>Taking the derivative of the function above, we find the slope at every point. Ultimately, we use a slope like zero</li>
+</ul>
+</div>
+<div id="outline-container-org93d0f82" class="outline-4">
+<h4 id="org93d0f82">Important concepts</h4>
+<div class="outline-text-4" id="text-org93d0f82">
+<ul class="org-ul">
+<li>We want to minimize the square of the distance between the observed values and the line</li>
+<li>We do this by taking the derivative and finding where it is equal to zero</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbf0ca7a" class="outline-3">
+<h3 id="orgbf0ca7a">Linear Regression</h3>
+<div class="outline-text-3" id="text-orgbf0ca7a">
+</div>
+<div id="outline-container-org27ac509" class="outline-4">
+<h4 id="org27ac509">Main ideas</h4>
+<div class="outline-text-4" id="text-org27ac509">
+<ul class="org-ul">
+<li>Use least-squares to fit a line to the data</li>
+<li>Calculate R^2</li>
+<li>Calculate a p-value for R^2</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org75f0689" class="outline-4">
+<h4 id="org75f0689">Summary</h4>
+<div class="outline-text-4" id="text-org75f0689">
+<ul class="org-ul">
+<li>Linear regression quantifies the relationship in the data (this is R^2), and it needs to be large</li>
+<li>It also determines how realible that relationship is (this is the p-value that we calculate with F), and it needs to be small</li>
+<li>If you have both, then you meet the requirements for an interesting result</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0a4b77d" class="outline-2">
+<h2 id="org0a4b77d">CodeBasics</h2>
+<div class="outline-text-2" id="text-org0a4b77d">
+</div>
+<div id="outline-container-orgc63768a" class="outline-3">
+<h3 id="orgc63768a">PyTorch vs TensorFlow vs Keras</h3>
+<div class="outline-text-3" id="text-orgc63768a">
+<ul class="org-ul">
+<li>PyTorch and TensorFlow are the two most popular deep learning frameworks, the first is developed by facebook and the second by google</li>
+<li>Keras is just a frontend, and you can think of PyTorch and TensorFlow as backends</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc27097f" class="outline-3">
+<h3 id="orgc27097f">Sigmoid Function</h3>
+<div class="outline-text-3" id="text-orgc27097f">
+<p>
+\[sigmoid(z) = \frac{1}{1 + e^{-z}\]
+</p>
+<ul class="org-ul">
+<li>Where \[e\] is Euler&rsquo;s number and it is approximately 2.71828</li>
+<li>So first you have a linear regression function defined as \[y = m\cdot x + b\], then you apply a sigmoid function to it and it becomes \[z = \frac{1}{1 + e^{-y}\]</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org039ac35" class="outline-3">
+<h3 id="org039ac35">Tanh</h3>
+<div class="outline-text-3" id="text-org039ac35">
+<ul class="org-ul">
+<li>Similar to sigmoid, but it gives a value between -1 and 1</li>
+</ul>
+<p>
+\[tanh(z) = \frac{e^z - e^{-z}}{e^z + e^{-z}\]
+</p>
+</div>
+</div>
+<div id="outline-container-org4ae8588" class="outline-3">
+<h3 id="org4ae8588">ReLU</h3>
+<div class="outline-text-3" id="text-org4ae8588">
+<p>
+\[ReLU(z) = max(0,x)\]
+</p>
+</div>
+</div>
+<div id="outline-container-org6282523" class="outline-3">
+<h3 id="org6282523">Leaky ReLU</h3>
+<div class="outline-text-3" id="text-org6282523">
+<p>
+\[Leaky ReLU(z) = max(0.1x,x)\]
+</p>
+</div>
+</div>
+<div id="outline-container-orgdaf3a89" class="outline-3">
+<h3 id="orgdaf3a89">Activation Function</h3>
+<div class="outline-text-3" id="text-orgdaf3a89">
+<ul class="org-ul">
+<li>It decides whether a neuron fires or not</li>
+<li>Sigmoid and Tanh are examples of it</li>
+<li>Use Sigmoid for the output and Tanh anywhere else. However they have a problem called vanishing gradients that makes them sometimes slower to learn</li>
+<li>If you are unsure which activation function to use in hidden layers, just use ReLU as your default choice, because it is a lightwight functin</li>
+<li>However ReLU also suffers from vanishing gradients, that is why there is Leaky ReLU</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2843fd6" class="outline-3">
+<h3 id="org2843fd6">Derivatives</h3>
+<div class="outline-text-3" id="text-org2843fd6">
+<ul class="org-ul">
+<li>They are like the slope of a non-linear equations and it is a function</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org55e003b" class="outline-3">
+<h3 id="org55e003b">Loss function</h3>
+<div class="outline-text-3" id="text-org55e003b">
+</div>
+<div id="outline-container-orge676c7d" class="outline-4">
+<h4 id="orge676c7d">Tensorflow loss value examples</h4>
+<div class="outline-text-4" id="text-orge676c7d">
+<ul class="org-ul">
+<li>sparse_categorical_crossentropy</li>
+<li>binary_crossentropy</li>
+<li>categorical_crossentropy</li>
+<li>mean_absolute_error</li>
+<li>mean_squared_error</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9c3ac9a" class="outline-2">
+<h2 id="org9c3ac9a">Deep Learning with Python - François Chollet</h2>
+<div class="outline-text-2" id="text-org9c3ac9a">
+</div>
+<div id="outline-container-org3baca03" class="outline-3">
+<h3 id="org3baca03">Chapter One - What is deep learning?</h3>
+<div class="outline-text-3" id="text-org3baca03">
+</div>
+<div id="outline-container-orga3a7346" class="outline-4">
+<h4 id="orga3a7346">Artificiall intelligence</h4>
+<div class="outline-text-4" id="text-orga3a7346">
+<ul class="org-ul">
+<li>Can be defined as: the effor to automate intellectual tasks normally performed by humans</li>
+<li>AI is a general field that encompasses machine learning and deep learning, but also includes many more approaches that don&rsquo;t involve any learning</li>
+<li>Symbolic AI was a more hardcoded way to approach problem solving, and it was suitable for well-defined, logical problems, such as playing chess</li>
+<li>Symbolic AI was not good at more complex and fuzzy problems, such as image classification, speech recognition, and language translation</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3f7e708" class="outline-4">
+<h4 id="org3f7e708">Machine Learning</h4>
+<div class="outline-text-4" id="text-org3f7e708">
+<ul class="org-ul">
+<li>While classical programming, represented by Symbolic AI, had as input rules and data and outputted answers, machine learning had as input data and answers and it outputted rules</li>
+<li>A machine learning system is trained rather than explicity programmed</li>
+<li>I liked this definition:</li>
+</ul>
+<blockquote>
+<p>
+Unlike statistics, machine learning tends to deal with large, complex datasets (such as a dataset of millions of images, each consisting of tens of thousands of pixels) for which classical statistical analysis such as Bayesian analysis would be impractical. As a result, machine learning, and especially deep learning, exhibits comparatively little mathematical theory—maybe too little—and is engineering oriented. It’s a hands-on discipline in which ideas are proven empirically more often than theorically
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>For doing ML we need &ldquo;Input data points&rdquo;, &ldquo;Examples of expected output&rdquo;, and &ldquo;A way to measure whether the algorithm is doing a good job&rdquo;. The last requirement is what makes the adjustment of the way the algorithm works possible, and the adjustment constitutes &ldquo;learning&rdquo;</li>
+<li>A quote that summarizes machine learning:</li>
+</ul>
+<blockquote>
+<p>
+So that’s what machine learning is, technically: searching for useful representations of some input data, within a predefined space of possibilities, using guidance from a feedback signal. This simple idea allows for solving a remarkably broad range of intellectual tasks, from speech recognition to autonomous car driving.
+</p>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-org2c461c1" class="outline-4">
+<h4 id="org2c461c1">The &ldquo;deep&rdquo; in deep learning</h4>
+<div class="outline-text-4" id="text-org2c461c1">
+<ul class="org-ul">
+<li>It is a subfield of machine learning and can be defined das a new take on learning representations from data that puts an emphasis on learning succesive layers of increasingly meaningful representations</li>
+<li>The deep refers to the idea of succesive layers of representations. The number of layers is called the depth of the model</li>
+<li>Modern deep learning often has tens or hundreds of succesive layers of representations, while other machine learning approaches have only one or two and are sometimes called shallow learning</li>
+<li>These layered representations are almost always learned via models called neural networks</li>
+</ul>
+<blockquote>
+<p>
+&ldquo;You can think of a deep network as a multistage information-distillation operaation, where information goes through successive filters and comes out increasingly purified&rdquo;
+</p>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-orgf71c8b9" class="outline-4">
+<h4 id="orgf71c8b9">What makes deep learning different</h4>
+<div class="outline-text-4" id="text-orgf71c8b9">
+<ul class="org-ul">
+<li>It took off because it had better performance on many problems, and also because it completely automates the feature engineering</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
@@ -336,6 +650,23 @@ So, my mentor gave me my first task to learn some stuff around NumPy, Panda, and
 <div class="outline-text-3" id="text-org6ac4b3d">
 <ul class="org-ul">
 <li>Playlist: <a href="https://youtube.com/playlist?list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF">Machine Learning</a></li>
+<li>Playlist: <a href="https://www.youtube.com/playlist?list=PLeo1K3hjS3uu7CxAacxVndI4bE_o3BDtO">Deep Learning With Tensorflow 2.0, Keras and Python</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org49a0fef" class="outline-3">
+<h3 id="org49a0fef">Articles</h3>
+<div class="outline-text-3" id="text-org49a0fef">
+<ul class="org-ul">
+<li><a href="https://scribe.bus-hit.me/ai-society/gans-from-scratch-1-a-deep-introduction-with-code-in-pytorch-and-tensorflow-cb03cdcdba0f?source=user_profile---------2">GANs from Scratch 1: A deep introduction. With code in PyTorch and TensorFlow</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9cb58c2" class="outline-3">
+<h3 id="org9cb58c2">Books</h3>
+<div class="outline-text-3" id="text-org9cb58c2">
+<ul class="org-ul">
+<li>Deep Learning with Python - François Chollet</li>
 </ul>
 </div>
 </div>
@@ -343,7 +674,7 @@ So, my mentor gave me my first task to learn some stuff around NumPy, Panda, and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luís Spengler</p>
-<p class="date">Created: 2023-01-28 Sat 15:05</p>
+<p class="date">Created: 2023-03-14 Tue 17:56</p>
 </div>
 </body>
 </html>

@@ -1,0 +1,27 @@
+#+TITLE: Evolução das ideias da Física
+#+DESCRIPTION: Evolução das ideias da Física - Meu caderno virtual
+#+SETUPFILE: https://luispengler.github.io/site/org-html-themes/org/theme-readtheorg.setup
+#+LaTeX_+HEADER: \usepackage{physics}
+#+LaTeX_+HEADER: \usepackage{amsmath}
+#+OPTIONS: num:nil ^:{} toc:2
+
+* Introdução
+** Avaliação
++ Livro: Origens e Evolução das ideias da física - José Fernando Rocha
++ Vai ter 2-3 páginas de resumo ao longo do curso que vai contar para N1 -> Digitado e enviado a samuel.oliveira@ufms.br
++ A N2 é um seminário sobre um tema a ser definido (previsto 21/06)
+** Aula
++ Conceitos de massa, inércia e de força são simples, naturais e intuivios? Não!  (indutivo, dedutivo)
++ Hermetismo? -> philosophycal system based on the purported teachings of Hermes Trismegistus
++ Newton influenciado por conceitos de coisas que estudava (alquimia, hermetismo)
++ Palavra gravidade? (gravis) Grave, pesado, importante
+* Leitura 13/03 (introdução -> )
++ Livros criados após a segunda guerra, principalmente por autores norte-americanos traduzidos do inglês não demonstram a complexidade dos estudos de newton, principalmente dos conceitos de massa, inércia e aceleração
++ O que quer dizer a fórmula \[f = ma\]?
++ Algumas ideias modernas da ciência na verdade já estiveram no pensamento humano às vezes há milênios
++ O aprendizado da física por meio dos chamados livros-textos levam a estudantes creer que o pensamento e progresso dessa ciência se deu de forma linear, não preparando esses acadêmicos para momentos de crise científico
++ A palavra Mecânica significa a arte de construir uma máquina
+#+BEGIN_QUOTE
+A mecânica se entrelaça fortemente com atividades extracientíficas e sociais, como o comércio, as guerras, a mitologia e a religião
+#+END_QUOTE
++

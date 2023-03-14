@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-03-14 Tue 17:56 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Machine Learning</title>
+<meta name="author" content="Luís Spengler" />
+<meta name="description" content="Machinen Learning" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="https://luispengler.github.io/site/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://luispengler.github.io/site/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="httpss://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="httpss://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://luispengler.github.io/site/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://luispengler.github.io/site/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Machine Learning</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgd2007a0">Introduction</a></li>
+<li><a href="#org90e8cd4">Chapter One - Introduction to GANs</a></li>
+<li><a href="#org4ff559c">Chapter Two - Into to generative modeling with autoencoders</a></li>
+<li><a href="#org50d9c47">Chapter Three - Your fist GAN: Generating handwritten digits</a></li>
+<li><a href="#org6cbd9b1">Chapter Four - Deep Convolutional GAN</a></li>
+<li><a href="#org2a86ac3">Resources</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd2007a0" class="outline-2">
+<h2 id="orgd2007a0">Introduction</h2>
+<div class="outline-text-2" id="text-orgd2007a0">
+<p>
+So, my mentor gave me another task and now I need to get the most out of the book &ldquo;GANs in action&rdquo;
+</p>
+<ul class="org-ul">
+<li>My mentor is <a href="https://scholar.google.com/citations?user=cHCDiIYAAAAJ">Dr. Abhijit Sen</a>, and we are starting research through the project <a href="https://www.ndeavours.org/">Ndeavours</a></li>
+<li>Keep tuned for updates into what we are doing - We will do stuff around the same topic of this notes page! (GANs :)</li>
+<li>As always, this page is mostly copying the main parts of each chapters and topics, something I call &ldquo;notes&rdquo;</li>
+<li>Another observation is that I am not enterily new to the concept of GANs, so I may not give much details in the notes</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org90e8cd4" class="outline-2">
+<h2 id="org90e8cd4">Chapter One - Introduction to GANs</h2>
+<div class="outline-text-2" id="text-org90e8cd4">
+</div>
+<div id="outline-container-org014bb9b" class="outline-3">
+<h3 id="org014bb9b">What are Generative Adversarial Networks?</h3>
+<div class="outline-text-3" id="text-org014bb9b">
+<ul class="org-ul">
+<li>They are a class of machine learning techniques that consist of two simultaneously trained models: one (the Generator) trained to generate fake data, and the other (the Discriminator) trained to discern the fake data from real examples</li>
+<li>The word generative tells the overall purpose of this model, which is to generate new data</li>
+<li>The word adversarial The generator and discriminator networks are trying to outwit each other</li>
+<li>And the word networks indicates the class of machine learning models most commonly used to represent the generator and discriminator, which are neural networks</li>
+<li>Depending on the complexity, we might choose between three neural networks: simple feed-forward neural networks, convulutional neural networks, U-Net</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org34ccc4f" class="outline-3">
+<h3 id="org34ccc4f">How do GANs work?</h3>
+<div class="outline-text-3" id="text-org34ccc4f">
+<ul class="org-ul">
+<li>The table below from the book answers this question very well</li>
+</ul>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Generator</td>
+<td class="org-left">Discriminator</td>
+</tr>
+
+<tr>
+<td class="org-left">Input</td>
+<td class="org-left">A vector of random numbers</td>
+<td class="org-left">Real examples coming from the training dataset, and fake examples coming from the generator</td>
+</tr>
+
+<tr>
+<td class="org-left">Output</td>
+<td class="org-left">Fake examples that strive to be as conving as possible</td>
+<td class="org-left">Predicted probability that the input example is real</td>
+</tr>
+
+<tr>
+<td class="org-left">Goal</td>
+<td class="org-left">Generate fake data that is indistinguishable from members of the training dataset</td>
+<td class="org-left">Distinguish between the fake examples from the Generator and the real examples from the dataset</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org4ac22d7" class="outline-3">
+<h3 id="org4ac22d7">GAN training</h3>
+<div class="outline-text-3" id="text-org4ac22d7">
+</div>
+<div id="outline-container-orge2b6c2e" class="outline-4">
+<h4 id="orge2b6c2e">Training the Discriminator</h4>
+<div class="outline-text-4" id="text-orge2b6c2e">
+<ul class="org-ul">
+<li>Take a random real example x from the traning dataset</li>
+<li>Get a new random noise vector z and, using  the Generator network, synthesize a fake example x*</li>
+<li>Use the Discriminator network to classify x and x*</li>
+<li>Computer the classification erros and backpropagate the total error to update the Discriminator weights and biases, seeking to minimize the classification errors</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org90b53a9" class="outline-4">
+<h4 id="org90b53a9">Training the Generator</h4>
+<div class="outline-text-4" id="text-org90b53a9">
+<ul class="org-ul">
+<li>Get a new random noise vector z and, using the Generator network, synthesize a fake example x*</li>
+<li>Use the Discriminator network to classify x*</li>
+<li>Computer the classification error and backpropagate the error to update the Generator weights and biases, seeking to maximize the Discriminator&rsquo;s error</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd3d8bba" class="outline-4">
+<h4 id="orgd3d8bba">Reaching equilibrium</h4>
+<div class="outline-text-4" id="text-orgd3d8bba">
+<ul class="org-ul">
+<li>The GAN setting is a zero-sum game, a situation in which one player&rsquo;s gains equal the other player&rsquo;s losses. When one player improves by a certain amount, the other player worsens by the same amount</li>
+<li>All zero-sum games have a Nash equilibrium, a point at which neither player can improve their situation or payoff by changing their actions</li>
+<li>This Nash equilibrium is reached when the generator produces fake examples that are indistinguishable from the real data in the training dataset, and the discriminator can at best randomly guess whether a particular example is real or fake</li>
+<li>With equilibrium achieved, GAN is said to have converged</li>
+<li>In practice, it is nearly impossible to find the Nash equilibrium for GANs because of the immense complexities involved in reaching convergence in nonconvex games</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org536d069" class="outline-3">
+<h3 id="org536d069">Why study GANs?</h3>
+<div class="outline-text-3" id="text-org536d069">
+<ul class="org-ul">
+<li>GANs have extensive applications across many different sectors, such as fashion, medicine, and cybersecurity</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4ff559c" class="outline-2">
+<h2 id="org4ff559c">Chapter Two - Into to generative modeling with autoencoders</h2>
+<div class="outline-text-2" id="text-org4ff559c">
+</div>
+<div id="outline-container-org063a4e0" class="outline-3">
+<h3 id="org063a4e0">Introduction to generative modeling</h3>
+<div class="outline-text-3" id="text-org063a4e0">
+<blockquote>
+<p>
+We start with a prescription of what we want to produce and get the image at the other end of the transformations. That is generative modeling in its simplest, most informal form;
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>This prespecription described in the quote above is said to be living in a latent space, and it serves as an inspiration so that we do not always get the same output, \[x^*\].</li>
+<li>The random noise vector from chapter 1 is often referred to as sample from the latent space.</li>
+<li>This so called latent space is a simpler, hidden representation of a data point. Simpler just means with fewer dimensions.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1dc3dc7" class="outline-3">
+<h3 id="org1dc3dc7">How do autoencoders function on a high level?</h3>
+<div class="outline-text-3" id="text-org1dc3dc7">
+<blockquote>
+<p>
+DEFINITION: The latent space is the hidden representation of the data. Rather than expressing words or images (for example, machine learning engineer in our example, or JPEG codec for images) in their uncompressed versions, an autoencoder compresses and clusters them based on its understanding of the data.
+</p>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-org5caf71b" class="outline-3">
+<h3 id="org5caf71b">What is an autoencoder made of?</h3>
+<div class="outline-text-3" id="text-org5caf71b">
+<ul class="org-ul">
+<li>Very simply, it has three steps: Encoder or compression network (step 1), latent space of size z (step 2), and output or decompression or reconstruction (step 3). Before the steps we have x, an image as vector of size y, and after we have x*, output as vector of size y.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org324c83b" class="outline-3">
+<h3 id="org324c83b">Unsupervised learning</h3>
+<div class="outline-text-3" id="text-org324c83b">
+<blockquote>
+<p>
+DEFINITION: Unsupervised learning is a type of machine learning in which we learn from the data itself without additional labels as to what this data means. Clustering, for example, is unsupervised—because we are just trying to discover the underlying structure of the data; but anomaly detection is usually supervised, as we need human-labeled anomalies.
+</p>
+</blockquote>
+</div>
+<div id="outline-container-org06e5286" class="outline-4">
+<h4 id="org06e5286">Generation using an autoencoder</h4>
+<div class="outline-text-4" id="text-org06e5286">
+<ul class="org-ul">
+<li>For generation, we cut off the encoder part and use only the latent space and the decoder</li>
+</ul>
+<blockquote>
+<p>
+Because we know from training where our examples get placed in the latent space, we can easily generate examples similar to the ones that the model has seen. Even if not, we can easily iterate or grid-search through the latent space to determine the kinds of representations that our model can generate.
+</p>
+</blockquote>
+</div>
+</div>
+</div>
+<div id="outline-container-org7fe8f81" class="outline-3">
+<h3 id="org7fe8f81">Code is life</h3>
+<div class="outline-text-3" id="text-org7fe8f81">
+<ul class="org-ul">
+<li>Now Imma head to my jupyter notebooks :)</li>
+<li>Summary of my code: We are going to create an object, generator or decoder, that can use  the predict() method to generate new examples of handwritten digits, given an input seed, which is just the latent space vector</li>
+<li>I didn&rsquo;t understand much of the math behind the distributions and why we are using it for the encoder-decoder</li>
+</ul>
+</div>
+<div id="outline-container-orgc651469" class="outline-4">
+<h4 id="orgc651469">Problems</h4>
+<div class="outline-text-4" id="text-orgc651469">
+<ul class="org-ul">
+<li>VAE picks the safe path and makes the background blurry by chooseing a safe pixel value, which minimzes the loss, but does not provide good images</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org4398b82" class="outline-3">
+<h3 id="org4398b82">Summary</h3>
+<div class="outline-text-3" id="text-org4398b82">
+<ul class="org-ul">
+<li>Autoencoders on a high level are composed of an encoder, a latent space, and a decoder. An autoencoder is trained by using a common objective function that measures the distance between the reproduced and the original data</li>
+<li>Autoencoders have many applications and can also be used as a generative model. In practice, this tends not to be their primary use because other methods, especially GANs, are better at the generative task.</li>
+<li>We can use Keras (a high-level API for TensorFlow) to write a simple variational autoencoder that produces handwritten  digits</li>
+<li>VAEs have limitations that motivate us to move on to GANs</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org50d9c47" class="outline-2">
+<h2 id="org50d9c47">Chapter Three - Your fist GAN: Generating handwritten digits</h2>
+<div class="outline-text-2" id="text-org50d9c47">
+</div>
+<div id="outline-container-org2aa6089" class="outline-3">
+<h3 id="org2aa6089">Foundations of GANs: Adversarial training</h3>
+<div class="outline-text-3" id="text-org2aa6089">
+<blockquote>
+<p>
+Formally, the Generator and the Discriminator are represented by differentiable functions, such as neural networks, each with its own cost function. The two networks are trained by backpropagation by using the Discriminator’s loss. The Discriminator strives to minimize the loss for both the real and the fake examples, while the Generator tries to maximize the Discriminator’s loss for the fake examples it produces.
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>For a computer, an image is just a matrix of values. If it is grascale than it is two-dimensional, if it is RGB thant it is three-dimensional</li>
+</ul>
+</div>
+<div id="outline-container-orgf544869" class="outline-4">
+<h4 id="orgf544869">Cost functions</h4>
+<div class="outline-text-4" id="text-orgf544869">
+<ul class="org-ul">
+<li>GANs differ from traditional neural networks in two key aspects. One is that in a conventional neural network, the cost function \[J\] is defined exclusively in terms of its own trainable parameters (the weights and biases, which we put together in a letter called theta \[\theta\] as in \[J(\theta)\]. However GANs are made up of two networks whose cost functions are dependent on both of the network&rsquo;s parameters (the generator (G) and the discriminator (D)) and are defined like this \[J^{(G)}(\theta^{(G)},\theta^{(D)})\] for the Generator&rsquo;s cost function, and \[J^{(D)}(\theta^{(G)},\theta^{(D)})\] for the Discriminator&rsquo;s cost function.</li>
+<li>The second difference is that while a traditional neural network can tune all its parameters during the training process, as GANs consist of two different network, each only can tune its own weights and biases. In other words, the Generator can only tune \[\theta^{(G)}\] and the Discriminator can only tune \[\theta^{(D)}\]</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3f1676e" class="outline-4">
+<h4 id="org3f1676e">Training process</h4>
+<div class="outline-text-4" id="text-org3f1676e">
+<ul class="org-ul">
+<li>The training of a traditional neural network is an optimization problem, where finding a set of parameters such that moving to any neighboring point in the paramters would increase the cost and would go against our minimalizatioon of the cost function.</li>
+<li>However, we can better define GAN training as a game than an optimization</li>
+</ul>
+<blockquote>
+<p>
+Training GANs successfully requires trial and error, and although there are best practices, it remains as much an art as it is a science.
+</p>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-org6387a58" class="outline-4">
+<h4 id="org6387a58">Conflicting objectives</h4>
+<div class="outline-text-4" id="text-org6387a58">
+<blockquote>
+<p>
+The Discriminator’s goal is to be as accurate as possible. For the real examples x, D(x) seeks to be as close as possible to 1 (label for the positive class). For fake examples x*, D(x*) strives to be as close as possible to 0 (label for the negative class). The Generator’s goal is the opposite. It seeks to fool the Discriminator by producing fake examples x* that are indistinguishable from the real data in the training dataset. Mathematically, the Generator strives to produce fake examples x* such that D(x*) is as close to 1 as possible.
+</p>
+</blockquote>
+</div>
+</div>
+</div>
+<div id="outline-container-org7d825dc" class="outline-3">
+<h3 id="org7d825dc">Summary</h3>
+<div class="outline-text-3" id="text-org7d825dc">
+<ul class="org-ul">
+<li>GANs consist of two networks: the Generator (G) and the Discriminator (D), each with its own loss function: \[J^{(G)}(\theta^{(G)},\theta^{(D)})\] and \[J^{(D)}(\theta^{(G)},\theta^{(D)})\] respectively.</li>
+<li>During training, the Generator and the Discriminator can tune only their own parameters: \[\theta^{(G)}\] and \[\theta^{(D)}\], respectively.</li>
+<li>The two GAN networks are trained simultaneously via a game-like dynamic. The Generator seeks to maximize the Discriminator’s false-positive classifications (classifying a generated image as real), while the Discriminator seeks to minimize its false-positve and false-negative classifications.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6cbd9b1" class="outline-2">
+<h2 id="org6cbd9b1">Chapter Four - Deep Convolutional GAN</h2>
+</div>
+
+
+<div id="outline-container-org2a86ac3" class="outline-2">
+<h2 id="org2a86ac3">Resources</h2>
+<div class="outline-text-2" id="text-org2a86ac3">
+<ul class="org-ul">
+<li>Book: GANs IN ACTION - Deep Learning with Generative Adversarial Networks</li>
+<li>Deep Learning with Python - François Chollet</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Luís Spengler</p>
+<p class="date">Created: 2023-03-14 Tue 17:56</p>
+</div>
+</body>
+</html>

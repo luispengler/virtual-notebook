@@ -8,47 +8,173 @@ So, my mentor gave me my first task to learn some stuff around NumPy, Panda, and
 + My mentor is [[https://scholar.google.com/citations?user=cHCDiIYAAAAJ][Dr. Abhijit Sen]], and we are starting research through the project [[https://www.ndeavours.org/][Ndeavours]]
 + Keep tuned for updates into what we are doing - I don't know yet because we just started, but it will have something to do with AI.
 
-* Decision Tree and Black Line
+* StatQuest
+** Decision Tree and Black Line
 + They are a simple machine learning method
 + Their purpose is to predict something, or classify someone/something
-** Deriving Machine Learning
+*** Deriving Machine Learning
 + With decision trees and black lines we can see that generaly machine learning is all about making predictions and classifications
-* Main ideas
+** Main ideas
 + The original data is called training data
 + The black line is fit to training data, but we could also use the green squiggle
 + But how much better is the green squiggle than the black line? To determine this we need testing data
 + The testing data is used to compare the predictions made by the black line to the predicitons made by the green squiggle
 + Summing the diference of the real data vs the predicted data by the black line and the green squiggle is a way we can tell which one predicts better (in ML we are more interested in a model predicting better than it fitting the training data better)
-** Summarizing
+*** Summarizing
 + First, we use Testing Data to evaluate Machine Learning methods
 + Second, don't be fooled by how well a Machine Learning method fits the Training Data
 + Note: Fitting the Training Data well but making poor predictions is called the Bias-Variance Tradeoff
 
-* Cross Validation
+** Cross Validation
 + It allows us to compare different machine learning methods and get a sense of how well they will work in practice
 + For the example in the video (2/87) we could use Logistic Regression, support vector machines (SVM), K-nearest neighbors, etc
-** Why we need the data
+*** Why we need the data
 + For training the machine learning methods and testing the machine learning methods
 + We shouldn't use all the data to train the ML method, neither reuse the same data for training and testing
 + A better idea would be to use the first 75% of the data for training and 25% of the data for testing, so that we could then compare methods by seeing how weel each one catagorized the test data
 + But is using the first 75% for training and 25% at the bottom for testing the best idea? Well, it won't matter much answering this question since cross validation in practice tries different ways of dividing the data for each ML method and summarizes the results at the end
 + In this example, diving the data into 4 blocks is called Four-Fold Cross Validation. In an extreme case, we could call each individual sample a block, and this would be called "Leave One Out Cross Validation". In practice, it is very common to divide the data into 10 blocks. This is called Ten-Fold Cross Validation
 
-* The Confusion Matrix
+** The Confusion Matrix
 + It is simply a way of telling if the ML algorithm predicted the output correctly.
 + In the left side of the table we use the prediction row. In the top part of the table we use the actual line. Therefore, diagonally you are going to have only the results truly predicted by the ML algorithm and anything else would be a wrong prediction
 
-* Sensitivity and Specificity
+** Sensitivity and Specificity
 + We can use them to help us decide which machine learning method would be best for our data
 + Used in the Confusion Matrix. Remember: rows correspond to what was predicted and columns correspond to the known truth
 + Sensitivity (in the example of heart disease identification) tells us what percentage of these patients (w/ heart disease) were correctly identified -> Sensitivity = True Positives / (True Positives + False Negatives)
 + Specificity tells us what percentage of these patients without heart disease were correctly identified -> Specificity = True Negatives / (True Negatives + False Positives)
 + If correctly identifying positives is the most important thing to do with the data, we should choose a method with higher sensitivity
 + Otherwise (correctly identifying negative) then we should be more emphatic on the specificity
-** With larger confusion matrices
+*** With larger confusion matrices
 + For larger confusion matrices that are no single values of sensitivity and specificity that work for the entire matrix
 + Instead, we calculate a different sensitivity and specificity for each category
+
+** Bias and Variance
++ As we don't know the true formula of a two variable relationship, we will try some algorithms to do it
++ Remember to split the data in two sets: training and testing
++ The first ML algorithm we use is called linear regression, and it creates a straight line, because it doesn't have the flexibility to accurately replicate the arc in the true relationship (no matter how hard we try) -> This straight line will never capture the true relationship between the true variables, and this is called bias
++ Because the straight line can't curve, it has a relatively large amount of bias
++ A squiggly line (made by another ML algorithm) is super flexible and hugs the training set along the arc of the true relationship, meaning a very little bias
++ It is possible to compare those two with the calculation of their sums of squares (in the training set contest, the squiggly line wins...)
++ In the testing set contest, the straight line wins, because the squiggly line did a bad job in fitting the testing data
++ The difference in fits between data sets is called variance
++ The squiggly line has little bias, because it can adapt to the true relationship in the training set, but it has high variability because it results in vastly different sums of squares for both the training and testing sets (it can also be said that the squiggly line is overfit) (it is hard to predict how it will do in the future)
++ The ideal algorithm in ML has low bias and low variability -> this is done by finding the sweet spot between a simple model and a complex model
++ Three commonly used methods for finding this sweet spot are regularization, boosting, and bagging (random forest)
+
+** ROC and AUC
+*** Basics of Logistic Regression
++ They y-axis has two categories
++ The x-axis only has one
++ In this regression, the y-axis is converted to the probability something is true and it ranges from 0 to 1
++ If we want to tell if something is true or not, then we need to turn probabilities into classifications -> maybe setting a threeshold at 0.5
++ We classify some of the data to see if it got it right or wrong, then plot it into a confusion matrix to summarize the classifications
++ Once the confusion matrix is filled in, we can calculate Sensitivity and Specificity to evaluate this Logistic Regression when 0.5 is the threshold for being true
++ If we used another threshold, we would need to evaluate our priorities (is it more import to identify the false or the true cases? Remember Sensitivity and Specificity...)
++ But how do we determine which threshold is the best? Well, we don't need to test every single opition, in some cases, close threesholds will give you the exact same confusion matrix
++ But even if we made one confusion matrix for each threshold that matttered, it would result in a confusingly large number of confusion matrices
+*** Receiver Operator Characteristic (ROC) graphs
++ Instead of being overwhelmed with confusion matrices, ROC graphs provide a simple way to summarize all of the information
++ The y-axis shows the True Positive Rate (from 0 to 1) (same thing as Sensitivity, ref to it for calculation)
++ The x-axis shows the False Positive Rate (from 0 to 1) (calulated by 1 - Sensitivity or False Positives / (False Positives + True Negatives))
++ For learning how to plot the graph ref to video: "ROC and AUC, Clearly Explained!" but it can be summarized as: increase the threshold and plot the point
+*** Area Under the Curve (AUC)
++ It is used to compare on ROC curve to another
++ If the AUC for the red ROC curve is greater than the AUC for the blue ROC curve, it suggests that the red curve is better
+*** Considerations
++ ROC graphs are drawn using True Positive Rates and False Positive Rates, but it can be done substituting the latter with precision (true positives / (true positives + false positives)) (proportion of positive results that were correctly classified)
+
+** Fitting a line to data aka Least Squares aka Linear Regression
++ We usually like to add a line to our data for us to see better what the trend is
++ How to decide between lines? We can measure how well it fits by seeing how close it is to the data points
++ One way to decide is by summing the squares of the difference between the y mean and the data point, something like this: (b is the y mean and y is the data point)
+\[(b-y_{1})^2 + (b-y_{2})^2 + (b-y_{3})^2\]
++ This method above is known as the "sum of squared residuals", because the residuals are the differences between the real data and the line, and we are assuming the square of these values
++ To find the sweet spot of the line we need to have the smallest sum of squares, to do so we use the method called "Least Squares", given by the equation below:
+\[((a\cdot x_{1} + b)-y_{1})^2 + ((a\cdot x_{2} + b)-y_{2})^2 + ...\]
++ Taking the derivative of the function above, we find the slope at every point. Ultimately, we use a slope like zero
+*** Important concepts
++ We want to minimize the square of the distance between the observed values and the line
++ We do this by taking the derivative and finding where it is equal to zero
+
+** Linear Regression
+*** Main ideas
++ Use least-squares to fit a line to the data
++ Calculate R^2
++ Calculate a p-value for R^2
+*** Summary
++ Linear regression quantifies the relationship in the data (this is R^2), and it needs to be large
++ It also determines how realible that relationship is (this is the p-value that we calculate with F), and it needs to be small
++ If you have both, then you meet the requirements for an interesting result
+
+* CodeBasics
+** PyTorch vs TensorFlow vs Keras
++ PyTorch and TensorFlow are the two most popular deep learning frameworks, the first is developed by facebook and the second by google
++ Keras is just a frontend, and you can think of PyTorch and TensorFlow as backends
+
+** Sigmoid Function
+\[sigmoid(z) = \frac{1}{1 + e^{-z}\]
++ Where \[e\] is Euler's number and it is approximately 2.71828
++ So first you have a linear regression function defined as \[y = m\cdot x + b\], then you apply a sigmoid function to it and it becomes \[z = \frac{1}{1 + e^{-y}\]
+** Tanh
++ Similar to sigmoid, but it gives a value between -1 and 1
+\[tanh(z) = \frac{e^z - e^{-z}}{e^z + e^{-z}\]
+** ReLU
+\[ReLU(z) = max(0,x)\]
+** Leaky ReLU
+\[Leaky ReLU(z) = max(0.1x,x)\]
+** Activation Function
++ It decides whether a neuron fires or not
++ Sigmoid and Tanh are examples of it
++ Use Sigmoid for the output and Tanh anywhere else. However they have a problem called vanishing gradients that makes them sometimes slower to learn
++ If you are unsure which activation function to use in hidden layers, just use ReLU as your default choice, because it is a lightwight functin
++ However ReLU also suffers from vanishing gradients, that is why there is Leaky ReLU
+** Derivatives
++ They are like the slope of a non-linear equations and it is a function
+** Loss function
+*** Tensorflow loss value examples
++ sparse_categorical_crossentropy
++ binary_crossentropy
++ categorical_crossentropy
++ mean_absolute_error
++ mean_squared_error
+
+* Deep Learning with Python - François Chollet
+** Chapter One - What is deep learning?
+*** Artificiall intelligence
++ Can be defined as: the effor to automate intellectual tasks normally performed by humans
++ AI is a general field that encompasses machine learning and deep learning, but also includes many more approaches that don't involve any learning
++ Symbolic AI was a more hardcoded way to approach problem solving, and it was suitable for well-defined, logical problems, such as playing chess
++ Symbolic AI was not good at more complex and fuzzy problems, such as image classification, speech recognition, and language translation
+*** Machine Learning
++ While classical programming, represented by Symbolic AI, had as input rules and data and outputted answers, machine learning had as input data and answers and it outputted rules
++ A machine learning system is trained rather than explicity programmed
++ I liked this definition:
+#+BEGIN_QUOTE
+Unlike statistics, machine learning tends to deal with large, complex datasets (such as a dataset of millions of images, each consisting of tens of thousands of pixels) for which classical statistical analysis such as Bayesian analysis would be impractical. As a result, machine learning, and especially deep learning, exhibits comparatively little mathematical theory—maybe too little—and is engineering oriented. It’s a hands-on discipline in which ideas are proven empirically more often than theorically
+#+END_QUOTE
++ For doing ML we need "Input data points", "Examples of expected output", and "A way to measure whether the algorithm is doing a good job". The last requirement is what makes the adjustment of the way the algorithm works possible, and the adjustment constitutes "learning"
++ A quote that summarizes machine learning:
+#+BEGIN_QUOTE
+ So that’s what machine learning is, technically: searching for useful representations of some input data, within a predefined space of possibilities, using guidance from a feedback signal. This simple idea allows for solving a remarkably broad range of intellectual tasks, from speech recognition to autonomous car driving.
+#+END_QUOTE
+*** The "deep" in deep learning
++ It is a subfield of machine learning and can be defined das a new take on learning representations from data that puts an emphasis on learning succesive layers of increasingly meaningful representations
++ The deep refers to the idea of succesive layers of representations. The number of layers is called the depth of the model
++ Modern deep learning often has tens or hundreds of succesive layers of representations, while other machine learning approaches have only one or two and are sometimes called shallow learning
++ These layered representations are almost always learned via models called neural networks
+#+BEGIN_QUOTE
+"You can think of a deep network as a multistage information-distillation operaation, where information goes through successive filters and comes out increasingly purified"
+#+END_QUOTE
+*** What makes deep learning different
++ It took off because it had better performance on many problems, and also because it completely automates the feature engineering
 
 * Resources
 ** Videos
 + Playlist: [[https://youtube.com/playlist?list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF][Machine Learning]]
++ Playlist: [[https://www.youtube.com/playlist?list=PLeo1K3hjS3uu7CxAacxVndI4bE_o3BDtO][Deep Learning With Tensorflow 2.0, Keras and Python]]
+** Articles
++ [[https://scribe.bus-hit.me/ai-society/gans-from-scratch-1-a-deep-introduction-with-code-in-pytorch-and-tensorflow-cb03cdcdba0f?source=user_profile---------2][GANs from Scratch 1: A deep introduction. With code in PyTorch and TensorFlow]]
+** Books
++ Deep Learning with Python - François Chollet
