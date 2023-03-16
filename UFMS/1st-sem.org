@@ -3,4 +3,4 @@
 #+SETUPFILE: https://luispengler.github.io/site/org-html-themes/org/theme-readtheorg.setup
 #+OPTIONS: num:nil ^:{} toc:1
 
-||
+| [[https://luispengler.github.io/virtual-notebook/html/UFMS/evolucao-fisica.html][Evolução das Ideias da Física]] | [[https://luispengler.github.io/virtual-notebook/html/UFMS/introducao-laboratorio-fisica.html][Introdução ao Laboratório de Fìsica]] | [[https://luispengler.github.io/virtual-notebook/html/UFMS/matematica-elementar.html][Matemática Elementar]] | [[https://luispengler.github.io/virtual-notebook/html/UFMS/metodologia-e-redacao-cientifica.html][Metodologia e Redação Científica]] | [[https://luispengler.github.io/virtual-notebook/html/UFMS/seminarios-fisica.html][Seminários de Física]] |

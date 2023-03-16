@@ -95,3 +95,7 @@
 + \[\Real\] = números reais
 + Possui:
 + Inteiros, representação finita, representação decimal infinita e periódica, representação decimal infinita não periódica (\[\pi\])
+
+* Leitura ()
++ Há autores que não consideram 0 zero parte do conjunto dos números naturais
++ Todo número racional pode ser representado pela divisão de dois números inteiros
