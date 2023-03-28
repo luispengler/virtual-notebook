@@ -39,3 +39,48 @@ Somente a partir do século V, com os primeiros filósofos gregos, chamados de p
 + Antigos hebreus (hoje em dia também chamados de judeus ou israelitas) escreveram a parte inicial da bíblia, o pentateuco ou Torá, que possui cinco livros: Gênesis, Exodus, Deuteronômio, Numerus, Levíticus
 + A escolástica medival tentava conciliar a bíblia com a Filosofia platônica e aristotélica e para isso foram responsáveis muitos pensadores, dentre eles Agostinho, Tomás de Aquino, Maimonides, Averrois
 + O capítulo quatro ainda termina descrevendo um pouco da importância para a astronomia, matemática, mecânica e física de povos como os babilônios, egípcios e chineses
+
+* Leitura "The Upright Thinkers"
+#+BEGIN_QUOTE
+I realized then that the search for knowledge is the most human of all our desires
+#+END_QUOTE
+
+* Terceira aula
++ Euclide -> os elementos (dando a base da geometria)
++ Ptolomeu -> Geocentrismo
++ Aristóteles -> Filósofo
++ O renascimento retoma a ideia desses gregos (são todos gregos?), na mesma época turcos tomam a atual istambul, fazendo o pessoal desenvolver o pensamento e conhecimento para navegar em volta da áfrica
++ Por que revolução é usada para mudança, quando na fisica significa uma volta...?
++ O pensamento ocidental sofre a partir do Renascimento profundas e rápidas transformações - científico, filosófico, religioso, moral e social
++ Copérnico propõe o sistema heliocêntrico e o homem deixa de ser previlegiado por Deus
++ Kepler inova com os dados de Tycho Brahé e melhora o sistema de copérnico, modificando as trajetórias circulares para elípticas
++ Galileu derruma um dogma aristotélico provando que corpos com massas diferentes caem a velocidades iguais
++ O epicentro da revolução científica aconteceu com Descartes, Newton, Laplace e a nova concepção determinsta trazida por eles
+** Mecânica: cosmos e os povos antigos
++ Até 100 d.C. nõa tinhamos uma mecânica ou física, apenas interpretações mitológicas, astronomia, geometria e a técnica associada as máquinas simples
++ Havia vários mitos cosmogônicos que tentavam responder perguntas sobre a criação.
+
+* Quarta aula
++ Religião é de se ligar com algo (conexão)
++ O tempo que o tempo tem - livro
+
+* Leitura 27/03 (49 - 57)
++ A partir do século IX antes de cristo, a antiga mitologia dos poetas Hesíodo e Homero começou a ser substituída por uma visão filosófica que pode ser considerada a precurssora das ideias que temos hoje
++ Alexandre, o Grande, disciplo de Aristóteles chegou a conquistar a Babilônia e quase todo o Oriente Médio. Com ele, veio toda a cultura grega, a Filosofia, Matemática, Astronomia, Poesia, Teatro, Política, Oratória
++ Essa época de Alexandre de culminação de criatividade só tem paralelo conosco no século XV com o renascimento
++ Nos seus primórdios, a civilização ocidental foi um produto entre o conhecimento grego e a teologia monoteísta judaico-cristã
++ Pitágoras foi matemático, astrônomo, filósofo e líder religioso, fazendo muitas viagens ao Egito e à Babilônia onde, possivelmente aprendeu tanto sobre Geometria e Artimética que foram lhe atribuido criações (como o teorema de pitágoras)
++ Pitágoras descobriu o princípio de vibração dos corpos, notando uma relação matemática entre as notas das escalas musicais gregas e os comprimentos de uma corda vibrante
++ Pitágoras ficou fascinado com a ideia dos pequenos números, chegando a acreditar que todas as coisas do universo eram números inteiros. Assim, os períodos planetários deveriam guardar entre si uma relação de pequenos números inteiros e o cosmos executaria uma fantástica música universal, a música das esferas.
+#+BEGIN_QUOTE
+Para a comunidade dos pitagóricos, a música era assim o cântico sagrado entoado pelos números inteiros e suas justas proporções
+#+END_QUOTE
++ Então, foi criado o primeiro modelo matemático para descrever o universo
++ Pitágoras estendeu seu modelo musical à geometria. Considerava a Geometria e a Música para resolver todas as coisas
++ O cubo para pitágoras era harmônico, mas então descobriu que haviam números que não puderam ser escritos em frações (chamaram os irracionais de estúpidos, a princípio)
+
+* Quinta aula
++ O mundo de sofia - livro
++ Para os gregos, o perfeito era imutável
++ Musica de Raul Seixas
++ O homem que viu o infinito

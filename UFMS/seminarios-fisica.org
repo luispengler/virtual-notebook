@@ -1,6 +1,8 @@
 #+TITLE: Seminários de Física
 #+DESCRIPTION: Seminários de Física - Meu caderno virtual
-#+SETUPFILE: https://luispengler.github.io/site/org-html-themes/org/theme-readtheorg.setup
-#+LaTeX_+HEADER: \usepackage{physics}
-#+LaTeX_+HEADER: \usepackage{amsmath}
-#+OPTIONS: num:nil ^:{} toc:2
+-#+SETUPFILE: https://luispengler.github.io/site/org-html-themes/org/theme-readtheorg.setup
+-#+LaTeX_+HEADER: \usepackage{physics}
+-#+LaTeX_+HEADER: \usepackage{amsmath}
+-#+OPTIONS: num:nil ^:{} toc:2
+
+*

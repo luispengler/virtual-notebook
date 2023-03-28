@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-03-15 Wed 21:37 -->
+<!-- 2023-03-28 Tue 08:22 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Matemática Elementar</title>
@@ -245,6 +245,33 @@
 </ul>
 </li>
 <li><a href="#org10cdb97">Leitura ()</a></li>
+<li><a href="#orga5478d3">Aula 21/03</a>
+<ul>
+<li><a href="#org05ba137">Em \[Q = {\frac{a}{b}, a, b \in Z, b \neq 0}\]</a></li>
+<li><a href="#org41a8ea0">Transformação de números em representação decimal finita</a></li>
+<li><a href="#org7468da2">Transformação de números em representação decimal infinita</a></li>
+<li><a href="#org51aa451">Mais frações</a></li>
+<li><a href="#orge4e4383">T. Fundamental aritimética</a></li>
+<li><a href="#org3716d3a">Existem infinitos números primos</a></li>
+</ul>
+</li>
+<li><a href="#orga9747b7">Múltiplos e divisores comuns</a>
+<ul>
+<li><a href="#org9d24a2d">Observação</a></li>
+<li><a href="#org2f34ac1">Regra prática</a></li>
+</ul>
+</li>
+<li><a href="#org8c0d18e">Reais</a>
+<ul>
+<li><a href="#org5284d86">Relação de ordem -&gt; Vale a lei da tricotomia</a></li>
+<li><a href="#org0177baf">Domínio de integridade</a></li>
+</ul>
+</li>
+<li><a href="#orge0572a6">Exponenciação</a>
+<ul>
+<li><a href="#org79723fb">Expoentes naturais</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -488,10 +515,266 @@
 </ul>
 </div>
 </div>
+
+<div id="outline-container-orga5478d3" class="outline-2">
+<h2 id="orga5478d3">Aula 21/03</h2>
+<div class="outline-text-2" id="text-orga5478d3">
+</div>
+<div id="outline-container-org05ba137" class="outline-3">
+<h3 id="org05ba137">Em \[Q = {\frac{a}{b}, a, b \in Z, b \neq 0}\]</h3>
+<div class="outline-text-3" id="text-org05ba137">
+<ul class="org-ul">
+<li>Inteiros \[\frac{a}{1}\]</li>
+<li>Representação decimal finita \[\frac{1}{2} = 0,5\]</li>
+<li>Representação decimal infinita periódica \[\frac{1}{3} = 0,333...\]</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org41a8ea0" class="outline-3">
+<h3 id="org41a8ea0">Transformação de números em representação decimal finita</h3>
+<div class="outline-text-3" id="text-org41a8ea0">
+<p>
+\[0,37 = \frac{37}{100}\]
+\[2,631 = \frac{2631}{1000}\]
+</p>
+</div>
+</div>
+<div id="outline-container-org7468da2" class="outline-3">
+<h3 id="org7468da2">Transformação de números em representação decimal infinita</h3>
+<div class="outline-text-3" id="text-org7468da2">
+<p>
+\[0,7777...\]
+\[x= 0,7777...\]
+\[10x = 7,7777....\]
+</p>
+<ul class="org-ul">
+<li>Agora podemos subtrair</li>
+</ul>
+<p>
+\[10x - x = 7,7777... - 0,7777.... = 9x = 7\]
+\[x = \frac{7}{9}\]
+</p>
+<ul class="org-ul">
+<li>Outro exemplo:</li>
+</ul>
+<p>
+\[x = 6,434343...\]
+\[100x = 643,434343...\]
+</p>
+<ul class="org-ul">
+<li>Agora subtraimos</li>
+</ul>
+<p>
+\[100x - x= 643,434343 - 6,434343 = 99x = 643 - 6 = 637\]
+\[x = \frac{637}{99}\]
+</p>
+<ul class="org-ul">
+<li>Hard mode:</li>
+</ul>
+<p>
+\[x = 2,57919191...\]
+\[100x = 257,919191...\]
+</p>
+<ul class="org-ul">
+<li>Vamos usar o 100x como se fosse o próprio x nos exemplos anteriores:</li>
+</ul>
+<p>
+\[100000x = 25791,919191...\]
+\[100X = 257,919191...\]
+\[100000x - 100x = 25791,919191 - 257,919191 = 9900x = 25534\]
+\[x = \frac{25534}{9900}\]
+</p>
+</div>
+<div id="outline-container-orgcbd141d" class="outline-4">
+<h4 id="orgcbd141d">Curiosidade</h4>
+<div class="outline-text-4" id="text-orgcbd141d">
+<p>
+\[0,9999... = 1\]
+\[10x-x = 9,9999-0,9999 = 9x = 9\]
+\[x = 1\]
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org51aa451" class="outline-3">
+<h3 id="org51aa451">Mais frações</h3>
+<div class="outline-text-3" id="text-org51aa451">
+<ul class="org-ul">
+<li>Sejam \[a, b e c \in Z +q\]</li>
+</ul>
+<p>
+\[a = b\cdot c\]
+</p>
+<ul class="org-ul">
+<li>b é um divisor de a</li>
+<li>c é um divisor de a</li>
+</ul>
+<p>
+\[b | a e c | a\]
+</p>
+<ul class="org-ul">
+<li>A barrinha em cima signifca que divide, logo é divisor</li>
+<li>a é um múltiplo de b</li>
+<li>a é um múltiplo de c</li>
+<li>múltiplos positivos \[4 = {4, 8, 12, 16...} M(4)\]</li>
+<li>divisores positivos \[4 = {1, 2, 4} = D(4)\]</li>
+<li>primos possuem apenas dois divisores positivos (primo e 1)</li>
+<li>compostos: produto de primos</li>
+<li>Todo número inteiro, ou é 1, -1, primo, ou composto</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge4e4383" class="outline-3">
+<h3 id="orge4e4383">T. Fundamental aritimética</h3>
+<div class="outline-text-3" id="text-orge4e4383">
+<ul class="org-ul">
+<li>Cada número pode ser escrito por produtos de números primos elevados ao máximo expoente</li>
+<li>A partir dos primos a gente pode escrever qualquer número</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3716d3a" class="outline-3">
+<h3 id="org3716d3a">Existem infinitos números primos</h3>
+<div class="outline-text-3" id="text-org3716d3a">
+<ul class="org-ul">
+<li>Redução ao absurdo&#x2026;</li>
+<li>Suponha que \[a_{1} = 2, a_{2} = 3, a_{3} = 5, a_{n}\] (que sejam finitos)</li>
+</ul>
+<p>
+\[x = a_{1}\cdot a_{2}\cdot a_{3}\cdot a_{n} + 1\]
+</p>
+<ul class="org-ul">
+<li>Esse x não pode ser 1, não pode ser primo, nem é composto</li>
+<li>O erro está em supor que \[a_{n}\] é o último primo</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orga9747b7" class="outline-2">
+<h2 id="orga9747b7">Múltiplos e divisores comuns</h2>
+<div class="outline-text-2" id="text-orga9747b7">
+<ul class="org-ul">
+<li>mmc = mínimo múltiplo (positivo) comum entre 2 números</li>
+<li>mdc = mínimo divisor comum entre 2 números:</li>
+<li>6 e 10</li>
+</ul>
+<p>
+\[m(6) = {6, 12, 18, 24, 30,...}\]
+\[m(10) = {10, 20, 30, 40,...}\]
+\[mmc(6, 10) = 30\]
+\[D(6) = {1, 2, 3, 6}\]
+\[D(10) = {1, 2, 5, 10}\]
+\[mdc(6, 10) = 2\]
+</p>
+</div>
+<div id="outline-container-org9d24a2d" class="outline-3">
+<h3 id="org9d24a2d">Observação</h3>
+<div class="outline-text-3" id="text-org9d24a2d">
+<p>
+\[mmc(a,b) = \frac{a\cdot b}{mdc(a,b)}\]
+</p>
+</div>
+</div>
+<div id="outline-container-org2f34ac1" class="outline-3">
+<h3 id="org2f34ac1">Regra prática</h3>
+<div class="outline-text-3" id="text-org2f34ac1">
+<ul class="org-ul">
+<li>Ex 700, 120</li>
+<li>Fatorar 120 e 700:</li>
+</ul>
+<p>
+\[\frac{120}{2} = 60, \frac{60}{2} = 30, \frac{30}{2} = 15, \frac{15}{3} = 5, \frac{5}{5} = 1\]
+\[\frac{700}{2} = 350, \frac{350}{2} = 175, \frac{175}{5} = 35, \frac{35}{5} = 7, \frac{7}{7} = \]
+</p>
+<ul class="org-ul">
+<li>Para achar o mdc, pegue todos os resultados da fatoração em comum (2, 2, 5) e obtenha o produto. Este é o mdc.</li>
+</ul>
+<p>
+\[mdc (120, 700) = 2\cdot 2\cdot 5 = 20\]
+</p>
+<ul class="org-ul">
+<li>Para achar o mmc, escreva os resultados da fatoração em base comum, para o 120:</li>
+</ul>
+<p>
+\[2^3 \cdot 3^1\cdot 5^1\]
+</p>
+<ul class="org-ul">
+<li>Para o 700:</li>
+</ul>
+<p>
+\[2^2 \cdot 5^2 \cdot 7^1\]
+</p>
+<ul class="org-ul">
+<li>Copie a base que aparece nos dois e pegue o maior expoente:</li>
+</ul>
+<p>
+\[mmc(120, 700) = 2^3 \cdot 3^1 \cdot 5^2 \cdot 7^1 = 4200\]
+</p>
+</div>
+<div id="outline-container-orgf247483" class="outline-4">
+<h4 id="orgf247483">Passo a passo</h4>
+<div class="outline-text-4" id="text-orgf247483">
+<ul class="org-ul">
+<li>mdc = na fatoração, pegar somente os números que se repetem nos dois ao mesmo tempo</li>
+<li>mmc = na fatoração, pegar todos os primos que aparecem e com o maior expoente</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8c0d18e" class="outline-2">
+<h2 id="org8c0d18e">Reais</h2>
+<div class="outline-text-2" id="text-org8c0d18e">
+<ul class="org-ul">
+<li>O conjuto dos números reais é um corpo ordenado completo</li>
+<li>Comutativo, associativo?</li>
+</ul>
+</div>
+<div id="outline-container-org5284d86" class="outline-3">
+<h3 id="org5284d86">Relação de ordem -&gt; Vale a lei da tricotomia</h3>
+</div>
+<div id="outline-container-org0177baf" class="outline-3">
+<h3 id="org0177baf">Domínio de integridade</h3>
+</div>
+</div>
+
+<div id="outline-container-orge0572a6" class="outline-2">
+<h2 id="orge0572a6">Exponenciação</h2>
+<div class="outline-text-2" id="text-orge0572a6">
+</div>
+<div id="outline-container-org79723fb" class="outline-3">
+<h3 id="org79723fb">Expoentes naturais</h3>
+<div class="outline-text-3" id="text-org79723fb">
+<ul class="org-ul">
+<li>Vale para os inteiros:</li>
+</ul>
+<p>
+\[a^{0} = 1, a \neq 0\]
+\[a^n = a\cdot a^{n-1}\]
+\[a^n = a\cdot a\cdot a (n vezes)\]
+\[a^m \cdot a^n = a^{m+n}\]
+\[(a^m)^n = a^{m\cdot n}\]
+</p>
+<ul class="org-ul">
+<li>Vale para os racionais:</li>
+</ul>
+<p>
+\[a \geq 0\]
+\[a^{\frac{1}{n}} = \sqrt{n}(a) = b tal que b^n = a\]
+</p>
+<ul class="org-ul">
+<li>a tem que ser positivo porque quanto for elevado a 1/n vai ser positivo</li>
+<li>se n for ímpar, a raiz vai ser negativa</li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luís Spengler</p>
-<p class="date">Created: 2023-03-15 Wed 21:37</p>
+<p class="date">Created: 2023-03-28 Tue 08:22</p>
 </div>
 </body>
 </html>
